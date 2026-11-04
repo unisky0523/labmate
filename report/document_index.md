@@ -1,6 +1,6 @@
 # 文档来源索引
 
-ASR 十组耗时按用户确认为团队手动实测。当前记录见 [ASR 手动实测日志](../data/logs/asr_response_log.md)。
+ASR 十组耗时按我们的实测记录为团队手动实测。当前记录见 [ASR 手动实测日志](../data/logs/asr_response_log.md)。
 
 | 归档位置 | 来源 |
 | --- | --- |
@@ -61,9 +61,9 @@ ASR 十组耗时按用户确认为团队手动实测。当前记录见 [ASR 手�
 | [data/logs/asr_response_log.md](../data/logs/asr_response_log.md) | User clarification in this chat: ten paired timings were measured manually by the team; values unchanged from the attached log. |
 
 
-## 本轮队员交接
+## 模块集成记录
 
-总入口为 [ESP32/网页整理说明](board_modules/readme.md)。原文包括 [交接总说明](board_modules/handoff_readme.md)、[状态](board_modules/status.md)、[构建](board_modules/build.md)、[部署](board_modules/deploy.md)、[硬件](board_modules/hardware.md)、[接口](board_modules/interfaces.md) 和 [队员检查记载](board_modules/verification.md)。均来自 `labmate_board_modules_20261104.zip`；原路径可由 `board_modules` 组件恢复。
+总入口为 [ESP32/网页整理说明](board_modules/readme.md)。原文包括 [交接总说明](board_modules/handoff_readme.md)、[状态](board_modules/status.md)、[构建](board_modules/build.md)、[部署](board_modules/deploy.md)、[硬件](board_modules/hardware.md)、[接口](board_modules/interfaces.md) 和 [模块检查记录](board_modules/verification.md)。均来自 `labmate_board_modules_20261104.zip`；原路径可由 `board_modules` 组件恢复。
 
 
-本轮 FPGA 技能：[要求对照与独立验证](skill_review.md)、[技能总入口](../skill/readme.md)、[队员原始说明](history/skill/fpga_skill_readme_original.md)。
+本轮 FPGA 技能：[要求对照与独立验证](skill_review.md)、[技能总入口](../skill/readme.md)、[原始开发说明](history/skill/fpga_skill_readme_original.md)。

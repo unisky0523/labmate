@@ -16,6 +16,6 @@ ESP32、内嵌网页及 ARM 配套交接已于 2026-11-04 收到并合并，源�
 | 独立环境完整重建 | 已有源码、主要资产、脚本及原构建产物。 | 匹配 Vivado、Qt/ARM SDK、PlatformIO、Zig 的完整重建日志；系统工具链不重复纳入源码包。 |
 | 正式报告最终版 | 提供设计、复现、验证及来源 Markdown。 | 赛事要求的队伍信息和最终报告排版，以及团队统一的作者、许可信息。 |
 
-原 FPGA ZIP 中较早 ESP-IDF 示例及其 79 项解析器测试仍未采用。本轮新增的是队员正式 Arduino/PlatformIO 实现，详情见 [整理说明](board_modules/readme.md)。
+原 FPGA ZIP 中较早 ESP-IDF 示例及其 79 项解析器测试仍未采用。本轮新增的是项目正式 Arduino/PlatformIO 实现，详情见 [整理说明](board_modules/readme.md)。
 
 FPGA 三项技能已收录并复核。通用 PYNQ 契约的实板与跨板验证仍待补充，不将离线快照检查作为实际 Overlay 下载成功的证据。

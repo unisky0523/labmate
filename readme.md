@@ -1,10 +1,10 @@
-# LabMate 工程交付
+# LabMate 智能实验室助手
 
-本目录是唯一的交付源码目录，已按七个标准目录整理。最终上传桌面同级的 `labmate.rar`；备份另存于 `Labmate_backup_20261104`，不包含在提交包中。取舍说明见 [提交范围](report/submission_scope.md)。
+LabMate 是我们基于 Zynq-7010、ARM Linux 和 ESP32 开发的智能实验室助手，集成语音识别、Qt 触屏交互、仪器通信、FPGA 音频处理、摄像头/OCR 和网页预览。本仓库包含项目源码、构建脚本、部署工具和验证记录。提交范围见 [提交范围](report/submission_scope.md)。
 
-整理日期：2026-11-04（北京时间）。目标平台：正点原子领航者 7010 / XC7Z010CLG400-1，ARM Linux、Qt 5 与 Vivado 2020.2。
+版本日期：2026-11-04（北京时间）。目标平台：正点原子领航者 7010 / XC7Z010CLG400-1，ARM Linux、Qt 5 与 Vivado 2020.2。
 
-本目录按提交指南图二组织，收录 FPGA 工程、语音识别、Qt 触屏界面、仪器通信、连续记录、扫频、FFT 的 ARM 接口、摄像头/OCR 历史模块、Linux 内核与驱动、构建脚本和验证记录。**队员正式 ESP32 固件、内嵌网页及 ARM 配套板端模块现已补齐。** 详见 [新增材料与复现入口](report/board_modules/readme.md)。 Zynq 侧 SPI RTL、Linux 设备树和 ARM 发送工具属于本次工程，继续保留。
+我们按竞赛推荐结构组织工程，收录 FPGA 工程、语音识别、Qt 触屏界面、仪器通信、连续记录、扫频、FFT 的 ARM 接口、摄像头/OCR 历史模块、Linux 内核与驱动、构建脚本和验证记录。ESP32 固件、内嵌网页及 ARM 配套板端模块均已收录。 详见 [新增材料与复现入口](report/board_modules/readme.md)。 Zynq 侧 SPI RTL、Linux 设备树和 ARM 发送工具属于本次工程，继续保留。
 
 ## 目录对照
 
@@ -70,18 +70,18 @@ python -B build/fetch_dependencies.py --workspace /path/to/labmate_repro --from-
 
 也可用 `--model-archive /path/to/vosk-model-small-cn-0.22.zip` 指定已下载 ZIP。离线单元检查使用模拟依赖，不必先下载模型。完成模型准备后，按部署说明把 `arm/assets/voice/` 放入既定板端模型位置。
 
-## 当前结果的含义
+## 测试与性能结果
 
 本次已在精简提交副本上重新通过 Qt/ARM 业务检查 181 项、DG4102 检查 17 项、语音命令行检查 22 项，共 220 项。原始日志在 `sim/results/`。这些是离线功能回归，不代表新增的板卡实测。
 
-提供的 FPGA 报告记录了 LUT 12418/17600、FF 21261/35200、BRAM 12.5/60、DSP 7/80、Slice 4392/4400，约束内 setup/hold 裕量分别为 +0.135 ns / +0.029 ns。原报告及已有告警全部保留，见 `build/reports/fpga/`。
+我们保留的 FPGA 综合与实现报告记录了 LUT 12418/17600、FF 21261/35200、BRAM 12.5/60、DSP 7/80、Slice 4392/4400，约束内 setup/hold 裕量分别为 +0.135 ns / +0.029 ns。原报告及已有告警全部保留，见 `build/reports/fpga/`。
 
-用户已确认 [ASR 响应日志](data/logs/asr_response_log.md) 的十组耗时是**团队手动实测结果**。原 ARM 流程与加入 FPGA 后流程的中位响应耗时分别为 5.595 s、1.605 s，本组实测中位耗时降低约 71.3%。实测 CSV、统计结果和后续复测表位于 `data/`，统计入口为 `sim/analyze_asr.py`。
+我们手动测量了 10 组配对 ASR 响应耗时，原始记录见 [ASR 响应日志](data/logs/asr_response_log.md)。原 ARM 流程与加入 FPGA 后流程的中位响应耗时分别为 5.595 s、1.605 s，本组实测中位耗时降低约 71.3%。实测 CSV、统计结果和后续复测表位于 `data/`，统计入口为 `sim/analyze_asr.py`。
 
 当前 FFT 配置的 `worker_argv` 为空，ARM 可以取点并显示“待 FPGA”；PL FFT bitstream、DMA 驱动和桥接程序仍待交付。Linux SPI 自动启动日志可证明设备枚举、mode1 与 READY 输入配置，不能替代 ESP32 接收端或整条链路的性能验收。
 
 
-## 新增 ESP32 与网页
+## ESP32 与网页
 
 源码分别位于 `src/esp32/camera_link/` 和 `src/web/camera_preview/`，固件在 `board/esp32/`。配套 ARM 发送/仪器/OCR 模块作为 `board_modules` 组件恢复。完整说明见 [材料检查与对接边界](report/board_modules/readme.md)。
 
@@ -95,4 +95,4 @@ python -B sim/check_board_modules.py --workspace /path/to/labmate_repro --out /p
 
 ## FPGA 技能包
 
-队员提供的三个可复用 FPGA 技能现已收录于 [skill/](skill/readme.md)，包含固定向量 RTL 黄金参考、实现报告审计及通用 PYNQ 契约预检。按 `prepare.py --component skill` 恢复原始 SKILL.md 文件名；要求对照与验证结果见 [技能包审阅](report/skill_review.md)。
+团队编写的三个可复用 FPGA 技能现已收录于 [skill/](skill/readme.md)，包含固定向量 RTL 黄金参考、实现报告审计及通用 PYNQ 契约预检。按 `prepare.py --component skill` 恢复原始 SKILL.md 文件名；要求对照与验证结果见 [技能包审阅](report/skill_review.md)。

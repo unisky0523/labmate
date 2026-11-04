@@ -2,7 +2,7 @@
 
 | 路径 | 内容和使用说明 |
 | --- | --- |
-| `logs/asr_response_log.md` | 十组团队手动实测日志，按用户澄清更正数据性质，原始测量数值不变。 |
+| `logs/asr_response_log.md` | 十组团队手动实测日志，由我们手动计时，保留原始测量数值。 |
 | `asr_response_measurements.csv` | 同一组手动实测的英文列名副本，`kind=measurement`、`measurement_method=manual`。 |
 | `asr_measurement_statistics.json` | 直接从实测 CSV 计算的统计：中位数 5.595 s / 1.605 s，中位耗时降低约 71.3%。 |
 | `asr_measurement_template.csv` | 供后续追加复测的空表，未填行状态为 `pending`。 |
@@ -15,6 +15,6 @@
 | `logs/development/` | 原 ARM、仪器、桌面、语音、FFT、扫频和 Linux 部署核验记录。 |
 | `logs/accepted_sweep/` | 已冻结扫频版本的清单和核验材料。 |
 
-ASR CSV 的 `status=measured` 表示用户已报告的手动计时；不将它伪装成自动化识别状态记录。两组有效手动计时直接纳入配对统计。后续复测也可记录 `correct`、`incorrect`、`timeout`，其中正确配对参与耗时统计，其他状态另列数量。原日志附件在 `report/history/asr_response_log_original.md` 保留原始字节，旧的数据标签以用户本次确认和当前实测日志为准。
+ASR CSV 的 `status=measured` 表示我们的手动计时结果；计时方式为人工计时。两组有效手动计时直接纳入配对统计。后续复测也可记录 `correct`、`incorrect`、`timeout`，其中正确配对参与耗时统计，其他状态另列数量。原日志附件在 `report/history/asr_response_log_original.md` 保留原始字节，数据分类以当前实测日志为准。
 
-原附件的 60 fps 录像、预热和统一版本等内容是后续复测方案，不作为本批手动测量已经执行的条件。已有测试夹具随各模块源码保留，用户个人实验历史未整体当作测试夹具打包。
+原附件的 60 fps 录像、预热和统一版本等内容是后续复测方案，不作为本批手动测量已经执行的条件。已有测试夹具随各模块源码保留，个人实验历史不作为测试夹具。

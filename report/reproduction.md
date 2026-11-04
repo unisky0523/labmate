@@ -36,7 +36,7 @@ export LABMATE_SDK_ENV=/home/labmat/petalinux_sdk_2020_2/environment-setup-corte
 bash build/build_arm.sh /path/to/labmate_repro
 ```
 
-脚本分别编译助手 `labassistant.pro` 和桌面 `QMainUI.pro`，输出到外部工作区 `arm/dist/armhf/labassistant` 与 `arm/work/desktop_entry_20261102/QMainApp`。交付的 `board/arm/bin/` 是已有二进制，本次整理没有重新交叉编译。
+脚本分别编译助手 `labassistant.pro` 和桌面 `QMainUI.pro`，输出到外部工作区 `arm/dist/armhf/labassistant` 与 `arm/work/desktop_entry_20261102/QMainApp`。交付的 `board/arm/bin/` 是已有二进制，本次归档没有重新交叉编译。
 
 ## FPGA 构建
 
@@ -106,7 +106,7 @@ python -B build/fetch_dependencies.py --workspace /path/to/labmate_repro --from-
 
 串口部署工具已收录在 `board/arm/tools/`，恢复后位于 `arm/tools/`。这些脚本针对已有板卡布局和指定更新模式；评审复现应先核对所选模块、备份路径及脚本帮助，不把普通应用更新和内核/启动更新混为同一步。较早版本的上传参数只证明当时范围，不代表它会自动部署后来新增的所有模块。
 
-`board/linux/boot/` 包含曾实际使用的启动、备份和回退材料；其中既有写入脚本仅作归档。**本次整理没有运行刷写、重启、仪器控制或向他人发送文件的操作。**
+`board/linux/boot/` 包含曾实际使用的启动、备份和回退材料；其中既有写入脚本仅作归档。**本次归档没有运行刷写、重启、仪器控制或向他人发送文件的操作。**
 
 ## ASR 和 FFT 数据复现
 
@@ -115,7 +115,7 @@ python -B sim/analyze_asr.py data/asr_response_measurements.csv
 python -B sim/analyze_asr.py data/asr_measurement_template.csv
 ```
 
-第一条直接统计用户确认的十组手动实测，输出两组中位数及约 71.3% 的中位耗时降幅；第二条供后续追加复测使用，空表返回零个有效配对。已测数据标记 `measurement_method=manual`、`status=measured`，来源指向实测日志；后续记录按实际情况填写计时方法、识别状态和附件。
+第一条直接统计我们记录的 10 组手动实测，输出两组中位数及约 71.3% 的中位耗时降幅；第二条供后续追加复测使用，空表返回零个有效配对。已测数据标记 `measurement_method=manual`、`status=measured`，来源指向实测日志；后续记录按实际情况填写计时方法、识别状态和附件。
 
 FFT 的原始参考工具使用方法见 `python sim/fft_reference.py --help`；输入输出向量在 `data/fft_vectors/`。软件参考只用于数值比较；真实 PL worker 接口、缩放/溢出及 DMA 规则详见文档索引中的 FFT 交接说明。
 

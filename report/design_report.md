@@ -57,11 +57,11 @@ SDS1202X 波形 -> ARM 取点与 FFT 文件协议
 
 ## FPGA 工程
 
-`src/fpga/project/` 来自用户指定的 `Navigator_7010_ASR_SPI_ESP32_Vivado2020_2.zip`，包含 XPR、Block Design、约束、自定义 IP、生成的 HDL 和运行所需参考产物。准备后工程恢复在 `fpga/Navigator_7010/`。
+`src/fpga/project/` 来自我们采用的 `Navigator_7010_ASR_SPI_ESP32_Vivado2020_2.zip`，包含 XPR、Block Design、约束、自定义 IP、生成的 HDL 和运行所需参考产物。准备后工程恢复在 `fpga/Navigator_7010/`。
 
 音频前端在 `asr/rtl/asr_audio_frontend.v` 和 `fir_coeff.vh`。模块提供 `BYPASS` 参数：旁路路径进行音频传输，滤波路径逐声道去直流并执行 127 抽头 FIR。源码注释记录 100 MHz 时钟、44.1 kHz 双声道 24 位输入；实际交付工程配置和连接以 BD/XCI 为准，模块参数默认值不能替代工程实例参数。
 
-SPI 部分使用 PS SPI0 经 PL EMIO 引出，新增 GPIO READY 输入并调整相关 UART1/CAN0 引脚。其 FPGA I/O RTL 在 `spi/rtl/`，Linux 侧设备树和 ARM 发送工具仍保留。这里的 FPGA SPI 接口属于 Zynq。原 ZIP 的早期 ESP-IDF 示例不作为队员正式实现；本轮另收录正式 Arduino/PlatformIO 接收端与内嵌网页，见 `src/esp32/`、`src/web/`。
+SPI 部分使用 PS SPI0 经 PL EMIO 引出，新增 GPIO READY 输入并调整相关 UART1/CAN0 引脚。其 FPGA I/O RTL 在 `spi/rtl/`，Linux 侧设备树和 ARM 发送工具仍保留。这里的 FPGA SPI 接口属于 Zynq。原 ZIP 的早期 ESP-IDF 示例不作为项目正式实现；本轮另收录正式 Arduino/PlatformIO 接收端与内嵌网页，见 `src/esp32/`、`src/web/`。
 
 交付构建沿用未改动视频 IP 的既有生成 RTL，重新执行综合、布局、布线和 bitstream 生成。该方式及原始 HLS 重生成入口都在原脚本中保留；直接重生成旧视频 HLS 仍依赖匹配的工具环境。`build/reports/fpga/` 保存原始时序、资源、DRC、I/O、源文件审计和编译日志。
 
@@ -85,7 +85,7 @@ SPI 部分使用 PS SPI0 经 PL EMIO 引出，新增 GPIO READY 输入并调整�
 
 ## 参考数据和性能口径
 
-ASR 响应时间按日志口径，从口令播放结束到界面首次显示正确结果。用户已确认十组数据为团队手动实测：两组中位数分别为 5.595 s 和 1.605 s，本组实测中位耗时降低约 71.3%。实测日志、英文列名 CSV、统计结果及后续复测表见 `data/readme.md`；原附件作为历史来源另行保留。
+ASR 响应时间按日志口径，从口令播放结束到界面首次显示正确结果。我们手动测量了 10 组配对响应耗时：两组中位数分别为 5.595 s 和 1.605 s，本组实测中位耗时降低约 71.3%。实测日志、英文列名 CSV、统计结果及后续复测表见 `data/readme.md`；原附件作为历史来源另行保留。
 
 FFT 数据包含 HOST4 实际取点记录和合成正弦参考向量。`sim/fft_reference.py` 为软件数值对照，正式应用拒绝把 `software_reference` 当 FPGA 结果。当前只交付 ARM 协议和准备流程，尚无本项目真实 PL FFT 的性能结论。
 

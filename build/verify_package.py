@@ -28,7 +28,7 @@ def main():
     parser.add_argument('--write-manifest', action='store_true', help='Record a new complete package hash manifest after review')
     args = parser.parse_args()
     errors = []
-    all_paths = sorted(ROOT.rglob('*'))
+    all_paths = sorted(p for p in ROOT.rglob('*') if '.git' not in p.relative_to(ROOT).parts and p.relative_to(ROOT).as_posix() not in ('.gitattributes', '.gitignore'))
     files = [p for p in all_paths if p.is_file() and p != MANIFEST]
     for p in all_paths:
         if not re.fullmatch(r'[a-z0-9_.-]+', p.name):

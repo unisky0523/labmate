@@ -10,7 +10,7 @@
 | `build_fpga.py` | 调用所提供的 Vivado 2020.2 生成 RTL 构建入口。 |
 | `verify_package.py` | 校验命名、来源哈希、Qt 资源、ARM ELF、内核 CRC、DTB 和完整包清单。 |
 | `package_manifest.json` | 整理完成后记录的全部文件 SHA256；自身不包含在哈希列表中。 |
-| `reports/fpga/` | 用户提供工程的原始综合实现、时序、资源、I/O、DRC 和源文件审计。 |
+| `reports/fpga/` | 本项目工程的原始综合实现、时序、资源、I/O、DRC 和源文件审计。 |
 | `reports/linux/` | 已有 Linux 内核编译日志。 |
 
 完整 Linux 构建入口归档在 `src/linux/kit/build_spi.sh`，需经 `prepare.py --component linux` 恢复为 `linux/linux_kit/build_spi.sh` 后执行，确保其原文件名、依赖路径和输入校验保持一致。所有新构建产物留在工作区，不会覆盖提交副本的历史报告。

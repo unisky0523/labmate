@@ -21,4 +21,4 @@ XPR 的六项主工程源文件路径均在映射中存在。Vivado 导出的模
 加入正式 ESP32/网页材料后，将内核 XZ 归档提高到 preset 9；独立解压并比较前后整个 tar 流的 SHA256，内容逐字节一致，未额外删减源码。内核归档摘要、两个构建入口的输入清单和来源映射已同步，78 项输入校验通过。记录见 `sim/results/kernel_recompression.json` 与 `sim/results/kernel_input_checks.json`。
 
 
-新增三个 FPGA 技能的 21 个原始文件、四份 Python 脚本、6000 字黄金模型核算、24000 次 XSim 2026.1 比对、报告审计和 PYNQ 正反例已核验。最终工程现位于桌面 Labmate 根目录，按七目录组织；最终 RAR 位于桌面同级 labmate.rar，备份不进入工程及 RAR。
+新增三个 FPGA 技能的 21 个原始文件、四份 Python 脚本、6000 字黄金模型核算、24000 次 XSim 2026.1 比对、报告审计和 PYNQ 正反例已核验。工程按七个标准目录组织，交付归档为 `labmate.rar`，不包含开发备份和 Git 元数据。
