@@ -1,0 +1,22 @@
+--- a/drivers/i2c/busses/i2c-xiic.c
++++ b/drivers/i2c/busses/i2c-xiic.c
+@@ -1037,6 +1037,19 @@
+ 		return err;
+ 
+ 	err = xiic_busy(i2c);
++	if (err == -EBUSY && !i2c->tx_msg) {
++		/* Experimental factory-driver recovery, once per transfer.
++		 * Adapter transfers are serialized by the I2C core. Do not
++		 * reset when a driver transfer is still recorded as active.
++		 */
++		dev_warn(adap->dev.parent,
++			 "I2C bus busy; trying controller reinitialization\n");
++		mutex_lock(&i2c->lock);
++		err = xiic_reinit(i2c);
++		mutex_unlock(&i2c->lock);
++		if (!err)
++			err = xiic_busy(i2c);
++	}
+ 	if (err)
+ 		goto out;
+ 

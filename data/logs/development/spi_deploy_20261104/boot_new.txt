@@ -1,0 +1,6 @@
+mw.l 0xf8000008 0x0000df0d
+mw.l 0xf800012c 0x01fd4ccd
+mw.l 0xf8000004 0x0000767b
+md.l 0xf800012c 1
+fdt print /amba/spi@e0006000
+bootz 0x02000000 - 0x01f00000

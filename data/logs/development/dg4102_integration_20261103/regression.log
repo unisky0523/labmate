@@ -1,0 +1,17 @@
+VOICE_BASELINE 200_2: restored 12 files from actual board backup; preserved original backup files.
+======================================================================
+FAIL: test_adapter_and_runtime_match_verified_board_reference (test_deployment.DeploymentTests.test_adapter_and_runtime_match_verified_board_reference)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\fpga amd xinlx\work\labmate_ui\tests\test_deployment.py", line 139, in test_adapter_and_runtime_match_verified_board_reference
+    self.assertEqual(hashlib.sha256((root/name).read_bytes()).hexdigest(), expected, name)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'c34cc156054b4ce8dd344110dd3b569e39c502815e5d4646c321be76eb618dc3' != '4100c571d3ec962742c80327cb5137b34f17f22f1db309e59907813243d7c004'
+- c34cc156054b4ce8dd344110dd3b569e39c502815e5d4646c321be76eb618dc3
++ 4100c571d3ec962742c80327cb5137b34f17f22f1db309e59907813243d7c004
+ : asr_runtime/asr_cli.py
+
+----------------------------------------------------------------------
+Ran 140 tests in 13.641s
+
+FAILED (failures=1)

@@ -1,0 +1,15 @@
+{
+  "pipeline/control_0": {
+    "type": "example.org:user:control:1.0",
+    "phys_addr": 1136656384,
+    "addr_range": 65536,
+    "registers": {
+      "ID": {
+        "address_offset": 0
+      },
+      "STATUS": {
+        "address_offset": 4
+      }
+    }
+  }
+}

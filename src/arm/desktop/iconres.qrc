@@ -1,0 +1,34 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/icon/bar_1.png</file>
+        <file>resources/icon/bar_2.png</file>
+        <file>resources/icon/last_1.png</file>
+        <file>resources/icon/last_2.png</file>
+        <file>resources/icon/next_1.png</file>
+        <file>resources/icon/next_2.png</file>
+        <file>resources/icon/play_1.png</file>
+        <file>resources/icon/play_2.png</file>
+        <file>resources/icon/stop_1.png</file>
+        <file>resources/icon/stop_2.png</file>
+        <file>resources/icon/appicon/ADC.png</file>
+        <file>resources/icon/appicon/calculator.png</file>
+        <file>resources/icon/appicon/calendar.png</file>
+        <file>resources/icon/appicon/camera.png</file>
+        <file>resources/icon/appicon/clock.png</file>
+        <file>resources/icon/appicon/ebook.png</file>
+        <file>resources/icon/appicon/eluosifangkuai.png</file>
+        <file>resources/icon/appicon/fileManager.png</file>
+        <file>resources/icon/appicon/keyTest.png</file>
+        <file>resources/icon/appicon/LED.png</file>
+        <file>resources/icon/appicon/musicPlay.png</file>
+        <file>resources/icon/appicon/Notepad.png</file>
+        <file>resources/icon/appicon/onlineWeather.png</file>
+        <file>resources/icon/appicon/OpenCV.png</file>
+        <file>resources/icon/appicon/pictureView.png</file>
+        <file>resources/icon/appicon/QtDemo_1.png</file>
+        <file>resources/icon/appicon/QtDemo_2.png</file>
+        <file>resources/icon/appicon/systemSetting.png</file>
+        <file>resources/icon/appicon/temp.png</file>
+        <file>resources/icon/appicon/VoltageMonitoring.png</file>
+    </qresource>
+</RCC>

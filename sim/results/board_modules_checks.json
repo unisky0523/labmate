@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "checks": {
+    "handoff_manifest_files": 194,
+    "python_files_parsed_for_3_7": 106,
+    "firmware_bytes": 885056,
+    "embedded_html_matches": true,
+    "firmware_sha256": "c30082a49a1782e9ad18d9eab50b93cfcc7cdc7455b0455a0454790700f853e2",
+    "esp32_environment": "esp32dev_spi_emio",
+    "static_arm_executables": 3,
+    "protocol_roundtrip_vectors": 27,
+    "invalid_frames_or_acks_rejected": 8,
+    "current_dtb_spi_limit_hz": 4000000,
+    "handoff_max_fps_requested_hz": 8000000,
+    "hardware_accessed": false,
+    "fresh_esp32_or_arm_cross_build": false,
+    "javascript_syntax": "passed"
+  },
+  "failures": []
+}

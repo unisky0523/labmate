@@ -1,0 +1,7 @@
+crc32 0x02000000 0x49ce18
+crc32 for 02000000 ... 0249ce17 ==> 527b2fd0
+Zynq> crc32 0x01f00000 0x59f4
+crc32 for 01f00000 ... 01f059f3 ==> 9d849c68
+Zynq> md.l 0xf800012c 1
+f800012c: 01fd0ccd                               ....
+Zynq> 

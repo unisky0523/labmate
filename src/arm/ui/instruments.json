@@ -1,0 +1,23 @@
+{
+  "meter": {
+    "root": "/media/sd-mmcblk0p1/labmate_sa5041_board"
+  },
+  "scope": {
+    "root": "/media/sd-mmcblk0p1/labmate_sds1202x_board",
+    "resource": "USB0::62700::60986::SDS1XDC4163410::0::INSTR",
+    "channels": [1],
+    "parameters": ["PKPK", "FREQ", "RMS"]
+  },
+  "generator": {
+    "root": "/home/root/labmate_ui_test/dg4102_driver",
+    "channels": [2]
+  },
+  "query_timeout_ms": 3000,
+  "fft": {
+    "fft_size": 4096,
+    "worker_argv": [],
+    "renderer": "/home/root/labmate_ui_test/labassistant"
+  },
+  "screen_timeout_ms": 15000,
+  "evidence_dir": "/home/root/labmate_ui_test/data/instrument_jobs"
+}

@@ -1,0 +1,11 @@
+Project files checked: 701
+Missing files: 
+PCW_SPI0_PERIPHERAL_ENABLE = 1
+PCW_SPI0_SPI0_IO = EMIO
+PCW_UART0_PERIPHERAL_ENABLE = 1
+PCW_UART0_UART0_IO = MIO 14 .. 15
+PCW_UART1_PERIPHERAL_ENABLE = 0
+PCW_CAN0_PERIPHERAL_ENABLE = 0
+PCW_GPIO_EMIO_GPIO_IO = 12
+Camera /camera_in LCD /lcd_out ASR /audio/asr_frontend_0
+Relocation open and BD validation PASSED

@@ -1,0 +1,51 @@
+sync; reboot
+
+Broadcast message from root@ATK-ZYNQ (ng down for reboot NOW!
+INIT: Switching to runlevel: 6
+INIT: Sending processes the TERM signal
+root@ATK-ZYNQ:~# Stopping haveged: 
+
+Stopping Dropbear SSH server: stopped /usr/sbin/dropbear (pid 558)
+dropbear.
+Stopping system message bus: dbus.
+stopping DNS forwarder and DHCP server: dnsmasq... stopped /usr/bin/dnsmasq (pid 573)
+done.
+Stopping internet superserver: inetd.
+Stopping syslogd/klogd: stopped syslogd (pid 583)
+stopped klogd (pid 586)
+done
+Stopping tcf-agent: OK
+stopping statd: done
+Stopping rpcbind daemon...
+done.
+Stopping S.M.A.R.T. daemon: smartd.
+Deconfiguring network interfaces... done.
+Sending all processes the TERM signal...
+Sending all processes the KILL signal...
+Unmounting remote filesystems...
+Deactivating swap...
+Unmounting local filesystems...
+EXT4-fs (mmcblk1p1): re-mounted. Opts: (null)
+Rebooting... Console: switching to colour dummy device 80x30
+reboot: Restarting system
+
+
+U-Boot 2020.01 (Jul 30 2024 - 16:02:31 +0800)
+
+CPU:   Zynq 7z010
+Silicon: v3.1
+Model: Alientek Zynq Development Board
+DRAM:  ECC disabled 512 MiB
+Flash: 0 Bytes
+NAND:  0 MiB
+MMC:   mmc@e0100000: 0, mmc@e0101000: 1
+In:    serial@e0000000
+Out:   serial@e0000000
+Err:   serial@e0000000
+Net:   
+ZYNQ GEM: e000b000, mdio bus e000b000, phyaddr 7, interface rgmii-id
+
+Warning: ethernet@e000b000 using MAC address from DT
+eth0: ethernet@e000b000
+Hit any key to stop autoboot:  2  0 
+Zynq> 

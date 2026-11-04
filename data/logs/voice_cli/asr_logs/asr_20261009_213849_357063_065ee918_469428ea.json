@@ -1,0 +1,123 @@
+{
+  "text": "帮 我 练 是 季度 五次 数据",
+  "words": [
+    {
+      "conf": 1.0,
+      "end": 0.929431,
+      "start": 0.66,
+      "word": "帮"
+    },
+    {
+      "conf": 0.981045,
+      "end": 1.170133,
+      "start": 0.93,
+      "word": "我"
+    },
+    {
+      "conf": 0.569068,
+      "end": 1.44,
+      "start": 1.170999,
+      "word": "练"
+    },
+    {
+      "conf": 0.949968,
+      "end": 1.68,
+      "start": 1.44,
+      "word": "是"
+    },
+    {
+      "conf": 0.937102,
+      "end": 2.25,
+      "start": 1.68,
+      "word": "季度"
+    },
+    {
+      "conf": 1.0,
+      "end": 2.79,
+      "start": 2.28,
+      "word": "五次"
+    },
+    {
+      "conf": 0.939488,
+      "end": 3.33,
+      "start": 2.79,
+      "word": "数据"
+    }
+  ],
+  "segments": [
+    {
+      "result": [
+        {
+          "conf": 1.0,
+          "end": 0.929431,
+          "start": 0.66,
+          "word": "帮"
+        },
+        {
+          "conf": 0.981045,
+          "end": 1.170133,
+          "start": 0.93,
+          "word": "我"
+        },
+        {
+          "conf": 0.569068,
+          "end": 1.44,
+          "start": 1.170999,
+          "word": "练"
+        },
+        {
+          "conf": 0.949968,
+          "end": 1.68,
+          "start": 1.44,
+          "word": "是"
+        },
+        {
+          "conf": 0.937102,
+          "end": 2.25,
+          "start": 1.68,
+          "word": "季度"
+        },
+        {
+          "conf": 1.0,
+          "end": 2.79,
+          "start": 2.28,
+          "word": "五次"
+        },
+        {
+          "conf": 0.939488,
+          "end": 3.33,
+          "start": 2.79,
+          "word": "数据"
+        }
+      ],
+      "text": "帮 我 练 是 季度 五次 数据"
+    }
+  ],
+  "command": null,
+  "reason": "没有完整理解这句话，本次未执行。输入 help 查看支持的表达。",
+  "duration_seconds": 3.55,
+  "recognition_ms": 1042.49,
+  "min_word_confidence": 0.569068,
+  "mode": "test",
+  "audio_path": "D:\\labmate_b\\data\\audio\\asr_tests\\asr_20261009_213849_357063_065ee918.wav",
+  "metadata": {
+    "recorded_at": "2026-10-09T21:38:45.213+08:00",
+    "native_rate": 44100,
+    "device_name": "麦克风阵列 (Realtek(R) Audio)",
+    "truncated": false,
+    "capture_errors": []
+  },
+  "created_at": "2026-10-09T21:38:50.401+08:00",
+  "model_path": "D:\\labmate_b\\models\\vosk-model-small-cn-0.22",
+  "minimum_word_confidence": 0.45,
+  "pipeline_version": "vosk_domain_v1",
+  "sample_rate": 16000,
+  "expected_text": "帮我连续记录五次数据",
+  "expected_command": {
+    "intent": "record_device",
+    "count": 5,
+    "interval": 1.0
+  },
+  "semantic_correct": false,
+  "dispatch_state": "not_dispatched"
+}

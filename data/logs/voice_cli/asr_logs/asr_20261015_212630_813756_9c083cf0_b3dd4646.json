@@ -1,0 +1,95 @@
+{
+  "text": "拍 波形",
+  "words": [
+    {
+      "conf": 0.795924,
+      "end": 0.99,
+      "start": 0.66,
+      "word": "拍"
+    },
+    {
+      "conf": 0.796139,
+      "end": 1.62,
+      "start": 0.99,
+      "word": "波形"
+    }
+  ],
+  "segments": [
+    {
+      "result": [
+        {
+          "conf": 0.795924,
+          "end": 0.99,
+          "start": 0.66,
+          "word": "拍"
+        },
+        {
+          "conf": 0.796139,
+          "end": 1.62,
+          "start": 0.99,
+          "word": "波形"
+        }
+      ],
+      "text": "拍 波形"
+    }
+  ],
+  "command": {
+    "intent": "capture_image"
+  },
+  "reason": null,
+  "duration_seconds": 2.1,
+  "text_baseline": "拍 波形",
+  "words_baseline": [
+    {
+      "conf": 0.795924,
+      "end": 0.99,
+      "start": 0.66,
+      "word": "拍"
+    },
+    {
+      "conf": 0.796139,
+      "end": 1.62,
+      "start": 0.99,
+      "word": "波形"
+    }
+  ],
+  "segments_baseline": [
+    {
+      "result": [
+        {
+          "conf": 0.795924,
+          "end": 0.99,
+          "start": 0.66,
+          "word": "拍"
+        },
+        {
+          "conf": 0.796139,
+          "end": 1.62,
+          "start": 0.99,
+          "word": "波形"
+        }
+      ],
+      "text": "拍 波形"
+    }
+  ],
+  "min_word_confidence": 0.795924,
+  "recognizer_mode": "baseline",
+  "recognition_ms": 894.31,
+  "mode": "run",
+  "audio_path": "D:\\labmate_b\\data\\audio\\asr_tests\\asr_20261015_212630_813756_9c083cf0.wav",
+  "metadata": {
+    "recorded_at": "2026-10-15T21:26:28.089+08:00",
+    "native_rate": 44100,
+    "device_name": "麦克风阵列 (Realtek(R) Audio)",
+    "truncated": false,
+    "capture_errors": []
+  },
+  "created_at": "2026-10-15T21:26:31.709+08:00",
+  "model_path": "D:\\labmate_b\\models\\vosk-model-small-cn-0.22",
+  "minimum_word_confidence": 0.45,
+  "pipeline_version": "vosk_domain_v1",
+  "sample_rate": 16000,
+  "dispatch_state": "delivered_to_application",
+  "confirm_readback_text": "可以",
+  "confirm_readback_audio_path": "D:\\labmate_b\\data\\audio\\asr_tests\\asr_20261015_212644_580850_33feba9a.wav"
+}

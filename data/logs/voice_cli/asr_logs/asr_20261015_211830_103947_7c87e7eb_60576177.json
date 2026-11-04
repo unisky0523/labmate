@@ -1,0 +1,471 @@
+{
+  "text": "帮助 记录 电压 三 点 三 伏 电流 一 点 六 安",
+  "words": [
+    {
+      "conf": 0.536722,
+      "end": 1.2,
+      "start": 0.81,
+      "word": "帮助"
+    },
+    {
+      "conf": 1.0,
+      "end": 1.71,
+      "start": 1.2,
+      "word": "记录"
+    },
+    {
+      "conf": 1.0,
+      "end": 2.25,
+      "start": 1.71,
+      "word": "电压"
+    },
+    {
+      "conf": 1.0,
+      "end": 2.49,
+      "start": 2.25,
+      "word": "三"
+    },
+    {
+      "conf": 1.0,
+      "end": 2.67,
+      "start": 2.49,
+      "word": "点"
+    },
+    {
+      "conf": 1.0,
+      "end": 2.91,
+      "start": 2.67,
+      "word": "三"
+    },
+    {
+      "conf": 1.0,
+      "end": 3.3,
+      "start": 2.91,
+      "word": "伏"
+    },
+    {
+      "conf": 1.0,
+      "end": 3.81,
+      "start": 3.3,
+      "word": "电流"
+    },
+    {
+      "conf": 1.0,
+      "end": 3.99,
+      "start": 3.81,
+      "word": "一"
+    },
+    {
+      "conf": 0.986134,
+      "end": 4.14,
+      "start": 3.99,
+      "word": "点"
+    },
+    {
+      "conf": 0.986134,
+      "end": 4.37911,
+      "start": 4.14,
+      "word": "六"
+    },
+    {
+      "conf": 0.937265,
+      "end": 4.59,
+      "start": 4.38,
+      "word": "安"
+    }
+  ],
+  "segments": [
+    {
+      "result": [
+        {
+          "conf": 0.536722,
+          "end": 1.2,
+          "start": 0.81,
+          "word": "帮助"
+        },
+        {
+          "conf": 1.0,
+          "end": 1.71,
+          "start": 1.2,
+          "word": "记录"
+        },
+        {
+          "conf": 1.0,
+          "end": 2.25,
+          "start": 1.71,
+          "word": "电压"
+        },
+        {
+          "conf": 1.0,
+          "end": 2.49,
+          "start": 2.25,
+          "word": "三"
+        },
+        {
+          "conf": 1.0,
+          "end": 2.67,
+          "start": 2.49,
+          "word": "点"
+        },
+        {
+          "conf": 1.0,
+          "end": 2.91,
+          "start": 2.67,
+          "word": "三"
+        },
+        {
+          "conf": 1.0,
+          "end": 3.3,
+          "start": 2.91,
+          "word": "伏"
+        },
+        {
+          "conf": 1.0,
+          "end": 3.81,
+          "start": 3.3,
+          "word": "电流"
+        },
+        {
+          "conf": 1.0,
+          "end": 3.99,
+          "start": 3.81,
+          "word": "一"
+        },
+        {
+          "conf": 0.986134,
+          "end": 4.14,
+          "start": 3.99,
+          "word": "点"
+        },
+        {
+          "conf": 0.986134,
+          "end": 4.37911,
+          "start": 4.14,
+          "word": "六"
+        },
+        {
+          "conf": 0.937265,
+          "end": 4.59,
+          "start": 4.38,
+          "word": "安"
+        }
+      ],
+      "text": "帮助 记录 电压 三 点 三 伏 电流 一 点 六 安"
+    }
+  ],
+  "command": {
+    "intent": "record_manual",
+    "measurements": [
+      {
+        "quantity": "voltage",
+        "value": "3.3",
+        "unit": "V",
+        "raw_value": "三点三",
+        "raw_unit": "伏",
+        "unit_inferred": false
+      },
+      {
+        "quantity": "current",
+        "value": "1.6",
+        "unit": "A",
+        "raw_value": "一点六",
+        "raw_unit": "安",
+        "unit_inferred": false
+      }
+    ],
+    "inferred_units": []
+  },
+  "reason": null,
+  "duration_seconds": 5.35,
+  "text_baseline": "帮 我 记录 电压 三点 三伏 电流 一点六 玩",
+  "words_baseline": [
+    {
+      "conf": 0.744562,
+      "end": 0.99,
+      "start": 0.81,
+      "word": "帮"
+    },
+    {
+      "conf": 0.918357,
+      "end": 1.2,
+      "start": 0.99,
+      "word": "我"
+    },
+    {
+      "conf": 0.852661,
+      "end": 1.71,
+      "start": 1.2,
+      "word": "记录"
+    },
+    {
+      "conf": 0.968125,
+      "end": 2.25,
+      "start": 1.71,
+      "word": "电压"
+    },
+    {
+      "conf": 1.0,
+      "end": 2.67,
+      "start": 2.25,
+      "word": "三点"
+    },
+    {
+      "conf": 0.586948,
+      "end": 3.3,
+      "start": 2.67,
+      "word": "三伏"
+    },
+    {
+      "conf": 1.0,
+      "end": 3.81,
+      "start": 3.3,
+      "word": "电流"
+    },
+    {
+      "conf": 0.845176,
+      "end": 4.294833,
+      "start": 3.81,
+      "word": "一点六"
+    },
+    {
+      "conf": 0.269149,
+      "end": 4.59,
+      "start": 4.294833,
+      "word": "玩"
+    }
+  ],
+  "segments_baseline": [
+    {
+      "result": [
+        {
+          "conf": 0.744562,
+          "end": 0.99,
+          "start": 0.81,
+          "word": "帮"
+        },
+        {
+          "conf": 0.918357,
+          "end": 1.2,
+          "start": 0.99,
+          "word": "我"
+        },
+        {
+          "conf": 0.852661,
+          "end": 1.71,
+          "start": 1.2,
+          "word": "记录"
+        },
+        {
+          "conf": 0.968125,
+          "end": 2.25,
+          "start": 1.71,
+          "word": "电压"
+        },
+        {
+          "conf": 1.0,
+          "end": 2.67,
+          "start": 2.25,
+          "word": "三点"
+        },
+        {
+          "conf": 0.586948,
+          "end": 3.3,
+          "start": 2.67,
+          "word": "三伏"
+        },
+        {
+          "conf": 1.0,
+          "end": 3.81,
+          "start": 3.3,
+          "word": "电流"
+        },
+        {
+          "conf": 0.845176,
+          "end": 4.294833,
+          "start": 3.81,
+          "word": "一点六"
+        },
+        {
+          "conf": 0.269149,
+          "end": 4.59,
+          "start": 4.294833,
+          "word": "玩"
+        }
+      ],
+      "text": "帮 我 记录 电压 三点 三伏 电流 一点六 玩"
+    }
+  ],
+  "min_word_confidence": 0.536722,
+  "text_grammar": "帮助 记录 电压 三 点 三 伏 电流 一 点 六 安",
+  "words_grammar": [
+    {
+      "conf": 0.536722,
+      "end": 1.2,
+      "start": 0.81,
+      "word": "帮助"
+    },
+    {
+      "conf": 1.0,
+      "end": 1.71,
+      "start": 1.2,
+      "word": "记录"
+    },
+    {
+      "conf": 1.0,
+      "end": 2.25,
+      "start": 1.71,
+      "word": "电压"
+    },
+    {
+      "conf": 1.0,
+      "end": 2.49,
+      "start": 2.25,
+      "word": "三"
+    },
+    {
+      "conf": 1.0,
+      "end": 2.67,
+      "start": 2.49,
+      "word": "点"
+    },
+    {
+      "conf": 1.0,
+      "end": 2.91,
+      "start": 2.67,
+      "word": "三"
+    },
+    {
+      "conf": 1.0,
+      "end": 3.3,
+      "start": 2.91,
+      "word": "伏"
+    },
+    {
+      "conf": 1.0,
+      "end": 3.81,
+      "start": 3.3,
+      "word": "电流"
+    },
+    {
+      "conf": 1.0,
+      "end": 3.99,
+      "start": 3.81,
+      "word": "一"
+    },
+    {
+      "conf": 0.986134,
+      "end": 4.14,
+      "start": 3.99,
+      "word": "点"
+    },
+    {
+      "conf": 0.986134,
+      "end": 4.37911,
+      "start": 4.14,
+      "word": "六"
+    },
+    {
+      "conf": 0.937265,
+      "end": 4.59,
+      "start": 4.38,
+      "word": "安"
+    }
+  ],
+  "segments_grammar": [
+    {
+      "result": [
+        {
+          "conf": 0.536722,
+          "end": 1.2,
+          "start": 0.81,
+          "word": "帮助"
+        },
+        {
+          "conf": 1.0,
+          "end": 1.71,
+          "start": 1.2,
+          "word": "记录"
+        },
+        {
+          "conf": 1.0,
+          "end": 2.25,
+          "start": 1.71,
+          "word": "电压"
+        },
+        {
+          "conf": 1.0,
+          "end": 2.49,
+          "start": 2.25,
+          "word": "三"
+        },
+        {
+          "conf": 1.0,
+          "end": 2.67,
+          "start": 2.49,
+          "word": "点"
+        },
+        {
+          "conf": 1.0,
+          "end": 2.91,
+          "start": 2.67,
+          "word": "三"
+        },
+        {
+          "conf": 1.0,
+          "end": 3.3,
+          "start": 2.91,
+          "word": "伏"
+        },
+        {
+          "conf": 1.0,
+          "end": 3.81,
+          "start": 3.3,
+          "word": "电流"
+        },
+        {
+          "conf": 1.0,
+          "end": 3.99,
+          "start": 3.81,
+          "word": "一"
+        },
+        {
+          "conf": 0.986134,
+          "end": 4.14,
+          "start": 3.99,
+          "word": "点"
+        },
+        {
+          "conf": 0.986134,
+          "end": 4.37911,
+          "start": 4.14,
+          "word": "六"
+        },
+        {
+          "conf": 0.937265,
+          "end": 4.59,
+          "start": 4.38,
+          "word": "安"
+        }
+      ],
+      "text": "帮助 记录 电压 三 点 三 伏 电流 一 点 六 安"
+    }
+  ],
+  "min_word_confidence_grammar": 0.536722,
+  "recognizer_mode": "grammar_fallback",
+  "recognition_ms": 1524.53,
+  "mode": "run",
+  "audio_path": "D:\\labmate_b\\data\\audio\\asr_tests\\asr_20261015_211830_103947_7c87e7eb.wav",
+  "metadata": {
+    "recorded_at": "2026-10-15T21:18:24.104+08:00",
+    "native_rate": 44100,
+    "device_name": "麦克风阵列 (Realtek(R) Audio)",
+    "truncated": false,
+    "capture_errors": []
+  },
+  "created_at": "2026-10-15T21:18:31.631+08:00",
+  "model_path": "D:\\labmate_b\\models\\vosk-model-small-cn-0.22",
+  "minimum_word_confidence": 0.45,
+  "pipeline_version": "vosk_domain_v1",
+  "sample_rate": 16000,
+  "dispatch_state": "not_dispatched"
+}

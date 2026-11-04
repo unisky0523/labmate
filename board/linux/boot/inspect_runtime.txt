@@ -1,0 +1,4 @@
+find /media/sd-mmcblk0p1 -maxdepth 3 -type f \( -name zImage -o -name '*board_files*' -o -name '*.bit' -o -name '*kernel*.zip' \)
+cat /media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/emio_board.py
+cat /media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/run_spi_emio_board.sh
+sed -n '1,180p' /media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/SPI_EMIO_RUN_CN.md

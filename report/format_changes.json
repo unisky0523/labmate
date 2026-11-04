@@ -1,0 +1,38 @@
+[
+  {
+    "path": "src/linux/kernel/atk-zynq-linux-xlnx.tar.xz",
+    "old_sha256": "371ad957e55c2e37ff571ae16de4444d7ebd48c687d4df0266dc25b1671ea005",
+    "new_sha256": "2a980bfdae1923e3f2a2ac43bcd835dd40791274102ae9954c9a979b66f2e5c0",
+    "reason": "Kernel cache removal / compression format and paired build input checksums"
+  },
+  {
+    "path": "src/arm/vision/ov5640_kernel_recovery_20261022/build_kernel.sh",
+    "old_sha256": "0e3c6baa25ec8428bf6e3ed80357968864e928a712ec049ea5847a497415135d",
+    "new_sha256": "73fd00e82c2e8b184666b50208e02adf53fa090afebfb88a0f0167912f915a50",
+    "reason": "Kernel cache removal / compression format and paired build input checksums"
+  },
+  {
+    "path": "src/arm/vision/ov5640_kernel_recovery_20261022/input_sha256sums",
+    "old_sha256": "c08859a98d180d5425eccbc1ab53901283c17c13d95d3a56f9b34759e26f51d8",
+    "new_sha256": "2bfa1dee28e617094b0ebbe8af15e008249bafc082a66171e061260e7c152d36",
+    "reason": "Kernel cache removal / compression format and paired build input checksums"
+  },
+  {
+    "path": "src/linux/kit/build_spi.sh",
+    "old_sha256": "0ff88c277b82089cdd8c3ea64dbb5886bc3c0093951df4ae1800286e7574ae1c",
+    "new_sha256": "4743735406adf4b0627398b9b8c1098b699edcd929f479c8fbf22fd91000516f",
+    "reason": "Kernel cache removal / compression format and paired build input checksums"
+  },
+  {
+    "path": "src/linux/kit/input_sha256sums",
+    "old_sha256": "9af786761a54e1ddc48c7e1aa42ddac417e3f5d94ff5bbf84f67f7fbacc6be9e",
+    "new_sha256": "74b7b3d4df15f781712ada423a705da007bf45e69f853f59056615361d01cb18",
+    "reason": "Kernel cache removal / compression format and paired build input checksums"
+  },
+  {
+    "path": "src/linux/kernel/atk-zynq-linux-xlnx.tar.xz",
+    "old_sha256": "371ad957e55c2e37ff571ae16de4444d7ebd48c687d4df0266dc25b1671ea005",
+    "new_sha256": "2a980bfdae1923e3f2a2ac43bcd835dd40791274102ae9954c9a979b66f2e5c0",
+    "reason": "Kernel cache removal / compression format and paired build input checksums"
+  }
+]

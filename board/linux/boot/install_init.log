@@ -1,0 +1,21 @@
+uname -r
+5.4.0-xilinx-v2020.2-spi-test-20261104
+root@ATK-ZYNQ:~# ls -l /dev/spidev1.0 /dev/video0 /dev/fb0
+crw-rw----    1 root     video      29,   0 Nov  3 20:20 /dev/fb0
+crw-------    1 root     root      153,   0 Nov  3 20:20 /dev/spidev1.0
+crw-rw----    1 root     video      81,   0 Nov  3 20:20 /dev/video0
+root@ATK-ZYNQ:~# python3 -c 'import pathlib,shutil; s=pathlib.Path("/home/root/s pi_stage_20261104/config"); jobs=[(s/"labmate-spi-init.py",pathlib.Path("/usr/lo cal/lib/labmate-spi-init.py")),(s/"labmate-spi",pathlib.Path("/etc/init.d/labmat e-spi")),(s/"rollback-factory.sh",pathlib.Path("/home/root/spi_boot_backup_20261 104/rollback-factory.sh"))]; assert all(not d.exists() for a,d in jobs); [(d.par ent.mkdir(parents=True,exist_ok=True),shutil.copyfile(str(a),str(d)),d.chmod(0o7 55)) for a,d in jobs]; link=pathlib.Path("/etc/rcS.d/S40labmate-spi"); assert no t link.exists(); link.symlink_to("../init.d/labmate-spi"); print("SPI_INIT_INSTA LLED")'
+SPI_INIT_INSTALLED
+root@ATK-ZYNQ:~# /etc/init.d/labmate-spi start
+LABMATE_SPI_READY device=/dev/spidev1.0 mode=1 bits=8 ready=/sys/class/gpio/gpio962/value direction=in
+root@ATK-ZYNQ:~# cat /sys/class/gpio/gpio962/direction
+in
+root@ATK-ZYNQ:~# cat /var/log/labmate-spi-init.log
+LABMATE_SPI_READY device=/dev/spidev1.0 mode=1 bits=8 ready=/sys/class/gpio/gpio962/value direction=in
+root@ATK-ZYNQ:~# sha256sum /dev/mtd0 /dev/mtd1 /dev/mtd2 /dev/mtd3
+6e6addd02a1de7801b1415c532533b8ac287a876a65f63d1cdb7539f9a9e1ce6  /dev/mtd0
+b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260  /dev/mtd1
+c7b045f395a08b78aa20f1b4c12ca12e14029c0a911879bfc93d93a791701ab1  /dev/mtd2
+0ab06ec02ee5b1866c45180085041eb0a839f53f0e6ab535ce83bb20e26bf323  /dev/mtd3
+root@ATK-ZYNQ:~# sync
+root@ATK-ZYNQ:~# 

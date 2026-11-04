@@ -1,0 +1,138 @@
+{
+  "text": "拍 一下 不行",
+  "words": [
+    {
+      "conf": 0.972903,
+      "end": 1.05,
+      "start": 0.51,
+      "word": "拍"
+    },
+    {
+      "conf": 0.879384,
+      "end": 1.92,
+      "start": 1.41,
+      "word": "一下"
+    },
+    {
+      "conf": 0.701602,
+      "end": 2.64,
+      "start": 1.92,
+      "word": "不行"
+    }
+  ],
+  "segments": [
+    {
+      "result": [
+        {
+          "conf": 0.972903,
+          "end": 1.05,
+          "start": 0.51,
+          "word": "拍"
+        },
+        {
+          "conf": 0.879384,
+          "end": 1.92,
+          "start": 1.41,
+          "word": "一下"
+        },
+        {
+          "conf": 0.701602,
+          "end": 2.64,
+          "start": 1.92,
+          "word": "不行"
+        }
+      ],
+      "text": "拍 一下 不行"
+    }
+  ],
+  "command": null,
+  "reason": "没有完整理解这句话，本次未执行。输入 help 查看支持的表达。",
+  "duration_seconds": 3.4,
+  "text_baseline": "拍 一下 不行",
+  "words_baseline": [
+    {
+      "conf": 0.972903,
+      "end": 1.05,
+      "start": 0.51,
+      "word": "拍"
+    },
+    {
+      "conf": 0.879384,
+      "end": 1.92,
+      "start": 1.41,
+      "word": "一下"
+    },
+    {
+      "conf": 0.701602,
+      "end": 2.64,
+      "start": 1.92,
+      "word": "不行"
+    }
+  ],
+  "segments_baseline": [
+    {
+      "result": [
+        {
+          "conf": 0.972903,
+          "end": 1.05,
+          "start": 0.51,
+          "word": "拍"
+        },
+        {
+          "conf": 0.879384,
+          "end": 1.92,
+          "start": 1.41,
+          "word": "一下"
+        },
+        {
+          "conf": 0.701602,
+          "end": 2.64,
+          "start": 1.92,
+          "word": "不行"
+        }
+      ],
+      "text": "拍 一下 不行"
+    }
+  ],
+  "min_word_confidence": 0.701602,
+  "text_grammar": "[unk]",
+  "words_grammar": [
+    {
+      "conf": 1.0,
+      "end": 2.61,
+      "start": 0.51,
+      "word": "[unk]"
+    }
+  ],
+  "segments_grammar": [
+    {
+      "result": [
+        {
+          "conf": 1.0,
+          "end": 2.61,
+          "start": 0.51,
+          "word": "[unk]"
+        }
+      ],
+      "text": "[unk]"
+    }
+  ],
+  "min_word_confidence_grammar": 1.0,
+  "recognizer_mode": "baseline",
+  "recognition_ms": 850.51,
+  "mode": "run",
+  "audio_path": "D:\\labmate_b\\data\\audio\\asr_tests\\asr_20261015_213150_463356_9c18bf69.wav",
+  "metadata": {
+    "recorded_at": "2026-10-15T21:31:46.517+08:00",
+    "native_rate": 44100,
+    "device_name": "麦克风阵列 (Realtek(R) Audio)",
+    "truncated": false,
+    "capture_errors": []
+  },
+  "created_at": "2026-10-15T21:31:51.317+08:00",
+  "model_path": "D:\\labmate_b\\models\\vosk-model-small-cn-0.22",
+  "minimum_word_confidence": 0.45,
+  "pipeline_version": "vosk_domain_v1",
+  "sample_rate": 16000,
+  "dispatch_state": "not_dispatched"
+}

@@ -1,0 +1,184 @@
+{
+  "text": "记录 电流 三点 二 六 服 电压 的 是 他 的 撤回",
+  "words": [
+    {
+      "conf": 0.880733,
+      "end": 1.11,
+      "start": 0.42,
+      "word": "记录"
+    },
+    {
+      "conf": 1.0,
+      "end": 1.89,
+      "start": 1.38,
+      "word": "电流"
+    },
+    {
+      "conf": 1.0,
+      "end": 2.43,
+      "start": 1.89,
+      "word": "三点"
+    },
+    {
+      "conf": 0.774953,
+      "end": 2.637962,
+      "start": 2.43,
+      "word": "二"
+    },
+    {
+      "conf": 0.827159,
+      "end": 2.85,
+      "start": 2.637962,
+      "word": "六"
+    },
+    {
+      "conf": 0.18968,
+      "end": 3.24,
+      "start": 2.85,
+      "word": "服"
+    },
+    {
+      "conf": 1.0,
+      "end": 4.2,
+      "start": 3.63,
+      "word": "电压"
+    },
+    {
+      "conf": 0.795967,
+      "end": 4.71,
+      "start": 4.56,
+      "word": "的"
+    },
+    {
+      "conf": 0.279542,
+      "end": 5.599035,
+      "start": 5.34,
+      "word": "是"
+    },
+    {
+      "conf": 0.366844,
+      "end": 6.959274,
+      "start": 6.81,
+      "word": "他"
+    },
+    {
+      "conf": 0.62128,
+      "end": 7.05,
+      "start": 6.959274,
+      "word": "的"
+    },
+    {
+      "conf": 0.842915,
+      "end": 7.5,
+      "start": 7.05,
+      "word": "撤回"
+    }
+  ],
+  "segments": [
+    {
+      "result": [
+        {
+          "conf": 0.880733,
+          "end": 1.11,
+          "start": 0.42,
+          "word": "记录"
+        },
+        {
+          "conf": 1.0,
+          "end": 1.89,
+          "start": 1.38,
+          "word": "电流"
+        },
+        {
+          "conf": 1.0,
+          "end": 2.43,
+          "start": 1.89,
+          "word": "三点"
+        },
+        {
+          "conf": 0.774953,
+          "end": 2.637962,
+          "start": 2.43,
+          "word": "二"
+        },
+        {
+          "conf": 0.827159,
+          "end": 2.85,
+          "start": 2.637962,
+          "word": "六"
+        },
+        {
+          "conf": 0.18968,
+          "end": 3.24,
+          "start": 2.85,
+          "word": "服"
+        },
+        {
+          "conf": 1.0,
+          "end": 4.2,
+          "start": 3.63,
+          "word": "电压"
+        },
+        {
+          "conf": 0.795967,
+          "end": 4.71,
+          "start": 4.56,
+          "word": "的"
+        },
+        {
+          "conf": 0.279542,
+          "end": 5.599035,
+          "start": 5.34,
+          "word": "是"
+        }
+      ],
+      "text": "记录 电流 三点 二 六 服 电压 的 是"
+    },
+    {
+      "result": [
+        {
+          "conf": 0.366844,
+          "end": 6.959274,
+          "start": 6.81,
+          "word": "他"
+        },
+        {
+          "conf": 0.62128,
+          "end": 7.05,
+          "start": 6.959274,
+          "word": "的"
+        },
+        {
+          "conf": 0.842915,
+          "end": 7.5,
+          "start": 7.05,
+          "word": "撤回"
+        }
+      ],
+      "text": "他 的 撤回"
+    }
+  ],
+  "command": null,
+  "reason": "部分词的识别分数较低，本次不执行，请核对显示文字并重说。",
+  "duration_seconds": 7.6,
+  "recognition_ms": 2304.27,
+  "min_word_confidence": 0.18968,
+  "mode": "test",
+  "audio_path": "D:\\labmate_b\\data\\audio\\asr_tests\\asr_20261009_213216_052494_930de46e.wav",
+  "metadata": {
+    "recorded_at": "2026-10-09T21:32:07.689+08:00",
+    "native_rate": 44100,
+    "device_name": "麦克风阵列 (Realtek(R) Audio)",
+    "truncated": false,
+    "capture_errors": []
+  },
+  "created_at": "2026-10-09T21:32:18.360+08:00",
+  "model_path": "D:\\labmate_b\\models\\vosk-model-small-cn-0.22",
+  "minimum_word_confidence": 0.45,
+  "pipeline_version": "vosk_domain_v1",
+  "sample_rate": 16000,
+  "expected_text": "unknown",
+  "expected_command": null,
+  "semantic_correct": true,
+  "dispatch_state": "not_dispatched"
+}

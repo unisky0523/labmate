@@ -1,0 +1,499 @@
+{
+  "targets": [
+    "bc",
+    "bison",
+    "flex",
+    "libssl-dev",
+    "libelf-dev",
+    "zlib1g-dev",
+    "u-boot-tools",
+    "device-tree-compiler",
+    "kmod",
+    "pkg-config"
+  ],
+  "system_prerequisites": [
+    "debconf",
+    "debconf-2.0",
+    "dpkg",
+    "install-info",
+    "libc-bin",
+    "libc-dev-bin",
+    "libc6",
+    "libc6-dev",
+    "libgcc1",
+    "libstdc++6",
+    "linux-libc-dev",
+    "multiarch-support",
+    "perl",
+    "perl-base",
+    "ucf"
+  ],
+  "indexes": [
+    {
+      "suite": "bionic",
+      "component": "main",
+      "index_url": "https://archive.ubuntu.com/ubuntu/dists/bionic/main/binary-amd64/Packages.xz",
+      "sha256": "695c0eea6c76328592315343dc03cc2b063dfba15fcf145234dfd5ede50a48d3"
+    },
+    {
+      "suite": "bionic",
+      "component": "universe",
+      "index_url": "https://archive.ubuntu.com/ubuntu/dists/bionic/universe/binary-amd64/Packages.xz",
+      "sha256": "39ec12bac1f788ae649d32c138898d49fdec15eee020a9c72ae92a622fb662a0"
+    },
+    {
+      "suite": "bionic-updates",
+      "component": "main",
+      "index_url": "https://archive.ubuntu.com/ubuntu/dists/bionic-updates/main/binary-amd64/Packages.xz",
+      "sha256": "c0ad42b92b0efa5f65fb51f56b1d39e12330982a5e85304fe152db782a985eb0"
+    },
+    {
+      "suite": "bionic-updates",
+      "component": "universe",
+      "index_url": "https://archive.ubuntu.com/ubuntu/dists/bionic-updates/universe/binary-amd64/Packages.xz",
+      "sha256": "5bd0649c6e9005798ab4836201e645c5ec715b3fa17a4f7a9ce03a6d3a200dd4"
+    },
+    {
+      "suite": "bionic-security",
+      "component": "main",
+      "index_url": "https://security.ubuntu.com/ubuntu/dists/bionic-security/main/binary-amd64/Packages.xz",
+      "sha256": "03d478cf9945cb4c537afb2b06216345304ce743210f06505750d51571d21766"
+    },
+    {
+      "suite": "bionic-security",
+      "component": "universe",
+      "index_url": "https://security.ubuntu.com/ubuntu/dists/bionic-security/universe/binary-amd64/Packages.xz",
+      "sha256": "87b4d8cf9da57a77c4b1fe44fa8e251b745c49623d837279d90c24d3883e4f43"
+    }
+  ],
+  "packages": [
+    {
+      "Package": "bc",
+      "Version": "1.07.1-2",
+      "Architecture": "amd64",
+      "Filename": "pool/main/b/bc/bc_1.07.1-2_amd64.deb",
+      "SHA256": "061619b85e59f1a949bf032def9ce36eb7dce776ffbd19504bfd6f1f6ef66633",
+      "Size": "86160",
+      "Depends": "libc6 (>= 2.14), libreadline7 (>= 6.0)",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "binutils",
+      "Version": "2.30-21ubuntu1~18.04.9",
+      "Architecture": "amd64",
+      "Filename": "pool/main/b/binutils/binutils_2.30-21ubuntu1~18.04.9_amd64.deb",
+      "SHA256": "87a2aa5f0d3b7c31e0fb16055d6a5ed6e5a668c75c4dd02c32a08e4fc4980f8d",
+      "Size": "3392",
+      "Depends": "libc6 (>= 2.27), zlib1g (>= 1:1.1.4), binutils-common (= 2.30-21ubuntu1~18.04.9), libbinutils (= 2.30-21ubuntu1~18.04.9), binutils-x86-64-linux-gnu (= 2.30-21ubuntu1~18.04.9)",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "binutils-common",
+      "Version": "2.30-21ubuntu1~18.04.9",
+      "Architecture": "amd64",
+      "Filename": "pool/main/b/binutils/binutils-common_2.30-21ubuntu1~18.04.9_amd64.deb",
+      "SHA256": "52a7fac6b89db7049106040d56fef6f8d405050d56151b6d576e491cd32c0501",
+      "Size": "196808",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "binutils-x86-64-linux-gnu",
+      "Version": "2.30-21ubuntu1~18.04.9",
+      "Architecture": "amd64",
+      "Filename": "pool/main/b/binutils/binutils-x86-64-linux-gnu_2.30-21ubuntu1~18.04.9_amd64.deb",
+      "SHA256": "513f472188f42de5a8bcd5373cdf18cb8651bab629a941bbd32f34f14e277223",
+      "Size": "1839460",
+      "Depends": "binutils-common (= 2.30-21ubuntu1~18.04.9), libbinutils (= 2.30-21ubuntu1~18.04.9), libc6 (>= 2.27), zlib1g (>= 1:1.1.4)",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "bison",
+      "Version": "2:3.0.4.dfsg-1build1",
+      "Architecture": "amd64",
+      "Filename": "pool/main/b/bison/bison_3.0.4.dfsg-1build1_amd64.deb",
+      "SHA256": "cbdf5358bd0b995ff2723e0ea1d984e1e72ae48cb25872f73ea172041d7c90a7",
+      "Size": "266338",
+      "Depends": "m4, libc6 (>= 2.15), libbison-dev (= 2:3.0.4.dfsg-1build1)",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "bzip2",
+      "Version": "1.0.6-8.1ubuntu0.2",
+      "Architecture": "amd64",
+      "Filename": "pool/main/b/bzip2/bzip2_1.0.6-8.1ubuntu0.2_amd64.deb",
+      "SHA256": "14955e4660d85da6507e9074f14f4d412bc7bf9e7841f327cf8751a6d227e329",
+      "Size": "33928",
+      "Depends": "libbz2-1.0 (= 1.0.6-8.1ubuntu0.2), libc6 (>= 2.14)",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "device-tree-compiler",
+      "Version": "1.4.5-3",
+      "Architecture": "amd64",
+      "Filename": "pool/main/d/device-tree-compiler/device-tree-compiler_1.4.5-3_amd64.deb",
+      "SHA256": "69501c78f97bdfd688367c052fa3dd8ec8b9eb0494e4232b0b3b00fe86df2f9a",
+      "Size": "239452",
+      "Depends": "libc6 (>= 2.7)",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "dpkg-dev",
+      "Version": "1.19.0.5ubuntu2.4",
+      "Architecture": "all",
+      "Filename": "pool/main/d/dpkg/dpkg-dev_1.19.0.5ubuntu2.4_all.deb",
+      "SHA256": "bc437446e66a0ac9ac9de51a16960c5463c11556947835385971e18bc01864a2",
+      "Size": "607432",
+      "Depends": "perl:any, libdpkg-perl (= 1.19.0.5ubuntu2.4), tar (>= 1.28-1), bzip2, xz-utils, patch (>= 2.7), make, binutils",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "flex",
+      "Version": "2.6.4-6",
+      "Architecture": "amd64",
+      "Filename": "pool/main/f/flex/flex_2.6.4-6_amd64.deb",
+      "SHA256": "c819e4b2144c8dcd50ff1b17d072b8f30445b4911ba00a74d9fdb006a655b661",
+      "Size": "315792",
+      "Depends": "libc6 (>= 2.26), m4",
+      "Pre-Depends": "debconf | debconf-2.0",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "kmod",
+      "Version": "24-1ubuntu3.5",
+      "Architecture": "amd64",
+      "Filename": "pool/main/k/kmod/kmod_24-1ubuntu3.5_amd64.deb",
+      "SHA256": "95c7b910461c543322289239749a3afccc3617ab9506d708cef617d408bcd815",
+      "Size": "88796",
+      "Depends": "libc6 (>= 2.17), libkmod2 (= 24-1ubuntu3.5), lsb-base",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "libacl1",
+      "Version": "2.2.52-3build1",
+      "Architecture": "amd64",
+      "Filename": "pool/main/a/acl/libacl1_2.2.52-3build1_amd64.deb",
+      "SHA256": "adbe1a5b37daf02f7bbd645c3a0baf63f6607e207567574c609493c32d5d57a5",
+      "Size": "16126",
+      "Depends": "libattr1 (>= 1:2.4.46-8), libc6 (>= 2.14)",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "libattr1",
+      "Version": "1:2.4.47-2build1",
+      "Architecture": "amd64",
+      "Filename": "pool/main/a/attr/libattr1_2.4.47-2build1_amd64.deb",
+      "SHA256": "91ef5319ee1f0173a6c5d16ba364e79c90f74b94b5d7daed1a2674a92f4f9c78",
+      "Size": "9524",
+      "Depends": "libc6 (>= 2.4)",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "libbinutils",
+      "Version": "2.30-21ubuntu1~18.04.9",
+      "Architecture": "amd64",
+      "Filename": "pool/main/b/binutils/libbinutils_2.30-21ubuntu1~18.04.9_amd64.deb",
+      "SHA256": "3b236bcd2b068263e031cf344911926817663a50eef54c61fdc981111420ed4f",
+      "Size": "489104",
+      "Depends": "libc6 (>= 2.14), zlib1g (>= 1:1.2.0), binutils-common (= 2.30-21ubuntu1~18.04.9)",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "libbison-dev",
+      "Version": "2:3.0.4.dfsg-1build1",
+      "Architecture": "amd64",
+      "Filename": "pool/main/b/bison/libbison-dev_3.0.4.dfsg-1build1_amd64.deb",
+      "SHA256": "bb95875d2a109b44a8d6a5a0e149f1330cd7198847fc041d83e108238981196c",
+      "Size": "338662",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "libblkid1",
+      "Version": "2.31.1-0.4ubuntu3.7",
+      "Architecture": "amd64",
+      "Filename": "pool/main/u/util-linux/libblkid1_2.31.1-0.4ubuntu3.7_amd64.deb",
+      "SHA256": "1ebe375596d1ab25d58f44086bb876474c30a3a2e3765acda4a613ab17d21fb1",
+      "Size": "123892",
+      "Depends": "libc6 (>= 2.25), libuuid1 (>= 2.16)",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "libbz2-1.0",
+      "Version": "1.0.6-8.1ubuntu0.2",
+      "Architecture": "amd64",
+      "Filename": "pool/main/b/bzip2/libbz2-1.0_1.0.6-8.1ubuntu0.2_amd64.deb",
+      "SHA256": "897850ec11aab3280ce2755eb552995a5aa9b16a70453934828c6418591ea87b",
+      "Size": "31168",
+      "Depends": "libc6 (>= 2.4)",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "libdpkg-perl",
+      "Version": "1.19.0.5ubuntu2.4",
+      "Architecture": "all",
+      "Filename": "pool/main/d/dpkg/libdpkg-perl_1.19.0.5ubuntu2.4_all.deb",
+      "SHA256": "3f3ba6877e54a95a5a192e957c46350418b79498d24b99926e530aef3d932538",
+      "Size": "211840",
+      "Depends": "perl, dpkg (>= 1.18.11)",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "libelf-dev",
+      "Version": "0.170-0.4ubuntu0.1",
+      "Architecture": "amd64",
+      "Filename": "pool/main/e/elfutils/libelf-dev_0.170-0.4ubuntu0.1_amd64.deb",
+      "SHA256": "d5fdd6ed5789a707fb08c6d312b2288038183cae9ad5806b911ba738373abe8e",
+      "Size": "57300",
+      "Depends": "libelf1 (= 0.170-0.4ubuntu0.1), zlib1g-dev",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "libelf1",
+      "Version": "0.170-0.4ubuntu0.1",
+      "Architecture": "amd64",
+      "Filename": "pool/main/e/elfutils/libelf1_0.170-0.4ubuntu0.1_amd64.deb",
+      "SHA256": "93d6cf79756f6b1d9649b6dd4dace71f09ce8f9d88597fdf740a02d2c0250907",
+      "Size": "44796",
+      "Depends": "libc6 (>= 2.14), zlib1g (>= 1:1.1.4)",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "libffi6",
+      "Version": "3.2.1-8",
+      "Architecture": "amd64",
+      "Filename": "pool/main/libf/libffi/libffi6_3.2.1-8_amd64.deb",
+      "SHA256": "fa26945b0aadfc72ec623c68be9cc59235a7fe42e2388f7015fd131f4fb06dc9",
+      "Size": "17948",
+      "Depends": "libc6 (>= 2.14)",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "libglib2.0-0",
+      "Version": "2.56.4-0ubuntu0.18.04.9",
+      "Architecture": "amd64",
+      "Filename": "pool/main/g/glib2.0/libglib2.0-0_2.56.4-0ubuntu0.18.04.9_amd64.deb",
+      "SHA256": "0f629a40a5ea5e73195365c9a00adb5f7bd8761681bfa6c94adf6f20d1485b4e",
+      "Size": "1168948",
+      "Depends": "libc6 (>= 2.17), libffi6 (>= 3.0.4), libmount1 (>= 2.19.1), libpcre3, libselinux1 (>= 1.32), zlib1g (>= 1:1.2.2)",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "libkmod2",
+      "Version": "24-1ubuntu3.5",
+      "Architecture": "amd64",
+      "Filename": "pool/main/k/kmod/libkmod2_24-1ubuntu3.5_amd64.deb",
+      "SHA256": "f6041aae36c1f90ecd40cf1d8da5493775aec92eb7ae597fc496ef160f8205c7",
+      "Size": "40216",
+      "Depends": "libc6 (>= 2.17)",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "liblzma5",
+      "Version": "5.2.2-1.3ubuntu0.1",
+      "Architecture": "amd64",
+      "Filename": "pool/main/x/xz-utils/liblzma5_5.2.2-1.3ubuntu0.1_amd64.deb",
+      "SHA256": "10ceffc040ad0e0ab510a868015a2d10b9381618d01f745ccf11f4d40cd36068",
+      "Size": "91108",
+      "Depends": "libc6 (>= 2.17)",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "libmount1",
+      "Version": "2.31.1-0.4ubuntu3.7",
+      "Architecture": "amd64",
+      "Filename": "pool/main/u/util-linux/libmount1_2.31.1-0.4ubuntu3.7_amd64.deb",
+      "SHA256": "d76f62fec485bfa7558ba1a89907edd17e54c6782de2b000f70c0a01cd91200b",
+      "Size": "135776",
+      "Depends": "libblkid1 (>= 2.17.2), libc6 (>= 2.25), libselinux1 (>= 2.6-3~)",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "libpcre3",
+      "Version": "2:8.39-9ubuntu0.1",
+      "Architecture": "amd64",
+      "Filename": "pool/main/p/pcre3/libpcre3_8.39-9ubuntu0.1_amd64.deb",
+      "SHA256": "a913c6a5943ad5608e675ccfee38029c123a689a983292d10172d6bda20e474f",
+      "Size": "230760",
+      "Depends": "libc6 (>= 2.14)",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "libreadline7",
+      "Version": "7.0-3",
+      "Architecture": "amd64",
+      "Filename": "pool/main/r/readline/libreadline7_7.0-3_amd64.deb",
+      "SHA256": "8706403267e95615f1b70db31ff16709361982728b308466346e01c20a743dd5",
+      "Size": "123760",
+      "Depends": "readline-common, libc6 (>= 2.15), libtinfo5 (>= 6)",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "libselinux1",
+      "Version": "2.7-2build2",
+      "Architecture": "amd64",
+      "Filename": "pool/main/libs/libselinux/libselinux1_2.7-2build2_amd64.deb",
+      "SHA256": "6b6c70f809e8b13f0b1f27006e125abb3a8c3195f5c888dce0df1a5d3f211c0d",
+      "Size": "68184",
+      "Depends": "libc6 (>= 2.14), libpcre3",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "libsigsegv2",
+      "Version": "2.12-1",
+      "Architecture": "amd64",
+      "Filename": "pool/main/libs/libsigsegv/libsigsegv2_2.12-1_amd64.deb",
+      "SHA256": "233ba112b0c15cc602c6d5537ae427531228d78a0586dc8d39d5b6aac47921c1",
+      "Size": "14700",
+      "Depends": "libc6 (>= 2.4)",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "libssl-dev",
+      "Version": "1.1.1-1ubuntu2.1~18.04.23",
+      "Architecture": "amd64",
+      "Filename": "pool/main/o/openssl/libssl-dev_1.1.1-1ubuntu2.1~18.04.23_amd64.deb",
+      "SHA256": "a9b6e93d93e33206836b30630ae8ad720b15bece3da8275184f076e7e97d4b2f",
+      "Size": "1567652",
+      "Depends": "libssl1.1 (= 1.1.1-1ubuntu2.1~18.04.23)",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "libssl1.1",
+      "Version": "1.1.1-1ubuntu2.1~18.04.23",
+      "Architecture": "amd64",
+      "Filename": "pool/main/o/openssl/libssl1.1_1.1.1-1ubuntu2.1~18.04.23_amd64.deb",
+      "SHA256": "986727f5a99088bef98971edfcd9567f5693b5e941aa241894fce1020c7015a0",
+      "Size": "1302640",
+      "Depends": "libc6 (>= 2.25), debconf (>= 0.5) | debconf-2.0",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "libtinfo5",
+      "Version": "6.1-1ubuntu1.18.04.1",
+      "Architecture": "amd64",
+      "Filename": "pool/main/n/ncurses/libtinfo5_6.1-1ubuntu1.18.04.1_amd64.deb",
+      "SHA256": "f7a59966bba0f997dd1bee0994c43cd563026a81e791cacc6540a2a8c9a49e53",
+      "Size": "81392",
+      "Depends": "libc6 (>= 2.16)",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "libuuid1",
+      "Version": "2.31.1-0.4ubuntu3.7",
+      "Architecture": "amd64",
+      "Filename": "pool/main/u/util-linux/libuuid1_2.31.1-0.4ubuntu3.7_amd64.deb",
+      "SHA256": "c04350aa8dc1bd73712716f9826b0f02fa10b77058c990a406445020970c2eaa",
+      "Size": "20116",
+      "Depends": "libc6 (>= 2.25)",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "lsb-base",
+      "Version": "9.20170808ubuntu1",
+      "Architecture": "all",
+      "Filename": "pool/main/l/lsb/lsb-base_9.20170808ubuntu1_all.deb",
+      "SHA256": "fc5414daefad5c2eecb490979063f7856b300fb51dc911485663b4a5067b8aa8",
+      "Size": "12460",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "m4",
+      "Version": "1.4.18-1",
+      "Architecture": "amd64",
+      "Filename": "pool/main/m/m4/m4_1.4.18-1_amd64.deb",
+      "SHA256": "eb49ad0a92f46080ab23974ee5db69dc08709a74e4275a0906afc220c75ce7a8",
+      "Size": "197166",
+      "Depends": "libc6 (>= 2.17), libsigsegv2 (>= 2.9)",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "make",
+      "Version": "4.1-9.1ubuntu1",
+      "Architecture": "amd64",
+      "Filename": "pool/main/m/make-dfsg/make_4.1-9.1ubuntu1_amd64.deb",
+      "SHA256": "6a7f7b7ad1f6ff6332099ed9ceaa4889a6ce56a7a48817ddccc0952126059d07",
+      "Size": "153924",
+      "Depends": "libc6 (>= 2.27)",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "patch",
+      "Version": "2.7.6-2ubuntu1.1",
+      "Architecture": "amd64",
+      "Filename": "pool/main/p/patch/patch_2.7.6-2ubuntu1.1_amd64.deb",
+      "SHA256": "f56fc64546fbbbba26ca1776587bf0c3cad48438bb84c5c423c025ab86d4263e",
+      "Size": "101856",
+      "Depends": "libc6 (>= 2.17)",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "pkg-config",
+      "Version": "0.29.1-0ubuntu2",
+      "Architecture": "amd64",
+      "Filename": "pool/main/p/pkg-config/pkg-config_0.29.1-0ubuntu2_amd64.deb",
+      "SHA256": "362e1f1573e97c5c2f5167721570fadfd5e23146472a293c002a62eca6417b07",
+      "Size": "45010",
+      "Depends": "libc6 (>= 2.14), libglib2.0-0 (>= 2.16.0), dpkg-dev, libdpkg-perl",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "readline-common",
+      "Version": "7.0-3",
+      "Architecture": "all",
+      "Filename": "pool/main/r/readline/readline-common_7.0-3_all.deb",
+      "SHA256": "84cb3642c82114496d2fc17011db13655bd661cf4641098c03c168ddde367908",
+      "Size": "52856",
+      "Depends": "dpkg (>= 1.15.4) | install-info",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "tar",
+      "Version": "1.29b-2ubuntu0.4",
+      "Architecture": "amd64",
+      "Filename": "pool/main/t/tar/tar_1.29b-2ubuntu0.4_amd64.deb",
+      "SHA256": "365d9e86595e82026281dfe23bc2aa0cc537ddf5709c06cdf4e293ce447dcaf3",
+      "Size": "233720",
+      "Pre-Depends": "libacl1 (>= 2.2.51-8), libc6 (>= 2.17), libselinux1 (>= 1.32)",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "u-boot-tools",
+      "Version": "2020.10+dfsg-1ubuntu0~18.04.3",
+      "Architecture": "amd64",
+      "Filename": "pool/main/u/u-boot/u-boot-tools_2020.10+dfsg-1ubuntu0~18.04.3_amd64.deb",
+      "SHA256": "3bdc2af5eda96b0ce54c18a32caebb14eead6f91d6abf37fd53c4d26927aff1a",
+      "Size": "162308",
+      "Depends": "libc6 (>= 2.15), libssl1.1 (>= 1.1.1)",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "xz-utils",
+      "Version": "5.2.2-1.3ubuntu0.1",
+      "Architecture": "amd64",
+      "Filename": "pool/main/x/xz-utils/xz-utils_5.2.2-1.3ubuntu0.1_amd64.deb",
+      "SHA256": "bfd4d081809401717753017f94cdeadc639878bd1ab49d3b3e04f91918717f97",
+      "Size": "83824",
+      "Depends": "libc6 (>= 2.17), liblzma5 (>= 5.2.2)",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "zlib1g",
+      "Version": "1:1.2.11.dfsg-0ubuntu2.2",
+      "Architecture": "amd64",
+      "Filename": "pool/main/z/zlib/zlib1g_1.2.11.dfsg-0ubuntu2.2_amd64.deb",
+      "SHA256": "515c904330188cc53238ae38bf16fbaa774ac9d168d8e400003416eb05bc6a86",
+      "Size": "56852",
+      "Depends": "libc6 (>= 2.14)",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    },
+    {
+      "Package": "zlib1g-dev",
+      "Version": "1:1.2.11.dfsg-0ubuntu2.2",
+      "Architecture": "amd64",
+      "Filename": "pool/main/z/zlib/zlib1g-dev_1.2.11.dfsg-0ubuntu2.2_amd64.deb",
+      "SHA256": "33f5ec22778404069783abc5db2917d26d471d63dcb05448cd59b479c11142ab",
+      "Size": "175640",
+      "Depends": "zlib1g (= 1:1.2.11.dfsg-0ubuntu2.2), libc6-dev | libc-dev",
+      "origin_base": "https://archive.ubuntu.com/ubuntu"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+# Current project baseline: QSPI boot files and eMMC rootfs, as recorded in this workspace.
+# U-Boot may supply its existing bootargs when the candidate kernel is booted.
+console=ttyPS0,115200 cma=50M earlycon root=/dev/mmcblk1p1 rw rootwait

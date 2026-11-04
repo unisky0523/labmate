@@ -1,0 +1,10 @@
+uname -a
+cat /proc/mtd
+mount | grep mmc
+ls -l /boot
+command -v flashcp
+command -v mtd_debug
+command -v fw_printenv
+cat /proc/cmdline
+ls -l /sys/class/gpio/gpio962/value
+ps | grep -E 'send_jpeg|camera|labassistant' | head -n 15

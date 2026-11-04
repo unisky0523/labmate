@@ -1,0 +1,4 @@
+python3 -c 'import pathlib,tarfile,json,hashlib; s=pathlib.Path("/home/root/spi_stage_20261104"); t=tarfile.open(str(s/"boot-assets.tar.gz")); assert set(t.getnames())==set(["zImage","system-spi.dtb","asr_esp32_spi.bit","SHA256.json"]); manifest=json.load(t.extractfile("SHA256.json")); assert all(hashlib.sha256(t.extractfile(n).read()).hexdigest()==h for n,h in manifest.items()); d=pathlib.Path("/boot/spi-20261104"); assert not d.exists(); d.mkdir(); t.extractall(str(d)); print("EMMC_BOOT_ASSETS_VERIFIED",manifest)'
+python3 -c 'import base64,pathlib; print("BACKUP_SCRIPT_B64_BEGIN"); print(base64.b64encode(pathlib.Path("/home/root/spi_boot_backup_20261104/mtd3.bin").read_bytes()).decode()); print("BACKUP_SCRIPT_B64_END")'
+ls -l /etc/rcS.d
+sync

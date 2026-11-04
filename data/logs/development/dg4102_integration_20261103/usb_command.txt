@@ -1,0 +1,1 @@
+ls -l /sys/class/udc; ls /sys/bus/platform/drivers/ci_hdrc; dmesg | tail -45

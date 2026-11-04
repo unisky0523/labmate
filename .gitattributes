@@ -1,0 +1,2 @@
+* -text
+src/linux/kernel/atk-zynq-linux-xlnx.tar.xz filter=lfs diff=lfs merge=lfs -text

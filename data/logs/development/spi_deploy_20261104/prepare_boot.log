@@ -1,0 +1,28 @@
+crc32 0x03000000 0x97cf1
+crc32 for 03000000 ... 03097cf0 ==> e0cfa840
+Zynq> fatwrite mmc 0:1 0x03000000 spi_test_20261104.tar.gz 0x97cf1
+621809 bytes written
+Zynq> mw.l 0xf8000008 0x0000df0d
+Zynq> mw.l 0xf8000158 0x00000601
+Zynq> setexpr.l spi_apb *0xf800012c
+Unknown command 'setexpr.l' - try 'help'
+Zynq> setexpr spi_apb ${spi_apb} \| 0x4000
+Unknown command 'setexpr' - try 'help'
+Zynq> mw.l 0xf800012c ${spi_apb}
+mw - memory write (fill)
+
+Usage:
+mw [.b, .w, .l] address value [count]
+Zynq> mw.l 0xf8000004 0x0000767b
+Zynq> md.l 0xf8000158 1
+f8000158: 00000601                               ....
+Zynq> md.l 0xf800012c 1
+f800012c: 01fd0ccd                               ....
+Zynq> fdt addr 0x01f00000
+Zynq> fdt resize 0x1000
+Zynq> fdt set /amba/ethernet@e000b000 local-mac-address [00 0a 35 00 c0 13]
+Zynq> fdt mknode / chipid
+Zynq> fdt set /chipid chipid 7z010
+Zynq> printenv bootargs
+bootargs=earlycon console=ttyPS0,115200 cma=50M root=/dev/mmcblk1p1 rw rootwait
+Zynq> 

@@ -1,0 +1,161 @@
+{
+  "text": "记住 电压 三点 啊 六叔 电流 一点 一 三",
+  "words": [
+    {
+      "conf": 0.949081,
+      "end": 0.96,
+      "start": 0.51,
+      "word": "记住"
+    },
+    {
+      "conf": 0.775425,
+      "end": 1.44,
+      "start": 0.96,
+      "word": "电压"
+    },
+    {
+      "conf": 0.915582,
+      "end": 1.936775,
+      "start": 1.44,
+      "word": "三点"
+    },
+    {
+      "conf": 0.451933,
+      "end": 2.069803,
+      "start": 1.95,
+      "word": "啊"
+    },
+    {
+      "conf": 0.779711,
+      "end": 2.64,
+      "start": 2.069803,
+      "word": "六叔"
+    },
+    {
+      "conf": 1.0,
+      "end": 3.12,
+      "start": 2.73,
+      "word": "电流"
+    },
+    {
+      "conf": 0.915966,
+      "end": 3.45,
+      "start": 3.12,
+      "word": "一点"
+    },
+    {
+      "conf": 0.596553,
+      "end": 3.6,
+      "start": 3.45,
+      "word": "一"
+    },
+    {
+      "conf": 0.466091,
+      "end": 4.05,
+      "start": 3.6,
+      "word": "三"
+    }
+  ],
+  "segments": [
+    {
+      "result": [
+        {
+          "conf": 0.949081,
+          "end": 0.96,
+          "start": 0.51,
+          "word": "记住"
+        },
+        {
+          "conf": 0.775425,
+          "end": 1.44,
+          "start": 0.96,
+          "word": "电压"
+        },
+        {
+          "conf": 0.915582,
+          "end": 1.936775,
+          "start": 1.44,
+          "word": "三点"
+        },
+        {
+          "conf": 0.451933,
+          "end": 2.069803,
+          "start": 1.95,
+          "word": "啊"
+        },
+        {
+          "conf": 0.779711,
+          "end": 2.64,
+          "start": 2.069803,
+          "word": "六叔"
+        },
+        {
+          "conf": 1.0,
+          "end": 3.12,
+          "start": 2.73,
+          "word": "电流"
+        },
+        {
+          "conf": 0.915966,
+          "end": 3.45,
+          "start": 3.12,
+          "word": "一点"
+        },
+        {
+          "conf": 0.596553,
+          "end": 3.6,
+          "start": 3.45,
+          "word": "一"
+        },
+        {
+          "conf": 0.466091,
+          "end": 4.05,
+          "start": 3.6,
+          "word": "三"
+        }
+      ],
+      "text": "记住 电压 三点 啊 六叔 电流 一点 一 三"
+    }
+  ],
+  "command": null,
+  "reason": "没有完整理解这句话，本次未执行。输入 help 查看支持的表达。",
+  "duration_seconds": 4.9,
+  "recognition_ms": 1491.34,
+  "min_word_confidence": 0.451933,
+  "mode": "test",
+  "audio_path": "D:\\labmate_b\\data\\audio\\asr_tests\\asr_20261009_213146_396772_ee8680f5.wav",
+  "metadata": {
+    "recorded_at": "2026-10-09T21:31:40.752+08:00",
+    "native_rate": 44100,
+    "device_name": "麦克风阵列 (Realtek(R) Audio)",
+    "truncated": false,
+    "capture_errors": []
+  },
+  "created_at": "2026-10-09T21:31:47.892+08:00",
+  "model_path": "D:\\labmate_b\\models\\vosk-model-small-cn-0.22",
+  "minimum_word_confidence": 0.45,
+  "pipeline_version": "vosk_domain_v1",
+  "sample_rate": 16000,
+  "expected_text": "记录电压三点二六伏，电流一点一四安",
+  "expected_command": {
+    "intent": "record_manual",
+    "measurements": [
+      {
+        "quantity": "voltage",
+        "value": "3.26",
+        "unit": "V",
+        "raw_value": "三点二六",
+        "raw_unit": "伏"
+      },
+      {
+        "quantity": "current",
+        "value": "1.14",
+        "unit": "A",
+        "raw_value": "一点一四",
+        "raw_unit": "安"
+      }
+    ]
+  },
+  "semantic_correct": false,
+  "dispatch_state": "not_dispatched"
+}

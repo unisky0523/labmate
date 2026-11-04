@@ -1,0 +1,12 @@
+{
+  "run_af_test.sh": "6c1be8da537066873421e9b61d9240ba4dad6d0b0a46ceb2b0f1c01d11c9b5a6",
+  "af_test.py": "d11315302948917c1e9256d4d965b364d9415a5937bb649b5063be525fff92c2",
+  "af_capture.c": "050752e8cae06d2d2955c67248d8082c0b864cdd7f62324eed4f7c32b128f688",
+  "af_capture": "ec677c2246c1e5a360b4b691876894fadcc56abff33ac04a3026b3ef4109f5f9",
+  "sources/PROVENANCE.md": "68e7811087c2c3bfc69238af7f93b0294da54ff615e45877907a65c2f02fa7b6",
+  "sources/ESPRESSIF_LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "sources/ov5640_af_firmware.h": "0420422fd4175548fa8abf4da484dc56f4642e443d314fa8797bc20fe19690a4",
+  "build/validation.txt": "e3b8ab66be43b05bad680312c19bae95b94b8125a48f163a6aeb91ed2bf8f19b",
+  "convert_images.py": "e4303c6aa3dccb53d12e8ac1a634a2e1e41d070031b20e17389acbb14a58c1ad",
+  "README_CN.md": "7826f68cc27cf86352e3a88ce2d8672cf3a5b0878a89bc46cbc91cba9b685b23"
+}

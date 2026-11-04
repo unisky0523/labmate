@@ -1,0 +1,4 @@
+python3 -c "import base64; print('FDT_BEGIN'); print(base64.b64encode(open('/sys/firmware/fdt','rb').read()).decode()); print('FDT_END')"
+python3 -c "import base64; print('CONFIG_BEGIN'); print(base64.b64encode(open('/proc/config.gz','rb').read()).decode()); print('CONFIG_END')"
+ls /sys/class/net
+cat /sys/class/net/eth0/carrier

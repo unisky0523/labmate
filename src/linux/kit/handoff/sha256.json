@@ -1,0 +1,14 @@
+{
+  "00_交接清单与分工.md": "e50d1ba18e3a07f47b7b6bdc883ff0f82839a779e5002cafd559235888b0b8b9",
+  "ARM端交接_SPI图片发送.md": "7c4448770450cd1d330201f63518b4042c4335b247afbec54a9078f26f88a7d1",
+  "SPI协议.md": "056269783c27bbab67574e5bfefbf843d86c62fdcf2fbd71a77eb00e2183f790",
+  "test_320x240.jpg": "4d812f8c72faab7a1db5437947208150d7764eaf237e827d7e124129e471e6e0",
+  "接线与下载说明.md": "3fc711cd198339f8db559ec9bd241022d999d041e7aedac63d7e3ba4d932fb33",
+  "FPGA/asr_esp32_spi.bit": "fe6441ea9548626e3a02e8cc8a191c8bb75924bf7d6bc0726c7f5be48c0878fb",
+  "FPGA/asr_esp32_spi.xsa": "b330ed6cec6351f99c90a2200e17df30382a0d5caa26ac43763f0684ce503b09",
+  "linux/add_spidev_match.py": "ba69c32140f15ebba07063cd2824c987552b3927d68cf9db0d130ee316ed56f8",
+  "linux/check_board.sh": "87537b234578dce5b7f00e0694d267d5988e24831f0384dfe6969247da93b575",
+  "linux/esp32-spi.dtsi": "78d48199320fcb2aa7918ecdb8015e2bf1fbb3bc1a418d3a6797308586940be7",
+  "linux/qt_send_example.cpp": "06b0ae84ce1858e36b3370b9f16dcf6cd30b882b812a6a1fba22ef08cc4d74a6",
+  "linux/send_jpeg.py": "f934805a826b80dda15bb64df33209ed88cfc9f071312cc856890bb5a281d7ed"
+}

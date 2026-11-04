@@ -1,0 +1,20 @@
+python3 -c "import base64,zlib;exec(zlib.decompress(base64.b64deecode('eJydVM1u3DYQvuspeCPVyru22+RQQIfA8J6DdHNaLAiuxLXoSKQ6M1rHfoCgx/YFevATJOg5j++MgeYtiRGm1axttUJ3ImU/f/PCbcU0bgERlsKrdJnHxeo3BJ1sIjWgNsUMMjteGqhGEtzgeqQJrSuev9ggbX2CSBEEjk/U9KzqvQ2Dmb5rXZNIas7pwmiyTTBG9xxqFmzqMFUqeZQALF6PRfvXNpEDR0niPKNI1Zb77eki+AJQj1mvlgsL6JlgrQQKBQThovQXHsmbsCR7c8RDrYIUGqkAHaEv+ltv7Ipgsi+J13UbgS0BtDqIjjSN8WWSlA5sQQFuRS5i7qUhM+dMdqZ2pSEXvD4/PX95dnb6k5zws+Zd6UC1BqwnzJfQ2UzY9w5Jh3f9NUU2K4LfuipnHIob+OI8EXcN/ztjM3e6ryA8LeKaZmdgnMJexfpR9oL6v+UFLVYy+ktstyXUmxisWobVs6CCMeEV6HDbMhGSBbiryXzKwJPlDwrlBpsg0g2goMWuG8UHKxWD78/uHLX3/ITMhv939+/fhpusfTl7/vHzz7fy/SXRAghDLJajl9BRcZ0JZ0n60muRZ4Lzlsbb+rbOyuTnak7bk/pClL8pvnjcANZfkx9jEozga7pakkO2zBemRpsmYLGreSSGJs5asDtnb1QfMhNyEwyUJ1VA+vlk0sTJXhPZNGqzy531pNI0gXBzQIlmZ1UM9BB2EnNNvnUU6Us7IdR02mgdP/TcPS6QnGkVWmJY66J928KzkYJPrBGw/IUOTkQx1mMesexXpeJbrlYxOVttF+CCM63Bw4+xefPufbjjRW5vzFy3wf/9Day9I0bc0P2HnKx4RX8tD8lHrwAm+w6u7pb4OD+bkQdHd2ymmC0PENrr3hIuTqg6YcjM3NunNfYmsL5Kw5/NlcTNibAyoadqTXK9Q/PRE4fhy5iCftSMsEPvx/WnJft/55DEkzi2Ni3aUmP+eNhPhj2QJtPiVQfbYshMR9lEibEe+JYmLThPSmq9WCz1xavXy7dvLrWWPzJsVnZNi22qAZmJbd1gNO/MfW4OBEg==')))"
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "<string>", line 25, in <module>
+  File "/home/root/labmate_ui_test/fft_control.py", line 124, in preview
+    raw = self.analyze(operation_id, cancelled)
+  File "/home/root/labmate_ui_test/fft_control.py", line 89, in analyze
+    acquired = self.acquire(operation_id, cancelled)
+  File "/home/root/labmate_ui_test/fft_control.py", line 76, in acquire
+    raise ValueError('HOST4 波形采集失败：'+result.stderr.decode('utf-8', 'replace')[-450:])
+ValueError: HOST4 波形采集失败：ut, args.channel)
+  File "/home/root/labmate_ui_test/scope_waveform.py", line 135, in capture
+    raise failure
+  File "/home/root/labmate_ui_test/scope_waveform.py", line 100, in capture
+    data = binary_block(raw_reply, channel)
+  File "/home/root/labmate_ui_test/scope_waveform.py", line 33, in binary_block
+    raise ValueError('Unexpected waveform channel/header: ' + repr(prefix))
+ValueError: Unexpected waveform channel/header: b'C1:WF ALL,'
+
+root@ATK-ZYNQ:~# 

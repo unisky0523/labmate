@@ -1,0 +1,280 @@
+{
+  "text": "行 我 连续 记录 五次 数据",
+  "words": [
+    {
+      "conf": 0.514562,
+      "end": 0.81,
+      "start": 0.6,
+      "word": "行"
+    },
+    {
+      "conf": 0.987078,
+      "end": 1.05,
+      "start": 0.812045,
+      "word": "我"
+    },
+    {
+      "conf": 0.85085,
+      "end": 1.65,
+      "start": 1.05,
+      "word": "连续"
+    },
+    {
+      "conf": 0.755485,
+      "end": 2.25,
+      "start": 1.65,
+      "word": "记录"
+    },
+    {
+      "conf": 1.0,
+      "end": 2.88,
+      "start": 2.25,
+      "word": "五次"
+    },
+    {
+      "conf": 1.0,
+      "end": 3.51,
+      "start": 2.88,
+      "word": "数据"
+    }
+  ],
+  "segments": [
+    {
+      "result": [
+        {
+          "conf": 0.514562,
+          "end": 0.81,
+          "start": 0.6,
+          "word": "行"
+        },
+        {
+          "conf": 0.987078,
+          "end": 1.05,
+          "start": 0.812045,
+          "word": "我"
+        },
+        {
+          "conf": 0.85085,
+          "end": 1.65,
+          "start": 1.05,
+          "word": "连续"
+        },
+        {
+          "conf": 0.755485,
+          "end": 2.25,
+          "start": 1.65,
+          "word": "记录"
+        },
+        {
+          "conf": 1.0,
+          "end": 2.88,
+          "start": 2.25,
+          "word": "五次"
+        },
+        {
+          "conf": 1.0,
+          "end": 3.51,
+          "start": 2.88,
+          "word": "数据"
+        }
+      ],
+      "text": "行 我 连续 记录 五次 数据"
+    }
+  ],
+  "command": null,
+  "reason": "没有完整理解这句话，本次未执行。输入 help 查看支持的表达。",
+  "duration_seconds": 4.4,
+  "text_baseline": "行 我 连续 记录 五次 数据",
+  "words_baseline": [
+    {
+      "conf": 0.514562,
+      "end": 0.81,
+      "start": 0.6,
+      "word": "行"
+    },
+    {
+      "conf": 0.987078,
+      "end": 1.05,
+      "start": 0.812045,
+      "word": "我"
+    },
+    {
+      "conf": 0.85085,
+      "end": 1.65,
+      "start": 1.05,
+      "word": "连续"
+    },
+    {
+      "conf": 0.755485,
+      "end": 2.25,
+      "start": 1.65,
+      "word": "记录"
+    },
+    {
+      "conf": 1.0,
+      "end": 2.88,
+      "start": 2.25,
+      "word": "五次"
+    },
+    {
+      "conf": 1.0,
+      "end": 3.51,
+      "start": 2.88,
+      "word": "数据"
+    }
+  ],
+  "segments_baseline": [
+    {
+      "result": [
+        {
+          "conf": 0.514562,
+          "end": 0.81,
+          "start": 0.6,
+          "word": "行"
+        },
+        {
+          "conf": 0.987078,
+          "end": 1.05,
+          "start": 0.812045,
+          "word": "我"
+        },
+        {
+          "conf": 0.85085,
+          "end": 1.65,
+          "start": 1.05,
+          "word": "连续"
+        },
+        {
+          "conf": 0.755485,
+          "end": 2.25,
+          "start": 1.65,
+          "word": "记录"
+        },
+        {
+          "conf": 1.0,
+          "end": 2.88,
+          "start": 2.25,
+          "word": "五次"
+        },
+        {
+          "conf": 1.0,
+          "end": 3.51,
+          "start": 2.88,
+          "word": "数据"
+        }
+      ],
+      "text": "行 我 连续 记录 五次 数据"
+    }
+  ],
+  "min_word_confidence": 0.514562,
+  "text_grammar": "安 五 连续 记录 五次 数据",
+  "words_grammar": [
+    {
+      "conf": 0.461181,
+      "end": 0.81,
+      "start": 0.63,
+      "word": "安"
+    },
+    {
+      "conf": 0.550228,
+      "end": 1.05,
+      "start": 0.81,
+      "word": "五"
+    },
+    {
+      "conf": 1.0,
+      "end": 1.65,
+      "start": 1.05,
+      "word": "连续"
+    },
+    {
+      "conf": 1.0,
+      "end": 2.25,
+      "start": 1.65,
+      "word": "记录"
+    },
+    {
+      "conf": 1.0,
+      "end": 2.88,
+      "start": 2.25,
+      "word": "五次"
+    },
+    {
+      "conf": 1.0,
+      "end": 3.51,
+      "start": 2.88,
+      "word": "数据"
+    }
+  ],
+  "segments_grammar": [
+    {
+      "result": [
+        {
+          "conf": 0.461181,
+          "end": 0.81,
+          "start": 0.63,
+          "word": "安"
+        },
+        {
+          "conf": 0.550228,
+          "end": 1.05,
+          "start": 0.81,
+          "word": "五"
+        },
+        {
+          "conf": 1.0,
+          "end": 1.65,
+          "start": 1.05,
+          "word": "连续"
+        },
+        {
+          "conf": 1.0,
+          "end": 2.25,
+          "start": 1.65,
+          "word": "记录"
+        },
+        {
+          "conf": 1.0,
+          "end": 2.88,
+          "start": 2.25,
+          "word": "五次"
+        },
+        {
+          "conf": 1.0,
+          "end": 3.51,
+          "start": 2.88,
+          "word": "数据"
+        }
+      ],
+      "text": "安 五 连续 记录 五次 数据"
+    },
+    {
+      "text": ""
+    }
+  ],
+  "min_word_confidence_grammar": 0.461181,
+  "recognizer_mode": "baseline",
+  "recognition_ms": 1278.21,
+  "mode": "test",
+  "audio_path": "D:\\labmate_b\\data\\audio\\asr_tests\\asr_20261015_210626_814524_a4f4a358.wav",
+  "metadata": {
+    "recorded_at": "2026-10-15T21:06:21.791+08:00",
+    "native_rate": 44100,
+    "device_name": "麦克风阵列 (Realtek(R) Audio)",
+    "truncated": false,
+    "capture_errors": []
+  },
+  "created_at": "2026-10-15T21:06:28.094+08:00",
+  "model_path": "D:\\labmate_b\\models\\vosk-model-small-cn-0.22",
+  "minimum_word_confidence": 0.45,
+  "pipeline_version": "vosk_domain_v1",
+  "sample_rate": 16000,
+  "expected_text": "帮我连续记录五次数据",
+  "expected_command": {
+    "intent": "record_device",
+    "count": 5,
+    "interval": 1.0
+  },
+  "semantic_correct": false,
+  "dispatch_state": "not_dispatched"
+}

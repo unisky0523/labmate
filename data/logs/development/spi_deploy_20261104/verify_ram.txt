@@ -1,0 +1,4 @@
+version
+help fatwrite
+crc32 0x02000000 0x49ce18
+crc32 0x01f00000 0x59f4

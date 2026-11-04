@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-04",
+  "handoff_original_manifest": "12/12 SHA256 pass",
+  "xsa_embedded_bit_matches_delivered_bit": true,
+  "xsa_spi_clock_and_apb_bit14_checked": true,
+  "official_ubuntu_offline_debs": 43,
+  "offline_native_elf_dependency_closure_checked": true,
+  "bash_syntax_and_help_checked": true,
+  "python_syntax_checked": true,
+  "spidev_patch_exactly_one_match_added": true,
+  "original_board_dts_retained_plus_one_include": true,
+  "original_soc_dtsi_byte_identical": true,
+  "supplied_spi_fragment_preserved": true,
+  "unexpected_sd_root_rejected_before_writing": true,
+  "board_config_guard_passed": true,
+  "sender_test_jpeg_protocol_simulation": {
+    "bytes": 7023,
+    "transactions": 14,
+    "crc32": "2f1734b8"
+  },
+  "ubuntu_kernel_build_executed": false,
+  "board_boot_executed": false,
+  "esp32_end_to_end_verified": false
+}

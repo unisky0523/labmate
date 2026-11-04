@@ -1,0 +1,5 @@
+{
+  "zImage": "a9ba894eae6308b7fba49ae0fedbaec8b780eba61718bdc6c0897c9bf242b6bb",
+  "system-spi.dtb": "59ea70473ff6ce0e2deb5d59074eb2eed5fbfb0890fc43067eb545ece48546dc",
+  "asr_esp32_spi.bit": "fe6441ea9548626e3a02e8cc8a191c8bb75924bf7d6bc0726c7f5be48c0878fb"
+}

@@ -1,0 +1,46 @@
+{
+  "restored_files": 2203,
+  "missing": [],
+  "hash_mismatches": [],
+  "xpr_source_paths": [
+    {
+      "path": "$PPRDIR/asr/rtl/fir_coeff.vh",
+      "present": true
+    },
+    {
+      "path": "$PPRDIR/asr/rtl/asr_audio_frontend.v",
+      "present": true
+    },
+    {
+      "path": "$PPRDIR/spi/rtl/spi_emio_master_io.v",
+      "present": true
+    },
+    {
+      "path": "$PSRCDIR/sources_1/bd/system/system.bd",
+      "present": true
+    },
+    {
+      "path": "$PGENDIR/sources_1/bd/system/hdl/system_wrapper.v",
+      "present": true
+    },
+    {
+      "path": "$PSRCDIR/constrs_1/system.xdc",
+      "present": true
+    }
+  ],
+  "linux_kit_inputs": 74,
+  "linux_kit_input_failures": [],
+  "linux_config_passed": true,
+  "measurement_template_accepted_pairs": 0,
+  "bash_syntax_check": {
+    "status": "not_run",
+    "reason": "Git Bash could not start in the host sandbox; MSYS NtCreateDirectoryObject access denied."
+  },
+  "board_accessed": false,
+  "passed": true,
+  "manual_measurement_pairs": 10,
+  "asr_classification": "team_confirmed_manual_measurements",
+  "asr_median_a_s": 5.595,
+  "asr_median_b_s": 1.605,
+  "scope": "Historical source-restoration checks on the full package; compact checks are in compact_checks.json."
+}

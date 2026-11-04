@@ -1,0 +1,18 @@
+{
+  "board_support.py": "6e89379fea6481dbdf1c317ad0766eed8d0c822e32168338622c86414996bda5",
+  "licenses/CPython-LICENSE": "a77d71d6be6f9032e6b6e5d2cf6da68f9eeab9036edfbc043633c8979cd5e82c",
+  "licenses/GCC-RUNTIME-EXCEPTION.txt": "9d6b43ce4d8de0c878bf16b54d8e7a10d9bd42b75178153e3af6a815bdc90f74",
+  "licenses/GPL-3.0.txt": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+  "licenses/pyclipper-LICENSE": "32ee7398e3123736fd14e9f08287edc2d97ace102ab54d8dc4edc8d31c651fa8",
+  "payload/libgomp.so.1": "47cca83317d66c090d6a9e1ae363e75a22ef5f5f9de9437845516c30451179b1",
+  "payload/native_fault.so": "8dfef1c02f81a0f2b6de30eefd675922009b44456b3cf8fc378364696933a515",
+  "payload/pyclipper/__init__.py": "57f4e098cd574700bcaaaae7e25a03a482189168e8acbf4f0e1fa187bb2fe1f6",
+  "payload/pyclipper/_pyclipper.cpython-37m-arm-linux-gnueabi.so": "f684afb29422ada80a80b61d0504d2fe0b66ef72d0aed36bc060f322d3752354",
+  "payload/pyclipper/_version.py": "9316cdd6a659c8cc73286272490fa88d07ce842324f7b32cead94e762a83ff2a",
+  "payload/smoke_infer": "51d47b48a6fe8519ed4858084bd533e0e05aaa14a2dec3979bac8c9a03adae13",
+  "README_CN.md": "2c64f5d32117dfda5f891b7442261e0f266246195cdfc32cd921beb5018dca1c",
+  "sources/native_fault.c": "a8a4859c4f650cc2b93396c28b43a43c06ca8f12fb04a72a37e903c08b5e72d5",
+  "sources/smoke_infer.cc": "a1d091ff422d62ba2d86b2b2607169f911c4ac9a3a4276720d1299c179a3c25c",
+  "SOURCES.md": "5c18151c884b848823b137fddb29b99ea1ba958d443a007e8f665a09fece3ee7",
+  "STATIC_VALIDATION.json": "ef98e8ead1c70b6998da0d3b0d57330edff3bd6e445dcd70790d76f882cdb144"
+}

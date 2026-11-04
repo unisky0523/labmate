@@ -1,0 +1,22 @@
+{
+  "old_records": 61,
+  "old_records_unchanged": true,
+  "binary_sha256": "4c5b507fd60409463cff1501d1f72a1769d64b297558a5725c1ce309586a979d",
+  "processes": [
+    {
+      "pid": "2029",
+      "command": "./labassistant "
+    },
+    {
+      "pid": "2030",
+      "command": "/usr/bin/python3 -u /home/root/labmate_ui_test/backend.py "
+    }
+  ],
+  "ui_log": "QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/var/volatile/tmp/runtime-root'\n",
+  "pcm_sha256": "0f9436a90036db6895746f38c1d2b79d3015965b81b80a50fe583c7a6f639b0f",
+  "framebuffer": {
+    "virtual_size": "800,960",
+    "bits_per_pixel": "24",
+    "stride": "2400"
+  }
+}

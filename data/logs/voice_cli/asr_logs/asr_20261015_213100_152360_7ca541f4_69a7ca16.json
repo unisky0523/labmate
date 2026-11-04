@@ -1,0 +1,150 @@
+{
+  "text": "上 一条 数据 有问题",
+  "words": [
+    {
+      "conf": 0.962685,
+      "end": 0.87,
+      "start": 0.54,
+      "word": "上"
+    },
+    {
+      "conf": 1.0,
+      "end": 1.23,
+      "start": 0.87,
+      "word": "一条"
+    },
+    {
+      "conf": 1.0,
+      "end": 1.624805,
+      "start": 1.23,
+      "word": "数据"
+    },
+    {
+      "conf": 0.860871,
+      "end": 2.34,
+      "start": 1.624805,
+      "word": "有问题"
+    }
+  ],
+  "segments": [
+    {
+      "result": [
+        {
+          "conf": 0.962685,
+          "end": 0.87,
+          "start": 0.54,
+          "word": "上"
+        },
+        {
+          "conf": 1.0,
+          "end": 1.23,
+          "start": 0.87,
+          "word": "一条"
+        },
+        {
+          "conf": 1.0,
+          "end": 1.624805,
+          "start": 1.23,
+          "word": "数据"
+        },
+        {
+          "conf": 0.860871,
+          "end": 2.34,
+          "start": 1.624805,
+          "word": "有问题"
+        }
+      ],
+      "text": "上 一条 数据 有问题"
+    },
+    {
+      "text": ""
+    }
+  ],
+  "command": {
+    "intent": "annotate",
+    "status": "abnormal"
+  },
+  "reason": null,
+  "duration_seconds": 4.35,
+  "text_baseline": "上 一条 数据 有问题",
+  "words_baseline": [
+    {
+      "conf": 0.962685,
+      "end": 0.87,
+      "start": 0.54,
+      "word": "上"
+    },
+    {
+      "conf": 1.0,
+      "end": 1.23,
+      "start": 0.87,
+      "word": "一条"
+    },
+    {
+      "conf": 1.0,
+      "end": 1.624805,
+      "start": 1.23,
+      "word": "数据"
+    },
+    {
+      "conf": 0.860871,
+      "end": 2.34,
+      "start": 1.624805,
+      "word": "有问题"
+    }
+  ],
+  "segments_baseline": [
+    {
+      "result": [
+        {
+          "conf": 0.962685,
+          "end": 0.87,
+          "start": 0.54,
+          "word": "上"
+        },
+        {
+          "conf": 1.0,
+          "end": 1.23,
+          "start": 0.87,
+          "word": "一条"
+        },
+        {
+          "conf": 1.0,
+          "end": 1.624805,
+          "start": 1.23,
+          "word": "数据"
+        },
+        {
+          "conf": 0.860871,
+          "end": 2.34,
+          "start": 1.624805,
+          "word": "有问题"
+        }
+      ],
+      "text": "上 一条 数据 有问题"
+    },
+    {
+      "text": ""
+    }
+  ],
+  "min_word_confidence": 0.860871,
+  "recognizer_mode": "baseline",
+  "recognition_ms": 1036.84,
+  "mode": "run",
+  "audio_path": "D:\\labmate_b\\data\\audio\\asr_tests\\asr_20261015_213100_152360_7ca541f4.wav",
+  "metadata": {
+    "recorded_at": "2026-10-15T21:30:55.257+08:00",
+    "native_rate": 44100,
+    "device_name": "麦克风阵列 (Realtek(R) Audio)",
+    "truncated": false,
+    "capture_errors": []
+  },
+  "created_at": "2026-10-15T21:31:01.193+08:00",
+  "model_path": "D:\\labmate_b\\models\\vosk-model-small-cn-0.22",
+  "minimum_word_confidence": 0.45,
+  "pipeline_version": "vosk_domain_v1",
+  "sample_rate": 16000,
+  "dispatch_state": "delivered_to_application",
+  "confirm_readback_text": "可以",
+  "confirm_readback_audio_path": "D:\\labmate_b\\data\\audio\\asr_tests\\asr_20261015_213110_411898_9209340b.wav"
+}

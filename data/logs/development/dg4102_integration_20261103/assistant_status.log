@@ -1,0 +1,7 @@
+ps -ef | grep -E 'labassistant|backend.py|arecord' | grep -v greep; tail -8 /tmp/labmate_desktop.log
+ 6134 root      0:02 ./labassistant
+ 6135 root      1:21 /usr/bin/python3 -u /home/root/labmate_ui_test/backend.py
+ 6652 root      0:00 arecord -q -D hw:0,1 -t raw -f S24_LE -r 44100 -c 2
+tail: can't open '/tmp/labmate_desktop.log': No such file or directory
+tail: no files
+root@ATK-ZYNQ:~# 

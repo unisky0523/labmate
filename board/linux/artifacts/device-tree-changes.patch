@@ -1,0 +1,40 @@
+--- a/arch/arm/boot/dts/atk-navigator-7010.dts
++++ b/arch/arm/boot/dts/atk-navigator-7010.dts
+@@ -31,3 +31,4 @@
+ };
+ #define Z7010
+ #include "navigator-system-user.dtsi"
++#include "labmate-spi-board.dtsi"
+--- /dev/null
++++ b/arch/arm/boot/dts/labmate-spi-board.dtsi
+@@ -0,0 +1,10 @@
++/* SPI additions to the retained factory board tree. */
++#include "esp32-spi.dtsi"
++
++&gpio0 { emio-gpio-width = <12>; };
++
++/ {
++    chosen {
++        bootargs = "console=ttyPS0,115200 cma=50M earlycon root=/dev/mmcblk1p1 rw rootwait";
++    };
++};
+--- /dev/null
++++ b/arch/arm/boot/dts/esp32-spi.dtsi
+@@ -0,0 +1,17 @@
++/* Merge into the existing system-user.dtsi, keeping all original camera/audio/LCD nodes. */
++&spi0 {
++    status = "okay";
++    is-decoded-cs = <0>;
++    num-cs = <1>;
++    #address-cells = <1>;
++    #size-cells = <0>;
++    esp32_image: image-link@0 {
++        compatible = "labmate,esp32-image-link";
++        reg = <0>;
++        spi-max-frequency = <4000000>;
++        spi-cpha; /* SPI mode1: CPOL=0, CPHA=1 */
++    };
++};
++/* These EMIO pins are now SPI. USB console remains UART0 (e0000000). */
++&uart1 { status = "disabled"; };
++&can0 { status = "disabled"; };

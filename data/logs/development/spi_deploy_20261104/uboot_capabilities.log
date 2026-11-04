@@ -1,0 +1,55 @@
+printenv ethaddr kernel_addr_r fdt_addr_r
+ethaddr=00:0a:35:00:c0:13
+kernel_addr_r=0x2000000
+fdt_addr_r=0x1f00000
+Zynq> help bootz
+bootz - boot Linux zImage image from memory
+
+Usage:
+bootz [addr [initrd[:size]] [fdt]]
+    - boot Linux zImage stored in memory
+	The argument 'initrd' is optional and specifies the address
+	of the initrd in memory. The optional argument ':size' allows
+	specifying the size of RAW initrd.
+	When booting a Linux kernel which requires a flat device-tree
+	a third argument is required which is the address of the
+	device-tree blob. To boot that kernel without an initrd image,
+	use a '-' for the second argument. If you do not pass a third
+	a bd_info struct will be passed instead
+
+Zynq> help fdt
+fdt - flattened device tree utility commands
+
+Usage:
+fdt addr [-c]  <addr> [<length>]   - Set the [control] fdt location to <addr>
+fdt move   <fdt> <newaddr> <length> - Copy the fdt to <addr> and make it active
+fdt resize [<extrasize>]            - Resize fdt to size + padding to 4k addr + some optional <extrasize> if needed
+fdt print  <path> [<prop>]          - Recursive print starting at <path>
+fdt list   <path> [<prop>]          - Print one level starting at <path>
+fdt get value <var> <path> <prop>   - Get <property> and store in <var>
+fdt get name <var> <path> <index>   - Get name of node <index> and store in <var>
+fdt get addr <var> <path> <prop>    - Get start address of <property> and store in <var>
+fdt get size <var> <path> [<prop>]  - Get size of [<property>] or num nodes and store in <var>
+fdt set    <path> <prop> [<val>]    - Set <property> [to <val>]
+fdt mknode <path> <node>            - Create a new node after <path>
+fdt rm     <path> [<prop>]          - Delete the node or <property>
+fdt header [get <var> <member>]     - Display header info
+                                      get - get header member <member> and store it in <var>
+fdt bootcpu <id>                    - Set boot cpuid
+fdt memory <addr> <size>            - Add/Update memory node
+fdt rsvmem print                    - Show current mem reserves
+fdt rsvmem add <addr> <size>        - Add a mem reserve
+fdt rsvmem delete <index>           - Delete a mem reserves
+fdt chosen [<start> <end>]          - Add/update the /chosen branch in the tree
+                                        <start>/<end> - initrd start/end addr
+fdt checksign [<addr>]              - check FIT signature
+                                        <start> - addr of key blob
+                                                  default gd->fdt_blob
+NOTE: Dereference aliases by omitting the leading '/', e.g. fdt print ethernet0.
+Zynq> help crc32
+crc32 - checksum calculation
+
+Usage:
+crc32 address count [addr]
+    - compute CRC32 checksum [save at addr]
+Zynq> 

@@ -1,0 +1,30 @@
+{
+  "request_id": "087c287e594d42cd92e3a2150623e654",
+  "device_id": "mock_meter_01",
+  "source": "mock",
+  "source_type": "mock",
+  "source_role": "primary",
+  "is_simulated": true,
+  "value": 3.3,
+  "raw_text": "3.30 V",
+  "unit": "V",
+  "valid": true,
+  "captured_at": "2023-04-16T03:29:49.155+00:00",
+  "image_path": null,
+  "error_code": null,
+  "batch_id": "83d57ba8c3674cd081a365c014a9461a",
+  "batch_index": 1,
+  "trigger": {
+    "source": "voice",
+    "audio_path": "/media/sd-mmcblk0p1/labmate_b_board_20261015/data/audio/asr_tests/asr_20230416_032934_329581_20b5c812.wav",
+    "asr_text": "记录 数据",
+    "asr_log": "/media/sd-mmcblk0p1/labmate_b_board_20261015/data/asr_logs/asr_20230416_032934_329581_20b5c812_aeafc982.json",
+    "recorded_at": "2023-04-16T03:29:33.658+00:00",
+    "model_path": "/media/sd-mmcblk0p1/labmate_b_board_20261015/models/vosk-model-small-cn-0.22",
+    "pre_confirmed": false
+  },
+  "schema_version": 2,
+  "record_id": "cf80f98aed664fd591662fc0a56c9a04",
+  "saved_at": "2023-04-16T03:29:49.157+00:00",
+  "status": "active"
+}

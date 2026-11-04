@@ -1,0 +1,9 @@
+{
+  "query": true,
+  "sweep_configuration": true,
+  "user_confirmed": true,
+  "individual_frequency": "pending",
+  "individual_amplitude": "pending",
+  "output_enable_readback": "ON",
+  "electrical_output_verified": false
+}

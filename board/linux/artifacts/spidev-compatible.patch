@@ -1,0 +1,10 @@
+--- a/drivers/spi/spidev.c
++++ b/drivers/spi/spidev.c
+@@ -658,6 +658,7 @@
+ 
+ #ifdef CONFIG_OF
+ static const struct of_device_id spidev_dt_ids[] = {
++	{ .compatible = "labmate,esp32-image-link" },
+ 	{ .compatible = "rohm,dh2228fv" },
+ 	{ .compatible = "lineartechnology,ltc2488" },
+ 	{ .compatible = "ge,achc" },

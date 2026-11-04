@@ -1,0 +1,6 @@
+CONFIG_BT_RTK_HCIBTUSB: m -> n
+CONFIG_NOTICE: supplied vendor source lacks the optional Realtek Bluetooth driver; candidate kernel omits it.
+CONFIG_LOCALVERSION: "-xilinx-v2020.2" -> "-xilinx-v2020.2-spi-test-20261104"
+CONFIG_LOCALVERSION_AUTO: y -> n
+CONFIG_SPI_SPIDEV: n -> y
+CONFIG_MATCH_PASS: only SPI options and the test release may change.

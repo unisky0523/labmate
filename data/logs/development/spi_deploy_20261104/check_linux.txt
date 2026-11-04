@@ -1,0 +1,7 @@
+uname -r
+mount | grep mmc
+ls -l /dev/spidev* /dev/video* /dev/fb* /dev/snd/control* 2>/dev/null
+for g in /sys/class/gpio/gpiochip*; do echo $g; cat $g/label $g/base $g/ngpio; done
+dmesg | grep -i spi
+python3 --version
+sha256sum /media/sd-mmcblk0p1/spi_test_20261104.tar.gz

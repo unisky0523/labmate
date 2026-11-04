@@ -1,0 +1,9 @@
+QT += core gui widgets
+CONFIG += c++11
+TEMPLATE = app
+TARGET = labassistant
+SOURCES += main.cpp
+RESOURCES += resources.qrc
+DISTFILES += backend.py asr_adapter.py record_store.py README.md tests/test_backend.py tests/test_real_asr.py tests/test_records.py
+DISTFILES += instrument_adapter.py command_executor.py instruments.json tests/test_instruments.py
+msvc:QMAKE_CXXFLAGS += /utf-8

@@ -1,0 +1,94 @@
+{
+  "device_id": "keysight_scope_measure_01",
+  "source": "vision",
+  "dynamic_measurements": {
+    "min_rows": 2,
+    "max_rows": 4
+  },
+  "label_inference": {
+    "enabled": true,
+    "unit_to_label": {
+      "Hz": "频率",
+      "kHz": "频率",
+      "MHz": "频率",
+      "V": "峰峰值",
+      "mV": "峰峰值",
+      "uV": "峰峰值",
+      "deg": "相移"
+    }
+  },
+  "locator": {
+    "mode": "auto_lcd",
+    "min_area_ratio": 0.02,
+    "max_area_ratio": 0.95,
+    "min_aspect": 1.2,
+    "max_aspect": 8.0,
+    "canny_low": 50,
+    "canny_high": 150,
+    "perspective": {
+      "enabled": true,
+      "width": 1600,
+      "height": 934,
+      "min_area_ratio": 0.10,
+      "min_aspect": 1.35,
+      "max_aspect": 2.40,
+      "epsilon": 0.02
+    },
+    "sidebar_recovery": {
+      "screen_aspect_ratio": 1.712,
+      "right_margin_ratio": 0.014,
+      "top_margin_ratio": 0.006
+    }
+  },
+  "layout_validation": {
+    "panel_roi_relative": {"x": 0.805, "y": 0.600, "w": 0.190, "h": 0.320},
+    "activity_bands": [[0.610, 0.700], [0.700, 0.800], [0.800, 0.900]],
+    "min_reference_activity": 8.0,
+    "min_last_band_ratio": 0.45
+  },
+  "measurements": [
+    {
+      "id": "ch1_vpp",
+      "label": "峰峰值",
+      "channel": "1",
+      "default_unit": "V",
+      "require_detected_unit": true,
+      "allowed_units": ["V", "mV"],
+      "min_value": 0,
+      "row_roi_relative": {"x": 0.805, "y": 0.550, "w": 0.190, "h": 0.150},
+      "value_roi_relative": {"x": 0.900, "y": 0.635, "w": 0.095, "h": 0.065}
+    },
+    {
+      "id": "ch2_vpp",
+      "label": "峰峰值",
+      "channel": "2",
+      "default_unit": "mV",
+      "require_detected_unit": true,
+      "allowed_units": ["V", "mV"],
+      "min_value": 0,
+      "row_roi_relative": {"x": 0.805, "y": 0.650, "w": 0.190, "h": 0.145},
+      "value_roi_relative": {"x": 0.910, "y": 0.720, "w": 0.085, "h": 0.070}
+    },
+    {
+      "id": "phase_1_2",
+      "label": "相移",
+      "channel": "1-2",
+      "default_unit": "deg",
+      "min_value": -360,
+      "max_value": 360,
+      "row_roi_relative": {"x": 0.805, "y": 0.745, "w": 0.190, "h": 0.150},
+      "value_roi_relative": {"x": 0.875, "y": 0.857, "w": 0.106, "h": 0.070}
+    }
+  ],
+  "preprocess": {
+    "scale": 4.0,
+    "threshold": "none",
+    "invert": false
+  },
+  "ocr": {
+    "engine": "tesseract",
+    "value_psm": 7,
+    "unit_psm": 7,
+    "value_allowlist": "0123456789.-+VmAuHz°deg%"
+  }
+}

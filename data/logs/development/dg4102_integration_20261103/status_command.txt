@@ -1,0 +1,1 @@
+ps -ef | grep -E 'labassistant|backend.py|arecord' | grep -v grep; tail -8 /tmp/labmate_desktop.log

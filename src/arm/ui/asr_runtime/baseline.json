@@ -1,0 +1,19 @@
+{
+  "source": "D:\\fpga amd xinlx\\labmate_b_board_20261015(1)\\labmate_b_board_20261015",
+  "files": {
+    "asr_cli.py": "77f669a2c71acc49f2e5f7431bf1026e28b2b913a12bc7669b43fdaddb28b554",
+    "asr_grammar.py": "5cf636b4d2162d7e8d9b11067430d9e2c0e98265393ed3a8ff422eadc028d961",
+    "asr_backend.py": "85c765b031bc51f0a9de4feebaee64269e6a4311e74b1e3398894ff2b77033cf",
+    "vosk_lite.py": "cca0af72c5039d18ec79ba0eac2d87f862cd2ff5b9cad101341ad6a8f974726f",
+    "board_audio.py": "558e98a7ccf16b4d190aea9f25db8d18f1bf0279c3b94860cd14171a8628436f",
+    "board_mic.py": "9e94ca5cffcf0c3ee061a6e0a44e756c1ba6b90a3a57cc8e5c0bc6fceeea7c15",
+    "board_listen.py": "50c0ead703bc162373ea7d7fdcc18f33d95e4d1552bd63858c8284b5a85c32b2",
+    "text_cli.py": "d674d5fbb3e33b2f3b3cc72157cac8bfa7bb5a13a1670720bc87e6e36eb102fe",
+    "main.py": "a3a6d4fe14923527481c5ee18f9af196faaccd7c9f0cc0b55b29e9838f102a47",
+    "wave.py": "98857069566681d053718078b51acdd2d5d517a063aa2abe26d112b3d65973e5",
+    "chunk.py": "34a5d2cde2e00a03acd84768ccd352ebdc3ac008a8f41ab1caee698e4a474ca0",
+    "PYTHON_STDLIB_LICENSE.txt": "a77d71d6be6f9032e6b6e5d2cf6da68f9eeab9036edfbc043633c8979cd5e82c",
+    "PYTHON_STDLIB_SOURCE.md": "65eaa8f1db3b19161597c9d3236f50c656e203648c0ec3db9c1bd39578cbc450"
+  },
+  "asset_note": "Reuse model/libvosk from /home/root/labmate_b_audio_test; do not copy its Python sources."
+}

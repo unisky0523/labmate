@@ -1,0 +1,79 @@
+ip -4 addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104# cat /sys/class/n et/eth0/carrier
+0
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104# ls -la /media/sd -mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link
+total 1088
+drwxrwxr-x    3 root     users        32768 Nov  4  2026 .
+drwxrwxr-x    3 root     users        32768 Nov  4  2026 ..
+-rwxrwxr-x    1 root     users         6836 Nov  4  2026 BOARD_RUN_CN.md
+-rwxrwxr-x    1 root     users         3586 Nov  4  2026 MAX_FPS_CN.md
+-rwxrwxr-x    1 root     users         4457 Nov  4  2026 PERFORMANCE_CN.md
+-rwxrwxr-x    1 root     users        12065 Nov  4  2026 README_CN.md
+-rwxrwxr-x    1 root     users         6350 Nov  4  2026 SPI_EMIO_RUN_CN.md
+-rwxrwxr-x    1 root     users         4034 Nov  4  2026 SPI_HANDOFF_CN.md
+-rwxrwxr-x    1 root     users         4564 Nov  4  2026 TEN_FPS_CN.md
+-rwxrwxr-x    1 root     users           48 Nov  4  2026 __init__.py
+-rwxrwxr-x    1 root     users         1652 Nov  4  2026 build_spi_diagnostic_update.py
+-rwxrwxr-x    1 root     users         2609 Nov  4  2026 build_spi_emio_bundle.py
+-rwxrwxr-x    1 root     users          191 Nov  4  2026 control_board.sh
+-rwxrwxr-x    1 root     users         5376 Nov  4  2026 demo_server.py
+-rwxrwxr-x    1 root     users         4361 Nov  4  2026 emio_board.py
+-rwxrwxr-x    1 root     users         1457 Nov  4  2026 flash.py
+drwxrwxr-x    3 root     users        32768 Nov  4  2026 native
+-rwxrwxr-x    1 root     users         1172 Nov  4  2026 native_capture.py
+-rwxrwxr-x    1 root     users         2486 Nov  4  2026 native_preview.py
+-rwxrwxr-x    1 root     users         3470 Nov  4  2026 persistent_capture.py
+-rwxrwxr-x    1 root     users         4066 Nov  4  2026 prepare_bundle.py
+-rwxrwxr-x    1 root     users         9948 Nov  4  2026 preview_service.py
+-rwxrwxr-x    1 root     users         2309 Nov  4  2026 protocol.py
+-rwxrwxr-x    1 root     users           33 Nov  4  2026 requirements.txt
+-rwxrwxr-x    1 root     users          190 Nov  4  2026 run_native_board.sh
+-rwxrwxr-x    1 root     users          182 Nov  4  2026 run_sender_board.sh
+-rwxrwxr-x    1 root     users          186 Nov  4  2026 run_spi_emio_board.sh
+-rwxrwxr-x    1 root     users        13115 Nov  4  2026 sender.py
+-rwxrwxr-x    1 root     users         8149 Nov  4  2026 test_link.py
+-rwxrwxr-x    1 root     users         4373 Nov  4  2026 test_native.py
+-rwxrwxr-x    1 root     users         3880 Nov  4  2026 test_persistent.py
+-rwxrwxr-x    1 root     users         9102 Nov  4  2026 test_service.py
+-rwxrwxr-x    1 root     users         4394 Nov  4  2026 test_spi_emio.py
+-rwxrwxr-x    1 root     users         8955 Nov  4  2026 transports.py
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104# find /media/sd-m mcblk0p1/labmate_spi_cs_test_20261104/c_camera_link -maxdepth 2 -type f | head - n 30
+/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/BOARD_RUN_CN.md
+/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/build_spi_diagnostic_update.py
+/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/build_spi_emio_bundle.py
+/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/control_board.sh
+/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/demo_server.py
+/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/emio_board.py
+/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/flash.py
+/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/native_capture.py
+/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/native_preview.py
+/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/persistent_capture.py
+/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/prepare_bundle.py
+/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/preview_service.py
+/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/protocol.py
+/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/README_CN.md
+/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/requirements.txt
+/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/run_native_board.sh
+/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/run_sender_board.sh
+/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/run_spi_emio_board.sh
+/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/sender.py
+/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/SPI_EMIO_RUN_CN.md
+/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/SPI_HANDOFF_CN.md
+/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/test_link.py
+/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/test_native.py
+/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/test_persistent.py
+/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/test_service.py
+/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/test_spi_emio.py
+/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/transports.py
+/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/__init__.py
+/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/native/build.py
+/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/native/build_manifest.json
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104# sha256sum /dev/m td0 /dev/mtd1 /dev/mtd2 /dev/mtd3
+6e6addd02a1de7801b1415c532533b8ac287a876a65f63d1cdb7539f9a9e1ce6  /dev/mtd0
+b5a41c3758763bbec72769fab4a2533bf2db0b6312d93d25a695f9e4b9e02260  /dev/mtd1
+c7b045f395a08b78aa20f1b4c12ca12e14029c0a911879bfc93d93a791701ab1  /dev/mtd2
+0ab06ec02ee5b1866c45180085041eb0a839f53f0e6ab535ce83bb20e26bf323  /dev/mtd3
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104# 

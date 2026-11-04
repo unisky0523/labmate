@@ -1,0 +1,29 @@
+{
+  "release": "labmate_ui_voice_sweep_20261103_v1",
+  "program_files": 289,
+  "history_files": 96,
+  "backup": "/home/root/labmate_releases/labmate_ui_voice_sweep_20261103_v1.tar.gz",
+  "backup_bytes": 2539537,
+  "backup_sha256": "8958a47938231df9fa259901531957f9e87c6df592f0cf4cec88064d43b3f378",
+  "fingerprint": "21a38ebeff799f5b0774806d296cf7a7da1ba133c7f654c0820d4992f97d4ff4",
+  "storage": {
+    "device": "/dev/root",
+    "mount": "/",
+    "filesystem": "ext4"
+  },
+  "voice": {
+    "accepted_by_user": true,
+    "source_unchanged": true,
+    "channel": 0,
+    "calibration_sha256": "63a3904f0118830b6f5b1e07530ec1b62f2b015931d4d69434aaa74c797cce71"
+  },
+  "boot_entries": [
+    "/etc/rc4.d/S90qtGUI.sh",
+    "/etc/rc5.d/S90qtGUI.sh",
+    "/etc/rc0.d/K00qtGUI.sh",
+    "/etc/rc6.d/K00qtGUI.sh",
+    "/etc/rc1.d/K00qtGUI.sh",
+    "/etc/rc3.d/S90qtGUI.sh",
+    "/etc/rc2.d/S90qtGUI.sh"
+  ]
+}

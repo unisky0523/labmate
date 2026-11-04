@@ -1,0 +1,16 @@
+{
+  "files": {
+    "labassistant": "579ea6529722b88236b2cf5da25218813a7aaa23d4121a8a10027c1c9be3a673",
+    "backend.py": "0b38c5ef3ff1b076f4d999ef97b1ff53a2c71d0711d2a8ff9d5b373d0c62146d",
+    "record_store.py": "5bf1fc6d33fb4de0d8b1e3c2cb8fd5251225c969f3f18821926a110f1b166ee9",
+    "asr_adapter.py": "4b9f5111eb9dd66a097a036fb60ae87c0c7dc1d42c07e88b866cf31bb33af315",
+    "asr_runtime/asr_grammar.py": "d1a52cd72b6584ab0b02f4065e1b6db8eb7f02b94c45b2a4a9f904f03d0a68d6",
+    "asr_runtime/board_listen.py": "0f9436a90036db6895746f38c1d2b79d3015965b81b80a50fe583c7a6f639b0f",
+    "run_ui_test.sh": "379c71c5585e6ebe6e6ad0dc3f9e5746e37a272b4a278806718212c640b10675",
+    "run_ui_desktop.sh": "3c751e0d4133ded95c021111845b3c1d3ff154acd0732a1658f0261a5513f432"
+  },
+  "private_store_undo_clear_restart": "passed",
+  "existing_records_untouched": true,
+  "desktop_visible": true,
+  "marker": true
+}

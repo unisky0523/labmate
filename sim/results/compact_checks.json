@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "package_limit_bytes": 200000000,
+  "arm_offline_tests": 220,
+  "kernel_retained_files_verified": 66070,
+  "kernel_input_checksums_verified": 78,
+  "xpr_source_paths_verified": 6,
+  "official_model_download_verified": true,
+  "model_files_verified": 14,
+  "failures": [],
+  "kernel_xz_recompression_tar_identical": true,
+  "kernel_xz_archive_sha256": "4c48d7fec2411512b1af9812cdf5b07b81dc494b6268519a229bca51445b57e7"
+}

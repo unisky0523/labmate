@@ -1,0 +1,11 @@
+{
+  "sample_rate": 44100,
+  "taps": 127,
+  "coefficient_bits": 18,
+  "fractional_bits": 17,
+  "passband_100_to_6400_min_db": -0.005932709952750047,
+  "passband_100_to_6400_max_db": 0.0013857711568602666,
+  "stopband_8000_up_max_db": -61.989159557626095,
+  "fir_group_delay_ms": 1.4285714285714286,
+  "coefficient_l1": 1.989593505859375
+}

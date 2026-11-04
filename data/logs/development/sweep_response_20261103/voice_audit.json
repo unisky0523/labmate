@@ -1,0 +1,507 @@
+{
+  "current": {
+    "asr_adapter.py": "3452688ea69b8338942b0444be170a2b8b2455ff2f3d61443b4c8cc20cd812a6",
+    "audio_frontend.py": "17fa10bb37e2f9c5d9715b800beb4759fbb337cd69e2b86aba203609423090dd",
+    "run_ui_voice.sh": "9eeb74784b7c5d9d5a84e27ce3fcd373a4582d1039ace78279c3e3fa70c975ee",
+    "run_ui_instruments.sh": "69b3644d43c7a1bae8fa370f6d95f32941fb719808245993b83a69e463eaeff0",
+    "run_ui_test.sh": "379c71c5585e6ebe6e6ad0dc3f9e5746e37a272b4a278806718212c640b10675",
+    "asr_runtime/asr_backend.py": "85c765b031bc51f0a9de4feebaee64269e6a4311e74b1e3398894ff2b77033cf",
+    "asr_runtime/asr_cli.py": "8b92f25d7dd88c069814fc1491914907ea3c9fe47744d767b54a8b20cd70cdda",
+    "asr_runtime/asr_grammar.py": "c3ad45836f9cb7128afce7c8a74398ddee7a11d950d8e9d69e435e963cb70d15",
+    "asr_runtime/board_listen.py": "0f9436a90036db6895746f38c1d2b79d3015965b81b80a50fe583c7a6f639b0f",
+    "asr_runtime/board_mic.py": "9e94ca5cffcf0c3ee061a6e0a44e756c1ba6b90a3a57cc8e5c0bc6fceeea7c15",
+    "asr_runtime/board_audio.py": "558e98a7ccf16b4d190aea9f25db8d18f1bf0279c3b94860cd14171a8628436f",
+    "asr_runtime/vosk_lite.py": "cca0af72c5039d18ec79ba0eac2d87f862cd2ff5b9cad101341ad6a8f974726f",
+    "asr_runtime/text_cli.py": "87e8534f11925b8df49e73622e769e9771c6f7bf0cbdba06f0aaf596d1f79a26",
+    "asr_runtime/main.py": "c11089d72de2cce2513327f6402907ec21847ed753d5134f15b9cdd3c39b1a4b",
+    "data/audio_diagnostics/voice_calibration.json": "b5bf85a1fd5aff4d30f65488403222faaa1847611568425e0a95364bfdbed319",
+    "data/audio_diagnostics/audio_profile_latest.json": "ecea30e1b2cdd19997a07c263c518c54a2bc8cba2937163e2bc07cd71c2ff676"
+  },
+  "snapshots": {
+    "before_sweep_response_20261103.tar.gz": {
+      "asr_adapter.py": {
+        "sha256": "3452688ea69b8338942b0444be170a2b8b2455ff2f3d61443b4c8cc20cd812a6",
+        "same": true
+      },
+      "audio_frontend.py": {
+        "sha256": "17fa10bb37e2f9c5d9715b800beb4759fbb337cd69e2b86aba203609423090dd",
+        "same": true
+      },
+      "run_ui_voice.sh": {
+        "sha256": "9eeb74784b7c5d9d5a84e27ce3fcd373a4582d1039ace78279c3e3fa70c975ee",
+        "same": true
+      },
+      "run_ui_instruments.sh": {
+        "sha256": "69b3644d43c7a1bae8fa370f6d95f32941fb719808245993b83a69e463eaeff0",
+        "same": true
+      },
+      "run_ui_test.sh": {
+        "sha256": "379c71c5585e6ebe6e6ad0dc3f9e5746e37a272b4a278806718212c640b10675",
+        "same": true
+      },
+      "asr_runtime/asr_backend.py": {
+        "sha256": "85c765b031bc51f0a9de4feebaee64269e6a4311e74b1e3398894ff2b77033cf",
+        "same": true
+      },
+      "asr_runtime/asr_cli.py": {
+        "sha256": "8b92f25d7dd88c069814fc1491914907ea3c9fe47744d767b54a8b20cd70cdda",
+        "same": true
+      },
+      "asr_runtime/asr_grammar.py": {
+        "sha256": "c3ad45836f9cb7128afce7c8a74398ddee7a11d950d8e9d69e435e963cb70d15",
+        "same": true
+      },
+      "asr_runtime/board_listen.py": {
+        "sha256": "0f9436a90036db6895746f38c1d2b79d3015965b81b80a50fe583c7a6f639b0f",
+        "same": true
+      },
+      "asr_runtime/board_mic.py": {
+        "sha256": "9e94ca5cffcf0c3ee061a6e0a44e756c1ba6b90a3a57cc8e5c0bc6fceeea7c15",
+        "same": true
+      },
+      "asr_runtime/board_audio.py": {
+        "sha256": "558e98a7ccf16b4d190aea9f25db8d18f1bf0279c3b94860cd14171a8628436f",
+        "same": true
+      },
+      "asr_runtime/vosk_lite.py": {
+        "sha256": "cca0af72c5039d18ec79ba0eac2d87f862cd2ff5b9cad101341ad6a8f974726f",
+        "same": true
+      },
+      "asr_runtime/text_cli.py": {
+        "sha256": "87e8534f11925b8df49e73622e769e9771c6f7bf0cbdba06f0aaf596d1f79a26",
+        "same": true
+      },
+      "asr_runtime/main.py": {
+        "sha256": "c11089d72de2cce2513327f6402907ec21847ed753d5134f15b9cdd3c39b1a4b",
+        "same": true
+      },
+      "data/audio_diagnostics/voice_calibration.json": {
+        "sha256": "de4a6078eceecb6f3d55299d0b72da512c4305ba1e57aea3ead3baa93c72efbc",
+        "same": false,
+        "content": {
+          "success": true,
+          "selected": {
+            "layout": "msb-first",
+            "channel": 1,
+            "hits": 3,
+            "texts": [
+              "记录数据",
+              "记录数据",
+              "记录数据"
+            ],
+            "confidence": 1.0,
+            "noise_floor": 0.004241661913692951
+          },
+          "candidates": [
+            {
+              "layout": "little",
+              "channel": 0,
+              "hits": 0,
+              "texts": [
+                "",
+                "伏",
+                ""
+              ],
+              "confidence": 0.0,
+              "noise_floor": 0.5400880455970765
+            },
+            {
+              "layout": "little",
+              "channel": 1,
+              "hits": 0,
+              "texts": [
+                "",
+                "",
+                ""
+              ],
+              "confidence": 0.0,
+              "noise_floor": 0.5681079387664795
+            },
+            {
+              "layout": "msb-first",
+              "channel": 0,
+              "hits": 2,
+              "texts": [
+                "十记录数据",
+                "记录数据",
+                "记录数据"
+              ],
+              "confidence": 1.0,
+              "noise_floor": 0.007337955385446548
+            },
+            {
+              "layout": "msb-first",
+              "channel": 1,
+              "hits": 3,
+              "texts": [
+                "记录数据",
+                "记录数据",
+                "记录数据"
+              ],
+              "confidence": 1.0,
+              "noise_floor": 0.004241661913692951
+            }
+          ],
+          "message": "检测通过：msb-first／右声道，3/3 命中，已应用。",
+          "summary": "little／左：0/3，置信分数 0.00\nlittle／右：0/3，置信分数 0.00\nmsb-first／左：2/3，置信分数 1.00\nmsb-first／右：3/3，置信分数 1.00",
+          "channel": 1,
+          "profile": {
+            "byte_order": "msb-first",
+            "noise_rms": [
+              0.007337955385446548,
+              0.004241661913692951
+            ],
+            "thresholds": [
+              0.014675910770893096,
+              0.01
+            ],
+            "calibrated": true
+          }
+        }
+      },
+      "data/audio_diagnostics/audio_profile_latest.json": {
+        "sha256": "f9cca46488f978b0f46cdafbbf5d9f58b450108d83c652855ae0b2e320f4f359",
+        "same": false,
+        "content": {
+          "byte_order": "msb-first",
+          "sign_byte_fraction": [
+            [
+              0.6040589569160998,
+              0.008072562358276645
+            ],
+            [
+              0.9662585034013605,
+              0.007369614512471655
+            ]
+          ],
+          "noise_rms": [
+            0.015456601092591874,
+            0.0065179432276636345
+          ],
+          "thresholds": [
+            0.030913202185183748,
+            0.013035886455327269
+          ]
+        }
+      }
+    },
+    "before_fft_20261103.tar.gz": {
+      "asr_adapter.py": {
+        "sha256": "3452688ea69b8338942b0444be170a2b8b2455ff2f3d61443b4c8cc20cd812a6",
+        "same": true
+      },
+      "audio_frontend.py": {
+        "sha256": "17fa10bb37e2f9c5d9715b800beb4759fbb337cd69e2b86aba203609423090dd",
+        "same": true
+      },
+      "run_ui_voice.sh": {
+        "sha256": "9eeb74784b7c5d9d5a84e27ce3fcd373a4582d1039ace78279c3e3fa70c975ee",
+        "same": true
+      },
+      "run_ui_instruments.sh": {
+        "sha256": "69b3644d43c7a1bae8fa370f6d95f32941fb719808245993b83a69e463eaeff0",
+        "same": true
+      },
+      "run_ui_test.sh": {
+        "sha256": "379c71c5585e6ebe6e6ad0dc3f9e5746e37a272b4a278806718212c640b10675",
+        "same": true
+      },
+      "asr_runtime/asr_backend.py": {
+        "sha256": "85c765b031bc51f0a9de4feebaee64269e6a4311e74b1e3398894ff2b77033cf",
+        "same": true
+      },
+      "asr_runtime/asr_cli.py": {
+        "sha256": "c34cc156054b4ce8dd344110dd3b569e39c502815e5d4646c321be76eb618dc3",
+        "same": false
+      },
+      "asr_runtime/asr_grammar.py": {
+        "sha256": "3202bd89cfc72d39629a8f3d9945da9b8fec8fc9fe989a822fbfd930c674e495",
+        "same": false
+      },
+      "asr_runtime/board_listen.py": {
+        "sha256": "0f9436a90036db6895746f38c1d2b79d3015965b81b80a50fe583c7a6f639b0f",
+        "same": true
+      },
+      "asr_runtime/board_mic.py": {
+        "sha256": "9e94ca5cffcf0c3ee061a6e0a44e756c1ba6b90a3a57cc8e5c0bc6fceeea7c15",
+        "same": true
+      },
+      "asr_runtime/board_audio.py": {
+        "sha256": "558e98a7ccf16b4d190aea9f25db8d18f1bf0279c3b94860cd14171a8628436f",
+        "same": true
+      },
+      "asr_runtime/vosk_lite.py": {
+        "sha256": "cca0af72c5039d18ec79ba0eac2d87f862cd2ff5b9cad101341ad6a8f974726f",
+        "same": true
+      },
+      "asr_runtime/text_cli.py": {
+        "sha256": "c8c2ba4027dc78c8278b51fa791c0add693cf1d9014b9bcbc940c2e626dc85a2",
+        "same": false
+      },
+      "asr_runtime/main.py": {
+        "sha256": "c11089d72de2cce2513327f6402907ec21847ed753d5134f15b9cdd3c39b1a4b",
+        "same": true
+      },
+      "data/audio_diagnostics/voice_calibration.json": {
+        "sha256": "531f64e3baf85bfea4cb260428e347f3460c000993a3366b7a30ef221f613fd8",
+        "same": false,
+        "content": {
+          "success": true,
+          "selected": {
+            "layout": "msb-first",
+            "channel": 0,
+            "hits": 3,
+            "texts": [
+              "记录数据",
+              "记录数据",
+              "记录数据"
+            ],
+            "confidence": 1.0,
+            "noise_floor": 0.004548219125717878
+          },
+          "candidates": [
+            {
+              "layout": "little",
+              "channel": 0,
+              "hits": 0,
+              "texts": [
+                "伏",
+                "伏",
+                "伏"
+              ],
+              "confidence": 0.0,
+              "noise_floor": 0.31283825635910034
+            },
+            {
+              "layout": "little",
+              "channel": 1,
+              "hits": 0,
+              "texts": [
+                "",
+                "伏",
+                ""
+              ],
+              "confidence": 0.0,
+              "noise_floor": 0.5557950973510742
+            },
+            {
+              "layout": "msb-first",
+              "channel": 0,
+              "hits": 3,
+              "texts": [
+                "记录数据",
+                "记录数据",
+                "记录数据"
+              ],
+              "confidence": 1.0,
+              "noise_floor": 0.004548219125717878
+            },
+            {
+              "layout": "msb-first",
+              "channel": 1,
+              "hits": 3,
+              "texts": [
+                "记录数据",
+                "记录数据",
+                "记录数据"
+              ],
+              "confidence": 1.0,
+              "noise_floor": 0.004239727091044187
+            }
+          ],
+          "message": "检测通过：msb-first／左声道，3/3 命中，已应用。",
+          "summary": "little／左：0/3，置信分数 0.00\nlittle／右：0/3，置信分数 0.00\nmsb-first／左：3/3，置信分数 1.00\nmsb-first／右：3/3，置信分数 1.00",
+          "channel": 0,
+          "profile": {
+            "byte_order": "msb-first",
+            "noise_rms": [
+              0.004548219125717878,
+              0.004239727091044187
+            ],
+            "thresholds": [
+              0.01,
+              0.01
+            ],
+            "calibrated": true
+          }
+        }
+      },
+      "data/audio_diagnostics/audio_profile_latest.json": {
+        "sha256": "8b0f074c087cfe6556c068947b676c0152b8773419c5b1de442c7dae650edfb5",
+        "same": false,
+        "content": {
+          "byte_order": "msb-first",
+          "sign_byte_fraction": [
+            [
+              0.7388888888888889,
+              0.009138321995464853
+            ],
+            [
+              0.9959410430839002,
+              0.00798185941043084
+            ]
+          ],
+          "noise_rms": [
+            0.009158019907772541,
+            0.004461234086193144
+          ],
+          "thresholds": [
+            0.018316039815545082,
+            0.01
+          ]
+        }
+      }
+    }
+  },
+  "processes": [
+    {
+      "pid": "2903",
+      "command": "./labassistant ",
+      "env": [
+        "LABMATE_INSTRUMENT_CONFIG=/home/root/labmate_ui_test/instruments.json",
+        "LABMATE_MODEL_PATH=/home/root/labmate_b_audio_test/models/vosk-model-small-cn-0.22",
+        "LABMATE_HISTORY_DIRS=/home/root/labmate_b_audio_test/data/records:/media/sd-mmcblk0p1/labmate_b_board_20261015/data/records",
+        "QT_QPA_PLATFORM=linuxfb:fb=/dev/fb0",
+        "LABMATE_ASR_ROOT=/home/root/labmate_ui_test/asr_runtime",
+        "LABMATE_BACKEND=/home/root/labmate_ui_test/backend.py",
+        "QT_QPA_FONTDIR=/usr/share/fonts",
+        "LD_LIBRARY_PATH=/home/root/labmate_b_audio_test/lib:/home/root/labmate_b_audio_test",
+        "LABMATE_RECORD_DIR=/home/root/labmate_ui_test/data/records"
+      ]
+    },
+    {
+      "pid": "2904",
+      "command": "/usr/bin/python3 -u /home/root/labmate_ui_test/backend.py ",
+      "env": [
+        "LABMATE_ASR_ROOT=/home/root/labmate_ui_test/asr_runtime",
+        "LABMATE_BACKEND=/home/root/labmate_ui_test/backend.py",
+        "LABMATE_HISTORY_DIRS=/home/root/labmate_b_audio_test/data/records:/media/sd-mmcblk0p1/labmate_b_board_20261015/data/records",
+        "LABMATE_INSTRUMENT_CONFIG=/home/root/labmate_ui_test/instruments.json",
+        "LABMATE_MODEL_PATH=/home/root/labmate_b_audio_test/models/vosk-model-small-cn-0.22",
+        "LABMATE_RECORD_DIR=/home/root/labmate_ui_test/data/records",
+        "LD_LIBRARY_PATH=/home/root/labmate_b_audio_test/lib:/home/root/labmate_b_audio_test",
+        "QT_QPA_FONTDIR=/usr/share/fonts",
+        "QT_QPA_PLATFORM=linuxfb:fb=/dev/fb0"
+      ]
+    },
+    {
+      "pid": "3422",
+      "command": "arecord -q -D hw:0,1 -t raw -f S24_LE -r 44100 -c 2 ",
+      "env": [
+        "LABMATE_ASR_ROOT=/home/root/labmate_ui_test/asr_runtime",
+        "LABMATE_BACKEND=/home/root/labmate_ui_test/backend.py",
+        "LABMATE_HISTORY_DIRS=/home/root/labmate_b_audio_test/data/records:/media/sd-mmcblk0p1/labmate_b_board_20261015/data/records",
+        "LABMATE_INSTRUMENT_CONFIG=/home/root/labmate_ui_test/instruments.json",
+        "LABMATE_MODEL_PATH=/home/root/labmate_b_audio_test/models/vosk-model-small-cn-0.22",
+        "LABMATE_RECORD_DIR=/home/root/labmate_ui_test/data/records",
+        "LD_LIBRARY_PATH=/home/root/labmate_b_audio_test/lib:/home/root/labmate_b_audio_test",
+        "QT_QPA_FONTDIR=/usr/share/fonts",
+        "QT_QPA_PLATFORM=linuxfb:fb=/dev/fb0"
+      ]
+    }
+  ],
+  "configs": {
+    "data/audio_diagnostics/voice_calibration.json": {
+      "success": true,
+      "selected": {
+        "layout": "msb-first",
+        "channel": 0,
+        "hits": 3,
+        "texts": [
+          "记录数据",
+          "记录数据",
+          "记录数据"
+        ],
+        "confidence": 1.0,
+        "noise_floor": 0.008022515848279
+      },
+      "candidates": [
+        {
+          "layout": "little",
+          "channel": 0,
+          "hits": 0,
+          "texts": [
+            "伏",
+            "",
+            "伏"
+          ],
+          "confidence": 0.0,
+          "noise_floor": 0.5522150039672852
+        },
+        {
+          "layout": "little",
+          "channel": 1,
+          "hits": 0,
+          "texts": [
+            "",
+            "",
+            ""
+          ],
+          "confidence": 0.0,
+          "noise_floor": 0.5676130294799805
+        },
+        {
+          "layout": "msb-first",
+          "channel": 0,
+          "hits": 3,
+          "texts": [
+            "记录数据",
+            "记录数据",
+            "记录数据"
+          ],
+          "confidence": 1.0,
+          "noise_floor": 0.008022515848279
+        },
+        {
+          "layout": "msb-first",
+          "channel": 1,
+          "hits": 3,
+          "texts": [
+            "记录数据",
+            "记录数据",
+            "记录数据"
+          ],
+          "confidence": 1.0,
+          "noise_floor": 0.004273667186498642
+        }
+      ],
+      "message": "检测通过：msb-first／左声道，3/3 命中，已应用。",
+      "summary": "little／左：0/3，置信分数 0.00\nlittle／右：0/3，置信分数 0.00\nmsb-first／左：3/3，置信分数 1.00\nmsb-first／右：3/3，置信分数 1.00",
+      "channel": 0,
+      "profile": {
+        "byte_order": "msb-first",
+        "noise_rms": [
+          0.008022515848279,
+          0.004273667186498642
+        ],
+        "thresholds": [
+          0.016045031696558,
+          0.01
+        ],
+        "calibrated": true
+      }
+    },
+    "data/audio_diagnostics/audio_profile_latest.json": {
+      "byte_order": "msb-first",
+      "sign_byte_fraction": [
+        [
+          0.5780725623582766,
+          0.007142857142857143
+        ],
+        [
+          0.9518367346938775,
+          0.008594104308390022
+        ]
+      ],
+      "noise_rms": [
+        0.018621140904724595,
+        0.007182357949204743
+      ],
+      "thresholds": [
+        0.03724228180944919,
+        0.014364715898409486
+      ]
+    }
+  },
+  "ui_log": "QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/var/volatile/tmp/runtime-root'\n"
+}

@@ -1,0 +1,6 @@
+Image Name:   Linux-5.4.0-xilinx-v2020.2-spi-t
+Created:      Wed Nov  4 01:26:21 2026
+Image Type:   ARM Linux Kernel Image (uncompressed)
+Data Size:    4836888 Bytes = 4723.52 KiB = 4.61 MiB
+Load Address: 00008000
+Entry Point:  00008000

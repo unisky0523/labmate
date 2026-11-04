@@ -1,0 +1,25 @@
+Rebuild smoke_infer for the actual board Linux image
+
+The bundled smoke_infer is an unverified cross-build and is too new for the
+reviewed factory rootfs (glibc 2.30). Source: c_vision_lite/smoke_infer.cc.
+CMake project: c_vision_lite/CMakeLists.txt. Never replace the board libc.so.6
+or loader with a newer host copy.
+
+On a Linux build host with the board-matched ARMv7 hard-float SDK/sysroot and
+the extracted ARM Paddle-Lite C++ runtime, configure and build:
+
+  cmake -S c_vision_lite -B build-board \
+    -DCMAKE_TOOLCHAIN_FILE=/path/to/board-toolchain.cmake \
+    -DLITE_CXX_DIR=/path/to/paddle_lite/cxx
+  cmake --build build-board --target smoke_infer -j2
+
+The toolchain file must select the board SDK compiler and sysroot, not a
+generic host cross-compiler. Replace the bundled smoke_infer only after
+checking its ELF architecture, interpreter and required GLIBC/GLIBCXX symbols.
+On board, run 'ldd ./smoke_infer' and 'ldd ./libpaddle_light_api_shared.so'.
+Neither may report a missing library or missing symbol version. Check Python
+imports for numpy, cv2 and pyclipper; libgomp.so.1 may also be needed.
+Then follow README_IMAGE_BOARD.txt for the image tests.
+
+No board SDK/sysroot or compatible replacement binary is included here.
+This is a rebuild/test handoff, not a board-validated application.

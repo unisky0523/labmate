@@ -1,0 +1,24 @@
+mmc list
+mmc@e0100000: 0
+mmc@e0101000: 1
+Zynq> fatls mmc 0:1
+            voice_demo/
+            System Volume Information/
+            labmate_b_board_20261015/
+            closeup_capture_01/
+   105097   camera_800x480.jpg
+            FOUND.000/
+    32768   labmate_lite_image_reader_board_v2.chkdsk-directory-data
+            labmate_lite_image_reader_board_v2/
+   160044   asr_20230426_061422_058777_a14a4bf0.wav
+     2426   asr_20230426_061422_058777_a14a4bf0_9ab7244d.json
+  1308722   cv2_debug.tar.gz
+ 46577796   labmate_b_board_20261015.zip
+            labmate_sa5041_board/
+            labmate_sds1202x_board/
+            labmate_camera_link/
+            labmate_camera_spi_emio/
+
+6 file(s), 10 dir(s)
+
+Zynq> 

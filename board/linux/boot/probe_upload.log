@@ -1,0 +1,3 @@
+sha256sum /home/ root/spi_stage_20261104/uart_probe.bin
+10fc3c51a152e90e5b90319b601d92ccf37290ef53c35ff92507687d8a911a08  /home/root/spi_stage_20261104/uart_probe.bin
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104# 

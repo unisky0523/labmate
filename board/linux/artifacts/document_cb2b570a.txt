@@ -1,0 +1,27 @@
+SPI 内核 Ubuntu 离线编译包（2026-11-04）
+
+1. 将整个 ZIP 复制到之前编译 ARM 程序的 Ubuntu 18.04 虚拟机。
+2. 解压，进入 labmate_spi_kernel_ubuntu_20261104 文件夹，在这里打开终端。
+3. 执行一条命令：
+
+   bash build_spi.sh
+
+脚本沿用 /home/labmat/petalinux_sdk_2020_2 的 2020.2 SDK。
+源码、SPI 驱动修改、设备树、发送脚本、测试图和新增的宿主机构建依赖均已包含。
+构建依赖解压到自己的缓存目录，不需要联网下载，也不需要 sudo 安装。
+
+编译成功后，得到：
+
+   output/spi_board_files_20261104.tar.gz
+
+将这个文件复制回 Windows 的：
+
+   D:\fpga amd xinlx\work\spi_kernel_result_20261104\
+
+后续依据板卡当前 U-Boot 启动方式进行部署。这个编译包只在 Ubuntu 生成文件。
+输出包包含 zImage、uImage、system-spi.dtb、匹配模块、FPGA 文件和静态图片发送工具。
+候选版本号：5.4.0-xilinx-v2020.2-spi-test-20261104。
+
+本包针对已知 7010 摄像头/音频/LCD 工程基线构建；设备树根分区按此前记录使用 eMMC mmcblk1p1，U-Boot 原有 bootargs 应在部署时核对。
+ESP32 接收固件由接收端提供；本轻量交付没有它的工程，不影响这里的 Zynq 内核构建。
+编译完成与板上验证分别记录，只有实际构建成功才会生成 BUILD_OK。

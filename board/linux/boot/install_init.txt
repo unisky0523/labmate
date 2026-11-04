@@ -1,0 +1,8 @@
+uname -r
+ls -l /dev/spidev1.0 /dev/video0 /dev/fb0
+python3 -c 'import pathlib,shutil; s=pathlib.Path("/home/root/spi_stage_20261104/config"); jobs=[(s/"labmate-spi-init.py",pathlib.Path("/usr/local/lib/labmate-spi-init.py")),(s/"labmate-spi",pathlib.Path("/etc/init.d/labmate-spi")),(s/"rollback-factory.sh",pathlib.Path("/home/root/spi_boot_backup_20261104/rollback-factory.sh"))]; assert all(not d.exists() for a,d in jobs); [(d.parent.mkdir(parents=True,exist_ok=True),shutil.copyfile(str(a),str(d)),d.chmod(0o755)) for a,d in jobs]; link=pathlib.Path("/etc/rcS.d/S40labmate-spi"); assert not link.exists(); link.symlink_to("../init.d/labmate-spi"); print("SPI_INIT_INSTALLED")'
+/etc/init.d/labmate-spi start
+cat /sys/class/gpio/gpio962/direction
+cat /var/log/labmate-spi-init.log
+sha256sum /dev/mtd0 /dev/mtd1 /dev/mtd2 /dev/mtd3
+sync

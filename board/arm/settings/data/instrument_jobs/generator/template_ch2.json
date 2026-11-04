@@ -1,0 +1,12 @@
+{
+  "action": "sweep",
+  "channel": 2,
+  "start_hz": 100.0,
+  "stop_hz": 10000.0,
+  "time_s": 10.0,
+  "amplitude_vpp": 1.0,
+  "offset_v": 0,
+  "load": "highz",
+  "spacing": "lin",
+  "trigger": "int"
+}

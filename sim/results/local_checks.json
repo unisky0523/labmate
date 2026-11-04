@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-04T14:35:49.521660+08:00",
+  "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+  "board_accessed": false,
+  "suites": [
+    {
+      "name": "arm_ui",
+      "exit_code": 0,
+      "tests": 181,
+      "log": "arm_ui.log",
+      "summary": "OK"
+    },
+    {
+      "name": "dg4102",
+      "exit_code": 0,
+      "tests": 17,
+      "log": "dg4102.log",
+      "summary": "OK"
+    },
+    {
+      "name": "voice_cli",
+      "exit_code": 0,
+      "tests": 22,
+      "log": "voice_cli.log",
+      "summary": "OK"
+    }
+  ],
+  "passed": true
+}

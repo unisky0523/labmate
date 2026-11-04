@@ -1,0 +1,93 @@
+{
+  "model": "vosk-model-small-cn-0.22",
+  "url": "https://alphacephei.com/vosk/models/vosk-model-small-cn-0.22.zip",
+  "source_page": "https://alphacephei.com/vosk/models",
+  "license": "Apache-2.0",
+  "unpacked_bytes": 68292271,
+  "files": [
+    {
+      "path": "vosk-model-small-cn-0.22/am/final.mdl",
+      "sha256": "91eda2c04c4f599361cb92b0e5298ccdf6b3c7a1fa52bfcefcd2c4e07aa1c131",
+      "bytes": 15901896,
+      "packaged_full": "data/models/voice/models/vosk-model-small-cn-0.22/am/final.mdl"
+    },
+    {
+      "path": "vosk-model-small-cn-0.22/conf/mfcc.conf",
+      "sha256": "6c326fea5741c2d78be12f76eb1b36ea2ace040da9e355e4cfe6bb80e5f7d5ab",
+      "bytes": 153,
+      "packaged_full": "data/models/voice/models/vosk-model-small-cn-0.22/conf/mfcc.conf"
+    },
+    {
+      "path": "vosk-model-small-cn-0.22/conf/model.conf",
+      "sha256": "468a8125c07530f96adcc219a0a5f993e8e0721ccf18acbd3169b77fc685fb9b",
+      "bytes": 289,
+      "packaged_full": "data/models/voice/models/vosk-model-small-cn-0.22/conf/model.conf"
+    },
+    {
+      "path": "vosk-model-small-cn-0.22/graph/disambig_tid.int",
+      "sha256": "c9200318c2a265549ebfbea7e0176fa62e131e953abd140c9b0b39fe61e24015",
+      "bytes": 234,
+      "packaged_full": "data/models/voice/models/vosk-model-small-cn-0.22/graph/disambig_tid.int"
+    },
+    {
+      "path": "vosk-model-small-cn-0.22/graph/Gr.fst",
+      "sha256": "46d41a9b1723abccdcb354d731a5b58d87c060100d88ada1a3e31220f52b0434",
+      "bytes": 26082259,
+      "packaged_full": "data/models/voice/models/vosk-model-small-cn-0.22/graph/gr.fst"
+    },
+    {
+      "path": "vosk-model-small-cn-0.22/graph/HCLr.fst",
+      "sha256": "798af0d9ba6f2d727747f58e1e7b2305f8618bc8ea7f6c51beecd8a2c965b965",
+      "bytes": 16158762,
+      "packaged_full": "data/models/voice/models/vosk-model-small-cn-0.22/graph/hclr.fst"
+    },
+    {
+      "path": "vosk-model-small-cn-0.22/graph/phones/word_boundary.int",
+      "sha256": "11ca784b99f03188b451fb54714c2de3dd694e662a5f88e82df435c2789b9aec",
+      "bytes": 7161,
+      "packaged_full": "data/models/voice/models/vosk-model-small-cn-0.22/graph/phones/word_boundary.int"
+    },
+    {
+      "path": "vosk-model-small-cn-0.22/ivector/final.dubm",
+      "sha256": "e33276cbd548c0a03ae5812c98115940614997dff23a6d59968af6eaf7630ff8",
+      "bytes": 168048,
+      "packaged_full": "data/models/voice/models/vosk-model-small-cn-0.22/ivector/final.dubm"
+    },
+    {
+      "path": "vosk-model-small-cn-0.22/ivector/final.ie",
+      "sha256": "c39d46fbff04efb7baa9660ae7a728b0e2f35a4a1250b56ed3a599e26956df86",
+      "bytes": 9927287,
+      "packaged_full": "data/models/voice/models/vosk-model-small-cn-0.22/ivector/final.ie"
+    },
+    {
+      "path": "vosk-model-small-cn-0.22/ivector/final.mat",
+      "sha256": "42706d88818070ea0d0182b4d11367ba52a13b9a2be45630f60858a422109ada",
+      "bytes": 44975,
+      "packaged_full": "data/models/voice/models/vosk-model-small-cn-0.22/ivector/final.mat"
+    },
+    {
+      "path": "vosk-model-small-cn-0.22/ivector/global_cmvn.stats",
+      "sha256": "b267dc89c1556fdd5bc358f0a480929da1743eeccfa06a67daf8db629ca336bb",
+      "bytes": 1090,
+      "packaged_full": "data/models/voice/models/vosk-model-small-cn-0.22/ivector/global_cmvn.stats"
+    },
+    {
+      "path": "vosk-model-small-cn-0.22/ivector/online_cmvn.conf",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "packaged_full": "data/models/voice/models/vosk-model-small-cn-0.22/ivector/online_cmvn.conf"
+    },
+    {
+      "path": "vosk-model-small-cn-0.22/ivector/splice.conf",
+      "sha256": "9f0c5f7c82d18eaf25d8bce470efa9f7741f88411fe428774bc0a9bb69a24756",
+      "bytes": 35,
+      "packaged_full": "data/models/voice/models/vosk-model-small-cn-0.22/ivector/splice.conf"
+    },
+    {
+      "path": "vosk-model-small-cn-0.22/README",
+      "sha256": "7362be411c609f2a1c9d2dfe22c2d72555c15eb90bfe47c41772f49ef94840ce",
+      "bytes": 82,
+      "packaged_full": "data/models/voice/models/vosk-model-small-cn-0.22/readme"
+    }
+  ]
+}

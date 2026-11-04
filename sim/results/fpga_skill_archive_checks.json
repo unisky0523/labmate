@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "archive": "LabMate_FPGA_skill.zip",
+  "archive_bytes": 68452,
+  "archive_sha256": "f72045f3858670d94834f7c84629b2341c50d82457d4b780d8aa0499ccc220c2",
+  "zip_crc_passed": true,
+  "file_entries": 21,
+  "standalone_readme_identical_to_archive": true
+}

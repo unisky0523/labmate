@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LabMate · 现场画面</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f2f4f5;color:#20282b;font:14px system-ui,sans-serif;letter-spacing:0}
+header{padding:16px 24px;background:#fff;border-bottom:1px solid #d6dedf;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+h1{margin:0;font-size:20px}#status{margin-left:auto;color:#466055;font-size:13px}
+main{width:100%;max-width:1600px;margin:0 auto;padding:20px 24px}.toolbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding-bottom:14px}
+button,select{font:inherit;height:38px;padding:0 14px;border:1px solid #bdc9cc;background:#fff;border-radius:4px;color:inherit;cursor:pointer}
+button:disabled,select:disabled{opacity:.45;cursor:default}button.primary{background:#17634d;border-color:#17634d;color:white}
+#mode{color:#4d5c62;margin-left:auto}.stage{background:#172021;width:100%;height:clamp(240px,calc(100vh - 230px),960px);height:clamp(240px,calc(100dvh - 230px),960px);display:grid;place-items:center;overflow:hidden;position:relative}
+#framewrap{position:relative;max-width:100%;max-height:100%;line-height:0}#photo{display:block;width:100%;height:100%}
+canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none}#empty{color:#e4e9e8;padding:48px;text-align:center}
+footer{display:flex;gap:20px;flex-wrap:wrap;padding:12px 0;color:#526168;font-size:12px}#error{color:#a3302b;min-height:20px;margin-top:12px}
+@media(max-width:600px){header{padding:12px}main{padding:12px}#status{margin-left:0}#mode{width:100%;margin-left:0}.stage{height:auto;aspect-ratio:5/3}button,select{padding:0 10px}}
+</style>
+<header><h1>LabMate · 现场画面</h1><span id="status">正在连接</span></header>
+<main>
+<div class="toolbar">
+<button id="freeze" class="primary">冻结画面</button>
+<button id="live">恢复预览</button>
+<select id="tool" aria-label="标注类型"><option value="arrow">箭头</option><option value="box">框选</option></select>
+<button id="undo">撤销标注</button><button id="clear">清除标注</button><button id="save">保存图片</button>
+<span id="mode">实时预览</span>
+</div>
+<div id="stage" class="stage"><div id="empty">等待摄像头画面</div><div id="framewrap" hidden><img id="photo" alt="实验现场"><canvas id="overlay"></canvas></div></div>
+<footer><span id="sequence">帧 —</span><span id="age">更新时间 —</span><span id="transport"></span><span id="fps">预览 — 帧/秒</span></footer>
+<div id="error" role="alert"></div>
+</main>
+<script>
+const $=id=>document.getElementById(id), canvas=$('overlay'), ctx=canvas.getContext('2d');
+let state=null, shown=null, shapes=[], draft=null, drag=null, busy=false, editing=false, imageURL=null;
+let updateDone=Promise.resolve();
+let commandFailure='';
+let fpsStart=performance.now(), displayed=0, snapshotAPI=true;
+function recordDisplay(){
+ displayed++;
+ const now=performance.now(),elapsed=now-fpsStart;
+ if(elapsed>=1000){$('fps').textContent='预览 '+(displayed*1000/elapsed).toFixed(1)+' 帧/秒';fpsStart=now;displayed=0;}
+}
+async function snapshot(){
+ if(snapshotAPI){
+  const query=shown?'?sequence='+shown.sequence+'&revision='+shown.revision:'';
+  const response=await fetch('/api/snapshot'+query,{cache:'no-store'});
+  if(response.status===404){snapshotAPI=false;}
+  else{
+   if(!response.ok)throw Error('获取画面失败：'+response.status);
+   const data=await response.arrayBuffer();
+   if(data.byteLength<4)throw Error('画面数据不完整');
+   const length=new DataView(data).getUint32(0,true);
+   if(length>16384||length>data.byteLength-4)throw Error('画面信息无效');
+   const next=JSON.parse(new TextDecoder().decode(new Uint8Array(data,4,length)));
+   const jpeg=data.slice(4+length);
+   if(jpeg.byteLength!==next.jpeg_bytes)throw Error('画面长度不匹配');
+   return {next,blob:jpeg.byteLength?new Blob([jpeg],{type:'image/jpeg'}):null};
+  }
+ }
+ const next=await request('/api/state');
+ if(!next.has_frame||(shown&&shown.sequence===next.sequence&&shown.revision===next.revision))return {next,blob:null};
+ const response=await fetch('/api/frame?sequence='+next.sequence+'&revision='+next.revision,{cache:'no-store'});
+ if(response.status===409)return null;
+ if(!response.ok)throw Error('获取画面失败：'+response.status);
+ return {next,blob:await response.blob()};
+}
+async function request(path,body){
+ const response=await fetch(path,{method:body===undefined?'GET':'POST',cache:'no-store',
+ headers:body===undefined?{}:{'Content-Type':'application/json'},body:body===undefined?undefined:JSON.stringify(body)});
+ if(!response.ok)throw Error(response.status===409?'画面已更新，请重试':'请求失败：'+response.status);
+ return response.json();
+}
+function drawShape(c,s,w,h){
+ const x=s.x1*w,y=s.y1*h,ex=s.x2*w,ey=s.y2*h;
+ c.strokeStyle='#ffdf42';c.fillStyle='#ffdf42';c.lineWidth=Math.max(2,w/260);c.lineCap='round';
+ c.beginPath();
+ if(s.kind==='box'){c.rect(Math.min(x,ex),Math.min(y,ey),Math.abs(ex-x),Math.abs(ey-y));c.stroke();return;}
+ c.moveTo(x,y);c.lineTo(ex,ey);c.stroke();
+ const angle=Math.atan2(ey-y,ex-x),size=Math.max(10,w/35);
+ c.beginPath();c.moveTo(ex,ey);c.lineTo(ex-size*Math.cos(angle-.45),ey-size*Math.sin(angle-.45));
+ c.lineTo(ex-size*Math.cos(angle+.45),ey-size*Math.sin(angle+.45));c.closePath();c.fill();
+}
+function paint(){
+ ctx.clearRect(0,0,canvas.width,canvas.height);
+ for(const s of shapes)drawShape(ctx,s,canvas.width,canvas.height);
+ if(draft)drawShape(ctx,draft,canvas.width,canvas.height);
+}
+function fitFrame(){
+ const stage=$('stage'),wrap=$('framewrap');
+ if(!canvas.width||!canvas.height||!stage.clientWidth||!stage.clientHeight)return;
+ stage.style.aspectRatio=canvas.width+'/'+canvas.height;
+ const scale=Math.min(stage.clientWidth/canvas.width,stage.clientHeight/canvas.height);
+ wrap.style.width=canvas.width*scale+'px';wrap.style.height=canvas.height*scale+'px';
+}
+if(typeof ResizeObserver!=='undefined')new ResizeObserver(fitFrame).observe($('stage'));
+if(typeof window!=='undefined')window.addEventListener('resize',fitFrame);
+function controls(){
+ const ready=state&&state.has_frame&&shown&&shown.sequence===state.sequence&&shown.revision===state.revision;
+ const frozen=ready&&state.frozen;
+ $('freeze').disabled=!ready||state.frozen||editing;
+ $('live').disabled=!state||!state.frozen||editing;
+ for(const id of ['tool','undo','clear'])$(id).disabled=!frozen||editing;
+ $('save').disabled=!ready||editing;
+ canvas.style.pointerEvents=frozen&&!editing?'auto':'none';
+}
+async function update(){
+ if(busy||editing||drag)return;
+ busy=true;
+ let finishUpdate;
+ updateDone=new Promise(resolve=>{finishUpdate=resolve;});
+ try{
+  const result=await snapshot();
+  if(!result||drag!==null)return;
+  const {next,blob}=result;
+  $('status').textContent=next.simulated?'离线演示':next.has_frame?(next.age_ms>8000?'画面已过期':'已连接'):'等待图像';
+  $('mode').textContent=next.frozen?'共享冻结画面':'实时预览';
+  $('sequence').textContent='帧 '+(next.has_frame?next.sequence:'—');
+  $('age').textContent=next.has_frame?'最近接收 '+Math.round(next.age_ms/1000)+' 秒前':'尚未收到图像';
+  $('transport').textContent=(next.transport||'').toUpperCase();
+  state=next;
+  if(next.has_frame&&(!shown||shown.sequence!==next.sequence||shown.revision!==next.revision)){
+   if(!blob)throw Error('缺少新画面');
+   const url=URL.createObjectURL(blob);
+   const test=new Image();
+   try{test.src=url;await test.decode();}catch(e){URL.revokeObjectURL(url);throw e;}
+   if(imageURL)URL.revokeObjectURL(imageURL);
+   imageURL=url;$('photo').src=url;
+   await new Promise(resolve=>requestAnimationFrame(resolve));
+   if(!next.frozen)recordDisplay();
+   const resized=canvas.width!==test.naturalWidth||canvas.height!==test.naturalHeight;
+   if(resized){canvas.width=test.naturalWidth;canvas.height=test.naturalHeight;fitFrame();}
+   shapes=next.annotations||[];shown={sequence:next.sequence,revision:next.revision};
+   $('empty').hidden=true;$('framewrap').hidden=false;paint();
+  }
+  if(next.frozen){$('fps').textContent='已冻结';fpsStart=performance.now();displayed=0;}
+  else if(performance.now()-fpsStart>=2000){$('fps').textContent='预览 0.0 帧/秒';fpsStart=performance.now();displayed=0;}
+  $('error').textContent=commandFailure;
+ }catch(e){$('status').textContent='连接异常';$('error').textContent=e.message;state=null;}
+ finally{busy=false;controls();finishUpdate();}
+}
+async function action(path,body={}){
+ if(editing||drag!==null)return;
+ // Pause polling first, then let the one in-flight image finish before the command.
+ editing=true;commandFailure='';controls();
+ let failure=null;
+ try{await updateDone;await request(path,body);}catch(e){failure=e;}
+ finally{commandFailure=failure?failure.message:'';editing=false;await update();if(failure)$('error').textContent=commandFailure;}
+}
+$('freeze').onclick=()=>action('/api/freeze');
+$('live').onclick=()=>action('/api/live');
+async function commit(next){
+ if(!state||!state.frozen)return;
+ await action('/api/annotations',{revision:state.revision,annotations:next});
+}
+$('undo').onclick=()=>commit(shapes.slice(0,-1));
+$('clear').onclick=()=>commit([]);
+function point(e){
+ const r=canvas.getBoundingClientRect();
+ return {x:Math.max(0,Math.min(1,(e.clientX-r.left)/r.width)),y:Math.max(0,Math.min(1,(e.clientY-r.top)/r.height))};
+}
+canvas.onpointerdown=e=>{
+ if(!state||!state.frozen||editing||shapes.length>=24)return;
+ const p=point(e);drag=e.pointerId;canvas.setPointerCapture(drag);
+ draft={kind:$('tool').value,x1:p.x,y1:p.y,x2:p.x,y2:p.y};paint();
+};
+canvas.onpointermove=e=>{if(drag!==e.pointerId)return;const p=point(e);draft.x2=p.x;draft.y2=p.y;paint();};
+canvas.onpointerup=async e=>{
+ if(drag!==e.pointerId)return;
+ const p=point(e);draft.x2=p.x;draft.y2=p.y;
+ const shape=draft;draft=null;drag=null;paint();
+ if(Math.hypot(shape.x2-shape.x1,shape.y2-shape.y1)>.008)await commit([...shapes,shape]);
+};
+canvas.onpointercancel=()=>{drag=null;draft=null;paint();};
+$('save').onclick=()=>{
+ if(!shown||!state)return;
+ const out=document.createElement('canvas');out.width=canvas.width;out.height=canvas.height;
+ const c=out.getContext('2d');c.drawImage($('photo'),0,0,out.width,out.height);
+ shapes.forEach(s=>drawShape(c,s,out.width,out.height));
+ out.toBlob(blob=>{if(!blob)return;const url=URL.createObjectURL(blob),a=document.createElement('a');
+ a.href=url;a.download='labmate-frame-'+shown.sequence+'.png';a.click();setTimeout(()=>URL.revokeObjectURL(url),2000);});
+};
+async function poll(){
+ await update();
+ setTimeout(poll,document.hidden?1500:state&&state.frozen?800:state?0:1000);
+}
+document.addEventListener('visibilitychange',()=>{fpsStart=performance.now();displayed=0;});
+poll();
+</script>
+</html>

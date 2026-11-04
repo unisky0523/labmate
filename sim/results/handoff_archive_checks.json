@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "archive": "labmate_board_modules_20261104.zip",
+  "archive_bytes": 20887736,
+  "archive_sha256": "5a065691eb10e6803a31a12412b3b5dc21132a64c3f57464c5afee219a5de57f",
+  "zip_crc_passed": true,
+  "file_entries": 195,
+  "standalone_readme_identical_to_archive": true
+}

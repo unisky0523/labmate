@@ -1,0 +1,8 @@
+{
+  "usb_route": "1-1.2",
+  "serial": "DG4E184950519",
+  "vendor_id": 6833,
+  "product_id": 1601,
+  "physical_port": "HOST2",
+  "bound_at": "2026-11-03T17:46:19.597+08:00"
+}

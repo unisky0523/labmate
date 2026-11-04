@@ -1,0 +1,80 @@
+{
+  "success": true,
+  "selected": {
+    "layout": "msb-first",
+    "channel": 0,
+    "hits": 3,
+    "texts": [
+      "记录数据",
+      "记录数据",
+      "记录数据"
+    ],
+    "confidence": 1.0,
+    "noise_floor": 0.008776788227260114
+  },
+  "candidates": [
+    {
+      "layout": "little",
+      "channel": 0,
+      "hits": 0,
+      "texts": [
+        "",
+        "",
+        ""
+      ],
+      "confidence": 0.0,
+      "noise_floor": 0.5564116477966309
+    },
+    {
+      "layout": "little",
+      "channel": 1,
+      "hits": 0,
+      "texts": [
+        "",
+        "",
+        ""
+      ],
+      "confidence": 0.0,
+      "noise_floor": 0.5689188957214355
+    },
+    {
+      "layout": "msb-first",
+      "channel": 0,
+      "hits": 3,
+      "texts": [
+        "记录数据",
+        "记录数据",
+        "记录数据"
+      ],
+      "confidence": 1.0,
+      "noise_floor": 0.008776788227260114
+    },
+    {
+      "layout": "msb-first",
+      "channel": 1,
+      "hits": 3,
+      "texts": [
+        "记录数据",
+        "记录数据",
+        "记录数据"
+      ],
+      "confidence": 1.0,
+      "noise_floor": 0.004390021599829197
+    }
+  ],
+  "message": "检测通过：msb-first／左声道，3/3 命中，已应用。",
+  "summary": "little／左：0/3，置信分数 0.00\nlittle／右：0/3，置信分数 0.00\nmsb-first／左：3/3，置信分数 1.00\nmsb-first／右：3/3，置信分数 1.00",
+  "channel": 0,
+  "profile": {
+    "byte_order": "msb-first",
+    "noise_rms": [
+      0.008776788227260114,
+      0.004390021599829197
+    ],
+    "thresholds": [
+      0.01755357645452023,
+      0.01
+    ],
+    "calibrated": true
+  }
+}

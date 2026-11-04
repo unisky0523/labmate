@@ -1,0 +1,97 @@
+{
+  "command": {
+    "intent": "record_device",
+    "count": 3,
+    "interval": 1.0
+  },
+  "usb_calls": [
+    {
+      "seconds": 0.141,
+      "device": "meter",
+      "request_id": "batch-smoke-20261103-1793694949-batch-1-1"
+    },
+    {
+      "seconds": 2.488,
+      "device": "scope",
+      "request_id": "batch-smoke-20261103-1793694949-batch-1-2"
+    },
+    {
+      "seconds": 7.988,
+      "device": "meter",
+      "request_id": "batch-smoke-20261103-1793694949-batch-2-1"
+    },
+    {
+      "seconds": 10.284,
+      "device": "scope",
+      "request_id": "batch-smoke-20261103-1793694949-batch-2-2"
+    },
+    {
+      "seconds": 15.395,
+      "device": "meter",
+      "request_id": "batch-smoke-20261103-1793694949-batch-3-1"
+    },
+    {
+      "seconds": 17.587,
+      "device": "scope",
+      "request_id": "batch-smoke-20261103-1793694949-batch-3-2"
+    }
+  ],
+  "total": 3,
+  "batch_complete": 3,
+  "rows": [
+    {
+      "record_id": "30d05780f357157dc5834d5982d52d12",
+      "content": "连续记录第 3/3 次（间隔 1 秒）\n万用表：直流电压 -0.0016 V\n示波器：通道1 峰峰值 5.04 V；通道1 频率 1000.0 Hz；通道1 有效值 1.76 V",
+      "saved_at": "2026-11-03T08:36:12.229+00:00",
+      "time_text": "2026-11-03 16:36:12",
+      "source": "仪器 USB",
+      "status": "完成",
+      "simulated": false,
+      "detail": "数据内容：连续记录第 3/3 次（间隔 1 秒）\n万用表：直流电压 -0.0016 V\n示波器：通道1 峰峰值 5.04 V；通道1 频率 1000.0 Hz；通道1 有效值 1.76 V\n记录时间：2026-11-03 16:36:12\n来源：仪器 USB；状态：完成\n原始话语：连续记录三次数据，时间间隔一秒\n采集/报数时间：2026-11-03 16:36:05\n确认时间：2026-11-03 16:36:12\n保存时间原值：2026-11-03T08:36:12.229+00:00\n记录编号：30d05780f357157dc5834d5982d52d12\n显示时区：北京时间 UTC+08:00（无时区的旧时间保持原值）\n采集状态：complete\n万用表：complete；采集时间：2026-11-03 16:36:06\n  直流电压：-0.0016 V；有效：True\n示波器：complete；采集时间：2026-11-03 16:36:10\n  通道1 峰峰值：5.04 V；有效：True\n  通道1 频率：1000.0 Hz；有效：True\n  通道1 有效值：1.76 V；有效：True\n原始回执：/var/volatile/tmp/labmate_batch_smoke_1k3eh0d9/receipts/30d05780f357157dc5834d5982d52d12dadc2088b1d3b590a51be1c86a0651e1.json",
+      "image_path": ""
+    },
+    {
+      "record_id": "ba15f022abd346ac534868e5d3815bd8",
+      "content": "连续记录第 2/3 次（间隔 1 秒）\n万用表：直流电压 -0.0009 V\n示波器：通道1 峰峰值 5.04 V；通道1 频率 1000.0 Hz；通道1 有效值 1.76 V",
+      "saved_at": "2026-11-03T08:36:05.151+00:00",
+      "time_text": "2026-11-03 16:36:05",
+      "source": "仪器 USB",
+      "status": "完成",
+      "simulated": false,
+      "detail": "数据内容：连续记录第 2/3 次（间隔 1 秒）\n万用表：直流电压 -0.0009 V\n示波器：通道1 峰峰值 5.04 V；通道1 频率 1000.0 Hz；通道1 有效值 1.76 V\n记录时间：2026-11-03 16:36:05\n来源：仪器 USB；状态：完成\n原始话语：连续记录三次数据，时间间隔一秒\n采集/报数时间：2026-11-03 16:35:57\n确认时间：2026-11-03 16:36:05\n保存时间原值：2026-11-03T08:36:05.151+00:00\n记录编号：ba15f022abd346ac534868e5d3815bd8\n显示时区：北京时间 UTC+08:00（无时区的旧时间保持原值）\n采集状态：complete\n万用表：complete；采集时间：2026-11-03 16:35:59\n  直流电压：-0.0009 V；有效：True\n示波器：complete；采集时间：2026-11-03 16:36:02\n  通道1 峰峰值：5.04 V；有效：True\n  通道1 频率：1000.0 Hz；有效：True\n  通道1 有效值：1.76 V；有效：True\n原始回执：/var/volatile/tmp/labmate_batch_smoke_1k3eh0d9/receipts/ba15f022abd346ac534868e5d3815bd8d2d036cb2eb6698ad36d14781457981e.json",
+      "image_path": ""
+    },
+    {
+      "record_id": "0129a8763f15360d68de4fb08413c037",
+      "content": "连续记录第 1/3 次（间隔 1 秒）\n万用表：直流电压 0.0012 V\n示波器：通道1 峰峰值 5.04 V；通道1 频率 1000.0 Hz；通道1 有效值 1.76 V",
+      "saved_at": "2026-11-03T08:35:57.744+00:00",
+      "time_text": "2026-11-03 16:35:57",
+      "source": "仪器 USB",
+      "status": "完成",
+      "simulated": false,
+      "detail": "数据内容：连续记录第 1/3 次（间隔 1 秒）\n万用表：直流电压 0.0012 V\n示波器：通道1 峰峰值 5.04 V；通道1 频率 1000.0 Hz；通道1 有效值 1.76 V\n记录时间：2026-11-03 16:35:57\n来源：仪器 USB；状态：完成\n原始话语：连续记录三次数据，时间间隔一秒\n采集/报数时间：2026-11-03 16:35:49\n确认时间：2026-11-03 16:35:57\n保存时间原值：2026-11-03T08:35:57.744+00:00\n记录编号：0129a8763f15360d68de4fb08413c037\n显示时区：北京时间 UTC+08:00（无时区的旧时间保持原值）\n采集状态：complete\n万用表：complete；采集时间：2026-11-03 16:35:51\n  直流电压：0.0012 V；有效：True\n示波器：complete；采集时间：2026-11-03 16:35:55\n  通道1 峰峰值：5.04 V；有效：True\n  通道1 频率：1000.0 Hz；有效：True\n  通道1 有效值：1.76 V；有效：True\n原始回执：/var/volatile/tmp/labmate_batch_smoke_1k3eh0d9/receipts/0129a8763f15360d68de4fb08413c0379c4ab99a6a4cfba52691a2ad708d1dbd.json",
+      "image_path": ""
+    }
+  ],
+  "metadata": [
+    {
+      "operation_id": "batch-smoke-20261103-1793694949",
+      "index": 3,
+      "count": 3,
+      "interval_seconds": 1.0
+    },
+    {
+      "operation_id": "batch-smoke-20261103-1793694949",
+      "index": 2,
+      "count": 3,
+      "interval_seconds": 1.0
+    },
+    {
+      "operation_id": "batch-smoke-20261103-1793694949",
+      "index": 1,
+      "count": 3,
+      "interval_seconds": 1.0
+    }
+  ],
+  "elapsed_seconds": 22.491
+}

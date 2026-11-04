@@ -1,0 +1,22 @@
+test_command_error_stops_remaining_writes (c_instrument.test_dg4102.DG4102Tests.test_command_error_stops_remaining_writes) ... ok
+test_dry_run_does_not_connect (c_instrument.test_dg4102.DG4102Tests.test_dry_run_does_not_connect) ... ok
+test_empty_records_consumed_before_next_command (c_instrument.test_dg4102.DG4102Tests.test_empty_records_consumed_before_next_command) ... ok
+test_invalid_requests_rejected_before_connection (c_instrument.test_dg4102.DG4102Tests.test_invalid_requests_rejected_before_connection) ... ok
+test_manual_trigger_guard (c_instrument.test_dg4102.DG4102Tests.test_manual_trigger_guard) ... ok
+test_output_and_stop_contract (c_instrument.test_dg4102.DG4102Tests.test_output_and_stop_contract) ... ok
+test_readback_mismatch_fails (c_instrument.test_dg4102.DG4102Tests.test_readback_mismatch_fails) ... ok
+test_status_never_writes_and_timeout_does_not_continue (c_instrument.test_dg4102.DG4102Tests.test_status_never_writes_and_timeout_does_not_continue) ... ok
+test_sweep_verifies_readbacks_and_never_enables_output (c_instrument.test_dg4102.DG4102Tests.test_sweep_verifies_readbacks_and_never_enables_output) ... ok
+test_wrong_identity_and_coupling_prevent_writes (c_instrument.test_dg4102.DG4102Tests.test_wrong_identity_and_coupling_prevent_writes) ... ok
+test_binding_uses_physical_route_and_serial_not_device_number (c_instrument.test_dg4102_board.BoardTests.test_binding_uses_physical_route_and_serial_not_device_number) ... ok
+test_missing_and_invalid_binding (c_instrument.test_dg4102_board.BoardTests.test_missing_and_invalid_binding) ... ok
+test_pyvisa_py_unsupported_clear_is_allowed_but_io_failure_is_not (c_instrument.test_dg4102_board.BoardTests.test_pyvisa_py_unsupported_clear_is_allowed_but_io_failure_is_not) ... ok
+test_sysfs_enumeration_ignores_other_devices (c_instrument.test_dg4102_board.BoardTests.test_sysfs_enumeration_ignores_other_devices) ... ok
+test_visa_hex_and_decimal_resources (c_instrument.test_dg4102_board.BoardTests.test_visa_hex_and_decimal_resources) ... ok
+test_voice_call_routes_to_bound_resource_and_preserves_request_id (c_instrument.test_dg4102_board.BoardTests.test_voice_call_routes_to_bound_resource_and_preserves_request_id) ... ok
+test_voice_call_wrong_route_never_opens_instrument (c_instrument.test_dg4102_board.BoardTests.test_voice_call_wrong_route_never_opens_instrument) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.025s
+
+OK

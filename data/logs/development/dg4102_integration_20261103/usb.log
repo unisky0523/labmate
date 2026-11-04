@@ -1,0 +1,50 @@
+ls -l /sys/class/udc; ls /sys/bus/platform/drivers/ci_hdrc; dmessg | tail -45
+total 0
+lrwxrwxrwx    1 root     root             0 Nov  3 08:14 ci_hdrc.0 -> ../../devices/soc0/amba/e0002000.usb/ci_hdrc.0/udc/ci_hdrc.0
+bind       ci_hdrc.0  uevent     unbind
+[    2.497486] rtc-pcf8563 0-0051: setting system clock to 2026-11-03T08:14:28 UTC (1793693668)
+[    2.504654] of_cfs_init
+[    2.505877] of_cfs_init: OK
+[    2.507635] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    2.517511] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    2.522860] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[    2.530290] cfg80211: failed to load regulatory.db
+[    2.530747] ALSA device list:
+[    2.535472]   #0: xlnx-i2s-snd-card-0
+[    2.550691] EXT4-fs (mmcblk1p1): recovery complete
+[    2.554232] EXT4-fs (mmcblk1p1): mounted filesystem with ordered data mode. Opts: (null)
+[    2.561062] VFS: Mounted root (ext4 filesystem) on device 179:9.
+[    2.573254] devtmpfs: mounted
+[    2.577327] Freeing unused kernel memory: 1024K
+[    2.603472] Run /sbin/init as init process
+[    2.633789] usb 1-1.4: not running at top speed; connect to a high speed hub
+[    3.142807] udevd[125]: starting version 3.2.8
+[    3.158783] random: udevd: uninitialized urandom read (16 bytes read)
+[    3.164757] random: udevd: uninitialized urandom read (16 bytes read)
+[    3.170662] random: udevd: uninitialized urandom read (16 bytes read)
+[    3.238719] udevd[126]: starting eudev-3.2.8
+[    4.510944] FAT-fs (mmcblk0p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+[    5.091886] EXT4-fs (mmcblk1p1): re-mounted. Opts: (null)
+[    5.926162] urandom_read: 4 callbacks suppressed
+[    5.926171] random: dd: uninitialized urandom read (512 bytes read)
+[   15.633229] random: dbus-daemon: uninitialized urandom read (12 bytes read)
+[   15.646455] random: dbus-daemon: uninitialized urandom read (12 bytes read)
+[   17.859970] random: crng init done
+[  599.773526] mmc0: card 0001 removed
+[ 1000.738900] mmc0: card never left busy state
+[ 1000.741871] mmc0: error -110 whilst initialising SD card
+[ 1000.806611] mmc0: Problem switching card into high-speed mode!
+[ 1000.811236] mmc0: new SDHC card at address 0001
+[ 1000.825374] mmcblk0: mmc0:0001 SD 29.1 GiB 
+[ 1000.830473]  mmcblk0: p1
+[ 1001.440275] FAT-fs (mmcblk0p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+[ 2194.183397] usb 1-1.4: USB disconnect, device number 4
+[ 2201.643063] usb 1-1.4: new full-speed USB device number 5 using ci_hdrc
+[ 2201.793539] usb 1-1.4: not running at top speed; connect to a high speed hub
+[ 2749.173179] mmc0: card 0001 removed
+[ 2753.068099] mmc0: Problem switching card into high-speed mode!
+[ 2753.072711] mmc0: new SDHC card at address 0001
+[ 2753.077518] mmcblk0: mmc0:0001 SD 29.1 GiB 
+[ 2753.085802]  mmcblk0: p1
+[ 2753.665434] FAT-fs (mmcblk0p1): Volume was not properly unmounted. Some data may be corrupt. Please run fsck.
+root@ATK-ZYNQ:~# 

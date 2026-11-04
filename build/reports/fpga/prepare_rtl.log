@@ -1,0 +1,90 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Nov  3 23:49:08 2026
+# Process ID: 37040
+# Current directory: D:/spi1103/Navigator_7010
+# Command line: vivado.exe -mode batch -source D:\spi1103\Navigator_7010\spi\scripts\prepare_rtl.tcl -log D:\spi1103\Navigator_7010\spi\reports\prepare_rtl.log -journal D:\spi1103\Navigator_7010\spi\reports\prepare_rtl.jou
+# Log file: D:/spi1103/Navigator_7010/spi/reports/prepare_rtl.log
+# Journal file: D:\spi1103\Navigator_7010\spi\reports\prepare_rtl.jou
+#-----------------------------------------------------------
+source {D:\spi1103\Navigator_7010\spi\scripts\prepare_rtl.tcl}
+# set root [file dirname [file dirname [file dirname [file normalize [info script]]]]]
+# if {[version -short] ne "2020.2"} {error "Use Vivado 2020.2"}
+# open_project [file join $root Navigator_7010.xpr]
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/spi1103/Navigator_7010/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/vivado2020/Vivado/2020.2/data/ip'.
+# set_property STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED true [get_runs impl_1]
+# set_property STEPS.POST_ROUTE_PHYS_OPT_DESIGN.ARGS.DIRECTIVE AggressiveExplore [get_runs impl_1]
+# open_bd_design [get_files */system.bd]
+Reading block design file <D:/spi1103/Navigator_7010/Navigator_7010.srcs/sources_1/bd/system/system.bd>...
+Adding component instance block -- xilinx.com:ip:audio_formatter:1.0 - audio_formatter
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_0
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:i2s_receiver:1.0 - i2s_receiver
+Adding component instance block -- xilinx.com:ip:i2s_transmitter:1.0 - i2s_transmitter
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_mclk
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_0
+Adding component instance block -- xilinx.com:module_ref:asr_audio_frontend:1.0 - asr_frontend_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_0
+Adding component instance block -- xilinx.com:ip:axi_register_slice:2.1 - s00_regslice
+Adding component instance block -- xilinx.com:ip:axi_data_fifo:2.1 - s00_data_fifo
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - axis_subset_converter_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_153M
+Adding component instance block -- xilinx.com:ip:v_frmbuf_wr:2.2 - v_frmbuf_wr_0
+Adding component instance block -- xilinx.com:ip:v_vid_in_axi4s:4.0 - v_vid_in_axi4s_0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_0
+Adding component instance block -- alientek.com:user:ov5640_capture_data:1.0 - ov5640_capture_data_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_mem_intercon
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - axis_subset_converter_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - lcd_id
+Adding component instance block -- digilentinc.com:IP:PWM:2.0 - lcd_pl_pwm
+Adding component instance block -- xilinx.com:ip:v_tc:6.2 - lcd_vtc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding component instance block -- www.alientek.com:user:rgb2lcd:1.0 - rgb2lcd
+Adding component instance block -- xilinx.com:ip:v_axi4s_vid_out:4.0 - v_axi4s_vid_out_0
+Adding component instance block -- xilinx.com:ip:v_frmbuf_rd:2.2 - v_frmbuf_rd_0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding component instance block -- xilinx.com:user:gmii2rgmii:1.0 - gmii2rgmii_0
+Adding component instance block -- xilinx.com:ip:axi_iic:2.0 - i2c2
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding component instance block -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - rest_gpio
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding component instance block -- xilinx.com:module_ref:spi_emio_master_io:1.0 - esp32_spi_io
+Successfully read diagram <system> from block design file <D:/spi1103/Navigator_7010/Navigator_7010.srcs/sources_1/bd/system/system.bd>
+open_bd_design: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1104.164 ; gain = 0.000
+# validate_bd_design
+INFO: [BD 5-320] Validate design is not run, since the design is already validated.
+# save_bd_design
+# generate_target all [get_files */system.bd]
+INFO: [BD 41-1637] Generated targets are already up-to-date for block design 'system' - hence not re-generating.
+# make_wrapper -files [get_files */system.bd] -top
+# update_compile_order -fileset sources_1
+# reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+# launch_runs impl_1 -to_step write_bitstream -scripts_only
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:03:18 . Memory (MB): peak = 1104.164 ; gain = 0.000
+# close_project
+# exit
+INFO: [Common 17-206] Exiting Vivado at Tue Nov  3 23:52:42 2026...

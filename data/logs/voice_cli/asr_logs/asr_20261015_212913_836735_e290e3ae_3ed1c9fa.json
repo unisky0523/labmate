@@ -1,0 +1,193 @@
+{
+  "text": "帮 我 连续 记录 五次 数据",
+  "words": [
+    {
+      "conf": 0.959621,
+      "end": 0.72,
+      "start": 0.48,
+      "word": "帮"
+    },
+    {
+      "conf": 0.980004,
+      "end": 1.02,
+      "start": 0.72,
+      "word": "我"
+    },
+    {
+      "conf": 0.851132,
+      "end": 1.5,
+      "start": 1.02,
+      "word": "连续"
+    },
+    {
+      "conf": 0.880734,
+      "end": 1.89,
+      "start": 1.5,
+      "word": "记录"
+    },
+    {
+      "conf": 1.0,
+      "end": 2.64,
+      "start": 1.89,
+      "word": "五次"
+    },
+    {
+      "conf": 1.0,
+      "end": 3.21,
+      "start": 2.64,
+      "word": "数据"
+    }
+  ],
+  "segments": [
+    {
+      "result": [
+        {
+          "conf": 0.959621,
+          "end": 0.72,
+          "start": 0.48,
+          "word": "帮"
+        },
+        {
+          "conf": 0.980004,
+          "end": 1.02,
+          "start": 0.72,
+          "word": "我"
+        },
+        {
+          "conf": 0.851132,
+          "end": 1.5,
+          "start": 1.02,
+          "word": "连续"
+        },
+        {
+          "conf": 0.880734,
+          "end": 1.89,
+          "start": 1.5,
+          "word": "记录"
+        },
+        {
+          "conf": 1.0,
+          "end": 2.64,
+          "start": 1.89,
+          "word": "五次"
+        },
+        {
+          "conf": 1.0,
+          "end": 3.21,
+          "start": 2.64,
+          "word": "数据"
+        }
+      ],
+      "text": "帮 我 连续 记录 五次 数据"
+    }
+  ],
+  "command": {
+    "intent": "record_device",
+    "count": 5,
+    "interval": 1.0
+  },
+  "reason": null,
+  "duration_seconds": 4.05,
+  "text_baseline": "帮 我 连续 记录 五次 数据",
+  "words_baseline": [
+    {
+      "conf": 0.959621,
+      "end": 0.72,
+      "start": 0.48,
+      "word": "帮"
+    },
+    {
+      "conf": 0.980004,
+      "end": 1.02,
+      "start": 0.72,
+      "word": "我"
+    },
+    {
+      "conf": 0.851132,
+      "end": 1.5,
+      "start": 1.02,
+      "word": "连续"
+    },
+    {
+      "conf": 0.880734,
+      "end": 1.89,
+      "start": 1.5,
+      "word": "记录"
+    },
+    {
+      "conf": 1.0,
+      "end": 2.64,
+      "start": 1.89,
+      "word": "五次"
+    },
+    {
+      "conf": 1.0,
+      "end": 3.21,
+      "start": 2.64,
+      "word": "数据"
+    }
+  ],
+  "segments_baseline": [
+    {
+      "result": [
+        {
+          "conf": 0.959621,
+          "end": 0.72,
+          "start": 0.48,
+          "word": "帮"
+        },
+        {
+          "conf": 0.980004,
+          "end": 1.02,
+          "start": 0.72,
+          "word": "我"
+        },
+        {
+          "conf": 0.851132,
+          "end": 1.5,
+          "start": 1.02,
+          "word": "连续"
+        },
+        {
+          "conf": 0.880734,
+          "end": 1.89,
+          "start": 1.5,
+          "word": "记录"
+        },
+        {
+          "conf": 1.0,
+          "end": 2.64,
+          "start": 1.89,
+          "word": "五次"
+        },
+        {
+          "conf": 1.0,
+          "end": 3.21,
+          "start": 2.64,
+          "word": "数据"
+        }
+      ],
+      "text": "帮 我 连续 记录 五次 数据"
+    }
+  ],
+  "min_word_confidence": 0.851132,
+  "recognizer_mode": "baseline",
+  "recognition_ms": 1059.64,
+  "mode": "run",
+  "audio_path": "D:\\labmate_b\\data\\audio\\asr_tests\\asr_20261015_212913_836735_e290e3ae.wav",
+  "metadata": {
+    "recorded_at": "2026-10-15T21:29:09.135+08:00",
+    "native_rate": 44100,
+    "device_name": "麦克风阵列 (Realtek(R) Audio)",
+    "truncated": false,
+    "capture_errors": []
+  },
+  "created_at": "2026-10-15T21:29:14.898+08:00",
+  "model_path": "D:\\labmate_b\\models\\vosk-model-small-cn-0.22",
+  "minimum_word_confidence": 0.45,
+  "pipeline_version": "vosk_domain_v1",
+  "sample_rate": 16000,
+  "dispatch_state": "delivered_to_application",
+  "confirm_readback_text": "可以",
+  "confirm_readback_audio_path": "D:\\labmate_b\\data\\audio\\asr_tests\\asr_20261015_212927_543539_1f973473.wav"
+}

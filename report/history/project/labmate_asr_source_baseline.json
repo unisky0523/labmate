@@ -1,0 +1,124 @@
+{
+  "selected_on": "2026-10-29",
+  "selected_by": "user",
+  "source_root": "D:\\fpga amd xinlx\\labmate_b_board_20261015(1)\\labmate_b_board_20261015",
+  "purpose": "Authoritative ASR source baseline for the next Qt/Python integration; UI currently still uses demo recognition.",
+  "code_policy": "Use this folder, not D:/labmate_b, the old dist ZIP, backup folders or README examples as source of current behavior. No runtime files modified in this registration.",
+  "validation": {
+    "python37_syntax_module_count": 19,
+    "actual_board_test_performed_here": false,
+    "new_qt_python_demo_confirmed_by_user": true
+  },
+  "runtime_files": [
+    {
+      "path": "asr_backend.py",
+      "sha256": "85c765b031bc51f0a9de4feebaee64269e6a4311e74b1e3398894ff2b77033cf",
+      "bytes": 350
+    },
+    {
+      "path": "asr_benchmark.py",
+      "sha256": "df2d34c83468e86b21ac1c87058c2c53ff784001d194f2063e4b9c77a1864919",
+      "bytes": 3292
+    },
+    {
+      "path": "asr_cli.py",
+      "sha256": "77f669a2c71acc49f2e5f7431bf1026e28b2b913a12bc7669b43fdaddb28b554",
+      "bytes": 30050
+    },
+    {
+      "path": "asr_grammar.py",
+      "sha256": "5cf636b4d2162d7e8d9b11067430d9e2c0e98265393ed3a8ff422eadc028d961",
+      "bytes": 2377
+    },
+    {
+      "path": "audio_capture_probe.py",
+      "sha256": "af93b4b76ce8e87ae980bcd7bb7c0a9b18f9a6f7549cd344d2ff8e02980ee76c",
+      "bytes": 2068
+    },
+    {
+      "path": "board_app.py",
+      "sha256": "036fd8cc9c91b9e11c954ac68dd98f36fb43b43b09624af825c378eb5a7d002d",
+      "bytes": 11437
+    },
+    {
+      "path": "board_audio.py",
+      "sha256": "558e98a7ccf16b4d190aea9f25db8d18f1bf0279c3b94860cd14171a8628436f",
+      "bytes": 5077
+    },
+    {
+      "path": "board_check.py",
+      "sha256": "59206c9048daf066ba78d1de3c9f55a09d3d70e60b08f6f062a37ce748eb4b3b",
+      "bytes": 2511
+    },
+    {
+      "path": "board_listen.py",
+      "sha256": "50c0ead703bc162373ea7d7fdcc18f33d95e4d1552bd63858c8284b5a85c32b2",
+      "bytes": 12353
+    },
+    {
+      "path": "board_mic.py",
+      "sha256": "9e94ca5cffcf0c3ee061a6e0a44e756c1ba6b90a3a57cc8e5c0bc6fceeea7c15",
+      "bytes": 11208
+    },
+    {
+      "path": "board_sources.py",
+      "sha256": "2c26d54b364301df04372b2cde0476388c02f5d20cea90abdc7422010d8483d2",
+      "bytes": 5388
+    },
+    {
+      "path": "board_speaker.py",
+      "sha256": "bfdd8e72696ec2ba91baf91e796aa165541830ba8404d72d50dc0d716a843ffe",
+      "bytes": 2556
+    },
+    {
+      "path": "board_ui.py",
+      "sha256": "8c486a2b3a92e2b5ae5d4395805a1c0763515d8853d0a4e3926125a6d6b2560d",
+      "bytes": 1823
+    },
+    {
+      "path": "chunk.py",
+      "sha256": "34a5d2cde2e00a03acd84768ccd352ebdc3ac008a8f41ab1caee698e4a474ca0",
+      "bytes": 5435
+    },
+    {
+      "path": "main.py",
+      "sha256": "a3a6d4fe14923527481c5ee18f9af196faaccd7c9f0cc0b55b29e9838f102a47",
+      "bytes": 11099
+    },
+    {
+      "path": "readback.py",
+      "sha256": "e0a9646fafe52c4ac9025603c46dec3b8001889bbb5cbf219ac74997dafe636e",
+      "bytes": 312
+    },
+    {
+      "path": "text_cli.py",
+      "sha256": "d674d5fbb3e33b2f3b3cc72157cac8bfa7bb5a13a1670720bc87e6e36eb102fe",
+      "bytes": 22553
+    },
+    {
+      "path": "vosk_lite.py",
+      "sha256": "cca0af72c5039d18ec79ba0eac2d87f862cd2ff5b9cad101341ad6a8f974726f",
+      "bytes": 5611
+    },
+    {
+      "path": "wave.py",
+      "sha256": "98857069566681d053718078b51acdd2d5d517a063aa2abe26d112b3d65973e5",
+      "bytes": 18414
+    },
+    {
+      "path": "run_board.sh",
+      "sha256": "b61b3ec1c81eff53e697c17d010fa72dabd806475b74c90383d8d916b5b2738e",
+      "bytes": 232
+    },
+    {
+      "path": "requirements_board.txt",
+      "sha256": "b6cea6cb39fcce4cf08d7fb9451fcdfccc519f683552b9d797f93716fecb953b",
+      "bytes": 183
+    },
+    {
+      "path": "libvosk.so",
+      "sha256": "50e9e705777774ce3f33636939c10cfa2c27d2d2c6441466146f35dacd4e9be4",
+      "bytes": 6550408
+    }
+  ]
+}

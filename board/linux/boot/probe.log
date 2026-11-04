@@ -1,0 +1,27 @@
+uname -a
+Linux ATK-ZYNQ 5.4.0-xilinx-v2020.2-spi-test-20261104 #1 SMP PREEMPT Wed Nov 4 01:09:42 CST 2026 armv7l GNU/Linux
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104# cat /proc/mtd
+dev:    size   erasesize  name
+mtd0: 00600000 00001000 "boot"
+mtd1: 00020000 00001000 "bootenv"
+mtd2: 00700000 00001000 "image.ub"
+mtd3: 00020000 00001000 "boot.scr"
+mtd4: 012c0000 00001000 "space"
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104# mount | grep mmc [Aroot@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104# mount | grep mm[Kc
+/dev/mmcblk1p1 on / type ext4 (rw,relatime)
+/dev/mmcblk1p1 on /media/sd-mmcblk1p1 type ext4 (rw,relatime)
+/dev/mmcblk0p1 on /media/sd-mmcblk0p1 type vfat (rw,relatime,gid=100,fmask=0002,dmask=0002,allow_utime=0020,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro)
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104# ls -l /boot
+total 0
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104# command -v flash cp
+/usr/sbin/flashcp
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104# command -v mtd_d ebug
+/usr/sbin/mtd_debug
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104# command -v fw_pr intenv
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104# cat /proc/cmdlin e
+earlycon console=ttyPS0,115200 cma=50M root=/dev/mmcblk1p1 rw rootwait
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104# ls -l /sys/class /gpio/gpio962/value
+-rw-r--r--    1 root     root          4096 Nov  3 18:07 /sys/class/gpio/gpio962/value
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104# ps | grep -E 'se nd_jpeg|camera|labassistant' | head -n 15
+ 2734 root      0:00 grep -E send_jpeg|camera|labassistant
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104# 

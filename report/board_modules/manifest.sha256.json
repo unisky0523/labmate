@@ -1,0 +1,781 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    ".gitattributes": {
+      "bytes": 190,
+      "sha256": "63dbd64ba2ae65f913f25d06d0015b92894ec6807a2b2a0ea424f77a20cf77dd"
+    },
+    ".gitignore": {
+      "bytes": 116,
+      "sha256": "99ed46446f263c04c1481fea9cb3f92085d9db1f245a015066baaad45aa19f6b"
+    },
+    "c_camera_link/__init__.py": {
+      "bytes": 48,
+      "sha256": "ca1e8ced77dd9791521610b6c6c01bfbc2fcf9c7b2f625f1cbd49f0ce6ba9989"
+    },
+    "c_camera_link/autostart.py": {
+      "bytes": 8380,
+      "sha256": "4fba0af67577e8869f950d7c6b1663c4f308be6b2674589db613460dedc64a0e"
+    },
+    "c_camera_link/autostart_board.sh": {
+      "bytes": 185,
+      "sha256": "6a05bace4832289af0436323664a749976b1f6bb6bf8fa616cca818d2561c55f"
+    },
+    "c_camera_link/boot_init.sh": {
+      "bytes": 1958,
+      "sha256": "36fb4dcbbe0fc64160df8af0b47bab1535e89ebd3710308c1a8e09d298f0bdc7"
+    },
+    "c_camera_link/control_board.sh": {
+      "bytes": 191,
+      "sha256": "22d0d035477bfd3c5c9d4a83e4c33d7dec640542d3a27c87b4ad85c72f8f6779"
+    },
+    "c_camera_link/emio_board.py": {
+      "bytes": 4361,
+      "sha256": "79197f3fa0f9d4ffc16ed0330f277b54d8895801ea9f3bb5c57b3db1dd686791"
+    },
+    "c_camera_link/esp32/platformio.ini": {
+      "bytes": 484,
+      "sha256": "ccc35e10561573cc19b09ec2d9d2567a2f91d929c761f3b4fe566baa13d1e9f3"
+    },
+    "c_camera_link/esp32/src/main.cpp": {
+      "bytes": 18406,
+      "sha256": "c9900029ef0eed395b1f9b33f79fd141842fbf7780b76c7a3732fbeeb80105c4"
+    },
+    "c_camera_link/esp32/web/index.html": {
+      "bytes": 10841,
+      "sha256": "b867676ffd71187b28a69819c30d2885a4527c989b9ee59b3956635a87c03c6b"
+    },
+    "c_camera_link/firmware/manifest.json": {
+      "bytes": 210,
+      "sha256": "cf0daecd75c281d38fd34552d6b8aa154b85fbd512c156fcdbf7ef09ec8ad59f"
+    },
+    "c_camera_link/firmware/spi-emio.bin": {
+      "bytes": 885056,
+      "sha256": "c30082a49a1782e9ad18d9eab50b93cfcc7cdc7455b0455a0454790700f853e2"
+    },
+    "c_camera_link/flash.py": {
+      "bytes": 1436,
+      "sha256": "78d0cbf99e14eb69e135889ca42fdbcd8eb6306f8473af643083179b89229164"
+    },
+    "c_camera_link/native/build.py": {
+      "bytes": 4319,
+      "sha256": "d85655a2e2bcf1781fd56b4930ce2f763ee9370adc8779e2b5c80038e9a5dc66"
+    },
+    "c_camera_link/native/build_manifest.json": {
+      "bytes": 939,
+      "sha256": "b7b5a3ee69f2d4cdd6d6075a68eaeee1b128398484a821df9cf8700da8817484"
+    },
+    "c_camera_link/native/camera_jpeg_stream_armv7": {
+      "bytes": 54668,
+      "sha256": "83c855bc2da7970a3d1cbd3294c57d36f9596ca74703d2121d5a92c21513527e"
+    },
+    "c_camera_link/native/camera_stream.c": {
+      "bytes": 9660,
+      "sha256": "2cfc7776816fcba9b6999a2a1c66209e480867d5e6133a272eae4450d8ec6707"
+    },
+    "c_camera_link/native/camera_stream_armv7": {
+      "bytes": 34088,
+      "sha256": "e8f09337694fa6b3ba48b355076c75d6f7e779c0032f782d3c4230bcef5c2ea1"
+    },
+    "c_camera_link/native/ppm_to_jpeg.c": {
+      "bytes": 3461,
+      "sha256": "489c8793e94eeb9b17d0a56eabe20bba05901556c8428d22a02b5a1a03d9d9f1"
+    },
+    "c_camera_link/native/ppm_to_jpeg_armv7": {
+      "bytes": 48756,
+      "sha256": "3b77a1c45ad3c5cf842e1fdc5567a4aca9e4777c246380583262a0086438d220"
+    },
+    "c_camera_link/native/preview_jpeg.h": {
+      "bytes": 3054,
+      "sha256": "3b76dbecbb65dcb64a77e31fbb4416c85dea65c0e1659fcbcb568bb2cce87e15"
+    },
+    "c_camera_link/native/third_party/stb_image_write.h": {
+      "bytes": 71221,
+      "sha256": "cbd5f0ad7a9cf4468affb36354a1d2338034f2c12473cf1a8e32053cb6914a05"
+    },
+    "c_camera_link/native_capture.py": {
+      "bytes": 1172,
+      "sha256": "4e3906155ece0d8c550e20cf148779e588ec62abd920b931b3d9392c59d48671"
+    },
+    "c_camera_link/native_preview.py": {
+      "bytes": 2486,
+      "sha256": "ca6dd8dec4e9cf6edfad765ea70cd400a3a424d8a3e4c5399f16d1671ed4d32b"
+    },
+    "c_camera_link/persistent_capture.py": {
+      "bytes": 3470,
+      "sha256": "e7847516b082969e198096885e73a1e655c42a972ad9c12066466b0fb4495606"
+    },
+    "c_camera_link/preview_service.py": {
+      "bytes": 12069,
+      "sha256": "77449c978ee50ebf732cdc99d68dd68c0be45582822df3f7d2ab6b964f501599"
+    },
+    "c_camera_link/protocol.py": {
+      "bytes": 1164,
+      "sha256": "4e7e273c9dc0079a6f256a0ba34c38402deaacb2438f7bb7348b636170d28b2c"
+    },
+    "c_camera_link/run_spi_emio_board.sh": {
+      "bytes": 186,
+      "sha256": "3ab9377983ae76d7111445c7ea4db729c8984b18d08f81f38c15be2997ef5481"
+    },
+    "c_camera_link/sender.py": {
+      "bytes": 13115,
+      "sha256": "0bda2397dc36be7aaa0a68d849bd9081766de82f3e73bc42c2c1a856661f7cbf"
+    },
+    "c_camera_link/transports.py": {
+      "bytes": 8955,
+      "sha256": "c31d2aac0b61293ec505daa82452989191689436a3e6d096c0f183b44f53311b"
+    },
+    "c_instrument/__init__.py": {
+      "bytes": 71,
+      "sha256": "97b7fd050155404e3eac37a2ed1fb03273f2d4e7a444d3ad3a786a5fd9db48fd"
+    },
+    "c_instrument/compat_py37/CPYTHON_LICENSE.txt": {
+      "bytes": 12769,
+      "sha256": "a77d71d6be6f9032e6b6e5d2cf6da68f9eeab9036edfbc043633c8979cd5e82c"
+    },
+    "c_instrument/compat_py37/typing.py": {
+      "bytes": 56217,
+      "sha256": "53e6fc94fd9e908688852909a2c1c805c4c3017dd4f5b63b56cb5e0bbb274607"
+    },
+    "c_instrument/cp210x_usb.py": {
+      "bytes": 5063,
+      "sha256": "4b78d9692de83ddb66cea78a9c06cad6f41c95e1378a48dca898d90ae1eae260"
+    },
+    "c_instrument/dg4102.py": {
+      "bytes": 16406,
+      "sha256": "5929a0e0f95c551717652861c85c14e53e2c8b17f3edbc4e1e0cfc245f74761c"
+    },
+    "c_instrument/dg4102_board.py": {
+      "bytes": 7560,
+      "sha256": "4aaf61c5d64e005de7008ced6fe41e7282af64af77f5a024851260b6569c0256"
+    },
+    "c_instrument/reader.py": {
+      "bytes": 7536,
+      "sha256": "abb12b8a05b0bc1227ef0215ba5f97c6f9e5cfc3a20ba6a849096b6ed80004bd"
+    },
+    "c_instrument/requirements-scope-board.txt": {
+      "bytes": 110,
+      "sha256": "85b076867ee8b5eb71e6fd17f5c2032b5385aafcf435a0f6a5732498db5467bc"
+    },
+    "c_instrument/run_dg4102_board.sh": {
+      "bytes": 276,
+      "sha256": "02c1006dad1cce1dcd5fc8afdfe8d4a8642a9b559aa29288afb4651d3b392c1c"
+    },
+    "c_instrument/run_meter_board.sh": {
+      "bytes": 173,
+      "sha256": "34503aca3d07daa6c09836bf7b57b52a20996b66316abcb7a690b24cdee32bfd"
+    },
+    "c_instrument/run_scope_board.sh": {
+      "bytes": 286,
+      "sha256": "e24b84da629ec8620f3cd07f5b8db91744811703dd179122b2c8a20f3434b8f2"
+    },
+    "c_instrument/sa5041.py": {
+      "bytes": 11502,
+      "sha256": "687c56c326dd651dd06b44c5a89621b722dcf5b6c7db18d4cb8039b6accc0d6b"
+    },
+    "c_instrument/sds1202x.py": {
+      "bytes": 10995,
+      "sha256": "755f97c7b863589a3d103582427cb2b976d8a7f979f7456d328f12fd4012c14b"
+    },
+    "c_instrument/transport.py": {
+      "bytes": 5741,
+      "sha256": "2ced947187988aee9783d0429007c2187172f92ca7c8954be77566fef85f3f8e"
+    },
+    "c_instrument/usbtmc_linux.py": {
+      "bytes": 2322,
+      "sha256": "ae86b28795dfe2e95739447dc8915230134ee42191e3106e69066a5384504a2a"
+    },
+    "c_instrument/vendor/importlib_metadata/__init__.py": {
+      "bytes": 31510,
+      "sha256": "963c017d792eca42285952702f16baeb5ce93d8dd613581627a35ffa0c8de35f"
+    },
+    "c_instrument/vendor/importlib_metadata/_adapters.py": {
+      "bytes": 1862,
+      "sha256": "07a7c28b9fbc98b543154663de4ac8e67028fa62a9d5d1ffa886afc88c85ac9b"
+    },
+    "c_instrument/vendor/importlib_metadata/_collections.py": {
+      "bytes": 743,
+      "sha256": "089d0e4c21c88d6034648552e2fa0e440b27d91e11d9c40112d3ec6442690126"
+    },
+    "c_instrument/vendor/importlib_metadata/_compat.py": {
+      "bytes": 1857,
+      "sha256": "f7338a7f478382408c9e7684854e64415c477753fc048615ed2b6ca3b6afe61f"
+    },
+    "c_instrument/vendor/importlib_metadata/_functools.py": {
+      "bytes": 2895,
+      "sha256": "3ec636fb8aeb297e1155e442d681a9d65075a660bd78a37cf3f7fe6c3f6e3a80"
+    },
+    "c_instrument/vendor/importlib_metadata/_itertools.py": {
+      "bytes": 2068,
+      "sha256": "72faffdaff0145bc5c225e71e6575fa9d1e3848f188bcb3cca4e741bf9e6ea34"
+    },
+    "c_instrument/vendor/importlib_metadata/_meta.py": {
+      "bytes": 1154,
+      "sha256": "fc5e3c1eefe317191f296cf9c1c612f2f3b6dea13281b55d17dafeeaa87e8631"
+    },
+    "c_instrument/vendor/importlib_metadata/_py39compat.py": {
+      "bytes": 1754,
+      "sha256": "c04529b3e1d7e04ee3fcbd0870fb065f1b03d5527e878ab769c0c583dae9bbe7"
+    },
+    "c_instrument/vendor/importlib_metadata/_text.py": {
+      "bytes": 2166,
+      "sha256": "1c2b0592c66924b7933f734493f9e0ac079755146d4ebb7287d78e001a113f80"
+    },
+    "c_instrument/vendor/importlib_metadata/py.typed": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "c_instrument/vendor/importlib_metadata-4.13.0.dist-info/LICENSE": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "c_instrument/vendor/importlib_metadata-4.13.0.dist-info/METADATA": {
+      "bytes": 4914,
+      "sha256": "a65ecee3bc77cfc511d9e5f6b042489d33ce448b482593899208805001f70c03"
+    },
+    "c_instrument/vendor/importlib_metadata-4.13.0.dist-info/RECORD": {
+      "bytes": 1316,
+      "sha256": "3b97b5d2d9bd03b1e5d38f87ce452e884026e1aea4c2bebb17755af5df2a939c"
+    },
+    "c_instrument/vendor/importlib_metadata-4.13.0.dist-info/top_level.txt": {
+      "bytes": 19,
+      "sha256": "08eddf0fdcb29403625e4acca38a872d5fe6a972f6b02e4914a82dd725804fe0"
+    },
+    "c_instrument/vendor/importlib_metadata-4.13.0.dist-info/WHEEL": {
+      "bytes": 92,
+      "sha256": "1b5e87e00dc87a84269cead8578b9e6462928e18a95f1f3373c9eef451a5bcc0"
+    },
+    "c_instrument/vendor/pyusb-1.2.1.dist-info/LICENSE": {
+      "bytes": 1513,
+      "sha256": "03e39fdcee9c18f2f9d0c3500a993ddeac050695eb81070ea41347587c76a7fe"
+    },
+    "c_instrument/vendor/pyusb-1.2.1.dist-info/METADATA": {
+      "bytes": 2230,
+      "sha256": "7736825b80bc5ecd09fe669c5fbcce83026a0dd64512a3de4c43e9143c3154f3"
+    },
+    "c_instrument/vendor/pyusb-1.2.1.dist-info/RECORD": {
+      "bytes": 1482,
+      "sha256": "cc09d3802bcbfc8f9ba0699c5a85b1033aaf136f025ef3130e59e63a9c211542"
+    },
+    "c_instrument/vendor/pyusb-1.2.1.dist-info/top_level.txt": {
+      "bytes": 4,
+      "sha256": "bd40397fe8fdda8c4f9d447f5db0a83a8c69a415be74ff1f78e0fb06654c32d1"
+    },
+    "c_instrument/vendor/pyusb-1.2.1.dist-info/WHEEL": {
+      "bytes": 92,
+      "sha256": "3aa464174798e461ecb0ca2b16395b4c8ab4ef6be91e917ad1f21003a952f710"
+    },
+    "c_instrument/vendor/pyvisa/__init__.py": {
+      "bytes": 1779,
+      "sha256": "8d88298bb658845a7abd14fd548b5e881dfbd0e1d38cc081964b628d59e3930c"
+    },
+    "c_instrument/vendor/pyvisa/attributes.py": {
+      "bytes": 97729,
+      "sha256": "40f74cd94af42fdb64d498703509c42884ac39274bf4d5b8da241db28660797a"
+    },
+    "c_instrument/vendor/pyvisa/cmd_line_tools.py": {
+      "bytes": 1769,
+      "sha256": "a6a6ab0e6d5a693c44918008de76d5de1f6a645a609f29efa77a74ca4d9d7428"
+    },
+    "c_instrument/vendor/pyvisa/constants.py": {
+      "bytes": 69490,
+      "sha256": "048a3ae19e761835b0bbec4e621b97ccfaf0394c9face47119557c976a5cc40b"
+    },
+    "c_instrument/vendor/pyvisa/ctwrapper/__init__.py": {
+      "bytes": 441,
+      "sha256": "aa7df7c7a5e911a1885c7ce59f09066ad5725db94e77d1749e1d108eb0e3ff02"
+    },
+    "c_instrument/vendor/pyvisa/ctwrapper/cthelper.py": {
+      "bytes": 2529,
+      "sha256": "d382f6736e0b2944ae6b6667b3004def7f6ba4f8c271aba2ce17d09b933fc954"
+    },
+    "c_instrument/vendor/pyvisa/ctwrapper/functions.py": {
+      "bytes": 85746,
+      "sha256": "5250b6b51689a60a862c20d1a6482602db95f730e3ee90d418480111a719b9ab"
+    },
+    "c_instrument/vendor/pyvisa/ctwrapper/highlevel.py": {
+      "bytes": 12378,
+      "sha256": "6526a32d27017b7fa908a95988cb9573bf792404bb7e0454f0333ce0e22feb4b"
+    },
+    "c_instrument/vendor/pyvisa/ctwrapper/types.py": {
+      "bytes": 4006,
+      "sha256": "fe8e6dec20fd28d3a5407341ebddcbb6bf4f8e8923234585e16faf8357d9ced4"
+    },
+    "c_instrument/vendor/pyvisa/errors.py": {
+      "bytes": 24743,
+      "sha256": "e86a423a19133708f60ef82b694423aeab0b062f0690010825071d45fb1c5647"
+    },
+    "c_instrument/vendor/pyvisa/events.py": {
+      "bytes": 7773,
+      "sha256": "25b1451b208a8dc9fbccc317936b1bd34a6982fd33985c82a1e8c8a3c3801d25"
+    },
+    "c_instrument/vendor/pyvisa/highlevel.py": {
+      "bytes": 104325,
+      "sha256": "d3405515096fb1b77edc7d774e57f5d6265806a51b1634f98a2cd5748de5a7a4"
+    },
+    "c_instrument/vendor/pyvisa/py.typed": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "c_instrument/vendor/pyvisa/resources/__init__.py": {
+      "bytes": 1006,
+      "sha256": "b46e84f01fecc28c6ba4e0408d7762e38e13b07122b20be5e7bf3dc07912c357"
+    },
+    "c_instrument/vendor/pyvisa/resources/firewire.py": {
+      "bytes": 726,
+      "sha256": "cf6d8845e2982a72259a9a997309e07f6f5e2e110c439d8bf727457cb85e6d19"
+    },
+    "c_instrument/vendor/pyvisa/resources/gpib.py": {
+      "bytes": 7862,
+      "sha256": "6213300505491495c2f28ae16f727a14bab066645a5eccfc89fdf0d2a13b6214"
+    },
+    "c_instrument/vendor/pyvisa/resources/messagebased.py": {
+      "bytes": 28241,
+      "sha256": "b189d0d08d84f87424ec08d3327927d47d90492491cfa39d10815def4451b4e1"
+    },
+    "c_instrument/vendor/pyvisa/resources/pxi.py": {
+      "bytes": 2691,
+      "sha256": "a84c2b6971d29e61eccae39788e9039df57640b6af7b254ad8c351a890f215d1"
+    },
+    "c_instrument/vendor/pyvisa/resources/registerbased.py": {
+      "bytes": 5340,
+      "sha256": "ee9b6d7665e1e7d99559ccbbb7af53343c7d580a44ef7461a8cc603769ded7e5"
+    },
+    "c_instrument/vendor/pyvisa/resources/resource.py": {
+      "bytes": 22174,
+      "sha256": "180d481e89f51777660c7bb29ac9567cc58b3c6666b8f4735ea649786cfd4f28"
+    },
+    "c_instrument/vendor/pyvisa/resources/serial.py": {
+      "bytes": 3638,
+      "sha256": "98fd265dd6711ed6a00e6c6ebd55765a4597ecea134dfc2012857eba666e8351"
+    },
+    "c_instrument/vendor/pyvisa/resources/tcpip.py": {
+      "bytes": 1218,
+      "sha256": "a79ac216189b7fe3d69a094d753841c56616a32c05572856acdf8a400f42d81e"
+    },
+    "c_instrument/vendor/pyvisa/resources/usb.py": {
+      "bytes": 5017,
+      "sha256": "d38f989e354b9b61b3b29f0eaf6ec2f24a444fd463242382e1bf787223990c7a"
+    },
+    "c_instrument/vendor/pyvisa/resources/vxi.py": {
+      "bytes": 2988,
+      "sha256": "edf154b2357daab89aadf2cb762aff755247e9d26c094a0175e0720e33988325"
+    },
+    "c_instrument/vendor/pyvisa/rname.py": {
+      "bytes": 24914,
+      "sha256": "25866b7aafb4a4d1e54d64e40bedcc97a6302e6f8e8e7baa0972c3c7d1aab783"
+    },
+    "c_instrument/vendor/pyvisa/shell.py": {
+      "bytes": 11924,
+      "sha256": "cb09a0f6959615097944b23e7277d8672683f7dc222c447ec999ff20ea2b2901"
+    },
+    "c_instrument/vendor/pyvisa/thirdparty/__init__.py": {
+      "bytes": 234,
+      "sha256": "2c7ecc949d058f7b4d741cd434be95535f764e7fa3d8b53e247a88b31c0889dd"
+    },
+    "c_instrument/vendor/pyvisa/thirdparty/prettytable.py": {
+      "bytes": 65957,
+      "sha256": "a6496b5c4ed42ca72fe07f6d48d6d4230a5e7b807cf534321fae7452b4fc2a5b"
+    },
+    "c_instrument/vendor/pyvisa/typing.py": {
+      "bytes": 1444,
+      "sha256": "ecac69f884130ebd5774e1bb120997a49bdfc387b63323ce7a2a897b54347126"
+    },
+    "c_instrument/vendor/pyvisa/util.py": {
+      "bytes": 29825,
+      "sha256": "9ba732cff35e5b19b1d14ed3c8ee0146a43754dbbfc1dce3ad468656fa7d8bd3"
+    },
+    "c_instrument/vendor/pyvisa/version.py": {
+      "bytes": 519,
+      "sha256": "b33e1b91f64dd355a65ed9a38da51387e1a059456925fc674a25f1b296a0bb69"
+    },
+    "c_instrument/vendor/PyVISA-1.12.0.dist-info/AUTHORS": {
+      "bytes": 1112,
+      "sha256": "9de624d84e87d24e6d523704f1eecfb2a9296ddb1bb6fc8f20f7d3c936238486"
+    },
+    "c_instrument/vendor/PyVISA-1.12.0.dist-info/entry_points.txt": {
+      "bytes": 112,
+      "sha256": "099ba6bf299a8c8fe025e9219e58902e5db767a8bfc2b7e4b77b32ee717bef27"
+    },
+    "c_instrument/vendor/PyVISA-1.12.0.dist-info/LICENSE": {
+      "bytes": 1110,
+      "sha256": "783a298d0b65d898f9ed13d852a464251a9e23318c3a349cbc071fb1e0e156c5"
+    },
+    "c_instrument/vendor/PyVISA-1.12.0.dist-info/METADATA": {
+      "bytes": 6716,
+      "sha256": "13a75cf39c7e83621f19fbd8fbdc3034546cce6a47fe20fd4f37774b5a24e24d"
+    },
+    "c_instrument/vendor/PyVISA-1.12.0.dist-info/RECORD": {
+      "bytes": 5206,
+      "sha256": "4f1eb10d1edb4a39f3d7cfa8a9fe54154df87af39975e5dc8ac4f0acdf99786b"
+    },
+    "c_instrument/vendor/PyVISA-1.12.0.dist-info/top_level.txt": {
+      "bytes": 7,
+      "sha256": "8d8b1d4b8bc94b57f1c80a1017c80e0c37388d873bf3eece337e04ca0a43f8b1"
+    },
+    "c_instrument/vendor/PyVISA-1.12.0.dist-info/WHEEL": {
+      "bytes": 92,
+      "sha256": "1b5e87e00dc87a84269cead8578b9e6462928e18a95f1f3373c9eef451a5bcc0"
+    },
+    "c_instrument/vendor/pyvisa_py/__init__.py": {
+      "bytes": 694,
+      "sha256": "75a8a3ced615e80038254ed52718bac4a9a6df53eb42dcbf838253c61716611c"
+    },
+    "c_instrument/vendor/pyvisa_py/attributes.py": {
+      "bytes": 1067,
+      "sha256": "8fb12e81c28469560efc49b00f550fb2f32d44827ebf5aae9eed7442fd3ea187"
+    },
+    "c_instrument/vendor/pyvisa_py/common.py": {
+      "bytes": 622,
+      "sha256": "62cfcc51d0e1fa8f20f4bcef99989de88005ff4bdc654f95f68a83fbcb8f078a"
+    },
+    "c_instrument/vendor/pyvisa_py/gpib.py": {
+      "bytes": 32701,
+      "sha256": "ddf2ddfbdf914c70d88e8e693bd3e8bfdc87f923ab0904fcd1fac471f0cc14ac"
+    },
+    "c_instrument/vendor/pyvisa_py/highlevel.py": {
+      "bytes": 25078,
+      "sha256": "c0da155f8ece98e93767a1c55e24f60bab70f6f8c448cf5930f9e27fd332a0df"
+    },
+    "c_instrument/vendor/pyvisa_py/protocols/__init__.py": {
+      "bytes": 230,
+      "sha256": "c026ee2999d13aab245fed4859856638e0cd4bb1a20c1ee73df342e1e981657d"
+    },
+    "c_instrument/vendor/pyvisa_py/protocols/hislip.py": {
+      "bytes": 26990,
+      "sha256": "c56815f1b4cdf8faea668cb32da75737f78acf97418244019db165ece85b3cf0"
+    },
+    "c_instrument/vendor/pyvisa_py/protocols/rpc.py": {
+      "bytes": 33528,
+      "sha256": "f7e4bc44d42b57032b6020b970bc03abe776538edb1548ca54255cdbdef6e815"
+    },
+    "c_instrument/vendor/pyvisa_py/protocols/usbraw.py": {
+      "bytes": 2324,
+      "sha256": "9bb5c4eefd9ccb8ddf9098ce3acd960dadd245b3594a2c94236ca9c5b9cd6f10"
+    },
+    "c_instrument/vendor/pyvisa_py/protocols/usbtmc.py": {
+      "bytes": 14831,
+      "sha256": "3612745def4c0362a0089861516072e178b0437e61187290188a3106588651be"
+    },
+    "c_instrument/vendor/pyvisa_py/protocols/usbutil.py": {
+      "bytes": 9409,
+      "sha256": "7ab9f19c1d11af8796c9401bc778914dd4a1537ab15b50eb6e0948b2defbd045"
+    },
+    "c_instrument/vendor/pyvisa_py/protocols/vxi11.py": {
+      "bytes": 10514,
+      "sha256": "57b1c8ceb8452ac6748c9f1af82c6879913e9d13e951e0bd3e758d850ca638c8"
+    },
+    "c_instrument/vendor/pyvisa_py/serial.py": {
+      "bytes": 16236,
+      "sha256": "dcc2efc60a8be71ddcc21ca88c35ec74930350fd6cc78f6ac814c569678fbe3f"
+    },
+    "c_instrument/vendor/pyvisa_py/sessions.py": {
+      "bytes": 28217,
+      "sha256": "5ff0fb5dfd9491ffc63cf040dd34cbbcc672a9d9266c5f05981284a2c63995f1"
+    },
+    "c_instrument/vendor/pyvisa_py/tcpip.py": {
+      "bytes": 49746,
+      "sha256": "829b8a8b99b8bcb3303c65a01cceab5bcad8bac1b78a53dc71996d354e61fb7a"
+    },
+    "c_instrument/vendor/pyvisa_py/usb.py": {
+      "bytes": 10867,
+      "sha256": "9a7f7a76fe11d67efffa9ab87810b5434988d336825b6feb74fed4225f055ad5"
+    },
+    "c_instrument/vendor/pyvisa_py/version.py": {
+      "bytes": 517,
+      "sha256": "7448f65c50d9899bc848bdb6d8c4c2662a3576686e57c44f72be63f4475ea55d"
+    },
+    "c_instrument/vendor/PyVISA_py-0.6.3.dist-info/AUTHORS": {
+      "bytes": 673,
+      "sha256": "cfd38d5b76335802d77e7aec35923d791cbbcc1fba4410317ec9950aa53c27fd"
+    },
+    "c_instrument/vendor/PyVISA_py-0.6.3.dist-info/LICENSE": {
+      "bytes": 1108,
+      "sha256": "d4db1413d2f8f451c9c6281dfe73acdc946658b528769fce0939db3903883b0a"
+    },
+    "c_instrument/vendor/PyVISA_py-0.6.3.dist-info/METADATA": {
+      "bytes": 6611,
+      "sha256": "28f9b220ccbceb31f8713e22dad3cadf623b162db535d556bb3b8a178aa94cb4"
+    },
+    "c_instrument/vendor/PyVISA_py-0.6.3.dist-info/RECORD": {
+      "bytes": 2398,
+      "sha256": "f06afe259744b9a0cd202eb839f72103ead1ae86eaffbcd1b0b2a83748064a15"
+    },
+    "c_instrument/vendor/PyVISA_py-0.6.3.dist-info/top_level.txt": {
+      "bytes": 10,
+      "sha256": "0b12f7c68339e8da3c68e42ab6ae6a9542f12de90b80994239fe8a6d850f41c9"
+    },
+    "c_instrument/vendor/PyVISA_py-0.6.3.dist-info/WHEEL": {
+      "bytes": 92,
+      "sha256": "db07a93359e4e034b8785a58ad6d534ea3dca0635f1e184efe2e66e1c3a299ba"
+    },
+    "c_instrument/vendor/typing_extensions-4.7.1.dist-info/LICENSE": {
+      "bytes": 13936,
+      "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf"
+    },
+    "c_instrument/vendor/typing_extensions-4.7.1.dist-info/METADATA": {
+      "bytes": 3078,
+      "sha256": "d16ef5bba982db8a15609ce26cda2ada5f9b42756853fa76e6e88d840ab939c0"
+    },
+    "c_instrument/vendor/typing_extensions-4.7.1.dist-info/RECORD": {
+      "bytes": 414,
+      "sha256": "f78abbf2f03d35fc570d5d875f50ba659a083b872a8718789db87805defe2607"
+    },
+    "c_instrument/vendor/typing_extensions-4.7.1.dist-info/WHEEL": {
+      "bytes": 81,
+      "sha256": "1196c6921ec87b83e865f450f08d19b8ff5592537f4ef719e83484e546abe33e"
+    },
+    "c_instrument/vendor/typing_extensions.py": {
+      "bytes": 111082,
+      "sha256": "ce42d78e130c4a62af2cbaa3f8c0ae9db49c18cbbb90f2d9614b0bba7dfc234d"
+    },
+    "c_instrument/vendor/usb/__init__.py": {
+      "bytes": 4005,
+      "sha256": "9261f75824ef8299d7df1ca355afe4bb862afd8c49aee0ac0ff9fe3b1a89912c"
+    },
+    "c_instrument/vendor/usb/_debug.py": {
+      "bytes": 3312,
+      "sha256": "bedf7c17b9ab556bc2a93e3c71373269bf380f815a28b4d13c0289b1867ef370"
+    },
+    "c_instrument/vendor/usb/_interop.py": {
+      "bytes": 3611,
+      "sha256": "725db36ed5ec73435881b818c9de23ae9ae3e986b4e0398be3f98d9c0e54ed92"
+    },
+    "c_instrument/vendor/usb/_lookup.py": {
+      "bytes": 3364,
+      "sha256": "eb7d197159682ea97064852ad4467f8ffac4b461313f23198ce53decb0e82e41"
+    },
+    "c_instrument/vendor/usb/_objfinalizer.py": {
+      "bytes": 5395,
+      "sha256": "7e45f152ca87d5dcd8fe0d1fbf6c6bb64ad3c4c2391a19d93ab6179325413aed"
+    },
+    "c_instrument/vendor/usb/_version.py": {
+      "bytes": 142,
+      "sha256": "76bc0bbcc68228c93fdf5fe62cbf60b0fb23c33a66ea13913481f5f434614a47"
+    },
+    "c_instrument/vendor/usb/backend/__init__.py": {
+      "bytes": 16277,
+      "sha256": "e54c2f0d6fe2cfeb7beb1553ab5fe3ad86beae07e9ccff2d849c574e378e1688"
+    },
+    "c_instrument/vendor/usb/backend/libusb0.py": {
+      "bytes": 27061,
+      "sha256": "b5d9b62922c1ff2de932a4d3bb1658c1a7cecf01f8871d921fbc2a124aa89291"
+    },
+    "c_instrument/vendor/usb/backend/libusb1.py": {
+      "bytes": 36005,
+      "sha256": "0c86fc30235ce1d762ae14721e19a5efcadd8eea7d94771d4767d9b099ffba60"
+    },
+    "c_instrument/vendor/usb/backend/openusb.py": {
+      "bytes": 28376,
+      "sha256": "15b2dc0681c04cba69d4218f2db0bd350ff39814a91a21d50ec89140f09f9246"
+    },
+    "c_instrument/vendor/usb/control.py": {
+      "bytes": 8947,
+      "sha256": "037e0030c3c1ba3cb108f45d9d754fd4b4b9e2c0e1953cf5660645c84396f0ba"
+    },
+    "c_instrument/vendor/usb/core.py": {
+      "bytes": 48151,
+      "sha256": "cfcfaf879bf2b215a0370b58533dc01ad778f8d1adb4d53441e49ab04b0c2091"
+    },
+    "c_instrument/vendor/usb/legacy.py": {
+      "bytes": 12685,
+      "sha256": "c37a11bfef20130d64a3943cba45d1a3cb20f9c3821bfcc84366a7d59e55a07c"
+    },
+    "c_instrument/vendor/usb/libloader.py": {
+      "bytes": 6891,
+      "sha256": "598a2f6b58d195c032f79de4ab386242aedc834d3325ef0ead84d0c347c3f912"
+    },
+    "c_instrument/vendor/usb/util.py": {
+      "bytes": 12291,
+      "sha256": "896e6a51bc3247b47ac61c825c16f7d5a5e4204dc5b71c0485e20b32f4eb8d0d"
+    },
+    "c_instrument/vendor/zipp/__init__.py": {
+      "bytes": 10676,
+      "sha256": "64d8c7b8e29a16682b48fbed2251d814d0af10d1ea498baa11592d0608fd72ef"
+    },
+    "c_instrument/vendor/zipp/py310compat.py": {
+      "bytes": 309,
+      "sha256": "1d01b821ff9e239bf8453f3651a824ecfb8bb1b9c9ec72a08f4690286440a7c3"
+    },
+    "c_instrument/vendor/zipp-3.15.0.dist-info/LICENSE": {
+      "bytes": 1050,
+      "sha256": "db3f0246b1f9278f15845b99fec478b8b506eb76487993722f8c6e254285faf8"
+    },
+    "c_instrument/vendor/zipp-3.15.0.dist-info/METADATA": {
+      "bytes": 3735,
+      "sha256": "7a5efb765553a97a0c4684f1ab021da0c3663409044429fdbfdf9794a8c97c05"
+    },
+    "c_instrument/vendor/zipp-3.15.0.dist-info/RECORD": {
+      "bytes": 524,
+      "sha256": "e84c9a333fcdad72c870b772ebc68c56dd9d4f6a6342146ab4ae02f93fe51298"
+    },
+    "c_instrument/vendor/zipp-3.15.0.dist-info/top_level.txt": {
+      "bytes": 5,
+      "sha256": "8806dda121df686a817d56f65ee47d26a4901c2a0eb0eb46eb2f42fcb4a9a85c"
+    },
+    "c_instrument/vendor/zipp-3.15.0.dist-info/WHEEL": {
+      "bytes": 92,
+      "sha256": "db07a93359e4e034b8785a58ad6d534ea3dca0635f1e184efe2e66e1c3a299ba"
+    },
+    "c_vision/__init__.py": {
+      "bytes": 57,
+      "sha256": "fa7319a1bbfc827cf8774fe3f888dcb06c0e965180c6c1b3c4bd3d03e8f9284f"
+    },
+    "c_vision/configs/keysight_scope_measure.json": {
+      "bytes": 2526,
+      "sha256": "593ca42d0f70afd959278b6ab65346f9989719059348030bcf1e66eaf742087e"
+    },
+    "c_vision/reader.py": {
+      "bytes": 49971,
+      "sha256": "681f901c510626712c728a9156e791038e3e54d4f5659c3930689feedcd3e2f7"
+    },
+    "c_vision_lite/__init__.py": {
+      "bytes": 82,
+      "sha256": "0a766d6477952d9677c86310e36e6d23e46b76d98e1a1fd32cf76e662d5e47bf"
+    },
+    "c_vision_lite/assets/alphabet.bin": {
+      "bytes": 74020,
+      "sha256": "ccb86bdbbf3cb6be8488882215d37c48457e21fa287b067b475bcaf510c3d1bf"
+    },
+    "c_vision_lite/assets/libpaddle_light_api_shared.so": {
+      "bytes": 2567084,
+      "sha256": "e7b8c288ecf846c5db435f2d03c82ecd4fb28e5739d539903f51206977fbf367"
+    },
+    "c_vision_lite/assets/PP-OCRv5_mobile_det.nb": {
+      "bytes": 4997430,
+      "sha256": "f240c74eede695324fb9ad38ff18e02e25ad74b07c5d215b97bec686983f7a2f"
+    },
+    "c_vision_lite/assets/PP-OCRv5_mobile_rec.nb": {
+      "bytes": 16718470,
+      "sha256": "d250a4fa432b3136fe9bcc0c9c6f603772568139f7c5c44f5e2ed84ea4e1976f"
+    },
+    "c_vision_lite/board_reader.py": {
+      "bytes": 12975,
+      "sha256": "b9452a02c35025b4e9e8e686e17c246804d40212c3575aad737d229c13edaf47"
+    },
+    "c_vision_lite/CMakeLists.txt": {
+      "bytes": 1536,
+      "sha256": "b4007de96581ff6df7adcfbb65bbf87bad237928300552c2d759e6d5cfcd5297"
+    },
+    "c_vision_lite/image_probe.cc": {
+      "bytes": 5076,
+      "sha256": "0954c66bf1b9754e431569c6da6744bf7d05237498a9a43fbd6c13f53550e630"
+    },
+    "c_vision_lite/run_ocr_board.sh": {
+      "bytes": 521,
+      "sha256": "c092a9a1f602785f45c60f98da9e570ec726a89b71d55327323b477e7c2e0954"
+    },
+    "c_vision_lite/runtime/include/paddle_api.h": {
+      "bytes": 26516,
+      "sha256": "96fa8917b2c020f708a6510cb40ff7d4c8da3c97dc7b348b0e458c8da5099d68"
+    },
+    "c_vision_lite/runtime/include/paddle_image_preprocess.h": {
+      "bytes": 8466,
+      "sha256": "5b85d61e773b0459f861edaed33273834fa1d7bab51037bfa0c24e1442c751be"
+    },
+    "c_vision_lite/runtime/include/paddle_lite_factory_helper.h": {
+      "bytes": 1659,
+      "sha256": "4eef5d3ad55254385b4316dfd5a94521271ef171b347f3f78ac614d01b401df5"
+    },
+    "c_vision_lite/runtime/include/paddle_place.h": {
+      "bytes": 7867,
+      "sha256": "a1dd6330943ef44836031f4f51dcb5b435378253e8ca5fa7671cec617b72dc6c"
+    },
+    "c_vision_lite/runtime/include/paddle_use_kernels.h": {
+      "bytes": 25355,
+      "sha256": "595833912ae16d3d2ed7859a5d5efe8c1929effabb7922741180e77598c9a506"
+    },
+    "c_vision_lite/runtime/include/paddle_use_ops.h": {
+      "bytes": 8648,
+      "sha256": "1c30b919fa930f6040a420e87190e7e33fb0959f08b5bdf81593ee90ce3ab982"
+    },
+    "c_vision_lite/runtime/include/paddle_use_passes.h": {
+      "bytes": 5752,
+      "sha256": "c053f6344059c52d9ae39273ea03a1583e6e6b6bba8d3471fcd02b34be0420d3"
+    },
+    "c_vision_lite/smoke_infer.cc": {
+      "bytes": 5394,
+      "sha256": "a1d091ff422d62ba2d86b2b2607169f911c4ac9a3a4276720d1299c179a3c25c"
+    },
+    "c_vision_paddle/__init__.py": {
+      "bytes": 78,
+      "sha256": "5a7ece471ada8c7b6c4340dfd03c607be57b1f15d211a087fe7e500a366ef519"
+    },
+    "c_vision_paddle/backend.py": {
+      "bytes": 1179,
+      "sha256": "5c58c9995db0a1a9eee840abcddc817dea655049e285fd7fd7c9900de31a413b"
+    },
+    "c_vision_paddle/measurements.py": {
+      "bytes": 18054,
+      "sha256": "78c2d687b4e64f3191111235b56d5c0a23f8e86aeceac8ebdd7739c230f9f944"
+    },
+    "c_vision_paddle/reader.py": {
+      "bytes": 1124,
+      "sha256": "ef46b7b12dc4e7f2a503049350e68a29b49b70df74cfbb95fa6874c5527d953b"
+    },
+    "docs/BUILD.md": {
+      "bytes": 4489,
+      "sha256": "667047487c8453c4baafb0533b79a38aa7be77c0c0b44f72ff65e3ce974384fd"
+    },
+    "docs/DEPLOY.md": {
+      "bytes": 4756,
+      "sha256": "fc60df3f47662744deaddef07cab957952ae8b1953449a3f06773aa9a519ff2e"
+    },
+    "docs/HARDWARE.md": {
+      "bytes": 2691,
+      "sha256": "d22f83e9b61f4e394b7394d3c542898e086674d45846e94e4a47773bddbb2a98"
+    },
+    "docs/INTERFACES.md": {
+      "bytes": 6703,
+      "sha256": "4ea99d61a2f85d3a6a668edaef41726f35561652a16d57a1570cc4a13830a90e"
+    },
+    "docs/STATUS.md": {
+      "bytes": 2623,
+      "sha256": "dd236384eb1911f33ebf2cc68baa1428440fd2f0492e50b5975c260ad5d30f73"
+    },
+    "docs/VERIFICATION.md": {
+      "bytes": 2446,
+      "sha256": "10db5936ff9ca555c0d4cd5a9a78002b65069d01347cfbd0045b4a0de557cda5"
+    },
+    "README.md": {
+      "bytes": 2640,
+      "sha256": "647d613679a07c0e8cf8b66381aa0d5832da60c59a3692de31716e2d768c2e65"
+    },
+    "third_party/Apache-2.0.txt": {
+      "bytes": 11376,
+      "sha256": "3840c5c0c61c294264d2dd77b8777be6ddd90121ef4e0e64abcd22edea581d6e"
+    },
+    "third_party/arduino-esp32-LICENSE": {
+      "bytes": 26338,
+      "sha256": "994ce1902a23c74519b5d118c6bbb657edabce91dd6b7cc825d86bb8f5c9780f"
+    },
+    "third_party/ArduinoJson-LICENSE": {
+      "bytes": 1117,
+      "sha256": "2d9db49bfc83e1148523121b87ed57dc5e3c2278a24705e6e19618a63f566df8"
+    },
+    "third_party/musl-COPYRIGHT": {
+      "bytes": 6204,
+      "sha256": "f9bc4423732350eb0b3f7ed7e91d530298476f8fec0c6c427a1c04ade22655af"
+    },
+    "third_party/newlib-COPYING": {
+      "bytes": 59777,
+      "sha256": "dec5d419a7a4b27c064c8367a21e5d7b58aefc162719dc169bc4f82a88994859"
+    },
+    "third_party/PaddleOCR-LICENSE": {
+      "bytes": 11376,
+      "sha256": "3840c5c0c61c294264d2dd77b8777be6ddd90121ef4e0e64abcd22edea581d6e"
+    },
+    "third_party/README.md": {
+      "bytes": 2731,
+      "sha256": "8bcd6948d1f33e9e958468eddf371d7288979b187ff04189e8365c20f62a4d8b"
+    },
+    "tools/merge_firmware.py": {
+      "bytes": 1799,
+      "sha256": "42d7f04d1fa2bd7bc18372ce09549bc63676338b2a07fd19ac47aa1056fefb19"
+    },
+    "tools/repack.py": {
+      "bytes": 2808,
+      "sha256": "d4d7b7dab3be3024a4196667d233e086b421ab95ef67b360d316f9544f5be7e4"
+    }
+  }
+}

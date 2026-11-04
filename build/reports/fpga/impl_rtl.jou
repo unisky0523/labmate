@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Nov  3 23:56:21 2026
+# Process ID: 14824
+# Current directory: D:/spi1103/Navigator_7010/Navigator_7010.runs/impl_1
+# Command line: vivado.exe -mode batch -source D:\spi1103\Navigator_7010\Navigator_7010.runs\impl_1\system_wrapper.tcl -log D:\spi1103\Navigator_7010\spi\reports\impl_rtl.log -journal D:\spi1103\Navigator_7010\spi\reports\impl_rtl.jou
+# Log file: D:/spi1103/Navigator_7010/spi/reports/impl_rtl.log
+# Journal file: D:\spi1103\Navigator_7010\spi\reports\impl_rtl.jou
+#-----------------------------------------------------------
+source {D:\spi1103\Navigator_7010\Navigator_7010.runs\impl_1\system_wrapper.tcl}

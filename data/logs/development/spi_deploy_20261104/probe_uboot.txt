@@ -1,0 +1,6 @@
+version
+bdinfo
+printenv bootcmd bootargs boot_targets loadaddr kernel_addr_r fdt_addr_r ethaddr
+help bootz
+help fdt
+help crc32

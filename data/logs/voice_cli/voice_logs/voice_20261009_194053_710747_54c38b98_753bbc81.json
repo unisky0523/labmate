@@ -1,0 +1,17 @@
+{
+  "command_id": "read",
+  "reason": "通过当前距离与差距阈值。",
+  "scores": {
+    "read": 0.6896941264895234,
+    "record": 0.8381764675893366
+  },
+  "max_distance": 1.2,
+  "min_margin": 0.08,
+  "margin": 0.14848234109981318,
+  "inference_ms": 630.79,
+  "audio_path": "D:\\labmate_b\\data\\audio\\voice_tests\\voice_20261009_194053_710747_54c38b98.wav",
+  "mode": "test",
+  "created_at": "2026-10-09T19:40:54.352595+08:00",
+  "sample_rate": 16000,
+  "pipeline_version": "mfcc_dtw_v1"
+}

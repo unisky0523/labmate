@@ -1,0 +1,23 @@
+{
+  "text": "",
+  "words": [],
+  "segments": [],
+  "command": null,
+  "reason": "录音明显削波，请降低增益或离麦克风稍远。",
+  "duration_seconds": 2.45,
+  "mode": "run",
+  "audio_path": "D:\\labmate_b\\data\\audio\\asr_tests\\asr_20261015_213221_111443_56884e92.wav",
+  "metadata": {
+    "recorded_at": "2026-10-15T21:32:18.117+08:00",
+    "native_rate": 44100,
+    "device_name": "麦克风阵列 (Realtek(R) Audio)",
+    "truncated": false,
+    "capture_errors": []
+  },
+  "created_at": "2026-10-15T21:32:21.113+08:00",
+  "model_path": "D:\\labmate_b\\models\\vosk-model-small-cn-0.22",
+  "minimum_word_confidence": 0.45,
+  "pipeline_version": "vosk_domain_v1",
+  "sample_rate": 16000,
+  "dispatch_state": "not_dispatched"
+}

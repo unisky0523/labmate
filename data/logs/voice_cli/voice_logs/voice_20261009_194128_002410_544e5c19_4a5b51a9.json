@@ -1,0 +1,17 @@
+{
+  "command_id": null,
+  "reason": "两个候选过于接近，拒绝识别。",
+  "scores": {
+    "read": 0.990106519298152,
+    "record": 0.9975249300247121
+  },
+  "max_distance": 1.2,
+  "min_margin": 0.08,
+  "margin": 0.007418410726560132,
+  "inference_ms": 677.37,
+  "audio_path": "D:\\labmate_b\\data\\audio\\voice_tests\\voice_20261009_194128_002410_544e5c19.wav",
+  "mode": "test",
+  "created_at": "2026-10-09T19:41:28.681828+08:00",
+  "sample_rate": 16000,
+  "pipeline_version": "mfcc_dtw_v1"
+}

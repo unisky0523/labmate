@@ -1,0 +1,75 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/cairuifan/Desktop/Labmate/.integration_20261104/skill_tmp/stream-golden-o328op8q/rtl/asr_audio_frontend.v" into library work
+INFO: [VRFC 10-311] analyzing module asr_audio_frontend
+INFO: [VRFC 10-311] analyzing module asr_history_ram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/cairuifan/Desktop/Labmate/.integration_20261104/skill_tmp/stream-golden-o328op8q/tb_frontend.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_frontend
+INFO: [VRFC 10-311] analyzing module tb_mode0
+INFO: [VRFC 10-311] analyzing module tb_mode1
+Vivado Simulator v2026.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/AMD/2026.1/Vivado/bin/unwrapped/win64.o/xelab.exe tb_mode0 -s frontend_0 
+Multi-threading is on. Using 22 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.asr_history_ram
+Compiling module work.asr_audio_frontend(BYPASS=0)
+Compiling module work.tb_frontend
+Compiling module work.tb_mode0
+Built simulation snapshot frontend_0
+
+****** xsim v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Wed Nov  4 15:36:18 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/frontend_0/xsim_script.tcl
+# xsim {frontend_0} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PASS BYPASS=          0 epoch=          0 samples=       6000
+PASS BYPASS=          0 epoch=          1 samples=       6000
+$finish called at time : 45770310 ns : File "C:/Users/cairuifan/Desktop/Labmate/.integration_20261104/skill_tmp/stream-golden-o328op8q/tb_frontend.sv" Line 58
+exit
+INFO: [Common 17-206] Exiting xsim at Wed Nov  4 15:36:26 2026...
+Vivado Simulator v2026.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/AMD/2026.1/Vivado/bin/unwrapped/win64.o/xelab.exe tb_mode1 -s frontend_1 
+Multi-threading is on. Using 22 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.asr_audio_frontend_default
+Compiling module work.tb_frontend(BYPASS=1)
+Compiling module work.tb_mode1
+Built simulation snapshot frontend_1
+
+****** xsim v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Wed Nov  4 15:36:29 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/frontend_1/xsim_script.tcl
+# xsim {frontend_1} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PASS BYPASS=          1 epoch=          0 samples=       6000
+PASS BYPASS=          1 epoch=          1 samples=       6000
+$finish called at time : 266790 ns : File "C:/Users/cairuifan/Desktop/Labmate/.integration_20261104/skill_tmp/stream-golden-o328op8q/tb_frontend.sv" Line 58
+exit
+INFO: [Common 17-206] Exiting xsim at Wed Nov  4 15:36:32 2026...
+PASS: 2 modes x 2 epochs x 6000 samples

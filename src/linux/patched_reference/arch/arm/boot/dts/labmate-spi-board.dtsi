@@ -1,0 +1,10 @@
+/* SPI additions to the retained factory board tree. */
+#include "esp32-spi.dtsi"
+
+&gpio0 { emio-gpio-width = <12>; };
+
+/ {
+    chosen {
+        bootargs = "console=ttyPS0,115200 cma=50M earlycon root=/dev/mmcblk1p1 rw rootwait";
+    };
+};

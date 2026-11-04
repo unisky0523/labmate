@@ -1,0 +1,16 @@
+{
+  "protocol": "labmate.fft.v1",
+  "request_id": "synthetic-sine-bin40",
+  "input_sha256": "e00744587ed57988d52ecd22075724f2646b748a50d27a120a500badc1b26017",
+  "fft_size": 4096,
+  "bin_count": 2049,
+  "output_kind": "power_u64_le",
+  "output_order": "natural",
+  "power_file": "power.u64le",
+  "power_sha256": "eded4e92854d3ecae956f0440957a75cc8e7efb384d4c7d25da8ec940d175dca",
+  "status": "complete",
+  "overflow": false,
+  "backend": "software_reference",
+  "fft_right_shift": 0,
+  "power_right_shift": 0
+}

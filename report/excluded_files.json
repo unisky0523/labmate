@@ -1,0 +1,26 @@
+[
+  {
+    "origin": "C:\\Users\\cairuifan\\Documents\\xwechat_files\\wxid_7wg8mf6t962p22_1775\\msg\\file\\2026-11\\Navigator_7010_ASR_SPI_ESP32_Vivado2020_2.zip::Navigator_7010/spi/esp32/CMakeLists.txt",
+    "reason": "Legacy FPGA ZIP ESP-IDF example and its dependent parser test not adopted; the final teammate PlatformIO firmware is included as board_modules."
+  },
+  {
+    "origin": "C:\\Users\\cairuifan\\Documents\\xwechat_files\\wxid_7wg8mf6t962p22_1775\\msg\\file\\2026-11\\Navigator_7010_ASR_SPI_ESP32_Vivado2020_2.zip::Navigator_7010/spi/tests/test_protocol.py",
+    "reason": "Legacy FPGA ZIP ESP-IDF example and its dependent parser test not adopted; the final teammate PlatformIO firmware is included as board_modules."
+  },
+  {
+    "origin": "C:\\Users\\cairuifan\\Documents\\xwechat_files\\wxid_7wg8mf6t962p22_1775\\msg\\file\\2026-11\\Navigator_7010_ASR_SPI_ESP32_Vivado2020_2.zip::Navigator_7010/spi/esp32/main/CMakeLists.txt",
+    "reason": "Legacy FPGA ZIP ESP-IDF example and its dependent parser test not adopted; the final teammate PlatformIO firmware is included as board_modules."
+  },
+  {
+    "origin": "C:\\Users\\cairuifan\\Documents\\xwechat_files\\wxid_7wg8mf6t962p22_1775\\msg\\file\\2026-11\\Navigator_7010_ASR_SPI_ESP32_Vivado2020_2.zip::Navigator_7010/spi/esp32/main/image_protocol.c",
+    "reason": "Legacy FPGA ZIP ESP-IDF example and its dependent parser test not adopted; the final teammate PlatformIO firmware is included as board_modules."
+  },
+  {
+    "origin": "C:\\Users\\cairuifan\\Documents\\xwechat_files\\wxid_7wg8mf6t962p22_1775\\msg\\file\\2026-11\\Navigator_7010_ASR_SPI_ESP32_Vivado2020_2.zip::Navigator_7010/spi/esp32/main/image_protocol.h",
+    "reason": "Legacy FPGA ZIP ESP-IDF example and its dependent parser test not adopted; the final teammate PlatformIO firmware is included as board_modules."
+  },
+  {
+    "origin": "C:\\Users\\cairuifan\\Documents\\xwechat_files\\wxid_7wg8mf6t962p22_1775\\msg\\file\\2026-11\\Navigator_7010_ASR_SPI_ESP32_Vivado2020_2.zip::Navigator_7010/spi/esp32/main/main.c",
+    "reason": "Legacy FPGA ZIP ESP-IDF example and its dependent parser test not adopted; the final teammate PlatformIO firmware is included as board_modules."
+  }
+]

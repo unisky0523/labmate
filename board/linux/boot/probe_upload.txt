@@ -1,0 +1,1 @@
+sha256sum /home/root/spi_stage_20261104/uart_probe.bin

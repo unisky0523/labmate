@@ -1,0 +1,12 @@
+{
+  "ip": {
+    "pipeline/control_0": {
+      "vlnv": "example.org:user:control:1.0",
+      "min_range": "0x1000",
+      "registers": {
+        "ID": "0x0",
+        "STATUS": "0x4"
+      }
+    }
+  }
+}

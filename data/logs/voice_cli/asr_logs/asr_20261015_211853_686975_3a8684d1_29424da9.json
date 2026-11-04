@@ -1,0 +1,71 @@
+{
+  "text": "可以",
+  "words": [
+    {
+      "conf": 0.602096,
+      "end": 3.560942,
+      "start": 2.85,
+      "word": "可以"
+    }
+  ],
+  "segments": [
+    {
+      "result": [
+        {
+          "conf": 0.602096,
+          "end": 3.560942,
+          "start": 2.85,
+          "word": "可以"
+        }
+      ],
+      "text": "可以"
+    }
+  ],
+  "command": {
+    "intent": "confirm"
+  },
+  "reason": "回读确认未通过，本次未执行。",
+  "duration_seconds": 4.7,
+  "text_baseline": "可以",
+  "words_baseline": [
+    {
+      "conf": 0.602096,
+      "end": 3.560942,
+      "start": 2.85,
+      "word": "可以"
+    }
+  ],
+  "segments_baseline": [
+    {
+      "result": [
+        {
+          "conf": 0.602096,
+          "end": 3.560942,
+          "start": 2.85,
+          "word": "可以"
+        }
+      ],
+      "text": "可以"
+    }
+  ],
+  "min_word_confidence": 0.602096,
+  "recognizer_mode": "baseline",
+  "recognition_ms": 626.52,
+  "mode": "run",
+  "audio_path": "D:\\labmate_b\\data\\audio\\asr_tests\\asr_20261015_211853_686975_3a8684d1.wav",
+  "metadata": {
+    "recorded_at": "2026-10-15T21:18:48.454+08:00",
+    "native_rate": 44100,
+    "device_name": "麦克风阵列 (Realtek(R) Audio)",
+    "truncated": false,
+    "capture_errors": []
+  },
+  "created_at": "2026-10-15T21:18:54.317+08:00",
+  "model_path": "D:\\labmate_b\\models\\vosk-model-small-cn-0.22",
+  "minimum_word_confidence": 0.45,
+  "pipeline_version": "vosk_domain_v1",
+  "sample_rate": 16000,
+  "dispatch_state": "readback_not_confirmed",
+  "confirm_readback_text": "你 是 上海 的 了 可以",
+  "confirm_readback_audio_path": "D:\\labmate_b\\data\\audio\\asr_tests\\asr_20261015_211909_431108_1e88d74d.wav"
+}

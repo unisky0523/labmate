@@ -1,0 +1,49 @@
+esp_spi_sclk = K14, LVCMOS33
+esp_spi_mosi = M15, LVCMOS33
+esp_spi_cs_n = J14, LVCMOS33
+esp_spi_miso = L16, LVCMOS33
+gpio0_tri_io[11] = G14, LVCMOS33
+system_i/processing_system7_0/SPI0_MISO_I -> system_i/esp32_spi_io_miso_i
+system_i/processing_system7_0/SPI0_MISO_O -> 
+system_i/processing_system7_0/SPI0_MISO_T -> 
+system_i/processing_system7_0/SPI0_MOSI_I -> system_i/esp32_spi_io_mosi_i
+system_i/processing_system7_0/SPI0_MOSI_O -> system_i/processing_system7_0_SPI0_MOSI_O
+system_i/processing_system7_0/SPI0_MOSI_T -> system_i/processing_system7_0_SPI0_MOSI_T
+system_i/processing_system7_0/SPI0_SCLK_I -> system_i/esp32_spi_io_sclk_i
+system_i/processing_system7_0/SPI0_SCLK_O -> system_i/processing_system7_0_SPI0_SCLK_O
+system_i/processing_system7_0/SPI0_SCLK_T -> system_i/processing_system7_0_SPI0_SCLK_T
+system_i/processing_system7_0/SPI0_SS1_O -> 
+system_i/processing_system7_0/SPI0_SS2_O -> 
+system_i/processing_system7_0/SPI0_SS_I -> 
+system_i/processing_system7_0/SPI0_SS_O -> system_i/processing_system7_0_SPI0_SS_O
+system_i/processing_system7_0/SPI0_SS_T -> system_i/processing_system7_0_SPI0_SS_T
+system_i/processing_system7_0/inst/IRQ_P2F_SPI0 -> 
+system_i/processing_system7_0/inst/SPI0_MISO_I -> system_i/processing_system7_0/SPI0_MISO_I
+system_i/processing_system7_0/inst/SPI0_MISO_O -> 
+system_i/processing_system7_0/inst/SPI0_MISO_T -> 
+system_i/processing_system7_0/inst/SPI0_MOSI_I -> system_i/processing_system7_0/SPI0_MOSI_I
+system_i/processing_system7_0/inst/SPI0_MOSI_O -> system_i/processing_system7_0/SPI0_MOSI_O
+system_i/processing_system7_0/inst/SPI0_MOSI_T -> system_i/processing_system7_0/SPI0_MOSI_T
+system_i/processing_system7_0/inst/SPI0_SCLK_I -> system_i/processing_system7_0/SPI0_SCLK_I
+system_i/processing_system7_0/inst/SPI0_SCLK_O -> system_i/processing_system7_0/SPI0_SCLK_O
+system_i/processing_system7_0/inst/SPI0_SCLK_T -> system_i/processing_system7_0/SPI0_SCLK_T
+system_i/processing_system7_0/inst/SPI0_SS1_O -> 
+system_i/processing_system7_0/inst/SPI0_SS2_O -> 
+system_i/processing_system7_0/inst/SPI0_SS_I -> 
+system_i/processing_system7_0/inst/SPI0_SS_O -> system_i/processing_system7_0/SPI0_SS_O
+system_i/processing_system7_0/inst/SPI0_SS_T -> system_i/processing_system7_0/SPI0_SS_T
+system_i/processing_system7_0/inst/PS7_i/EMIOSPI0MO -> system_i/processing_system7_0/inst/SPI0_MOSI_O
+system_i/processing_system7_0/inst/PS7_i/EMIOSPI0MOTN -> system_i/processing_system7_0/inst/SPI0_MOSI_T_n
+system_i/processing_system7_0/inst/PS7_i/EMIOSPI0SCLKO -> system_i/processing_system7_0/inst/SPI0_SCLK_O
+system_i/processing_system7_0/inst/PS7_i/EMIOSPI0SCLKTN -> system_i/processing_system7_0/inst/SPI0_SCLK_T_n
+system_i/processing_system7_0/inst/PS7_i/EMIOSPI0SO -> 
+system_i/processing_system7_0/inst/PS7_i/EMIOSPI0SSNTN -> system_i/processing_system7_0/inst/SPI0_SS_T_n
+system_i/processing_system7_0/inst/PS7_i/EMIOSPI0SSON[2] -> 
+system_i/processing_system7_0/inst/PS7_i/EMIOSPI0SSON[1] -> 
+system_i/processing_system7_0/inst/PS7_i/EMIOSPI0SSON[0] -> system_i/processing_system7_0/inst/SPI0_SS_O
+system_i/processing_system7_0/inst/PS7_i/EMIOSPI0STN -> 
+system_i/processing_system7_0/inst/PS7_i/EMIOSPI0MI -> system_i/processing_system7_0/inst/SPI0_MISO_I
+system_i/processing_system7_0/inst/PS7_i/EMIOSPI0SCLKI -> system_i/processing_system7_0/inst/SPI0_SCLK_I
+system_i/processing_system7_0/inst/PS7_i/EMIOSPI0SI -> system_i/processing_system7_0/inst/SPI0_MOSI_I
+system_i/processing_system7_0/inst/PS7_i/EMIOSPI0SSIN -> system_i/processing_system7_0/inst/<const1>
+SSIN constant net type: POWER

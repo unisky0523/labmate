@@ -1,0 +1,11 @@
+#!/bin/sh
+case "${1:-start}" in
+    start|restart)
+        /usr/bin/python3 /usr/local/lib/labmate-spi-init.py > /var/log/labmate-spi-init.log 2>&1
+        result=$?
+        cat /var/log/labmate-spi-init.log
+        exit "$result"
+        ;;
+    stop) exit 0 ;;
+    *) echo "Usage: $0 {start|stop|restart}"; exit 2 ;;
+esac

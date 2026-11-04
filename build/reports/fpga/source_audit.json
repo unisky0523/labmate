@@ -1,0 +1,19 @@
+{
+  "baseline": "D:\\a20b_1102\\Navigator_7010",
+  "modified": "D:\\spi1103\\Navigator_7010",
+  "address_map_identical": true,
+  "existing_components_changed": [
+    "processing_system7_0"
+  ],
+  "new_components": [
+    "esp32_spi_io"
+  ],
+  "asr_rtl_and_coefficients_identical": true,
+  "asr_bypass": 0,
+  "camera_lcd_audio_unchanged": true,
+  "vendor_video_hdl_files_compared": 64,
+  "vendor_video_hdl_identical": true,
+  "protocol_tests": "79 packet/ACK scenarios passed; native C parser compiled with -Wall -Wextra -Werror; ARM cross compile passed",
+  "full_esp_idf_build": "not performed; no ESP-IDF environment",
+  "on_board_test": "not performed"
+}

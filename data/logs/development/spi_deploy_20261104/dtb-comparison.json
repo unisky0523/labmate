@@ -1,0 +1,80 @@
+[
+  {
+    "node": "/amba/can@e0008000",
+    "property": "status",
+    "before": "6f6b617900",
+    "after": "64697361626c656400"
+  },
+  {
+    "node": "/amba/ethernet@e000b000",
+    "property": "local-mac-address",
+    "before": "000a3500c013",
+    "after": "000a35008b87"
+  },
+  {
+    "node": "/amba/gpio@e000a000",
+    "property": "emio-gpio-width",
+    "before": "0000000b",
+    "after": "0000000c"
+  },
+  {
+    "node": "/amba/serial@e0001000",
+    "property": "status",
+    "before": "6f6b617900",
+    "after": "64697361626c656400"
+  },
+  {
+    "node": "/amba/spi@e0006000",
+    "property": "is-decoded-cs",
+    "before": null,
+    "after": "00000000"
+  },
+  {
+    "node": "/amba/spi@e0006000",
+    "property": "num-cs",
+    "before": null,
+    "after": "00000001"
+  },
+  {
+    "node": "/amba/spi@e0006000",
+    "property": "status",
+    "before": "64697361626c656400",
+    "after": "6f6b617900"
+  },
+  {
+    "node": "/amba/spi@e0006000/image-link@0",
+    "property": "compatible",
+    "before": null,
+    "after": "6c61626d6174652c65737033322d696d6167652d6c696e6b00"
+  },
+  {
+    "node": "/amba/spi@e0006000/image-link@0",
+    "property": "reg",
+    "before": null,
+    "after": "00000000"
+  },
+  {
+    "node": "/amba/spi@e0006000/image-link@0",
+    "property": "spi-cpha",
+    "before": null,
+    "after": ""
+  },
+  {
+    "node": "/amba/spi@e0006000/image-link@0",
+    "property": "spi-max-frequency",
+    "before": null,
+    "after": "003d0900"
+  },
+  {
+    "node": "/chipid",
+    "property": "chipid",
+    "before": "377a30313000",
+    "after": null
+  },
+  {
+    "node": "/chosen",
+    "property": "bootargs",
+    "before": "6561726c79636f6e20636f6e736f6c653d7474795053302c31313532303020636d613d35304d20726f6f743d2f6465762f6d6d63626c6b31703120727720726f6f747761697400",
+    "after": "636f6e736f6c653d7474795053302c31313532303020636d613d35304d206561726c79636f6e20726f6f743d2f6465762f6d6d63626c6b31703120727720726f6f747761697400"
+  }
+]

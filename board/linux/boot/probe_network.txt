@@ -1,0 +1,5 @@
+ip -4 addr
+cat /sys/class/net/eth0/carrier
+ls -la /media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link
+find /media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link -maxdepth 2 -type f | head -n 30
+sha256sum /dev/mtd0 /dev/mtd1 /dev/mtd2 /dev/mtd3

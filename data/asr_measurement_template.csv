@@ -1,0 +1,11 @@
+pair_id,sample_id,status_a,status_b,response_a_s,response_b_s,evidence_a,evidence_b,kind
+01,ASR-01,pending,pending,,,,,measurement
+02,ASR-01,pending,pending,,,,,measurement
+03,ASR-01,pending,pending,,,,,measurement
+04,ASR-01,pending,pending,,,,,measurement
+05,ASR-01,pending,pending,,,,,measurement
+06,ASR-01,pending,pending,,,,,measurement
+07,ASR-01,pending,pending,,,,,measurement
+08,ASR-01,pending,pending,,,,,measurement
+09,ASR-01,pending,pending,,,,,measurement
+10,ASR-01,pending,pending,,,,,measurement

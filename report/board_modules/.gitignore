@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+.pio/
+.venv*/
+build/
+runs/
+c_instrument/board_config/
+c_vision_lite/assets/smoke_infer
+*.log

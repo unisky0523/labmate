@@ -1,0 +1,4 @@
+Vivado 2020.2. Frozen, unchanged video-IP RTL reused. Full synthesis/place/route performed.
+Hardware test NOT performed. External SPI timing/ESP32 operation must be measured on board.
+max constrained slack = 0.135 ns
+min constrained slack = 0.029 ns

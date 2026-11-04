@@ -1,0 +1,10 @@
+{
+  "kernel_release": "5.4.0-xilinx-v2020.2-spi-test-20261104",
+  "elf": "ARM ELF32 little-endian",
+  "spi0": "e0006000 / CS0 / mode1",
+  "dtb_checked": true,
+  "uImage_crc_checked": true,
+  "modules_checked": 32,
+  "board_tested": false
+}
+ARTIFACT_CHECK_PASS

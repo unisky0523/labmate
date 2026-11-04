@@ -1,0 +1,8 @@
+mkdir -p /home/r oot/spi_stage_20261104/config
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104# tar -xzf /home/r oot/spi_stage_20261104/boot-config.tar.gz -C /home/root/spi_stage_20261104/confi g
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104# cp /home/root/sp i_stage_20261104/config/boot.scr /boot/spi-20261104/boot.scr
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104# cp /home/root/sp i_stage_20261104/config/boot.cmd /boot/spi-20261104/boot.cmd
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104# sha256sum /boot/ spi-20261104/boot.scr
+134690eefbcd3672ff805ea6aa7a83f00aa1433fed349abf767bee30229169b4  /boot/spi-20261104/boot.scr
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104# sync
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104# 

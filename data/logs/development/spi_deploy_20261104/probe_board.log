@@ -1,0 +1,123 @@
+uname -a
+Linux ATK-ZYNQ 5.4.0-xilinx-v2020.2 #7 SMP PREEMPT Fri Feb 6 13:41:28 CST 2026 armv7l GNU/Linux
+>/dev/null
+ls -la /media/sd-mmcblk0p1/labmate_camera_spi_emio
+ls -la /opt/image /boot
+ls -l /sys/firmware/fdt /proc/config.gz
+ps w
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_camera_spi_emio# cat /proc/cmdline
+earlycon console=ttyPS0,115200 cma=50M root=/dev/mmcblk1p1 rw rootwait
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_camera_spi_emio# cat /proc/mtd
+dev:    size   erasesize  name
+mtd0: 00600000 00001000 "boot"
+mtd1: 00020000 00001000 "bootenv"
+mtd2: 00700000 00001000 "image.ub"
+mtd3: 00020000 00001000 "boot.scr"
+mtd4: 012c0000 00001000 "space"
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_camera_spi_emio# mount | grep -E ' / |mmmcblk'
+/dev/mmcblk1p1 on / type ext4 (rw,relatime)
+/dev/mmcblk1p1 on /media/sd-mmcblk1p1 type ext4 (rw,relatime)
+/dev/mmcblk0p1 on /media/sd-mmcblk0p1 type vfat (rw,relatime,gid=100,fmask=0002,dmask=0002,allow_utime=0020,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro)
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_camera_spi_emio# ip -4 addr show
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_camera_spi_emio# ls -l /dev/spidev* /syys/bus/spi/devices/ 2>/dev/null
+/sys/bus/spi/devices/:
+total 0
+lrwxrwxrwx    1 root     root             0 Nov  3 12:24 spi0.0 -> ../../../devices/soc0/amba/e000d000.spi/spi_master/spi0/spi0.0
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_camera_spi_emio# ls -la /media/sd-mmcbllk0p1/labmate_camera_spi_emio
+total 128
+drwxrwxr-x    3 root     users        32768 Nov  4  2026 .
+drwxrwxr-x   13 root     users        32768 Jan  1  1970 ..
+drwxrwxr-x    5 root     users        32768 Nov  4  2026 c_camera_link
+-rwxrwxr-x    1 root     users        28262 Nov  3 16:34 sample.jpg
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_camera_spi_emio# ls -la /opt/image /booot
+/boot:
+total 8
+drwxr-xr-x    2 root     root          4096 Feb  6  2026 .
+drwxr-xr-x   18 root     root          4096 Apr  7  2023 ..
+
+/opt/image:
+total 12
+drwxr-xr-x    2 root     root          4096 Feb  6  2026 .
+drwxr-xr-x    5 root     root          4096 Feb  6  2026 ..
+-rwxr-xr-x    1 root     root          3299 Feb  6  2026 burn_qspi.sh
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_camera_spi_emio# ls -l /sys/firmware/fddt /proc/config.gz
+-r--r--r--    1 root     root         32226 Nov  3 17:29 /proc/config.gz
+-r--------    1 root     root         24576 Nov  3 17:29 /sys/firmware/fdt
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_camera_spi_emio# ps w
+PID   USER     TIME  COMMAND
+    1 root      0:01 init [5]
+    2 root      0:00 [kthreadd]
+    3 root      0:00 [rcu_gp]
+    4 root      0:00 [rcu_par_gp]
+    7 root      0:00 [kworker/u4:0-ev]
+    8 root      0:00 [mm_percpu_wq]
+    9 root      0:00 [ksoftirqd/0]
+   10 root      0:01 [rcu_preempt]
+   11 root      0:00 [migration/0]
+   12 root      0:00 [cpuhp/0]
+   13 root      0:00 [cpuhp/1]
+   14 root      0:00 [migration/1]
+   15 root      0:00 [ksoftirqd/1]
+   18 root      0:00 [kdevtmpfs]
+   19 root      0:00 [rcu_tasks_kthre]
+   21 root      0:00 [kworker/1:1-eve]
+   22 root      0:00 [oom_reaper]
+   23 root      0:00 [writeback]
+   61 root      0:00 [kblockd]
+   62 root      0:00 [edac-poller]
+   63 root      0:00 [watchdogd]
+   64 root      0:00 [rpciod]
+   65 root      0:00 [kworker/u5:0-sd]
+   66 root      0:00 [xprtiod]
+   67 root      0:00 [cfg80211]
+   68 root      0:00 [kswapd0]
+   69 root      0:00 [nfsiod]
+   72 root      0:00 [spi0]
+   76 root      0:00 [ci_otg]
+   78 root      0:00 [irq/60-gt9xx]
+   79 root      0:00 [irq/57-41600000]
+   80 root      0:00 [sdhci]
+   81 root      0:00 [irq/32-mmc0]
+   82 root      0:01 [kworker/1:2-mm_]
+   83 root      0:00 [sdhci]
+   84 root      0:00 [irq/33-mmc1]
+   87 root      0:00 [kworker/1:1H-kb]
+   89 root      0:00 [mmc_complete]
+   90 root      0:00 [ipv6_addrconf]
+   98 root      0:00 [jbd2/mmcblk1p1-]
+   99 root      0:00 [ext4-rsv-conver]
+  126 root      0:00 /sbin/udevd -d
+  437 root      0:01 [kworker/u4:2-ev]
+  543 root      0:00 udhcpc -R -b -p /var/run/udhcpc.eth0.pid -i eth0
+  550 messageb  0:00 /usr/bin/dbus-daemon --system
+  553 root      0:03 /usr/sbin/haveged -w 1024 -v 1
+  557 root      0:00 /usr/sbin/dropbear -r /etc/dropbear/dropbear_rsa_host_key 
+  561 rpc       0:00 /usr/sbin/rpcbind
+  566 root      0:00 /usr/sbin/rpc.statd
+  572 nobody    0:00 /usr/bin/dnsmasq -7 /etc/dnsmasq.d
+  577 root      0:00 /usr/sbin/inetd
+  582 root      0:00 /sbin/syslogd -n -O /var/log/messages
+  585 root      0:00 /sbin/klogd -n
+  602 root      0:13 /usr/sbin/tcf-agent -d -L- -l0
+  614 root      0:00 {start_getty} /bin/sh /bin/start_getty 115200 ttyPS0 vt102
+  630 root      0:00 /bin/login -f
+  633 root      0:01 -sh
+ 3595 root      0:00 sh ./run_ui_test.sh
+ 3608 root      0:13 ./labassistant
+ 3609 root     41:21 /usr/bin/python3 -u /home/root/labmate_ui_test/backend.py
+ 4125 root      0:10 aplay -q -D default -t raw -f S24_LE -r 44100 -c 2 /dev/ze
+ 4126 root      0:25 arecord -q -D hw:0,1 -t raw -f S24_LE -r 44100 -c 2
+ 4225 root      0:00 [kworker/0:1H-mm]
+ 4549 root      0:00 [kworker/u5:1]
+ 4588 root      0:00 [mmc_complete]
+ 4702 root      0:00 [kworker/0:0-mm_]
+ 4746 root      0:00 [kworker/1:0H]
+ 4747 root      0:00 [kworker/0:0H]
+ 4835 root      0:00 [kworker/0:1-eve]
+ 4858 root      0:00 [kworker/0:2-eve]
+ 4885 root      0:00 [kworker/0:3-eve]
+ 4916 root      0:00 ps w
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_camera_spi_emio# 

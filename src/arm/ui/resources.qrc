@@ -1,0 +1,18 @@
+<RCC>
+  <qresource prefix="/backend">
+    <file>backend.py</file>
+    <file>asr_adapter.py</file>
+    <file>audio_frontend.py</file>
+    <file>record_store.py</file>
+    <file>instrument_adapter.py</file>
+    <file>command_executor.py</file>
+    <file>generator_control.py</file>
+    <file>generator_runner.py</file>
+    <file>fft_control.py</file>
+    <file>fft_protocol.py</file>
+    <file>scope_waveform.py</file>
+    <file>sweep_response.py</file>
+    <file>asr_runtime/main.py</file>
+    <file>asr_runtime/generator_commands.py</file>
+  </qresource>
+</RCC>

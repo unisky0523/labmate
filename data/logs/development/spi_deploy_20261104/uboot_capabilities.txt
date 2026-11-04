@@ -1,0 +1,4 @@
+printenv ethaddr kernel_addr_r fdt_addr_r
+help bootz
+help fdt
+help crc32

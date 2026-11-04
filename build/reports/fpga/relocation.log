@@ -1,0 +1,93 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Nov  4 00:06:46 2026
+# Process ID: 23860
+# Current directory: D:/学科文件/大三上/FPGA创新赛
+# Command line: vivado.exe -mode batch -source C:\Users\Gong\AppData\Local\Temp\verify_spi_relocation.tcl -log D:\spi_verify1104\relocation.log -journal D:\spi_verify1104\relocation.jou
+# Log file: D:/spi_verify1104/relocation.log
+# Journal file: D:\spi_verify1104\relocation.jou
+#-----------------------------------------------------------
+source {C:\Users\Gong\AppData\Local\Temp\verify_spi_relocation.tcl}
+# open_project D:/spi_verify1104/Navigator_7010/Navigator_7010.xpr
+INFO: [Project 1-313] Project file moved from 'D:/spi1103/Navigator_7010' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [Project 1-509] GeneratedRun file for 'synth_1' not found
+WARNING: [Project 1-509] GeneratedRun file for 'impl_1' not found
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/spi_verify1104/Navigator_7010/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/vivado2020/Vivado/2020.2/data/ip'.
+# set fp [open D:/spi_verify1104/relocation_check.txt w]
+# set missing {}
+# foreach f [get_files -all] {
+#  if {![file exists $f]} {lappend missing $f}
+# }
+# puts $fp "Project files checked: [llength [get_files -all]]"
+# puts $fp "Missing files: $missing"
+# if {[llength $missing]} {error "Relocated project has missing files"}
+# open_bd_design [get_files */system.bd]
+Reading block design file <D:/spi_verify1104/Navigator_7010/Navigator_7010.srcs/sources_1/bd/system/system.bd>...
+Adding component instance block -- xilinx.com:ip:audio_formatter:1.0 - audio_formatter
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_0
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:i2s_receiver:1.0 - i2s_receiver
+Adding component instance block -- xilinx.com:ip:i2s_transmitter:1.0 - i2s_transmitter
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_mclk
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_0
+Adding component instance block -- xilinx.com:module_ref:asr_audio_frontend:1.0 - asr_frontend_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_interconnect_0
+Adding component instance block -- xilinx.com:ip:axi_register_slice:2.1 - s00_regslice
+Adding component instance block -- xilinx.com:ip:axi_data_fifo:2.1 - s00_data_fifo
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - axis_subset_converter_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_153M
+Adding component instance block -- xilinx.com:ip:v_frmbuf_wr:2.2 - v_frmbuf_wr_0
+Adding component instance block -- xilinx.com:ip:v_vid_in_axi4s:4.0 - v_vid_in_axi4s_0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_0
+Adding component instance block -- alientek.com:user:ov5640_capture_data:1.0 - ov5640_capture_data_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:util_vector_logic:2.0 - util_vector_logic_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_mem_intercon
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axis_subset_converter:1.1 - axis_subset_converter_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - lcd_id
+Adding component instance block -- digilentinc.com:IP:PWM:2.0 - lcd_pl_pwm
+Adding component instance block -- xilinx.com:ip:v_tc:6.2 - lcd_vtc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - proc_sys_reset_0
+Adding component instance block -- www.alientek.com:user:rgb2lcd:1.0 - rgb2lcd
+Adding component instance block -- xilinx.com:ip:v_axi4s_vid_out:4.0 - v_axi4s_vid_out_0
+Adding component instance block -- xilinx.com:ip:v_frmbuf_rd:2.2 - v_frmbuf_rd_0
+Adding component instance block -- xilinx.com:ip:xlslice:1.0 - xlslice_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding component instance block -- xilinx.com:user:gmii2rgmii:1.0 - gmii2rgmii_0
+Adding component instance block -- xilinx.com:ip:axi_iic:2.0 - i2c2
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding component instance block -- xilinx.com:ip:axi_clock_converter:2.1 - auto_cc
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - rest_gpio
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding component instance block -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding component instance block -- xilinx.com:module_ref:spi_emio_master_io:1.0 - esp32_spi_io
+Successfully read diagram <system> from block design file <D:/spi_verify1104/Navigator_7010/Navigator_7010.srcs/sources_1/bd/system/system.bd>
+open_bd_design: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1102.684 ; gain = 0.000
+# validate_bd_design
+INFO: [BD 5-320] Validate design is not run, since the design is already validated.
+# set ps [get_bd_cells processing_system7_0]
+# foreach prop {PCW_SPI0_PERIPHERAL_ENABLE PCW_SPI0_SPI0_IO PCW_UART0_PERIPHERAL_ENABLE PCW_UART0_UART0_IO PCW_UART1_PERIPHERAL_ENABLE PCW_CAN0_PERIPHERAL_ENABLE PCW_GPIO_EMIO_GPIO_IO} {
+#  puts $fp "$prop = [get_property CONFIG.$prop $ps]"
+# }
+# puts $fp "Camera [get_bd_cells camera_in] LCD [get_bd_cells lcd_out] ASR [get_bd_cells audio/asr_frontend_0]"
+# puts $fp "Relocation open and BD validation PASSED"
+# close $fp
+# close_project
+# exit
+INFO: [Common 17-206] Exiting Vivado at Wed Nov  4 00:06:58 2026...

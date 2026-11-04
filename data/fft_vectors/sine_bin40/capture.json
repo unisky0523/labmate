@@ -1,0 +1,11 @@
+{
+  "raw_path": "D:\\fpga amd xinlx\\work\\fft_integration_20261103\\vectors\\sine_bin40\\scope_codes.i8",
+  "raw_sha256": "87a65689d84b08e2a22663cd4ef93d11edaf48772204c7c9636e95a5b5669096",
+  "sample_count": 4096,
+  "sample_interval_s": 1e-05,
+  "volts_per_code": 0.04,
+  "volts_offset": -0.5,
+  "channel": 1,
+  "captured_at": "2026-11-03T21:00:00+08:00",
+  "source": "synthetic_offline_fixture"
+}

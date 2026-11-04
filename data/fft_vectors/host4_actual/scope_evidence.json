@@ -1,0 +1,50 @@
+{
+  "commands": [
+    {
+      "command": "*IDN?",
+      "reply": "*IDN SIGLENT,SDS1202X,SDS1XDC4163410,1.1.2.13 R5"
+    },
+    {
+      "command": "TRMD?",
+      "reply": "TRMD AUTO"
+    },
+    {
+      "command": "WFSU?",
+      "reply": "WFSU SP,1,NP,0,FP,0,SN,0"
+    },
+    {
+      "command": "STOP"
+    },
+    {
+      "command": "TRMD?",
+      "reply": "TRMD STOP"
+    },
+    {
+      "command": "SARA?",
+      "reply": "SARA 1.00GSa/s"
+    },
+    {
+      "command": "TDIV?",
+      "reply": "TDIV 5.00E-05S"
+    },
+    {
+      "command": "C1:VDIV?",
+      "reply": "C1:VDIV 5.00E-01V"
+    },
+    {
+      "command": "C1:OFST?",
+      "reply": "C1:OFST 0.00E+00V"
+    },
+    {
+      "command": "WFSU SP,1,NP,0,FP,0"
+    },
+    {
+      "command": "WFSU SP,1,NP,0,FP,0,SN,0"
+    },
+    {
+      "command": "TRMD AUTO"
+    }
+  ],
+  "failure": null,
+  "restoration_errors": []
+}

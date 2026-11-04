@@ -1,0 +1,9 @@
+{
+  "archive": "D:\\\u5b66\u79d1\u6587\u4ef6\\\u5927\u4e09\u4e0a\\FPGA\u521b\u65b0\u8d5b\\outputs\\labmate_board_support_20261018_v2.zip",
+  "bytes": 269098,
+  "sha256": "23a6b891b5c7590a0f90efc791264e85eec8936099558234bd8ca59eb44ab906",
+  "files": 17,
+  "python37_syntax": "PASS",
+  "zip_crc_and_manifest": "PASS",
+  "board_execution": "NOT_TESTED"
+}

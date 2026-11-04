@@ -1,0 +1,12 @@
+{
+  "filesystem_repair": "Windows has made corrections; Healthy / OK",
+  "recovered_fragments": 480,
+  "retained_fragments": "E:/FOUND.000",
+  "retained_original_directory_data": "E:/labmate_lite_image_reader_board_v2.chkdsk-directory-data",
+  "backup_files_compared": 493,
+  "backup_compare_errors": [],
+  "original_vision_manifest_checked": 22,
+  "original_vision_manifest_errors": [],
+  "kernel_build_kit_copy_verified": true,
+  "kernel_compile": "NOT_RUN; build on Linux VM"
+}

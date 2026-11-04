@@ -1,0 +1,45 @@
+{
+  "files": {
+    "/etc/init.d/qtGUI.sh": "#!/bin/sh\n\ncase \"${1}\" in\nstart)\n    export TSLIB_TSDEVICE=/dev/input/by-path/platform-e0005000.i2c-event\n    export TSLIB_CONSOLEDEVICE=none\n    export TSLIB_FBDEVICE=/dev/fb0\n\n    export QT_QPA_FONTDIR=/usr/share/fonts\n    export QT_QPA_PLATFORM=linuxfb:fb=/dev/fb0\n\n    /opt/qt5/QMainApp >/dev/null 2>&1 &\n    ;;\nstop)\n    for pid in `ps | grep apps | grep -v grep | awk '{print $1}'`\n    do\n        kill -9 ${pid}\n    done\n\n    for pid in `ps | grep QMainApp | grep -v grep | awk '{print $1}'`\n    do\n        kill -9 ${pid}\n    done\n    ;;\nesac\n",
+    "/etc/profile": "# /etc/profile: system-wide .profile file for the Bourne shell (sh(1))\n# and Bourne compatible shells (bash(1), ksh(1), ash(1), ...).\n\nPATH=\"/usr/local/bin:/usr/bin:/bin\"\nEDITOR=\"vi\"\t\t\t# needed for packages like cron, git-commit\n[ \"$TERM\" ] || TERM=\"vt100\"\t# Basic terminal capab. For screen etc.\n\n# Add /sbin & co to $PATH for the root user\n[ \"$HOME\" != \"/home/root\" ] || PATH=$PATH:/usr/local/sbin:/usr/sbin:/sbin\n\n# Set the prompt for bash and ash (no other shells known to be in use here)\n[ -z \"$PS1\" ] || PS1='\\u@\\h:\\w\\$ '\n\nif [ -d /etc/profile.d ]; then\n\tfor i in /etc/profile.d/*.sh; do\n\t\tif [ -f $i -a -r $i ]; then\n\t\t\t. $i\n\t\tfi\n\tdone\n\tunset i\nfi\n\n# Make sure we are on a serial console (i.e. the device used starts with\n# /dev/tty[A-z]), otherwise we confuse e.g. the eclipse launcher which tries do\n# use ssh\ncase $(tty 2>/dev/null) in\n\t/dev/tty[A-z]*) [ -x /usr/bin/resize ] && /usr/bin/resize >/dev/null;;\nesac\n\nexport PATH PS1 OPIEDIR QPEDIR QTDIR EDITOR TERM\n\numask 022\n\numask 022\n\nalias l='ls -lh'\nalias ll='ls -alh'\n\nexport TSLIB_TSDEVICE=/dev/input/by-path/platform-e0005000.i2c-event\nexport TSLIB_CONSOLEDEVICE=none\nexport TSLIB_FBDEVICE=/dev/fb0\nexport TSLIB_CONFFILE=/etc/ts.conf\nexport TSLIB_PLUGINDIR=/usr/lib/ts\n\nexport QT_QPA_FONTDIR=/usr/share/fonts\nexport QT_QPA_PLATFORM=linuxfb:fb=/dev/fb0\n",
+    "/etc/fstab": "# stock fstab - you probably want to override this with a machine specific one\n\n/dev/root            /                    auto       defaults              1  1\nproc                 /proc                proc       defaults              0  0\ndevpts               /dev/pts             devpts     mode=0620,gid=5       0  0\ntmpfs                /run                 tmpfs      mode=0755,nodev,nosuid,strictatime 0  0\ntmpfs                /var/volatile        tmpfs      defaults              0  0\n\n# uncomment this if your device has a SD/MMC/Transflash slot\n#/dev/mmcblk0p1       /media/card          auto       defaults,sync,noauto  0  0\n\n"
+  },
+  "processes": [
+    {
+      "pid": 4892,
+      "args": [
+        "./labassistant",
+        ""
+      ],
+      "cwd": "/home/root/labmate_ui_test"
+    }
+  ],
+  "apps": [
+    "/opt/qt5/apps/11/app",
+    "/opt/qt5/apps/7/app",
+    "/opt/qt5/apps/0/app",
+    "/opt/qt5/apps/16/app",
+    "/opt/qt5/apps/4/app",
+    "/opt/qt5/apps/3/app",
+    "/opt/qt5/apps/9/app",
+    "/opt/qt5/apps/15/app",
+    "/opt/qt5/apps/1/app",
+    "/opt/qt5/apps/8/app",
+    "/opt/qt5/apps/6/app",
+    "/opt/qt5/apps/5/app",
+    "/opt/qt5/apps/2/app",
+    "/opt/qt5/apps/13/app",
+    "/opt/qt5/apps/18/app",
+    "/opt/qt5/apps/12/app",
+    "/opt/qt5/apps/10/app",
+    "/opt/qt5/apps/17/app",
+    "/opt/qt5/apps/14/app",
+    "/opt/qt5/apps/19/app"
+  ],
+  "desktop": {
+    "size": 365240,
+    "sha256": "fe2daff8aabba8ef5b8f85ac6839f2bc3ab0a3cbe9fd0056255ffe0395642373",
+    "resolved": "/opt/qt5/QMainApp"
+  },
+  "root_mounts": "/dev/root / ext4 rw,relatime 0 0\ndevtmpfs /dev devtmpfs rw,relatime,size=227036k,nr_inodes=56759,mode=755 0 0\nproc /proc proc rw,relatime 0 0\nsysfs /sys sysfs rw,relatime 0 0\nconfigfs /sys/kernel/config configfs rw,relatime 0 0\ntmpfs /run tmpfs rw,nosuid,nodev,mode=755 0 0\ntmpfs /var/volatile tmpfs rw,relatime 0 0\n/dev/mmcblk1p1 /media/sd-mmcblk1p1 ext4 rw,relatime 0 0\ndevpts /dev/pts devpts rw,relatime,gid=5,mode=620,ptmxmode=000 0 0\n/dev/mmcblk0p1 /media/sd-mmcblk0p1 vfat rw,relatime,gid=100,fmask=0002,dmask=0002,allow_utime=0020,codepage=437,iocharset=iso8859-1,shortname=mixed,utf8,errors=remount-ro 0 0\n"
+}

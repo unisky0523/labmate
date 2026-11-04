@@ -1,0 +1,86 @@
+{
+  "text": "上 一条 数据 问题",
+  "words": [
+    {
+      "conf": 1.0,
+      "end": 0.72,
+      "start": 0.33,
+      "word": "上"
+    },
+    {
+      "conf": 1.0,
+      "end": 1.23,
+      "start": 0.72,
+      "word": "一条"
+    },
+    {
+      "conf": 1.0,
+      "end": 1.802614,
+      "start": 1.23,
+      "word": "数据"
+    },
+    {
+      "conf": 0.555439,
+      "end": 2.55,
+      "start": 1.865454,
+      "word": "问题"
+    }
+  ],
+  "segments": [
+    {
+      "result": [
+        {
+          "conf": 1.0,
+          "end": 0.72,
+          "start": 0.33,
+          "word": "上"
+        },
+        {
+          "conf": 1.0,
+          "end": 1.23,
+          "start": 0.72,
+          "word": "一条"
+        },
+        {
+          "conf": 1.0,
+          "end": 1.802614,
+          "start": 1.23,
+          "word": "数据"
+        },
+        {
+          "conf": 0.555439,
+          "end": 2.55,
+          "start": 1.865454,
+          "word": "问题"
+        }
+      ],
+      "text": "上 一条 数据 问题"
+    }
+  ],
+  "command": null,
+  "reason": "没有完整理解这句话，本次未执行。输入 help 查看支持的表达。",
+  "duration_seconds": 3.05,
+  "recognition_ms": 965.44,
+  "min_word_confidence": 0.555439,
+  "mode": "test",
+  "audio_path": "D:\\labmate_b\\data\\audio\\asr_tests\\asr_20261009_213621_756320_6b0b7199.wav",
+  "metadata": {
+    "recorded_at": "2026-10-09T21:36:17.971+08:00",
+    "native_rate": 44100,
+    "device_name": "麦克风阵列 (Realtek(R) Audio)",
+    "truncated": false,
+    "capture_errors": []
+  },
+  "created_at": "2026-10-09T21:36:22.723+08:00",
+  "model_path": "D:\\labmate_b\\models\\vosk-model-small-cn-0.22",
+  "minimum_word_confidence": 0.45,
+  "pipeline_version": "vosk_domain_v1",
+  "sample_rate": 16000,
+  "expected_text": "上一条数据有问题",
+  "expected_command": {
+    "intent": "annotate",
+    "status": "abnormal"
+  },
+  "semantic_correct": false,
+  "dispatch_state": "not_dispatched"
+}

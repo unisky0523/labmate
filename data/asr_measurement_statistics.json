@@ -1,0 +1,26 @@
+{
+  "kind": "measurement",
+  "rows": 10,
+  "accepted_pairs": 10,
+  "status_counts_a": {
+    "measured": 10
+  },
+  "status_counts_b": {
+    "measured": 10
+  },
+  "measurement_methods": {
+    "manual": 10
+  },
+  "median_a_s": 5.595,
+  "median_b_s": 1.605,
+  "median_difference_s": 3.99,
+  "median_reduction_percent": 71.313673,
+  "range_a_s": [
+    5.31,
+    5.89
+  ],
+  "range_b_s": [
+    1.29,
+    1.93
+  ]
+}

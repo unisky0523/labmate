@@ -1,0 +1,16 @@
+crc32 0x03000000 0x97cf1
+fatwrite mmc 0:1 0x03000000 spi_test_20261104.tar.gz 0x97cf1
+mw.l 0xf8000008 0x0000df0d
+mw.l 0xf8000158 0x00000601
+setexpr.l spi_apb *0xf800012c
+setexpr spi_apb ${spi_apb} \| 0x4000
+mw.l 0xf800012c ${spi_apb}
+mw.l 0xf8000004 0x0000767b
+md.l 0xf8000158 1
+md.l 0xf800012c 1
+fdt addr 0x01f00000
+fdt resize 0x1000
+fdt set /amba/ethernet@e000b000 local-mac-address [00 0a 35 00 c0 13]
+fdt mknode / chipid
+fdt set /chipid chipid 7z010
+printenv bootargs

@@ -1,0 +1,48 @@
+test_board_msb_first_payload_sign_padding_and_channels (test_board_mic.CaptureTests.test_board_msb_first_payload_sign_padding_and_channels) ... ok
+test_codec_configuration_sets_fixed12_after_registers (test_board_mic.CaptureTests.test_codec_configuration_sets_fixed12_after_registers) ... ok
+test_historical_sample_alternate_decode_is_explicit_only (test_board_mic.CaptureTests.test_historical_sample_alternate_decode_is_explicit_only) ... ok
+test_i2c_failure (test_board_mic.CaptureTests.test_i2c_failure) ... ok
+test_incomplete_frame_rejected (test_board_mic.CaptureTests.test_incomplete_frame_rejected) ... ok
+test_latest_board_raw_uses_le_sign_and_channel (test_board_mic.CaptureTests.test_latest_board_raw_uses_le_sign_and_channel) ... ok
+test_mixer_error_is_a_real_capture_failure (test_board_mic.CaptureTests.test_mixer_error_is_a_real_capture_failure) ... ok
+test_nonzero_exit (test_board_mic.CaptureTests.test_nonzero_exit) ... 现在开始说话，录音约 5 秒。
+ok
+test_normal_banner_is_only_a_notice_and_asr_is_reached (test_board_mic.CaptureTests.test_normal_banner_is_only_a_notice_and_asr_is_reached) ... 现在开始说话，录音约 5 秒。
+ok
+test_playback_underrun_still_fails (test_board_mic.CaptureTests.test_playback_underrun_still_fails) ... 现在开始说话，录音约 5 秒。
+ok
+test_quiet_success (test_board_mic.CaptureTests.test_quiet_success) ... 现在开始说话，录音约 5 秒。
+ok
+test_recovered_overrun_still_fails_with_exit_zero (test_board_mic.CaptureTests.test_recovered_overrun_still_fails_with_exit_zero) ... 现在开始说话，录音约 5 秒。
+ok
+test_s24_sign_and_channel_selection (test_board_mic.CaptureTests.test_s24_sign_and_channel_selection) ... ok
+test_short_capture (test_board_mic.CaptureTests.test_short_capture) ... 现在开始说话，录音约 5 秒。
+ok
+test_timeout (test_board_mic.CaptureTests.test_timeout) ... 现在开始说话，录音约 5 秒。
+ok
+test_bad_phrase_has_no_general_fallback (test_command_grammar.CommandGrammarTests.test_bad_phrase_has_no_general_fallback) ... ok
+test_board_option_defaults_off (test_command_grammar.CommandGrammarTests.test_board_option_defaults_off) ... ok
+test_capture_failures_block_decode (test_command_grammar.CommandGrammarTests.test_capture_failures_block_decode) ... ok
+test_default_still_uses_general_decode (test_command_grammar.CommandGrammarTests.test_default_still_uses_general_decode) ... ok
+test_fast_readback_confirmation_and_cancel (test_command_grammar.CommandGrammarTests.test_fast_readback_confirmation_and_cancel) ... ok
+test_low_score_still_rejected (test_command_grammar.CommandGrammarTests.test_low_score_still_rejected) ... ok
+test_one_command_pass_preserves_number (test_command_grammar.CommandGrammarTests.test_one_command_pass_preserves_number) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.288s
+
+OK
+[识别文字] 记录电压三点三伏
+[理解结果] 人工报数：电压 3.3 V
+识别计算耗时：1 ms（不含录音与模型加载）
+[语音回读] 记录电压三点三伏
+[等待确认] 请说：可以/好的/是的/确认/行；否定说：不行/不可以/不是/取消/重说。
+[确认通过] 开始执行。
+录音：original.wav
+日志：<MagicMock name='mock.__truediv__()' id='1790040190864'>
+[识别文字] 记录电压三点三伏
+[理解结果] 人工报数：电压 3.3 V
+识别计算耗时：0 ms（不含录音与模型加载）
+[语音回读] 记录电压三点三伏
+[等待确认] 请说：可以/好的/是的/确认/行；否定说：不行/不可以/不是/取消/重说。
+[已取消] 没有执行。

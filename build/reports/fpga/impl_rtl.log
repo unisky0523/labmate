@@ -1,0 +1,1435 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Nov  3 23:56:21 2026
+# Process ID: 14824
+# Current directory: D:/spi1103/Navigator_7010/Navigator_7010.runs/impl_1
+# Command line: vivado.exe -mode batch -source D:\spi1103\Navigator_7010\Navigator_7010.runs\impl_1\system_wrapper.tcl -log D:\spi1103\Navigator_7010\spi\reports\impl_rtl.log -journal D:\spi1103\Navigator_7010\spi\reports\impl_rtl.jou
+# Log file: D:/spi1103/Navigator_7010/spi/reports/impl_rtl.log
+# Journal file: D:\spi1103\Navigator_7010\spi\reports\impl_rtl.jou
+#-----------------------------------------------------------
+source {D:\spi1103\Navigator_7010\Navigator_7010.runs\impl_1\system_wrapper.tcl}
+# proc create_report { reportName command } {
+#   set status "."
+#   append status $reportName ".fail"
+#   if { [file exists $status] } {
+#     eval file delete [glob $status]
+#   }
+#   send_msg_id runtcl-4 info "Executing : $command"
+#   set retval [eval catch { $command } msg]
+#   if { $retval != 0 } {
+#     set fp [open $status w]
+#     close $fp
+#     send_msg_id runtcl-5 warning "$msg"
+#   }
+# }
+# namespace eval ::optrace {
+#   variable script "D:/spi1103/Navigator_7010/Navigator_7010.runs/impl_1/system_wrapper.tcl"
+#   variable category "vivado_impl"
+# }
+# if {![info exists ::dispatch::connected]} {
+#   namespace eval ::dispatch {
+#     variable connected false
+#     if {[llength [array get env XILINX_CD_CONNECT_ID]] > 0} {
+#       set result "true"
+#       if {[catch {
+#         if {[lsearch -exact [package names] DispatchTcl] < 0} {
+#           set result [load librdi_cd_clienttcl[info sharedlibextension]] 
+#         }
+#         if {$result eq "false"} {
+#           puts "WARNING: Could not load dispatch client library"
+#         }
+#         set connect_id [ ::dispatch::init_client -mode EXISTING_SERVER ]
+#         if { $connect_id eq "" } {
+#           puts "WARNING: Could not initialize dispatch client"
+#         } else {
+#           puts "INFO: Dispatch client connection id - $connect_id"
+#           set connected true
+#         }
+#       } catch_res]} {
+#         puts "WARNING: failed to connect to dispatch server - $catch_res"
+#       }
+#     }
+#   }
+# }
+# if {$::dispatch::connected} {
+#   # Remove the dummy proc if it exists.
+#   if { [expr {[llength [info procs ::OPTRACE]] > 0}] } {
+#     rename ::OPTRACE ""
+#   }
+#   proc ::OPTRACE { task action {tags {} } } {
+#     ::vitis_log::op_trace "$task" $action -tags $tags -script $::optrace::script -category $::optrace::category
+#   }
+#   # dispatch is generic. We specifically want to attach logging.
+#   ::vitis_log::connect_client
+# } else {
+#   # Add dummy proc if it doesn't exist.
+#   if { [expr {[llength [info procs ::OPTRACE]] == 0}] } {
+#     proc ::OPTRACE {{arg1 \"\" } {arg2 \"\"} {arg3 \"\" } {arg4 \"\"} {arg5 \"\" } {arg6 \"\"}} {
+#         # Do nothing
+#     }
+#   }
+# }
+# proc start_step { step } {
+#   set stopFile ".stop.rst"
+#   if {[file isfile .stop.rst]} {
+#     puts ""
+#     puts "*** Halting run - EA reset detected ***"
+#     puts ""
+#     puts ""
+#     return -code error
+#   }
+#   set beginFile ".$step.begin.rst"
+#   set platform "$::tcl_platform(platform)"
+#   set user "$::tcl_platform(user)"
+#   set pid [pid]
+#   set host ""
+#   if { [string equal $platform unix] } {
+#     if { [info exist ::env(HOSTNAME)] } {
+#       set host $::env(HOSTNAME)
+#     } elseif { [info exist ::env(HOST)] } {
+#       set host $::env(HOST)
+#     }
+#   } else {
+#     if { [info exist ::env(COMPUTERNAME)] } {
+#       set host $::env(COMPUTERNAME)
+#     }
+#   }
+#   set ch [open $beginFile w]
+#   puts $ch "<?xml version=\"1.0\"?>"
+#   puts $ch "<ProcessHandle Version=\"1\" Minor=\"0\">"
+#   puts $ch "    <Process Command=\".planAhead.\" Owner=\"$user\" Host=\"$host\" Pid=\"$pid\">"
+#   puts $ch "    </Process>"
+#   puts $ch "</ProcessHandle>"
+#   close $ch
+# }
+# proc end_step { step } {
+#   set endFile ".$step.end.rst"
+#   set ch [open $endFile w]
+#   close $ch
+# }
+# proc step_failed { step } {
+#   set endFile ".$step.error.rst"
+#   set ch [open $endFile w]
+#   close $ch
+# OPTRACE "impl_1" END { }
+# }
+# OPTRACE "impl_1" START { ROLLUP_1 }
+# OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
+# start_step init_design
+# set ACTIVE_STEP init_design
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/spi1103/Navigator_7010/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/vivado2020/Vivado/2020.2/data/ip'.
+Command: link_design -top system_wrapper -part xc7z010clg400-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.364 . Memory (MB): peak = 1104.840 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1441 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_audio_formatter_0/system_audio_formatter_0.xdc] for cell 'system_i/audio/audio_formatter/inst'
+Finished Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_audio_formatter_0/system_audio_formatter_0.xdc] for cell 'system_i/audio/audio_formatter/inst'
+Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_rst_mclk_0/system_rst_mclk_0_board.xdc] for cell 'system_i/audio/rst_mclk/U0'
+Finished Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_rst_mclk_0/system_rst_mclk_0_board.xdc] for cell 'system_i/audio/rst_mclk/U0'
+Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_rst_mclk_0/system_rst_mclk_0.xdc] for cell 'system_i/audio/rst_mclk/U0'
+Finished Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_rst_mclk_0/system_rst_mclk_0.xdc] for cell 'system_i/audio/rst_mclk/U0'
+Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_rst_ps7_0_153M_0/system_rst_ps7_0_153M_0_board.xdc] for cell 'system_i/camera_in/rst_ps7_0_153M/U0'
+Finished Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_rst_ps7_0_153M_0/system_rst_ps7_0_153M_0_board.xdc] for cell 'system_i/camera_in/rst_ps7_0_153M/U0'
+Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_rst_ps7_0_153M_0/system_rst_ps7_0_153M_0.xdc] for cell 'system_i/camera_in/rst_ps7_0_153M/U0'
+Finished Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_rst_ps7_0_153M_0/system_rst_ps7_0_153M_0.xdc] for cell 'system_i/camera_in/rst_ps7_0_153M/U0'
+Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_axi_gpio_1_0/system_axi_gpio_1_0_board.xdc] for cell 'system_i/camera_in/axi_gpio_0/U0'
+Finished Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_axi_gpio_1_0/system_axi_gpio_1_0_board.xdc] for cell 'system_i/camera_in/axi_gpio_0/U0'
+Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_axi_gpio_1_0/system_axi_gpio_1_0.xdc] for cell 'system_i/camera_in/axi_gpio_0/U0'
+Finished Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_axi_gpio_1_0/system_axi_gpio_1_0.xdc] for cell 'system_i/camera_in/axi_gpio_0/U0'
+Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_lcd_id_0/system_lcd_id_0_board.xdc] for cell 'system_i/lcd_out/lcd_id/U0'
+Finished Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_lcd_id_0/system_lcd_id_0_board.xdc] for cell 'system_i/lcd_out/lcd_id/U0'
+Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_lcd_id_0/system_lcd_id_0.xdc] for cell 'system_i/lcd_out/lcd_id/U0'
+Finished Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_lcd_id_0/system_lcd_id_0.xdc] for cell 'system_i/lcd_out/lcd_id/U0'
+Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0_board.xdc] for cell 'system_i/lcd_out/proc_sys_reset_0/U0'
+Finished Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0_board.xdc] for cell 'system_i/lcd_out/proc_sys_reset_0/U0'
+Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0.xdc] for cell 'system_i/lcd_out/proc_sys_reset_0/U0'
+Finished Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0.xdc] for cell 'system_i/lcd_out/proc_sys_reset_0/U0'
+Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_board.xdc] for cell 'system_i/axi_gpio_0/U0'
+Finished Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_board.xdc] for cell 'system_i/axi_gpio_0/U0'
+Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0.xdc] for cell 'system_i/axi_gpio_0/U0'
+Finished Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0.xdc] for cell 'system_i/axi_gpio_0/U0'
+Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0_board.xdc] for cell 'system_i/clk_wiz_0/inst'
+Finished Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0_board.xdc] for cell 'system_i/clk_wiz_0/inst'
+Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.xdc] for cell 'system_i/clk_wiz_0/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.xdc:57]
+get_clocks: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1598.574 ; gain = 493.734
+Finished Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.xdc] for cell 'system_i/clk_wiz_0/inst'
+Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_i2c2_0/system_i2c2_0_board.xdc] for cell 'system_i/i2c2/U0'
+Finished Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_i2c2_0/system_i2c2_0_board.xdc] for cell 'system_i/i2c2/U0'
+Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc] for cell 'system_i/processing_system7_0/inst'
+WARNING: [Vivado 12-2489] -input_jitter contains time 0.202470 which will be rounded to 0.202 to ensure it is an integer multiple of 1 picosecond [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc:24]
+WARNING: [Vivado 12-2489] -input_jitter contains time 2.497500 which will be rounded to 2.498 to ensure it is an integer multiple of 1 picosecond [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc:30]
+Finished Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc] for cell 'system_i/processing_system7_0/inst'
+Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_rest_gpio_0/system_rest_gpio_0_board.xdc] for cell 'system_i/rest_gpio/U0'
+Finished Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_rest_gpio_0/system_rest_gpio_0_board.xdc] for cell 'system_i/rest_gpio/U0'
+Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_rest_gpio_0/system_rest_gpio_0.xdc] for cell 'system_i/rest_gpio/U0'
+Finished Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_rest_gpio_0/system_rest_gpio_0.xdc] for cell 'system_i/rest_gpio/U0'
+Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_board.xdc] for cell 'system_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0_board.xdc] for cell 'system_i/rst_ps7_0_100M/U0'
+Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0.xdc] for cell 'system_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_rst_ps7_0_100M_0/system_rst_ps7_0_100M_0.xdc] for cell 'system_i/rst_ps7_0_100M/U0'
+Parsing XDC File [D:/spi1103/Navigator_7010/Navigator_7010.srcs/constrs_1/system.xdc]
+WARNING: [Vivado 12-584] No ports matched 'tmds_tmds_data_p[2]'. [D:/spi1103/Navigator_7010/Navigator_7010.srcs/constrs_1/system.xdc:108]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/spi1103/Navigator_7010/Navigator_7010.srcs/constrs_1/system.xdc:108]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_tmds_data_p[1]'. [D:/spi1103/Navigator_7010/Navigator_7010.srcs/constrs_1/system.xdc:109]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/spi1103/Navigator_7010/Navigator_7010.srcs/constrs_1/system.xdc:109]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_tmds_data_p[0]'. [D:/spi1103/Navigator_7010/Navigator_7010.srcs/constrs_1/system.xdc:110]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/spi1103/Navigator_7010/Navigator_7010.srcs/constrs_1/system.xdc:110]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_tmds_clk_p'. [D:/spi1103/Navigator_7010/Navigator_7010.srcs/constrs_1/system.xdc:111]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/spi1103/Navigator_7010/Navigator_7010.srcs/constrs_1/system.xdc:111]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-508] No pins matched 'system_i/hdmi_out/clk_wiz_dyn/inst/CLK_CORE_DRP_I/clk_inst/mmcm_adv_inst/CLKOUT1'. [D:/spi1103/Navigator_7010/Navigator_7010.srcs/constrs_1/system.xdc:135]
+INFO: [Timing 38-2] Deriving generated clocks [D:/spi1103/Navigator_7010/Navigator_7010.srcs/constrs_1/system.xdc:135]
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -of_objects [get_pins system_i/hdmi_out/clk_wiz_dyn/inst/CLK_CORE_DRP_I/clk_inst/mmcm_adv_inst/CLKOUT1]'. [D:/spi1103/Navigator_7010/Navigator_7010.srcs/constrs_1/system.xdc:135]
+Resolution: Verify the create_clock command was called to create the clock object before it is referenced.
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/spi1103/Navigator_7010/Navigator_7010.srcs/constrs_1/system.xdc:135]
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks -of_objects [get_pins system_i/hdmi_out/clk_wiz_dyn/inst/CLK_CORE_DRP_I/clk_inst/mmcm_adv_inst/CLKOUT1]]'. [D:/spi1103/Navigator_7010/Navigator_7010.srcs/constrs_1/system.xdc:135]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group '. [D:/spi1103/Navigator_7010/Navigator_7010.srcs/constrs_1/system.xdc:135]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-5201] set_clock_groups: cannot set the clock group when only one non-empty group remains. [D:/spi1103/Navigator_7010/Navigator_7010.srcs/constrs_1/system.xdc:135]
+WARNING: [Vivado 12-508] No pins matched 'system_i/hdmi_out/clk_wiz_dyn/inst/CLK_CORE_DRP_I/clk_inst/mmcm_adv_inst/CLKOUT0'. [D:/spi1103/Navigator_7010/Navigator_7010.srcs/constrs_1/system.xdc:138]
+WARNING: [Vivado 12-1008] No clocks found for command 'get_clocks -of_objects [get_pins system_i/hdmi_out/clk_wiz_dyn/inst/CLK_CORE_DRP_I/clk_inst/mmcm_adv_inst/CLKOUT0]'. [D:/spi1103/Navigator_7010/Navigator_7010.srcs/constrs_1/system.xdc:138]
+Resolution: Verify the create_clock command was called to create the clock object before it is referenced.
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/spi1103/Navigator_7010/Navigator_7010.srcs/constrs_1/system.xdc:138]
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks -of_objects [get_pins system_i/hdmi_out/clk_wiz_dyn/inst/CLK_CORE_DRP_I/clk_inst/mmcm_adv_inst/CLKOUT0]]'. [D:/spi1103/Navigator_7010/Navigator_7010.srcs/constrs_1/system.xdc:138]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group '. [D:/spi1103/Navigator_7010/Navigator_7010.srcs/constrs_1/system.xdc:138]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-5201] set_clock_groups: cannot set the clock group when only one non-empty group remains. [D:/spi1103/Navigator_7010/Navigator_7010.srcs/constrs_1/system.xdc:138]
+Finished Parsing XDC File [D:/spi1103/Navigator_7010/Navigator_7010.srcs/constrs_1/system.xdc]
+Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_auto_us_0/system_auto_us_0_clocks.xdc] for cell 'system_i/audio/axi_interconnect_0/s00_couplers/auto_us/inst'
+Finished Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_auto_us_0/system_auto_us_0_clocks.xdc] for cell 'system_i/audio/axi_interconnect_0/s00_couplers/auto_us/inst'
+Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_auto_us_1/system_auto_us_1_clocks.xdc] for cell 'system_i/audio/axi_interconnect_0/s01_couplers/auto_us/inst'
+Finished Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_auto_us_1/system_auto_us_1_clocks.xdc] for cell 'system_i/audio/axi_interconnect_0/s01_couplers/auto_us/inst'
+Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_s00_regslice_0/system_s00_regslice_0_clocks.xdc] for cell 'system_i/camera_in/axi_interconnect_0/s00_couplers/s00_regslice/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-7' -to list should not be empty. [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_s00_regslice_0/system_s00_regslice_0_clocks.xdc:10]
+Finished Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_s00_regslice_0/system_s00_regslice_0_clocks.xdc] for cell 'system_i/camera_in/axi_interconnect_0/s00_couplers/s00_regslice/inst'
+Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_s00_data_fifo_0/system_s00_data_fifo_0_clocks.xdc] for cell 'system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst'
+WARNING: [Vivado_Tcl 4-939] Waiver ID 'LUTAR-1' object list should not be empty (perhaps an invalid wildcard was used or only unsupported objects). [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_s00_data_fifo_0/system_s00_data_fifo_0_clocks.xdc:2]
+Finished Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_s00_data_fifo_0/system_s00_data_fifo_0_clocks.xdc] for cell 'system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst'
+Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_v_frmbuf_wr_0_0/system_v_frmbuf_wr_0_0.xdc] for cell 'system_i/camera_in/v_frmbuf_wr_0/inst'
+Finished Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_v_frmbuf_wr_0_0/system_v_frmbuf_wr_0_0.xdc] for cell 'system_i/camera_in/v_frmbuf_wr_0/inst'
+Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_v_vid_in_axi4s_0_0/system_v_vid_in_axi4s_0_0_clocks.xdc] for cell 'system_i/camera_in/v_vid_in_axi4s_0/inst'
+Finished Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_v_vid_in_axi4s_0_0/system_v_vid_in_axi4s_0_0_clocks.xdc] for cell 'system_i/camera_in/v_vid_in_axi4s_0/inst'
+Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_lcd_vtc_0/system_lcd_vtc_0_clocks.xdc] for cell 'system_i/lcd_out/lcd_vtc/U0'
+Finished Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_lcd_vtc_0/system_lcd_vtc_0_clocks.xdc] for cell 'system_i/lcd_out/lcd_vtc/U0'
+Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_v_axi4s_vid_out_0_0/system_v_axi4s_vid_out_0_0_clocks.xdc] for cell 'system_i/lcd_out/v_axi4s_vid_out_0/inst'
+Finished Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_v_axi4s_vid_out_0_0/system_v_axi4s_vid_out_0_0_clocks.xdc] for cell 'system_i/lcd_out/v_axi4s_vid_out_0/inst'
+Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_v_frmbuf_rd_0_1/system_v_frmbuf_rd_0_1.xdc] for cell 'system_i/lcd_out/v_frmbuf_rd_0/inst'
+Finished Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_v_frmbuf_rd_0_1/system_v_frmbuf_rd_0_1.xdc] for cell 'system_i/lcd_out/v_frmbuf_rd_0/inst'
+Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_auto_cc_0/system_auto_cc_0_clocks.xdc] for cell 'system_i/ps7_0_axi_periph/m03_couplers/auto_cc/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_auto_cc_0/system_auto_cc_0_clocks.xdc:7]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-11' -to list should not be empty. [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_auto_cc_0/system_auto_cc_0_clocks.xdc:10]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-15' -to list should not be empty. [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_auto_cc_0/system_auto_cc_0_clocks.xdc:13]
+WARNING: [Vivado_Tcl 4-939] Waiver ID 'LUTAR-1' object list should not be empty (perhaps an invalid wildcard was used or only unsupported objects). [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_auto_cc_0/system_auto_cc_0_clocks.xdc:17]
+Finished Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_auto_cc_0/system_auto_cc_0_clocks.xdc] for cell 'system_i/ps7_0_axi_periph/m03_couplers/auto_cc/inst'
+Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_auto_cc_1/system_auto_cc_1_clocks.xdc] for cell 'system_i/ps7_0_axi_periph/m05_couplers/auto_cc/inst'
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_auto_cc_1/system_auto_cc_1_clocks.xdc:7]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-11' -to list should not be empty. [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_auto_cc_1/system_auto_cc_1_clocks.xdc:10]
+WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-15' -to list should not be empty. [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_auto_cc_1/system_auto_cc_1_clocks.xdc:13]
+WARNING: [Vivado_Tcl 4-939] Waiver ID 'LUTAR-1' object list should not be empty (perhaps an invalid wildcard was used or only unsupported objects). [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_auto_cc_1/system_auto_cc_1_clocks.xdc:17]
+Finished Parsing XDC File [d:/spi1103/Navigator_7010/Navigator_7010.gen/sources_1/bd/system/ip/system_auto_cc_1/system_auto_cc_1_clocks.xdc] for cell 'system_i/ps7_0_axi_periph/m05_couplers/auto_cc/inst'
+WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-15' -from list should not be empty. [D:/vivado2020/Vivado/2020.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:30]
+WARNING: [Vivado_Tcl 4-919] Waiver ID 'CDC-15' -from list should not be empty. [D:/vivado2020/Vivado/2020.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl:30]
+INFO: [Project 1-1715] 8 XPM XDC files have been applied to the design.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-1687] 11 scoped IP constraints or related sub-commands were skipped due to synthesis logic optimizations usually triggered by constant connectivity or unconnected output pins. To review the skipped constraints and messages, run the command 'set_param netlist.IPMsgFiltering false' before opening the design.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1598.574 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 72 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 46 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 25 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 1 instance 
+
+16 Infos, 22 Warnings, 10 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 1598.574 ; gain = 493.734
+# set rc [catch {
+#   create_msg_db init_design.pb
+#   set_param chipscope.maxJobs 1
+# OPTRACE "create in-memory project" START { }
+#   create_project -in_memory -part xc7z010clg400-1
+#   set_property design_mode GateLvl [current_fileset]
+#   set_param project.singleFileAddWarning.threshold 0
+# OPTRACE "create in-memory project" END { }
+# OPTRACE "set parameters" START { }
+#   set_property webtalk.parent_dir D:/spi1103/Navigator_7010/Navigator_7010.cache/wt [current_project]
+#   set_property parent.project_path D:/spi1103/Navigator_7010/Navigator_7010.xpr [current_project]
+#   set_property ip_repo_paths D:/spi1103/Navigator_7010/ip_repo [current_project]
+#   update_ip_catalog
+#   set_property ip_output_repo D:/spi1103/Navigator_7010/Navigator_7010.cache/ip [current_project]
+#   set_property ip_cache_permissions {read write} [current_project]
+#   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
+# OPTRACE "set parameters" END { }
+# OPTRACE "add files" START { }
+#   add_files -quiet D:/spi1103/Navigator_7010/Navigator_7010.runs/synth_1/system_wrapper.dcp
+#   set_msg_config -source 4 -id {BD 41-1661} -limit 0
+#   set_param project.isImplRun true
+#   add_files D:/spi1103/Navigator_7010/Navigator_7010.srcs/sources_1/bd/system/system.bd
+#   set_param project.isImplRun false
+# OPTRACE "read constraints: implementation" START { }
+#   read_xdc D:/spi1103/Navigator_7010/Navigator_7010.srcs/constrs_1/system.xdc
+# OPTRACE "read constraints: implementation" END { }
+# OPTRACE "add files" END { }
+# OPTRACE "link_design" START { }
+#   set_param project.isImplRun true
+#   link_design -top system_wrapper -part xc7z010clg400-1
+# OPTRACE "link_design" END { }
+#   set_param project.isImplRun false
+# OPTRACE "gray box cells" START { }
+# OPTRACE "gray box cells" END { }
+# OPTRACE "init_design_reports" START { REPORT }
+# OPTRACE "init_design_reports" END { }
+# OPTRACE "init_design_write_hwdef" START { }
+#   write_hwdef -force -file system_wrapper.hwdef
+# OPTRACE "init_design_write_hwdef" END { }
+#   close_msg_db -file init_design.pb
+# } RESULT]
+# if {$rc} {
+#   step_failed init_design
+#   return -code error $RESULT
+# } else {
+#   end_step init_design
+#   unset ACTIVE_STEP 
+# }
+# OPTRACE "Phase: Init Design" END { }
+# OPTRACE "Phase: Opt Design" START { ROLLUP_AUTO }
+# start_step opt_design
+# set ACTIVE_STEP opt_design
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.778 . Memory (MB): peak = 1598.574 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 184506d05
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.920 . Memory (MB): peak = 1598.574 ; gain = 0.000
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 4 inverter(s) to 52 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 196e73274
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1796.074 ; gain = 2.145
+INFO: [Opt 31-389] Phase Retarget created 199 cells and removed 398 cells
+INFO: [Opt 31-1021] In phase Retarget, 166 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: ffa63ed3
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1796.074 ; gain = 2.145
+INFO: [Opt 31-389] Phase Constant propagation created 5 cells and removed 429 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 550 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 105a376f1
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1796.074 ; gain = 2.145
+INFO: [Opt 31-389] Phase Sweep created 1 cells and removed 1451 cells
+INFO: [Opt 31-1021] In phase Sweep, 438 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 105a376f1
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1796.074 ; gain = 2.145
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 105a376f1
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1796.074 ; gain = 2.145
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 12f8b055c
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1796.074 ; gain = 2.145
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 160 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |             199  |             398  |                                            166  |
+|  Constant propagation         |               5  |             429  |                                            550  |
+|  Sweep                        |               1  |            1451  |                                            438  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                            160  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 1796.074 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 17705484c
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1796.074 ; gain = 2.145
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 16 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Pwropt 34-201] Structural ODC has moved 1 WE to EN ports
+Number of BRAM Ports augmented: 5 newly gated: 3 Total Ports: 32
+Ending PowerOpt Patch Enables Task | Checksum: 10e2e432f
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2112.039 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 10e2e432f
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2112.039 ; gain = 315.965
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 10e2e432f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2112.039 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 2112.039 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 10293b4f5
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 2112.039 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+27 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:12 . Memory (MB): peak = 2112.039 ; gain = 513.465
+Command: read_checkpoint -incremental D:/spi1103/Navigator_7010/spi/reference/asr_postroute.dcp
+INFO: [Vivado 12-9151] Incremental flow is being run with directive 'RuntimeOptimized'. This will override place_design, post-place phys_opt_design and route_design directives being called in high reuse mode.
+
+Starting Incremental read checkpoint Task
+
+Phase 1 Process Reference Checkpoint Netlist
+INFO: [Netlist 29-17] Analyzing 1388 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2112.039 ; gain = 0.000
+
+Phase 2 Initialization
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 2112.039 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 2112.039 ; gain = 0.000
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2112.039 ; gain = 0.000
+
+Phase 3 Replay Physical Synthesis Transforms
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Physopt 32-1028] Processed net system_i/lcd_out/lcd_vtc/U0/U_VIDEO_CTRL/AXI4_LITE_INTERFACE.GENR_MUX0/GEN_TREE.GEN_BRANCH[33].GEN_MUX_REG.data_out_reg_reg[33]_0[21]. Inserted 1 hold fix buffers
+INFO: [Vivado_Tcl 4-521] iPhys_opt_design summary: tried 1 changes and 1 changes are successfully applied
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 2112.039 ; gain = 0.000
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+
+Phase 4 Build Reuse DB
+Reading placer database...
+Read XDEF File: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2112.039 ; gain = 0.000
+Finished XDEF File Restore: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 2112.039 ; gain = 0.000
+INFO: [Designutils 20-2297] Reference Design: D:/spi1103/Navigator_7010/spi/reference/asr_postroute.dcp, Summary | WNS = 0.135 | WHS = 0.029 | State = POST_ROUTE_PHYSOPT |
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:29 . Memory (MB): peak = 2112.039 ; gain = 0.000
+
+Phase 5 Checking legality
+Phase 5 Checking legality | Checksum: 19f64e0f3
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:32 . Memory (MB): peak = 2112.039 ; gain = 0.000
+
+Phase 6 Reporting
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Tue Nov  3 23:57:37 2026
+| Host         : LAPTOP-DB6S7DJE running 64-bit major release  (build 9200)
+| Design       : system_wrapper
+| Device       : xc7z010
+| Design State : Fully Routed
+------------------------------------------------------------------------------------
+
+Incremental Implementation Information
+
+Table of Contents
+-----------------
+1. Incremental Flow Summary
+2. Reuse Summary
+3. Reference Checkpoint Information
+4. Comparison with Reference Run
+5. Optimization Comparison With Reference Run
+5.1 iphys_opt_replay Optimizations
+5.2 QoR Suggestion Optimizations
+6. Command Comparison with Reference Run
+6.1 Reference:
+6.2 Incremental:
+7. Non Reuse Information
+
+1. Incremental Flow Summary
+---------------------------
+
++-----------------------+------------------+
+|    Flow Information   |       Value      |
++-----------------------+------------------+
+| Synthesis Flow        |          Default |
+| Auto Incremental      |               No |
+| Incremental Directive | RuntimeOptimized |
+| Reuse mode            |             High |
+| Target WNS            |              0.0 |
+| QoR Suggestions       |                0 |
++-----------------------+------------------+
+
+
+2. Reuse Summary
+----------------
+
++-------+----------------------+----------------------------+--------------------+--------+
+|  Type | Matched % (of Total) | Current Reuse % (of Total) | Fixed % (of Total) |  Total |
++-------+----------------------+----------------------------+--------------------+--------+
+| Cells |                99.96 |                      99.98 |               0.72 |  38290 |
+| Nets  |                99.94 |                      99.92 |               0.00 |  29558 |
+| Pins  |                    - |                      99.97 |                  - | 142742 |
+| Ports |                97.67 |                     100.00 |             100.00 |    215 |
++-------+----------------------+----------------------------+--------------------+--------+
+* Reused % can exceed matched % when unmatched cells take their placement directly from other cells that have been matched
+
+
+3. Reference Checkpoint Information
+-----------------------------------
+
++----------------+-----------------------------------------------------------+
+| DCP Location:  | D:/spi1103/Navigator_7010/spi/reference/asr_postroute.dcp |
++----------------+-----------------------------------------------------------+
+
+
++--------------------------------+----------------------------+
+|         DCP Information        |            Value           |
++--------------------------------+----------------------------+
+| Vivado Version                 |                     2020.2 |
+| DCP State                      |                 POST_ROUTE |
+| Recorded WNS                   |                      0.135 |
+| Recorded WHS                   |                      0.029 |
+| Reference Speed File Version   | PRODUCTION 1.12 2019-11-22 |
+| Incremental Speed File Version | PRODUCTION 1.12 2019-11-22 |
++--------------------------------+----------------------------+
+* Recorded WNS/WHS timing numbers are estimated timing numbers. They may vary slightly from sign-off timing numbers.
+
+
+4. Comparison with Reference Run
+--------------------------------
+
++-----------------+---------------------------+---------------------------+---------------------------+
+|                 |          WNS(ns)          |  Runtime(elapsed)(hh:mm)  |    Runtime(cpu)(hh:mm)    |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|      Stage      |  Reference  | Incremental |  Reference  | Incremental |  Reference  | Incremental |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+| synth_design    |             |             |       00:06 |       00:03 |       00:05 |       00:03 |
+| opt_design      |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| read_checkpoint |             |             |             |             |             |             |
+| place_design    |       0.007 |             |       00:01 |             |       00:01 |             |
+| phys_opt_design |       0.007 |             |     < 1 min |             |     < 1 min |             |
+| route_design    |      -0.080 |             |       00:01 |             |       00:02 |             |
+| phys_opt_design |       0.135 |             |     < 1 min |             |     < 1 min |             |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+
+5. Optimization Comparison With Reference Run
+---------------------------------------------
+
+5.1 iphys_opt_replay Optimizations
+----------------------------------
+
++-------------------------+--------+------------+
+| iphys_opt_design replay | Reused | Not Reused |
++-------------------------+--------+------------+
+| hold_fix                |      1 |          0 |
++-------------------------+--------+------------+
+
+
+5.2 QoR Suggestion Optimizations
+--------------------------------
+
++-------------------------------------+-------+
+|           QoR Suggestions           | Value |
++-------------------------------------+-------+
+| QoR Suggestions (Recommended)       |     0 |
+|   Suggestions Included In Reference |     0 |
+|     Yet to apply                    |     0 |
+|     Applied                         |     0 |
+|     Failed to apply                 |     0 |
+|   New Suggestions (INCR_FRIENDLY=1) |     0 |
+|     Yet to apply                    |     0 |
+|     Applied                         |     0 |
+|     Failed to apply                 |     0 |
+| QoR Suggestions (Not Recommended)   |     0 |
+|   New Suggestions (INCR_FRIENDLY=0) |     0 |
+|     Yet to apply                    |     0 |
+|     Applied                         |     0 |
+|     Failed to apply                 |     0 |
+| Disabled New Suggestions            |     0 |
++-------------------------------------+-------+
+
+
+6. Command Comparison with Reference Run
+----------------------------------------
+
+6.1 Reference:
+--------------
+synth_design-verilog_define default::[not_specified] -top  system_wrapper -part  xc7z010clg400-1 
+opt_design
+place_design
+phys_opt_design
+route_design
+phys_opt_design -directive AggressiveExplore
+
+6.2 Incremental:
+----------------
+synth_design-verilog_define default::[not_specified] -top  system_wrapper -part  xc7z010clg400-1 
+opt_design
+read_checkpoint -directive RuntimeOptimized  -incremental D:/spi1103/Navigator_7010/spi/reference/asr_postroute.dcp
+
+7. Non Reuse Information
+------------------------
+
++-----------------------+------+
+|          Type         |   %  |
++-----------------------+------+
+| Non-Reused Cells      | 0.01 |
+|   New                 | 0.01 |
+| Partially reused nets | 0.00 |
+| Non-Reused nets       | 0.07 |
+| Non-Reused Ports      | 0.00 |
++-----------------------+------+
+
+
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:33 . Memory (MB): peak = 2112.039 ; gain = 0.000
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:33 . Memory (MB): peak = 2112.039 ; gain = 0.000
+read_checkpoint: Time (s): cpu = 00:00:39 ; elapsed = 00:00:33 . Memory (MB): peak = 2112.039 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 2112.039 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/spi1103/Navigator_7010/Navigator_7010.runs/impl_1/system_wrapper_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 2112.039 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_drc -file system_wrapper_drc_opted.rpt -pb system_wrapper_drc_opted.pb -rpx system_wrapper_drc_opted.rpx
+Command: report_drc -file system_wrapper_drc_opted.rpt -pb system_wrapper_drc_opted.pb -rpx system_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file D:/spi1103/Navigator_7010/Navigator_7010.runs/impl_1/system_wrapper_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 2151.855 ; gain = 39.816
+# set rc [catch {
+#   create_msg_db opt_design.pb
+# OPTRACE "read constraints: opt_design" START { }
+# OPTRACE "read constraints: opt_design" END { }
+# OPTRACE "opt_design" START { }
+#   opt_design 
+#   read_checkpoint -incremental {D:/spi1103/Navigator_7010/spi/reference/asr_postroute.dcp}
+# OPTRACE "opt_design" END { }
+# OPTRACE "read constraints: opt_design_post" START { }
+# OPTRACE "read constraints: opt_design_post" END { }
+# OPTRACE "Opt Design: write_checkpoint" START { CHECKPOINT }
+#   write_checkpoint -force system_wrapper_opt.dcp
+# OPTRACE "Opt Design: write_checkpoint" END { }
+# OPTRACE "opt_design reports" START { REPORT }
+#   create_report "impl_1_opt_report_drc_0" "report_drc -file system_wrapper_drc_opted.rpt -pb system_wrapper_drc_opted.pb -rpx system_wrapper_drc_opted.rpx"
+# OPTRACE "opt_design reports" END { }
+#   close_msg_db -file opt_design.pb
+# } RESULT]
+# if {$rc} {
+#   step_failed opt_design
+#   return -code error $RESULT
+# } else {
+#   end_step opt_design
+#   unset ACTIVE_STEP 
+# }
+# OPTRACE "Phase: Opt Design" END { }
+# OPTRACE "Phase: Place Design" START { ROLLUP_AUTO }
+# start_step place_design
+# set ACTIVE_STEP place_design
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+
+Starting Incremental Placer Task
+INFO: [Vivado_Tcl 4-24] Running Incremental Placer flow for unplaced cells using reference design-checkpoint 'D:/spi1103/Navigator_7010/spi/reference/asr_postroute.dcp'.
+INFO: [Place 46-42] Incremental Compile is being run in High Reuse Mode.
+INFO: [Place 46-44] place_design is using directive Default with target WNS of 0 ns.
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 2151.855 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 19f64e0f3
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.238 . Memory (MB): peak = 2151.855 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+WARNING: [Place 30-574] Poor placement for routing between an IO pin and BUFG. This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
+
+	cmos_pclk_IBUF_inst (IBUF.O) is locked to IOB_X0Y34
+	cmos_pclk_IBUF_BUFG_inst (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y5
+Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 19f64e0f3
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2178.441 ; gain = 26.586
+
+Phase 1.3 Build Placer Netlist Model
+WARNING: [Place 30-770] High register utilization is forcing place_design to place up to 8 registers per slice which may impact placement success and/or routing congestion.
+Phase 1.3 Build Placer Netlist Model | Checksum: 2421f805e
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 2178.441 ; gain = 26.586
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 2421f805e
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 2178.441 ; gain = 26.586
+Phase 1 Placer Initialization | Checksum: 2421f805e
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 2178.441 ; gain = 26.586
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 15b9831a5
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 2247.465 ; gain = 95.609
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 15ab6080e
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:13 . Memory (MB): peak = 2251.230 ; gain = 99.375
+
+Phase 2.3 Global Placement Core
+Phase 2.3 Global Placement Core | Checksum: 17ec74c32
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:17 . Memory (MB): peak = 2257.883 ; gain = 106.027
+Phase 2 Global Placement | Checksum: 17ec74c32
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:18 . Memory (MB): peak = 2257.883 ; gain = 106.027
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 17ec74c32
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:20 . Memory (MB): peak = 2264.199 ; gain = 112.344
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 23ef71429
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:20 . Memory (MB): peak = 2264.199 ; gain = 112.344
+
+Phase 3.3 Place Remaining
+Phase 3.3 Place Remaining | Checksum: 16ed034e4
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:27 . Memory (MB): peak = 2264.199 ; gain = 112.344
+Phase 3 Detail Placement | Checksum: 1d407c36a
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:32 . Memory (MB): peak = 2264.199 ; gain = 112.344
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 10e01c927
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=0.134 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: b19b8296
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2264.199 ; gain = 0.000
+INFO: [Place 46-33] Processed net system_i/clk_wiz_0/inst/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst_reg_0, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-33] Processed net system_i/lcd_out/lcd_vtc/U0/U_VIDEO_CTRL/GEN_HAS_IRQ.irq_i_1_n_3, BUFG insertion was skipped due to placement/routing conflicts.
+INFO: [Place 46-56] BUFG insertion identified 2 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 2, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: 1e16f618e
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2264.199 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 10e01c927
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:00:41 . Memory (MB): peak = 2264.199 ; gain = 112.344
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.134. For the most accurate timing information please run report_timing.
+
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:42 . Memory (MB): peak = 2264.199 ; gain = 112.344
+Phase 4.1 Post Commit Optimization | Checksum: e92bad8f
+
+Time (s): cpu = 00:01:01 ; elapsed = 00:00:42 . Memory (MB): peak = 2264.199 ; gain = 112.344
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: e92bad8f
+
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:43 . Memory (MB): peak = 2264.199 ; gain = 112.344
+
+Phase 4.3 Sweep Clock Roots: Post-Placement
+Phase 4.3 Sweep Clock Roots: Post-Placement | Checksum: e92bad8f
+
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:43 . Memory (MB): peak = 2264.199 ; gain = 112.344
+
+Phase 4.4 Placer Reporting
+
+Phase 4.4.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|              16x16|              32x32|
+|___________|___________________|___________________|
+|      South|              32x32|              32x32|
+|___________|___________________|___________________|
+|       East|              32x32|              32x32|
+|___________|___________________|___________________|
+|       West|              32x32|              32x32|
+|___________|___________________|___________________|
+
+Phase 4.4.1 Print Estimated Congestion | Checksum: e92bad8f
+
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:43 . Memory (MB): peak = 2264.199 ; gain = 112.344
+Phase 4.4 Placer Reporting | Checksum: e92bad8f
+
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:43 . Memory (MB): peak = 2264.199 ; gain = 112.344
+
+Phase 4.5 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 2264.199 ; gain = 0.000
+
+Time (s): cpu = 00:01:02 ; elapsed = 00:00:43 . Memory (MB): peak = 2264.199 ; gain = 112.344
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 124b365df
+
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:44 . Memory (MB): peak = 2264.199 ; gain = 112.344
+INFO: [Place 46-3] During incremental compilation, routing data from the original checkpoint is applied during place_design. As a result, dangling route segments and route conflicts may appear in the post place_design implementation due to changes between the original and incremental netlists. These routes can be ignored as they will be subsequently resolved by route_design. This issue will be cleaned up automatically in place_design in a future software release.
+
++-------------------------------------------------------------------------------+
+|Incremental Placement Summary                                                  |
++-------------------------------------------------------------------------------+
+|                          Type                           | Count  | Percentage |
++-------------------------------------------------------------------------------+
+|  Total instances                                        |  38290 |     100.00 |
+|  Reused instances                                       |  38286 |      99.99 |
+|  Non-reused instances                                   |      4 |       0.01 |
+|    New                                                  |      4 |       0.01 |
++-------------------------------------------------------------------------------+
+|Incremental Placement Runtime Summary                                          |
++-------------------------------------------------------------------------------+
+|  Initialization time(elapsed secs)                                   |   8.93 |
+|  Incremental Placer time(elapsed secs)                               |  34.71 |
++-------------------------------------------------------------------------------+
+
+Reference - Incremental Comparison Summary
+
+1. Comparison with Reference Run
+--------------------------------
+
++-----------------+---------------------------+---------------------------+---------------------------+
+|                 |          WNS(ns)          |  Runtime(elapsed)(hh:mm)  |    Runtime(cpu)(hh:mm)    |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|      Stage      |  Reference  | Incremental |  Reference  | Incremental |  Reference  | Incremental |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+| synth_design    |             |             |       00:06 |       00:03 |       00:05 |       00:03 |
+| opt_design      |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| read_checkpoint |             |             |             |     < 1 min |             |     < 1 min |
+| place_design    |       0.007 |       0.134 |       00:01 |     < 1 min |       00:01 |       00:01 |
+| phys_opt_design |       0.007 |             |     < 1 min |             |     < 1 min |             |
+| route_design    |      -0.080 |             |       00:01 |             |       00:02 |             |
+| phys_opt_design |       0.135 |             |     < 1 min |             |     < 1 min |             |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+
+Ending Incremental Placer Task | Checksum: 1071b8ad8
+
+Time (s): cpu = 00:01:03 ; elapsed = 00:00:44 . Memory (MB): peak = 2264.199 ; gain = 112.344
+INFO: [Common 17-83] Releasing license: Implementation
+13 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:01:03 ; elapsed = 00:00:44 . Memory (MB): peak = 2264.199 ; gain = 112.344
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 2264.199 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/spi1103/Navigator_7010/Navigator_7010.runs/impl_1/system_wrapper_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 2264.199 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_io -file system_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 2264.199 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file system_wrapper_utilization_placed.rpt -pb system_wrapper_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file system_wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.067 . Memory (MB): peak = 2264.199 ; gain = 0.000
+# set rc [catch {
+#   create_msg_db place_design.pb
+# OPTRACE "read constraints: place_design" START { }
+# OPTRACE "read constraints: place_design" END { }
+#   if { [llength [get_debug_cores -quiet] ] > 0 }  { 
+# OPTRACE "implement_debug_core" START { }
+#     implement_debug_core 
+# OPTRACE "implement_debug_core" END { }
+#   } 
+# OPTRACE "place_design" START { }
+#   place_design 
+# OPTRACE "place_design" END { }
+# OPTRACE "read constraints: place_design_post" START { }
+# OPTRACE "read constraints: place_design_post" END { }
+# OPTRACE "Place Design: write_checkpoint" START { CHECKPOINT }
+#   write_checkpoint -force system_wrapper_placed.dcp
+# OPTRACE "Place Design: write_checkpoint" END { }
+# OPTRACE "place_design reports" START { REPORT }
+#   create_report "impl_1_place_report_io_0" "report_io -file system_wrapper_io_placed.rpt"
+#   create_report "impl_1_place_report_utilization_0" "report_utilization -file system_wrapper_utilization_placed.rpt -pb system_wrapper_utilization_placed.pb"
+#   create_report "impl_1_place_report_control_sets_0" "report_control_sets -verbose -file system_wrapper_control_sets_placed.rpt"
+# OPTRACE "place_design reports" END { }
+#   close_msg_db -file place_design.pb
+# } RESULT]
+# if {$rc} {
+#   step_failed place_design
+#   return -code error $RESULT
+# } else {
+#   end_step place_design
+#   unset ACTIVE_STEP 
+# }
+# OPTRACE "Phase: Place Design" END { }
+# OPTRACE "Phase: Physical Opt Design" START { ROLLUP_AUTO }
+# start_step phys_opt_design
+# set ACTIVE_STEP phys_opt_design
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+
+Reference - Incremental Comparison Summary
+
+1. Comparison with Reference Run
+--------------------------------
+
++-----------------+---------------------------+---------------------------+---------------------------+
+|                 |          WNS(ns)          |  Runtime(elapsed)(hh:mm)  |    Runtime(cpu)(hh:mm)    |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|      Stage      |  Reference  | Incremental |  Reference  | Incremental |  Reference  | Incremental |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+| synth_design    |             |             |       00:06 |       00:03 |       00:05 |       00:03 |
+| opt_design      |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| read_checkpoint |             |             |             |     < 1 min |             |     < 1 min |
+| place_design    |       0.007 |       0.134 |       00:01 |     < 1 min |       00:01 |       00:01 |
+| phys_opt_design |       0.007 |       0.134 |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| route_design    |      -0.080 |             |       00:01 |             |       00:02 |             |
+| phys_opt_design |       0.135 |             |     < 1 min |             |     < 1 min |             |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+
+INFO: [Common 17-83] Releasing license: Implementation
+4 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2264.199 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:09 ; elapsed = 00:00:03 . Memory (MB): peak = 2280.875 ; gain = 16.676
+INFO: [Common 17-1381] The checkpoint 'D:/spi1103/Navigator_7010/Navigator_7010.runs/impl_1/system_wrapper_physopt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 2280.875 ; gain = 16.676
+# set rc [catch {
+#   create_msg_db phys_opt_design.pb
+# OPTRACE "read constraints: phys_opt_design" START { }
+# OPTRACE "read constraints: phys_opt_design" END { }
+# OPTRACE "phys_opt_design" START { }
+#   phys_opt_design 
+# OPTRACE "phys_opt_design" END { }
+# OPTRACE "read constraints: phys_opt_design_post" START { }
+# OPTRACE "read constraints: phys_opt_design_post" END { }
+# OPTRACE "Post-Place Phys Opt Design: write_checkpoint" START { CHECKPOINT }
+#   write_checkpoint -force system_wrapper_physopt.dcp
+# OPTRACE "Post-Place Phys Opt Design: write_checkpoint" END { }
+# OPTRACE "phys_opt_design report" START { REPORT }
+# OPTRACE "phys_opt_design report" END { }
+#   close_msg_db -file phys_opt_design.pb
+# } RESULT]
+# if {$rc} {
+#   step_failed phys_opt_design
+#   return -code error $RESULT
+# } else {
+#   end_step phys_opt_design
+#   unset ACTIVE_STEP 
+# }
+# OPTRACE "Phase: Physical Opt Design" END { }
+# OPTRACE "Phase: Route Design" START { ROLLUP_AUTO }
+# set_msg_config -source 4 -id {Route 35-39} -severity "critical warning" -new_severity warning
+# start_step route_design
+# set ACTIVE_STEP route_design
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC PLCK-12] Clock Placer Checks: Poor placement for routing between an IO pin and BUFG. 
+Resolution: Poor placement of an IO pin and a BUFG has resulted in the router using a non-dedicated path between the two.  There are several things that could trigger this DRC, each of which can cause unpredictable clock insertion delays that result in poor timing.  This DRC could be caused by any of the following: (a) a clock port was placed on a pin that is not a CCIO-pin (b)the BUFG has not been placed in the same half of the device or SLR as the CCIO-pin (c) a single ended clock has been placed on the N-Side of a differential pair CCIO-pin.
+ This is normally an ERROR but the CLOCK_DEDICATED_ROUTE constraint is set to FALSE allowing your design to continue. The use of this override is highly discouraged as it may lead to very poor timing results. It is recommended that this error condition be corrected in the design.
+
+	cmos_pclk_IBUF_inst (IBUF.O) is locked to IOB_X0Y34
+	cmos_pclk_IBUF_BUFG_inst (BUFG.I) is provisionally placed by clockplacer on BUFGCTRL_X0Y5
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 1 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+
+Starting Incremental Route Task
+Checksum: PlaceDB: a6244a86 ConstDB: 0 ShapeSum: 60f74052 RouteDB: cc1d8b11
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 9be4aac4
+
+Time (s): cpu = 00:00:16 ; elapsed = 00:00:12 . Memory (MB): peak = 2280.875 ; gain = 0.000
+Post Restoration Checksum: NetGraph: 90f479cd NumContArr: 6b0531de Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: fbf9abab
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 2280.875 ; gain = 0.000
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: fbf9abab
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:14 . Memory (MB): peak = 2280.875 ; gain = 0.000
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 2f380086
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:15 . Memory (MB): peak = 2280.875 ; gain = 0.000
+--------------------------------------------------------
+|Incremental Routing Reuse Summary                      |
+--------------------------------------------------------
+|Type                     | Count    | Percentage       |
+--------------------------------------------------------
+|Fully reused nets        |     29893|            99.94 |
+|Partially reused nets    |         2|             0.01 |
+|Non-reused nets          |        16|             0.05 |
+--------------------------------------------------------
+INFO: [Route 35-559] route_design is using directive Default with target WNS of 0.0ns
+ Number of Nodes with overlaps = 0
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 21.0735 %
+  Global Horizontal Routing Utilization  = 28.0659 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 18
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 16
+  Number of Partially Routed Nets     = 2
+  Number of Node Overlaps             = 0
+
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.134  | TNS=0.000  | WHS=0.028  | THS=0.000  |
+
+INFO: [Route 35-61] The design met the timing requirement.
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 21.1303 %
+  Global Horizontal Routing Utilization  = 28.1565 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+
+ Verification completed successfully
+INFO: [Route 35-20] Post Routing Timing Summary | WNS=0.135  | TNS=0.000  | WHS=0.029  | THS=0.000  |
+
+Phase 2 Router Initialization | Checksum: 1a117fbd3
+
+Time (s): cpu = 00:00:57 ; elapsed = 00:00:41 . Memory (MB): peak = 2292.172 ; gain = 11.297
+
+Phase 3 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 21.1303 %
+  Global Horizontal Routing Utilization  = 28.1565 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 3 Route finalize | Checksum: 1a117fbd3
+
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:41 . Memory (MB): peak = 2295.574 ; gain = 14.699
+
+Phase 4 Verifying routed nets
+
+ Verification completed successfully
+Phase 4 Verifying routed nets | Checksum: 1a117fbd3
+
+Time (s): cpu = 00:00:58 ; elapsed = 00:00:42 . Memory (MB): peak = 2296.602 ; gain = 15.727
+
+Phase 5 Depositing Routes
+Phase 5 Depositing Routes | Checksum: 1a117fbd3
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:00:44 . Memory (MB): peak = 2296.602 ; gain = 15.727
+--------------------------------------------------------
+|Incremental Routing Reuse Summary                      |
+--------------------------------------------------------
+|Type                     | Count    | Percentage       |
+--------------------------------------------------------
+|Fully reused nets        |     29893|            99.94 |
+|Partially reused nets    |         2|             0.01 |
+|Non-reused nets          |        16|             0.05 |
+--------------------------------------------------------
+INFO: [Route 35-16] Router Completed Successfully
+Ending Incremental Route Task | Checksum: 1a117fbd3
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:00:44 . Memory (MB): peak = 2296.602 ; gain = 15.727
+------------------------------------
+Incremental Router Runtime Summary: 
+------------------------------------
+   Initialization time: 41.611 Secs
+   Incremental Router time: 2.552 Secs
+
+Reference - Incremental Comparison Summary
+
+1. Comparison with Reference Run
+--------------------------------
+
++-----------------+---------------------------+---------------------------+---------------------------+
+|                 |          WNS(ns)          |  Runtime(elapsed)(hh:mm)  |    Runtime(cpu)(hh:mm)    |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|      Stage      |  Reference  | Incremental |  Reference  | Incremental |  Reference  | Incremental |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+| synth_design    |             |             |       00:06 |       00:03 |       00:05 |       00:03 |
+| opt_design      |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| read_checkpoint |             |             |             |     < 1 min |             |     < 1 min |
+| place_design    |       0.007 |       0.134 |       00:01 |     < 1 min |       00:01 |       00:01 |
+| phys_opt_design |       0.007 |       0.134 |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| route_design    |      -0.080 |         N/A |       00:01 |       00:01 |       00:02 |       00:01 |
+| phys_opt_design |       0.135 |             |     < 1 min |             |     < 1 min |             |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+
+INFO: [Common 17-83] Releasing license: Implementation
+11 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:01:19 ; elapsed = 00:00:57 . Memory (MB): peak = 2296.602 ; gain = 15.727
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 2316.418 ; gain = 19.816
+INFO: [Common 17-1381] The checkpoint 'D:/spi1103/Navigator_7010/Navigator_7010.runs/impl_1/system_wrapper_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 2316.418 ; gain = 19.816
+INFO: [runtcl-4] Executing : report_drc -file system_wrapper_drc_routed.rpt -pb system_wrapper_drc_routed.pb -rpx system_wrapper_drc_routed.rpx
+Command: report_drc -file system_wrapper_drc_routed.rpt -pb system_wrapper_drc_routed.pb -rpx system_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file D:/spi1103/Navigator_7010/Navigator_7010.runs/impl_1/system_wrapper_drc_routed.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:00:19 ; elapsed = 00:00:12 . Memory (MB): peak = 2346.707 ; gain = 30.289
+INFO: [runtcl-4] Executing : report_methodology -file system_wrapper_methodology_drc_routed.rpt -pb system_wrapper_methodology_drc_routed.pb -rpx system_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file system_wrapper_methodology_drc_routed.rpt -pb system_wrapper_methodology_drc_routed.pb -rpx system_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file D:/spi1103/Navigator_7010/Navigator_7010.runs/impl_1/system_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 2347.594 ; gain = 0.887
+INFO: [runtcl-4] Executing : report_power -file system_wrapper_power_routed.rpt -pb system_wrapper_power_summary_routed.pb -rpx system_wrapper_power_routed.rpx
+Command: report_power -file system_wrapper_power_routed.rpt -pb system_wrapper_power_summary_routed.pb -rpx system_wrapper_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+23 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 2353.852 ; gain = 6.258
+INFO: [runtcl-4] Executing : report_route_status -file system_wrapper_route_status.rpt -pb system_wrapper_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file system_wrapper_timing_summary_routed.rpt -pb system_wrapper_timing_summary_routed.pb -rpx system_wrapper_timing_summary_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file system_wrapper_incremental_reuse_routed.rpt
+INFO: [runtcl-4] Executing : report_clock_utilization -file system_wrapper_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file system_wrapper_bus_skew_routed.rpt -pb system_wrapper_bus_skew_routed.pb -rpx system_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+# set rc [catch {
+#   create_msg_db route_design.pb
+# OPTRACE "read constraints: route_design" START { }
+# OPTRACE "read constraints: route_design" END { }
+# OPTRACE "route_design" START { }
+#   route_design 
+# OPTRACE "route_design" END { }
+# OPTRACE "read constraints: route_design_post" START { }
+# OPTRACE "read constraints: route_design_post" END { }
+# OPTRACE "Route Design: write_checkpoint" START { CHECKPOINT }
+#   write_checkpoint -force system_wrapper_routed.dcp
+# OPTRACE "Route Design: write_checkpoint" END { }
+# OPTRACE "route_design reports" START { REPORT }
+#   create_report "impl_1_route_report_drc_0" "report_drc -file system_wrapper_drc_routed.rpt -pb system_wrapper_drc_routed.pb -rpx system_wrapper_drc_routed.rpx"
+#   create_report "impl_1_route_report_methodology_0" "report_methodology -file system_wrapper_methodology_drc_routed.rpt -pb system_wrapper_methodology_drc_routed.pb -rpx system_wrapper_methodology_drc_routed.rpx"
+#   create_report "impl_1_route_report_power_0" "report_power -file system_wrapper_power_routed.rpt -pb system_wrapper_power_summary_routed.pb -rpx system_wrapper_power_routed.rpx"
+#   create_report "impl_1_route_report_route_status_0" "report_route_status -file system_wrapper_route_status.rpt -pb system_wrapper_route_status.pb"
+#   create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file system_wrapper_timing_summary_routed.rpt -pb system_wrapper_timing_summary_routed.pb -rpx system_wrapper_timing_summary_routed.rpx"
+#   create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file system_wrapper_incremental_reuse_routed.rpt"
+#   create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file system_wrapper_clock_utilization_routed.rpt"
+#   create_report "impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file system_wrapper_bus_skew_routed.rpt -pb system_wrapper_bus_skew_routed.pb -rpx system_wrapper_bus_skew_routed.rpx"
+# OPTRACE "route_design reports" END { }
+# OPTRACE "route_design misc" START { }
+#   close_msg_db -file route_design.pb
+# OPTRACE "route_design write_checkpoint" START { CHECKPOINT }
+# OPTRACE "route_design write_checkpoint" END { }
+# } RESULT]
+# if {$rc} {
+#   write_checkpoint -force system_wrapper_routed_error.dcp
+#   step_failed route_design
+#   return -code error $RESULT
+# } else {
+#   end_step route_design
+#   unset ACTIVE_STEP 
+# }
+# OPTRACE "route_design misc" END { }
+# OPTRACE "Phase: Route Design" END { }
+# OPTRACE "Phase: Phys-Opt Design" START { ROLLUP_AUTO }
+# start_step post_route_phys_opt_design
+# set ACTIVE_STEP post_route_phys_opt_design
+Command: phys_opt_design -directive AggressiveExplore
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: AggressiveExplore
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+
+Reference - Incremental Comparison Summary
+
+1. Comparison with Reference Run
+--------------------------------
+
++-----------------+---------------------------+---------------------------+---------------------------+
+|                 |          WNS(ns)          |  Runtime(elapsed)(hh:mm)  |    Runtime(cpu)(hh:mm)    |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|      Stage      |  Reference  | Incremental |  Reference  | Incremental |  Reference  | Incremental |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+| synth_design    |             |             |       00:06 |       00:03 |       00:05 |       00:03 |
+| opt_design      |             |             |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| read_checkpoint |             |             |             |     < 1 min |             |     < 1 min |
+| place_design    |       0.007 |       0.134 |       00:01 |     < 1 min |       00:01 |       00:01 |
+| phys_opt_design |       0.007 |       0.134 |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
+| route_design    |      -0.080 |         N/A |       00:01 |       00:01 |       00:02 |       00:01 |
+| phys_opt_design |       0.135 |         N/A |     < 1 min |     < 1 min |     < 1 min |     < 1 min |
++-----------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+
+INFO: [Common 17-83] Releasing license: Implementation
+5 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:09 ; elapsed = 00:00:03 . Memory (MB): peak = 2396.391 ; gain = 11.918
+INFO: [Common 17-1381] The checkpoint 'D:/spi1103/Navigator_7010/Navigator_7010.runs/impl_1/system_wrapper_postroute_physopt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 2396.391 ; gain = 11.918
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -warn_on_violation -file system_wrapper_timing_summary_postroute_physopted.rpt -pb system_wrapper_timing_summary_postroute_physopted.pb -rpx system_wrapper_timing_summary_postroute_physopted.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file system_wrapper_bus_skew_postroute_physopted.rpt -pb system_wrapper_bus_skew_postroute_physopted.pb -rpx system_wrapper_bus_skew_postroute_physopted.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+# set rc [catch {
+#   set tool_flow [get_property -quiet TOOL_FLOW [current_project -quiet]]
+#   if {$tool_flow eq {SDx}} {send_msg_id {101-1} {status} {Starting optional post-route physical design optimization.} }
+#   create_msg_db post_route_phys_opt_design.pb
+# OPTRACE "phys_opt_design" START { }
+#   phys_opt_design -directive AggressiveExplore
+# OPTRACE "phys_opt_design" END { }
+# OPTRACE "Post-Route Phys Opt Design: write_checkpoint" START { CHECKPOINT }
+#   write_checkpoint -force system_wrapper_postroute_physopt.dcp
+# OPTRACE "Post-Route Phys Opt Design: write_checkpoint" END { }
+# OPTRACE "phys_opt_design reports" START { REPORT }
+#   create_report "impl_1_post_route_phys_opt_report_timing_summary_0" "report_timing_summary -max_paths 10 -warn_on_violation -file system_wrapper_timing_summary_postroute_physopted.rpt -pb system_wrapper_timing_summary_postroute_physopted.pb -rpx system_wrapper_timing_summary_postroute_physopted.rpx"
+#   create_report "impl_1_post_route_phys_opt_report_bus_skew_0" "report_bus_skew -warn_on_violation -file system_wrapper_bus_skew_postroute_physopted.rpt -pb system_wrapper_bus_skew_postroute_physopted.pb -rpx system_wrapper_bus_skew_postroute_physopted.rpx"
+# OPTRACE "phys_opt_design reports" END { }
+# OPTRACE "phys_opt_design misc" START { }
+#   close_msg_db -file post_route_phys_opt_design.pb
+#   set tool_flow [get_property TOOL_FLOW [current_project]]
+#   if {$tool_flow eq {SDx}} {send_msg_id {101-1} {status} {Finished optional post-route physical design optimization.} }
+# } RESULT]
+# if {$rc} {
+#   step_failed post_route_phys_opt_design
+#   return -code error $RESULT
+# } else {
+#   end_step post_route_phys_opt_design
+#   unset ACTIVE_STEP 
+# }
+# OPTRACE "phys_opt_design misc" END { }
+# OPTRACE "Phase: Phys-Opt Design" END { }
+# OPTRACE "Phase: Write Bitstream" START { ROLLUP_AUTO }
+# OPTRACE "write_bitstream setup" START { }
+# start_step write_bitstream
+# set ACTIVE_STEP write_bitstream
+INFO: [Memdata 28-208] The XPM instance: <system_i/lcd_out/v_axi4s_vid_out_0/inst/COUPLER_INST/generate_sync_fifo.FIFO_INST/XPM_FIFO_SYNC_INST/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <system_i/lcd_out/v_axi4s_vid_out_0>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <system_i/camera_in/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <system_i/camera_in/v_vid_in_axi4s_0>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <system_i/audio/i2s_transmitter/inst/I2S_TX_V1_0_SYS_INST/AXIS_FIFO_INST/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <system_i/audio/i2s_transmitter>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <system_i/audio/i2s_receiver/inst/I2S_RX_V1_0_SYS_INST/AXIS_FIFO_INST/xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <system_i/audio/i2s_receiver>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-208] The XPM instance: <system_i/audio/audio_formatter/inst/S2MM_INCLUDED.s2mm_top_1/s2mm_logic_1/buffering_1/INTERLEAVED.second_level_xpm_fifo_buffer/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <system_i/audio/audio_formatter>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+INFO: [Memdata 28-167] Found XPM memory block system_i/audio/audio_formatter/inst/S2MM_INCLUDED.s2mm_top_1/s2mm_logic_1/buffering_1/FIRST_LEVEL_BUFFERS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to auto. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the system_i/audio/audio_formatter/inst/S2MM_INCLUDED.s2mm_top_1/s2mm_logic_1/buffering_1/FIRST_LEVEL_BUFFERS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block system_i/audio/audio_formatter/inst/S2MM_INCLUDED.s2mm_top_1/s2mm_logic_1/buffering_1/FIRST_LEVEL_BUFFERS[0].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to auto. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the system_i/audio/audio_formatter/inst/S2MM_INCLUDED.s2mm_top_1/s2mm_logic_1/buffering_1/FIRST_LEVEL_BUFFERS[0].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst block.
+INFO: [Memdata 28-208] The XPM instance: <system_i/audio/audio_formatter/inst/MM2S_INCLUDED.mm2s_top_1/mm2s_logic_1/buffering_1/INTERLEAVED.interleaved_xpm_fifo_buffer/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst> is part of IP: <system_i/audio/audio_formatter>. This XPM instance will be excluded from the .mmi because updatemem is prohibited from making changes to an XPM that is part of an IP.
+Command: write_bitstream -force system_wrapper.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer lcd_rgb_tri_iobuf_0/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer lcd_rgb_tri_iobuf_1/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer lcd_rgb_tri_iobuf_10/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer lcd_rgb_tri_iobuf_11/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer lcd_rgb_tri_iobuf_12/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer lcd_rgb_tri_iobuf_13/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer lcd_rgb_tri_iobuf_14/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer lcd_rgb_tri_iobuf_16/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer lcd_rgb_tri_iobuf_17/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer lcd_rgb_tri_iobuf_18/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer lcd_rgb_tri_iobuf_19/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer lcd_rgb_tri_iobuf_2/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer lcd_rgb_tri_iobuf_20/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer lcd_rgb_tri_iobuf_21/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer lcd_rgb_tri_iobuf_22/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer lcd_rgb_tri_iobuf_3/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer lcd_rgb_tri_iobuf_4/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer lcd_rgb_tri_iobuf_5/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer lcd_rgb_tri_iobuf_6/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer lcd_rgb_tri_iobuf_8/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer lcd_rgb_tri_iobuf_9/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC BUFC-1] Input Buffer Connections: Input buffer system_i/esp32_spi_io/inst/cs_buf/IBUF has no loads. It is recommended to have an input buffer drive an internal load.
+WARNING: [DRC CHECK-3] Report rule limit reached: REQP-1839 rule limit reached: 20 violations have been found.
+WARNING: [DRC DPIP-1] Input pipelining: DSP system_i/audio/asr_frontend_0/inst/filter_path.accumulator0 input system_i/audio/asr_frontend_0/inst/filter_path.accumulator0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP system_i/audio/asr_frontend_0/inst/filter_path.accumulator0 input system_i/audio/asr_frontend_0/inst/filter_path.accumulator0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP system_i/audio/asr_frontend_0/inst/filter_path.product_reg input system_i/audio/asr_frontend_0/inst/filter_path.product_reg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP system_i/audio/asr_frontend_0/inst/filter_path.accumulator0 output system_i/audio/asr_frontend_0/inst/filter_path.accumulator0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP system_i/audio/asr_frontend_0/inst/filter_path.product_reg multiplier stage system_i/audio/asr_frontend_0/inst/filter_path.product_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ENARDEN (net: system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/ENB_I) which is driven by a register (system_i/camera_in/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/ENBWREN (net: system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/ENA_I) which is driven by a register (system_i/camera_in/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/WEBWE[0] (net: system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_2[0]) which is driven by a register (system_i/camera_in/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/WEBWE[1] (net: system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_2[0]) which is driven by a register (system_i/camera_in/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/WEBWE[2] (net: system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_2[0]) which is driven by a register (system_i/camera_in/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/WEBWE[3] (net: system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_2[0]) which is driven by a register (system_i/camera_in/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/WEBWE[4] (net: system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_2[0]) which is driven by a register (system_i/camera_in/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/WEBWE[5] (net: system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_2[0]) which is driven by a register (system_i/camera_in/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/WEBWE[6] (net: system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_2[0]) which is driven by a register (system_i/camera_in/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram has an input control pin system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram/WEBWE[7] (net: system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM36_NO_ECC.ram_2[0]) which is driven by a register (system_i/camera_in/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 system_i/camera_in/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0 has an input control pin system_i/camera_in/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0/ENARDEN (net: system_i/camera_in/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/wea[0]) which is driven by a register (system_i/camera_in/ov5640_capture_data_0/inst/byte_flag_d0_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 system_i/camera_in/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0 has an input control pin system_i/camera_in/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0/ENARDEN (net: system_i/camera_in/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/wea[0]) which is driven by a register (system_i/camera_in/ov5640_capture_data_0/inst/cam_href_d1_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 system_i/camera_in/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0 has an input control pin system_i/camera_in/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0/ENARDEN (net: system_i/camera_in/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/wea[0]) which is driven by a register (system_i/camera_in/ov5640_capture_data_0/inst/wait_done_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 system_i/lcd_out/v_frmbuf_rd_0/inst/mm_video_m_axi_U/bus_read/buff_rdata/mem_reg has an input control pin system_i/lcd_out/v_frmbuf_rd_0/inst/mm_video_m_axi_U/bus_read/buff_rdata/mem_reg/WEBWE[1] (net: system_i/lcd_out/v_frmbuf_rd_0/inst/mm_video_m_axi_U/bus_read/buff_rdata/m_axi_mm_video_RVALID) which is driven by a register (system_i/lcd_out/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 system_i/lcd_out/v_frmbuf_rd_0/inst/mm_video_m_axi_U/bus_read/buff_rdata/mem_reg has an input control pin system_i/lcd_out/v_frmbuf_rd_0/inst/mm_video_m_axi_U/bus_read/buff_rdata/mem_reg/WEBWE[2] (net: system_i/lcd_out/v_frmbuf_rd_0/inst/mm_video_m_axi_U/bus_read/buff_rdata/m_axi_mm_video_RVALID) which is driven by a register (system_i/lcd_out/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 system_i/lcd_out/v_frmbuf_rd_0/inst/mm_video_m_axi_U/bus_read/buff_rdata/mem_reg has an input control pin system_i/lcd_out/v_frmbuf_rd_0/inst/mm_video_m_axi_U/bus_read/buff_rdata/mem_reg/WEBWE[3] (net: system_i/lcd_out/v_frmbuf_rd_0/inst/mm_video_m_axi_U/bus_read/buff_rdata/m_axi_mm_video_RVALID) which is driven by a register (system_i/lcd_out/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 system_i/lcd_out/v_frmbuf_rd_0/inst/mm_video_m_axi_U/bus_read/buff_rdata/mem_reg has an input control pin system_i/lcd_out/v_frmbuf_rd_0/inst/mm_video_m_axi_U/bus_read/buff_rdata/mem_reg/WEBWE[4] (net: system_i/lcd_out/v_frmbuf_rd_0/inst/mm_video_m_axi_U/bus_read/buff_rdata/m_axi_mm_video_RVALID) which is driven by a register (system_i/lcd_out/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 system_i/lcd_out/v_frmbuf_rd_0/inst/mm_video_m_axi_U/bus_read/buff_rdata/mem_reg has an input control pin system_i/lcd_out/v_frmbuf_rd_0/inst/mm_video_m_axi_U/bus_read/buff_rdata/mem_reg/WEBWE[5] (net: system_i/lcd_out/v_frmbuf_rd_0/inst/mm_video_m_axi_U/bus_read/buff_rdata/m_axi_mm_video_RVALID) which is driven by a register (system_i/lcd_out/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 system_i/lcd_out/v_frmbuf_rd_0/inst/mm_video_m_axi_U/bus_read/buff_rdata/mem_reg has an input control pin system_i/lcd_out/v_frmbuf_rd_0/inst/mm_video_m_axi_U/bus_read/buff_rdata/mem_reg/WEBWE[6] (net: system_i/lcd_out/v_frmbuf_rd_0/inst/mm_video_m_axi_U/bus_read/buff_rdata/m_axi_mm_video_RVALID) which is driven by a register (system_i/lcd_out/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1839] RAMB36 async control check: The RAMB36E1 system_i/lcd_out/v_frmbuf_rd_0/inst/mm_video_m_axi_U/bus_read/buff_rdata/mem_reg has an input control pin system_i/lcd_out/v_frmbuf_rd_0/inst/mm_video_m_axi_U/bus_read/buff_rdata/mem_reg/WEBWE[7] (net: system_i/lcd_out/v_frmbuf_rd_0/inst/mm_video_m_axi_U/bus_read/buff_rdata/m_axi_mm_video_RVALID) which is driven by a register (system_i/lcd_out/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/ENBWREN (net: system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/ENA_I_0) which is driven by a register (system_i/camera_in/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[0] (net: system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram_2[0]) which is driven by a register (system_i/camera_in/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[1] (net: system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram_2[0]) which is driven by a register (system_i/camera_in/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[2] (net: system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram_2[0]) which is driven by a register (system_i/camera_in/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram has an input control pin system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram/WEBWE[3] (net: system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram_2[0]) which is driven by a register (system_i/camera_in/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 system_i/camera_in/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1 has an input control pin system_i/camera_in/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1/ENARDEN (net: system_i/camera_in/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/wea[0]) which is driven by a register (system_i/camera_in/ov5640_capture_data_0/inst/byte_flag_d0_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 system_i/camera_in/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1 has an input control pin system_i/camera_in/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1/ENARDEN (net: system_i/camera_in/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/wea[0]) which is driven by a register (system_i/camera_in/ov5640_capture_data_0/inst/cam_href_d1_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC REQP-1840] RAMB18 async control check: The RAMB18E1 system_i/camera_in/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1 has an input control pin system_i/camera_in/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1/ENARDEN (net: system_i/camera_in/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/wea[0]) which is driven by a register (system_i/camera_in/ov5640_capture_data_0/inst/wait_done_reg) that has an active asychronous set or reset. This may cause corruption of the memory contents and/or read values when the set/reset is asserted and is not analyzed by the default static timing analysis. It is suggested to eliminate the use of a set/reset to registers driving this RAMB pin or else use a synchronous reset in which the assertion of the reset is timed by default.
+WARNING: [DRC RTSTAT-10] No routable loads: 160 net(s) have no routable loads. The problem bus(es) and/or net(s) are system_i/camera_in/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, system_i/lcd_out/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, system_i/lcd_out/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, system_i/lcd_out/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, system_i/audio/axi_interconnect_0/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_READ.USE_SPLIT_R.read_addr_inst/USE_R_CHANNEL.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, system_i/camera_in/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, system_i/camera_in/axi_interconnect_0/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, system_i/camera_in/axi_interconnect_0/s00_couplers/s00_data_fifo/inst/gen_fifo.fifo_gen_inst/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, system_i/audio/axi_interconnect_0/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, system_i/audio/axi_interconnect_0/m00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, system_i/lcd_out/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/empty_fwft_i, system_i/lcd_out/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_afull_fb... and (the first 15 of 100 listed).
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 57 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./system_wrapper.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-83] Releasing license: Implementation
+17 Infos, 57 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:22 ; elapsed = 00:00:21 . Memory (MB): peak = 2839.879 ; gain = 434.566
+# set rc [catch {
+#   create_msg_db write_bitstream.pb
+# OPTRACE "read constraints: write_bitstream" START { }
+# OPTRACE "read constraints: write_bitstream" END { }
+#   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
+#   catch { write_mem_info -force -no_partial_mmi system_wrapper.mmi }
+# OPTRACE "write_bitstream setup" END { }
+# OPTRACE "write_bitstream" START { }
+#   write_bitstream -force system_wrapper.bit 
+# OPTRACE "write_bitstream" END { }
+# OPTRACE "write_bitstream misc" START { }
+# OPTRACE "read constraints: write_bitstream_post" START { }
+# OPTRACE "read constraints: write_bitstream_post" END { }
+#   catch {write_debug_probes -quiet -force system_wrapper}
+#   catch {file copy -force system_wrapper.ltx debug_nets.ltx}
+#   close_msg_db -file write_bitstream.pb
+# } RESULT]
+# if {$rc} {
+#   step_failed write_bitstream
+#   return -code error $RESULT
+# } else {
+#   end_step write_bitstream
+#   unset ACTIVE_STEP 
+# }
+# OPTRACE "write_bitstream misc" END { }
+# OPTRACE "Phase: Write Bitstream" END { }
+# OPTRACE "impl_1" END { }
+INFO: [Common 17-206] Exiting Vivado at Wed Nov  4 00:01:10 2026...

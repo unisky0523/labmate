@@ -1,0 +1,10 @@
+mkdir -p /media/sd-mmcblk0p1/labmate_spi_test_20261104
+tar -xzf /media/sd-mmcblk0p1/spi_test_20261104.tar.gz -C /media/sd-mmcblk0p1/labmate_spi_test_20261104
+test -d /lib/modules/5.4.0-xilinx-v2020.2-spi-test-20261104 && echo MODULE_DIR_EXISTS || tar -xzf /media/sd-mmcblk0p1/labmate_spi_test_20261104/modules-5.4.0-xilinx-v2020.2-spi-test-20261104.tar.gz -C /
+depmod -a 5.4.0-xilinx-v2020.2-spi-test-20261104
+cd /media/sd-mmcblk0p1/labmate_spi_test_20261104/runtime
+sh check_board.sh
+python3 send_jpeg.py --help
+python3 -c 'import runpy,os,fcntl,struct; m=runpy.run_path("send_jpeg.py"); p=m["ready_path"](); print("READY:",p,open(p).read().strip()); fd=os.open(m["find_spi"](),os.O_RDWR); fcntl.ioctl(fd,0x40016b01,struct.pack("B",1)); fcntl.ioctl(fd,0x40016b03,struct.pack("B",8)); b=bytearray(1); fcntl.ioctl(fd,0x80016b01,b,True); print("SPI_MODE:",b[0]); os.close(fd)'
+ls /lib/modules/$(uname -r)/modules.dep
+sync

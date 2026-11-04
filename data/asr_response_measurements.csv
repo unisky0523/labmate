@@ -1,0 +1,11 @@
+pair_id,sample_id,status_a,status_b,response_a_s,response_b_s,evidence_a,evidence_b,kind,measurement_method
+01,ASR-01,measured,measured,5.42,1.46,logs/asr_response_log.md,logs/asr_response_log.md,measurement,manual
+02,ASR-01,measured,measured,5.68,1.71,logs/asr_response_log.md,logs/asr_response_log.md,measurement,manual
+03,ASR-01,measured,measured,5.31,1.29,logs/asr_response_log.md,logs/asr_response_log.md,measurement,manual
+04,ASR-01,measured,measured,5.77,1.93,logs/asr_response_log.md,logs/asr_response_log.md,measurement,manual
+05,ASR-01,measured,measured,5.54,1.58,logs/asr_response_log.md,logs/asr_response_log.md,measurement,manual
+06,ASR-01,measured,measured,5.89,1.76,logs/asr_response_log.md,logs/asr_response_log.md,measurement,manual
+07,ASR-01,measured,measured,5.47,1.38,logs/asr_response_log.md,logs/asr_response_log.md,measurement,manual
+08,ASR-01,measured,measured,5.65,1.63,logs/asr_response_log.md,logs/asr_response_log.md,measurement,manual
+09,ASR-01,measured,measured,5.36,1.51,logs/asr_response_log.md,logs/asr_response_log.md,measurement,manual
+10,ASR-01,measured,measured,5.72,1.84,logs/asr_response_log.md,logs/asr_response_log.md,measurement,manual

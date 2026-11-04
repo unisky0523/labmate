@@ -1,0 +1,10 @@
+uname -a
+cat /proc/cmdline
+cat /proc/mtd
+mount | grep -E ' / |mmcblk'
+ip -4 addr show
+ls -l /dev/spidev* /sys/bus/spi/devices/ 2>/dev/null
+ls -la /media/sd-mmcblk0p1/labmate_camera_spi_emio
+ls -la /opt/image /boot
+ls -l /sys/firmware/fdt /proc/config.gz
+ps w

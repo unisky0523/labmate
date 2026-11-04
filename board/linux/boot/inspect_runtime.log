@@ -1,0 +1,192 @@
+find /media/sd-m mcblk0p1 -maxdepth 3 -type f \( -name zImage -o -name '*board_files*' -o -name ' *.bit' -o -name '*kernel*.zip' \)
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104# cat /media/sd-mm cblk0p1/labmate_spi_cs_test_20261104/c_camera_link/emio_board.py
+"""Discover the handed-off SPI0 device and PS GPIO offset 65 on Linux."""
+
+import argparse
+from pathlib import Path
+import sys
+import time
+
+
+def discover_spi(root=Path('/sys/bus/spi/devices')):
+    matches = []
+    for path in root.glob('spi*.*'):
+        compatible = path / 'of_node/compatible'
+        if compatible.is_file() and b'labmate,esp32-image-link' in compatible.read_bytes().split(b'\0'):
+            matches.append('/dev/spidev' + path.name[3:])
+    if len(matches) != 1:
+        raise RuntimeError('Expected one labmate,esp32-image-link SPI device, found {}'.format(matches))
+    if not Path(matches[0]).exists():
+        raise RuntimeError('SPI exists but {} is absent; check spidev driver binding'.format(matches[0]))
+    return matches[0]
+
+
+def discover_ready(root=Path('/sys/class/gpio')):
+    chips = []
+    for chip in root.glob('gpiochip*'):
+        label = (chip / 'label').read_text().strip().lower()
+        if ('zynq' in label or 'e000a000' in label) and int((chip / 'ngpio').read_text()) > 65:
+            chips.append(chip)
+    if len(chips) != 1:
+        raise RuntimeError('Cannot identify PS gpiochip; pass an explicitly configured --ready-path')
+    number = int((chips[0] / 'base').read_text()) + 65
+    gpio = root / ('gpio' + str(number))
+    if not gpio.exists():
+        try:
+            (root / 'export').write_text(str(number))
+        except OSError:
+            if not gpio.exists():
+                raise
+        deadline = time.monotonic() + 1
+        while not (gpio / 'direction').exists():
+            if time.monotonic() >= deadline:
+                raise RuntimeError('GPIO export did not complete')
+            time.sleep(0.01)
+    (gpio / 'direction').write_text('in')
+    return str(gpio / 'value')
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__, add_help=False)
+    parser.add_argument('--spi-device')
+    parser.add_argument('--ready-path')
+    parser.add_argument('--preview', action='store_true')
+    presets = parser.add_mutually_exclusive_group()
+    presets.add_argument('--fast', action='store_true',
+                        help='320px quality50, frame-end ACK, no frame-rate cap (v3 token firmware)')
+    presets.add_argument('--ten-fps', action='store_true',
+                        help='Direct native JPEG, requested 4MHz SPI, 320px quality50, target 10fps')
+    presets.add_argument('--max-fps', action='store_true',
+                        help='Uncapped pipelined native JPEG, requested 8MHz SPI, 320px quality50')
+    args, options = parser.parse_known_args()
+    if (args.ten_fps or args.max_fps) and not args.preview:
+        parser.error('--ten-fps / --max-fps requires --preview')
+    if any(v == '--transport' or v.startswith('--transport=') for v in options):
+        parser.error('This entry selects spi-emio automatically')
+    try:
+        print('SPI sender fps-v3-uncapped-20261104: module={}'.format(Path(__file__).resolve()),
+              file=sys.stderr, flush=True)
+        device = args.spi_device or discover_spi()
+        ready = args.ready_path or discover_ready()
+        print('SPI EMIO: device={} READY={} mode=1'.format(device, ready), file=sys.stderr)
+        sys.argv = ['emio_board', '--transport', 'spi-emio', '--spi-device', device,
+                    '--ready-path', ready, '--spi-speed', '2000000']
+        if args.max_fps:
+            sys.argv += ['--direct-jpeg', '--pipeline', '--spi-frame-poll', '--spi-set-speed',
+                         '--spi-speed', '8000000', '--width', '320', '--quality', '50',
+                         '--interval', '0', '--log-every', '30']
+        elif args.ten_fps:
+            sys.argv += ['--direct-jpeg', '--spi-frame-poll', '--spi-set-speed',
+                         '--spi-speed', '4000000', '--width', '320', '--quality', '50',
+                         '--interval', '0.1', '--log-every', '10']
+        elif args.fast:
+            sys.argv += ['--spi-frame-poll', '--width', '320', '--quality', '50', '--interval', '0']
+        sys.argv += options
+        if args.preview:
+            from .native_preview import main as run
+        else:
+            from .sender import main as run
+        run()
+    except (OSError, RuntimeError, ValueError) as exc:
+        print('SPI EMIO failed: {}'.format(exc), file=sys.stderr)
+        return 2
+    return 0
+
+
+if __name__ == '__main__':
+    sys.exit(main())
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104# cat /media/sd-mm cblk0p1/labmate_spi_cs_test_20261104/c_camera_link/run_spi_emio_board.sh
+#!/bin/sh
+set -eu
+ROOT=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+export PYTHONPATH="$ROOT/vendor:$ROOT${PYTHONPATH:+:$PYTHONPATH}"
+exec python3 -B -m c_camera_link.emio_board "$@"
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104# sed -n '1,180p'  /media/sd-mmcblk0p1/labmate_spi_cs_test_20261104/c_camera_link/SPI_EMIO_RUN_CN.m d
+# SPI0 EMIO 图片预览联调
+
+## 本包是什么
+
+配合对方 SPI0 EMIO 硬件接线的 ARM 发送器与 ESP32 固件。保留 LabMate-Camera 热点、网页、冻结和标注；UART 与旧 SPI 仍单独保留。新固件选择 spi-emio，主机必须选择 spi-emio，不能混用旧 spi 固件。
+
+本版本采用自有 LMJPEG01/LMCK 协议，不承诺与对方 send_jpeg.py 兼容：1024 字节事务，每数据事务后一个全零 POLL 事务，每帧共偶数个事务。mode1、8bit、MSB first、CS低有效。READY 从0开始，每次从机排好事务就翻转；主机依次等1/0。最终 POLL 返回12字节 LMAK、帧序号、CRC校验状态。保留32 KiB JPEG上限，避免改变现有三个图片缓存占用。CRC32为标准IEEE/zlib，包字段小端。数据包头为 `<4sHH>`，LMCK、有效长度0..1016、flags=0；负载拼成 `<8sIII>`（LMJPEG01、序号、JPEG长度、CRC32）及JPEG内容，其余补零。发送器最终收到匹配的成功ACK才报告acknowledged。
+
+每帧成功完成后 READY 下一令牌仍从1开始，支持持续发送。中途失败/强杀后先复位ESP32并重新启动发送器；不自动重传。不允许两个进程同时操作SPI。
+
+## 硬件前提
+
+对方的新bit、匹配设备树、PS SPI时钟和spidev驱动必须先就绪。本包不包含或自动替换FPGA启动镜像，也不能仅凭复制Python文件产生SPI设备。
+
+按对方交接，在断电时拔P1串口选择和P3两个CAN跳帽，U4不插其他模块。连接如下，编号为实际连接器脚号和ESP32 GPIO号：
+
+| Zynq | ESP32 |
+| --- | --- |
+| J3-1 SCLK | GPIO18 |
+| J3-2 MOSI | GPIO23 |
+| J3-3 CS | GPIO27 |
+| J3-4 MISO | GPIO19 |
+| U4-2 READY | GPIO26 |
+| J3-37/39或U4-5 GND | GND |
+
+ESP32独立USB供电并共地，不并接电源输出，U4-6是5V不能接信号。对方方案禁用了UART1，之前使用/dev/ttyPS1的图片链路在新硬件上不能继续作为有效UART使用；UART0调试控制台仍保留。
+
+## 1. 烧ESP32
+
+Windows项目根目录运行（端口以实际为准，之前是COM8），会覆盖ESP32应用但保留同样网页功能：
+
+```powershell
+cd D:\work\fpga_vision
+py -m c_camera_link.flash --port COM8 --variant spi-emio --confirm-overwrite
+```
+
+若下载模式失败，按住BOOT，点按EN，松开BOOT后重试。烧录后正常复位，不要按住BOOT运行。手机连LabMate-Camera，密码LabMate-2026，打开 http://192.168.4.1 ，尚未发图时没有新画面是正常现象。
+
+## 2. 板端先发静态图片
+
+将labmate_camera_spi_emio.zip解压到独立目录，再将其中labmate_camera_spi_emio整个文件夹放SD卡。原有部署保留。在串口终端进入这个新目录（SD挂载位置按实际调整）：
+
+```sh
+cd /mnt/sd/labmate_camera_spi_emio
+sh c_camera_link/run_spi_emio_board.sh --image sample.jpg
+```
+
+启动器按compatible=labmate,esp32-image-link寻找SPI，避免误用QSPI。按PS gpiochip base+65导出READY并设为输入，不把Linux全局GPIO65写死。请求2MHz，实际由PS分频决定。
+
+若自动识别失败，可明确传入已确认的节点：
+
+```sh
+sh c_camera_link/run_spi_emio_board.sh --spi-device /dev/spidev1.0 --ready-path /sys/class/gpio/gpioN/value --image sample.jpg
+```
+
+这里的1.0和N仅为示例，使用实际节点；不要把QSPI Flash控制器改绑来凑节点。
+
+## 3. 连续摄像头预览
+
+静态图片成功后运行，使用已有原生V4L2采集及JPEG编码，不依赖OpenCV：
+
+```sh
+chmod +x c_camera_link/native/camera_stream_armv7 c_camera_link/native/ppm_to_jpeg_armv7
+sh c_camera_link/run_spi_emio_board.sh --preview --count 0 --interval 0.1
+```
+
+如果SD挂载为noexec，chmod后仍提示Permission denied，将整个新部署目录复制到板上允许执行的位置再运行，不要改动现有系统程序。
+
+Ctrl+C停止。interval是额外帧间等待，不是保证帧率。先测采集/编码/发送实际耗时再优化频率，不能按SPI理论带宽承诺视频帧率。
+
+## 状态和排查
+
+CS极性诊断：若复位后单次发送出现约8192个时钟，但CS低时的时钟计数仍为0，可以在限定测试中加 `--spi-cs-high` 反转主机片选极性，SPI采样模式仍为mode1，ESP32仍为低有效片选。这只验证链路极性假设，不是通用配置，不代表已经证明硬件反相；部分Cadence驱动可能拒绝SPI_CS_HIGH（Invalid argument）。下一次不带该参数的发送会重新设置默认低有效。发送器现在只设置一次SPI模式，避免先mode0再mode1的额外空闲转换。
+
+2026-11-04 脉冲诊断固件：串口版本 `spi-pulse-diag-v2-20261104`。在现有引脚上用 ESP32 PCNT 硬件计数，不依赖万用表或高频GPIO中断。`sclk_rises` 为 GPIO18 上升沿计数，`cs_rises` 为 GPIO27 上升沿计数，`clocks_cs_low` 为 CS低电平期间的时钟上升沿。计数超过32767会回零，仅用于复位后单次传输定位，不能当长时间累计统计。观察发送前后差值，单个1024字节事务通常应增加8192个时钟上升沿、一次片选上升沿；不同步采样、边沿毛刺和布线质量仍需结合实际结果分析。
+
+本版同时打印前4笔从机事务位数，避免只看 last_bits 丢失之前事务的信息。计数诊断仍待实物验证，编译成功不代表引脚信号正确。检查顺序：ESP32复位 → 等初始诊断日志 → 板端诊断发送器仅发送一次 → 保留日志、不再次复位。建议此项诊断用 `--spi-speed 100000`，仍使用mode1和原来的包协议。
+
+软件协议测试、固件编译完成不等于板上联调成功。当前仍待真实spidev、READY令牌、接线、摄像头和Wi-Fi端到端验收。
+
+- 没找到SPI：对方bit/设备树/时钟/驱动尚未生效，参考其ARM交接；本程序不会自动修改启动文件。
+- 找到SPI但无spidev：核对匹配驱动与当前内核，不能随便复制不同内核的ko。
+- 找不到GPIO：传明确配置的ready-path，或核对CONFIG_GPIO_SYSFS与PS gpiochip。
+- READY超时：确认供电、共地、GPIO26、U4-2接线及新固件，失败后复位ESP32再试。
+- ACK错误：确认两端均为本包spi-emio协议和mode1，检查CS、MISO与信号完整性。
+
+禁止在Linux运行期间执行整套ps7_init或随意重配PL。对方提供的临时SPI时钟命令只在U-Boot阶段按其说明使用。
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104# 

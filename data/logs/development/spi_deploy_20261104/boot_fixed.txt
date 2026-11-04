@@ -1,0 +1,13 @@
+mw.l 0xf8000008 0x0000df0d
+mw.l 0xf8000900 0x0000000f
+mw.l 0xf8000240 0x00000000
+mw.l 0xf8000158 0x00000601
+md.l 0xf800012c 1
+mw.l 0xf800012c 0x01fd4ccd
+mw.l 0xf8000004 0x0000767b
+fdt addr 0x01f00000
+fdt resize 0x1000
+fdt set /amba/ethernet@e000b000 local-mac-address [00 0a 35 00 c0 13]
+fdt mknode / chipid
+fdt set /chipid chipid 7z010
+bootz 0x02000000 - 0x01f00000

@@ -1,0 +1,4 @@
+python3 -c "d=open('/dev/mtd1','rb').read(); print('BOOT_ENV_BEGIN'); [print(x.decode('ascii','replace')) for x in d.split(b'\0') if x.startswith((b'bootcmd=',b'bootargs=',b'loadaddr=',b'kernel_addr',b'fdt_addr',b'ramdisk_addr',b'boot_targets=',b'scriptaddr=',b'ethaddr='))]; print('BOOT_ENV_END')"
+python3 -c "import struct; d=open('/dev/mtd3','rb').read(); print('BOOT_SCRIPT_BEGIN'); n=struct.unpack_from('>I',d,12)[0]; print(d[64:64+min(n,8192)].decode('ascii','replace')); print('BOOT_SCRIPT_END')"
+cat /sys/class/net/eth1/carrier
+command -v fw_printenv

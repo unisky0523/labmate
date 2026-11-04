@@ -1,0 +1,18 @@
+{
+  "asr_adapter.py": "c953e8323ce347623fa86752ec9b38e351057657351bc06a1171f3fb3634a1de",
+  "asr_runtime/asr_backend.py": "85c765b031bc51f0a9de4feebaee64269e6a4311e74b1e3398894ff2b77033cf",
+  "asr_runtime/asr_cli.py": "77f669a2c71acc49f2e5f7431bf1026e28b2b913a12bc7669b43fdaddb28b554",
+  "asr_runtime/asr_grammar.py": "482ae08343815a650a5e885e485c3d9f3b6e8ba112acc2dbde10803690cfd235",
+  "asr_runtime/baseline.json": "a7766b38933a8b3365a17010900a97ccd8a75979cf50a0128a970d700b9752fb",
+  "asr_runtime/board_audio.py": "558e98a7ccf16b4d190aea9f25db8d18f1bf0279c3b94860cd14171a8628436f",
+  "asr_runtime/board_listen.py": "0f9436a90036db6895746f38c1d2b79d3015965b81b80a50fe583c7a6f639b0f",
+  "asr_runtime/board_mic.py": "9e94ca5cffcf0c3ee061a6e0a44e756c1ba6b90a3a57cc8e5c0bc6fceeea7c15",
+  "asr_runtime/chunk.py": "34a5d2cde2e00a03acd84768ccd352ebdc3ac008a8f41ab1caee698e4a474ca0",
+  "asr_runtime/main.py": "a3a6d4fe14923527481c5ee18f9af196faaccd7c9f0cc0b55b29e9838f102a47",
+  "asr_runtime/PYTHON_STDLIB_LICENSE.txt": "a77d71d6be6f9032e6b6e5d2cf6da68f9eeab9036edfbc043633c8979cd5e82c",
+  "asr_runtime/PYTHON_STDLIB_SOURCE.md": "65eaa8f1db3b19161597c9d3236f50c656e203648c0ec3db9c1bd39578cbc450",
+  "asr_runtime/text_cli.py": "09f0606a1123e7c76b5ad8fb789dabe48eac117be084538cadddb2e229b65c5b",
+  "asr_runtime/vosk_lite.py": "cca0af72c5039d18ec79ba0eac2d87f862cd2ff5b9cad101341ad6a8f974726f",
+  "asr_runtime/wave.py": "98857069566681d053718078b51acdd2d5d517a063aa2abe26d112b3d65973e5",
+  "audio_frontend.py": "17fa10bb37e2f9c5d9715b800beb4759fbb337cd69e2b86aba203609423090dd"
+}

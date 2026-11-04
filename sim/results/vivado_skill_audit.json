@@ -1,0 +1,65 @@
+{
+  "design": "system_wrapper",
+  "device": "7z010clg400-1",
+  "stage": "Physopt postRoute",
+  "timing": {
+    "setup": {
+      "worst_slack_ns": 0.135,
+      "total_slack_ns": 0.0,
+      "failing_endpoints": 0,
+      "total_endpoints": 49604
+    },
+    "hold": {
+      "worst_slack_ns": 0.029,
+      "total_slack_ns": 0.0,
+      "failing_endpoints": 0,
+      "total_endpoints": 49546
+    },
+    "pulse_width": {
+      "worst_slack_ns": 0.264,
+      "total_slack_ns": 0.0,
+      "failing_endpoints": 0,
+      "total_endpoints": 22071
+    }
+  },
+  "constrained_timing_pass": true,
+  "coverage": {
+    "no_clock": 214,
+    "unconstrained_internal_endpoints": 492,
+    "no_input_delay": 21,
+    "no_output_delay": 42
+  },
+  "coverage_review_required": true,
+  "utilization": {
+    "lut": {
+      "used": 12418.0,
+      "available": 17600.0,
+      "percent": 70.56
+    },
+    "ff": {
+      "used": 21261.0,
+      "available": 35200.0,
+      "percent": 60.4
+    },
+    "bram36_equivalent": {
+      "used": 12.5,
+      "available": 60.0,
+      "percent": 20.83
+    },
+    "dsp": {
+      "used": 7.0,
+      "available": 80.0,
+      "percent": 8.75
+    },
+    "slice_or_clb": {
+      "used": 4392.0,
+      "available": 4400.0,
+      "percent": 99.82
+    }
+  },
+  "resource_capacity_pass": true,
+  "drc": {
+    "Warning": 58
+  },
+  "drc_no_error_or_critical": true
+}

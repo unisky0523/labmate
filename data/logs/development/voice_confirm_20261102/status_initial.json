@@ -1,0 +1,991 @@
+{
+  "processes": [
+    {
+      "pid": 4892,
+      "args": [
+        "./labassistant",
+        ""
+      ],
+      "environment": [
+        "LABMATE_INSTRUMENT_CONFIG=/home/root/labmate_ui_test/instruments.json",
+        "LABMATE_MODEL_PATH=/home/root/labmate_b_audio_test/models/vosk-model-small-cn-0.22",
+        "LABMATE_HISTORY_DIRS=/home/root/labmate_b_audio_test/data/records:/media/sd-mmcblk0p1/labmate_b_board_20261015/data/records",
+        "LABMATE_ASR_ROOT=/home/root/labmate_ui_test/asr_runtime",
+        "LABMATE_BACKEND=/home/root/labmate_ui_test/backend.py",
+        "LABMATE_RECORD_DIR=/home/root/labmate_ui_test/data/records"
+      ]
+    },
+    {
+      "pid": 4893,
+      "args": [
+        "/usr/bin/python3",
+        "-u",
+        "/home/root/labmate_ui_test/backend.py",
+        ""
+      ],
+      "environment": [
+        "LABMATE_ASR_ROOT=/home/root/labmate_ui_test/asr_runtime",
+        "LABMATE_BACKEND=/home/root/labmate_ui_test/backend.py",
+        "LABMATE_HISTORY_DIRS=/home/root/labmate_b_audio_test/data/records:/media/sd-mmcblk0p1/labmate_b_board_20261015/data/records",
+        "LABMATE_INSTRUMENT_CONFIG=/home/root/labmate_ui_test/instruments.json",
+        "LABMATE_MODEL_PATH=/home/root/labmate_b_audio_test/models/vosk-model-small-cn-0.22",
+        "LABMATE_RECORD_DIR=/home/root/labmate_ui_test/data/records"
+      ]
+    },
+    {
+      "pid": 5409,
+      "args": [
+        "aplay",
+        "-q",
+        "-D",
+        "default",
+        "-t",
+        "raw",
+        "-f",
+        "S24_LE",
+        "-r",
+        "44100",
+        "-c",
+        "2",
+        "/dev/zero",
+        ""
+      ],
+      "environment": [
+        "LABMATE_ASR_ROOT=/home/root/labmate_ui_test/asr_runtime",
+        "LABMATE_BACKEND=/home/root/labmate_ui_test/backend.py",
+        "LABMATE_HISTORY_DIRS=/home/root/labmate_b_audio_test/data/records:/media/sd-mmcblk0p1/labmate_b_board_20261015/data/records",
+        "LABMATE_INSTRUMENT_CONFIG=/home/root/labmate_ui_test/instruments.json",
+        "LABMATE_MODEL_PATH=/home/root/labmate_b_audio_test/models/vosk-model-small-cn-0.22",
+        "LABMATE_RECORD_DIR=/home/root/labmate_ui_test/data/records"
+      ]
+    },
+    {
+      "pid": 5410,
+      "args": [
+        "arecord",
+        "-q",
+        "-D",
+        "hw:0,1",
+        "-t",
+        "raw",
+        "-f",
+        "S24_LE",
+        "-r",
+        "44100",
+        "-c",
+        "2",
+        ""
+      ],
+      "environment": [
+        "LABMATE_ASR_ROOT=/home/root/labmate_ui_test/asr_runtime",
+        "LABMATE_BACKEND=/home/root/labmate_ui_test/backend.py",
+        "LABMATE_HISTORY_DIRS=/home/root/labmate_b_audio_test/data/records:/media/sd-mmcblk0p1/labmate_b_board_20261015/data/records",
+        "LABMATE_INSTRUMENT_CONFIG=/home/root/labmate_ui_test/instruments.json",
+        "LABMATE_MODEL_PATH=/home/root/labmate_b_audio_test/models/vosk-model-small-cn-0.22",
+        "LABMATE_RECORD_DIR=/home/root/labmate_ui_test/data/records"
+      ]
+    }
+  ],
+  "files": {
+    "backend.py": "00479fcd6fe00865732360121ad310ef89941789f2d8f4d4c84734d3de551dfc",
+    "record_store.py": "4e6544c2012f1e82e4d2efafea5b57b46a27b8f2aa24d1e9030341374bb7fd6b",
+    "instrument_adapter.py": "0638e63b160962daef12d0aceb91eb35d8f2808fc0d3e1126c02046a1f7f593f",
+    "command_executor.py": "268fdc28379b50dc65f83cb40e049da0c273f4f487d669800e533d1ec78cfdb5",
+    "instruments.json": "4d0e6e2bc57178d42f47d1a9bc525b36c8b59a160c19b225fd98c46f8f8516a9",
+    "run_ui_voice.sh": "9eeb74784b7c5d9d5a84e27ce3fcd373a4582d1039ace78279c3e3fa70c975ee",
+    "run_ui_instruments.sh": "69b3644d43c7a1bae8fa370f6d95f32941fb719808245993b83a69e463eaeff0",
+    "asr_adapter.py": "4b9f5111eb9dd66a097a036fb60ae87c0c7dc1d42c07e88b866cf31bb33af315",
+    "asr_runtime/board_listen.py": "0f9436a90036db6895746f38c1d2b79d3015965b81b80a50fe583c7a6f639b0f",
+    "asr_runtime/asr_grammar.py": "c7090a230420a16af2a8b1d28a18d0956d458aaadf49e5c488c9dba3cb44ba39",
+    "labassistant": "80422d256c7e01ad0a399be7704dbdd4fcaf3ed3419a4c6e628b4d763ca744a2"
+  },
+  "records": [
+    {
+      "path": "/home/root/labmate_ui_test/data/records/record_20261102_114753_513063_e284f0fdc0ca492bfea18fec8d5d8742.json",
+      "document": {
+        "schema_version": 4,
+        "record_kind": "instrument_result",
+        "record_id": "e284f0fdc0ca492bfea18fec8d5d8742",
+        "request_id": "{a443e616-c80c-4fe4-b285-1eb5974f563e}",
+        "source": "instrument_usb",
+        "is_simulated": false,
+        "valid": true,
+        "status": "active",
+        "acquisition_status": "complete",
+        "devices": [
+          {
+            "request_id": "{a443e616-c80c-4fe4-b285-1eb5974f563e}-1",
+            "action": "meter.read",
+            "result": {
+              "request_id": "{a443e616-c80c-4fe4-b285-1eb5974f563e}-1",
+              "device_id": "suin_sa5041",
+              "device_id_source": "configured",
+              "source": "scpi",
+              "transport": "cp210x_usb",
+              "simulated": false,
+              "identity_verified": false,
+              "value": -0.0008,
+              "unit": "V",
+              "valid": true,
+              "status": "complete",
+              "captured_at": "2026-11-02T19:47:47.145+08:00",
+              "image_path": "",
+              "error_code": "",
+              "measurements": [
+                {
+                  "measurement_id": "dc_voltage",
+                  "label": "直流电压",
+                  "channel": "",
+                  "label_source": "function_response",
+                  "value": -0.0008,
+                  "unit": "V",
+                  "base_unit": "V",
+                  "unit_source": "range_reply_display_scale",
+                  "unit_scale_verified": true,
+                  "validation_status": "range_bracket_checked_display_convention",
+                  "valid": true,
+                  "error_code": "",
+                  "raw_text": "-0.0008",
+                  "captured_at": "2026-11-02T19:47:47.782+08:00",
+                  "raw_numeric_value": -0.0008,
+                  "range_query": ":SENSe:VOLTage:DC:RANGe?",
+                  "range": {
+                    "upper": 2.0,
+                    "unit": "V",
+                    "display_unit": "V",
+                    "scale_to_base": 1.0,
+                    "unit_source": "range_reply"
+                  },
+                  "range_after": {
+                    "upper": 2.0,
+                    "unit": "V",
+                    "display_unit": "V",
+                    "scale_to_base": 1.0,
+                    "unit_source": "range_reply"
+                  },
+                  "display_unit": "V",
+                  "display_value": -0.0008,
+                  "scale_to_base": 1.0
+                }
+              ],
+              "evidence": [
+                {
+                  "query": ":FUNCtion?",
+                  "raw_text": "\u0000\u0000VOLT:DC",
+                  "requested_at": "2026-11-02T19:47:47.145+08:00",
+                  "received_at": "2026-11-02T19:47:47.243+08:00"
+                },
+                {
+                  "query": ":READ?",
+                  "raw_text": "0.0011",
+                  "requested_at": "2026-11-02T19:47:47.243+08:00",
+                  "received_at": "2026-11-02T19:47:47.352+08:00"
+                },
+                {
+                  "query": ":FUNCtion?",
+                  "raw_text": "\u0000\u0000VOLT:DC",
+                  "requested_at": "2026-11-02T19:47:47.352+08:00",
+                  "received_at": "2026-11-02T19:47:47.566+08:00"
+                },
+                {
+                  "query": ":SENSe:VOLTage:DC:RANGe?",
+                  "raw_text": "\u0000\u00002V",
+                  "requested_at": "2026-11-02T19:47:47.566+08:00",
+                  "received_at": "2026-11-02T19:47:47.673+08:00"
+                },
+                {
+                  "query": ":READ?",
+                  "raw_text": "-0.0008",
+                  "requested_at": "2026-11-02T19:47:47.673+08:00",
+                  "received_at": "2026-11-02T19:47:47.782+08:00"
+                },
+                {
+                  "query": ":SENSe:VOLTage:DC:RANGe?",
+                  "raw_text": "\u0000\u00002V",
+                  "requested_at": "2026-11-02T19:47:47.782+08:00",
+                  "received_at": "2026-11-02T19:47:47.889+08:00"
+                },
+                {
+                  "query": ":FUNCtion?",
+                  "raw_text": "\u0000\u0000VOLT:DC",
+                  "requested_at": "2026-11-02T19:47:47.889+08:00",
+                  "received_at": "2026-11-02T19:47:48.104+08:00"
+                }
+              ],
+              "function": "VOLT:DC",
+              "unit_scale_verified": true,
+              "valid_count": 1,
+              "total_count": 1,
+              "completed_at": "2026-11-02T19:47:48.104+08:00",
+              "port": "cp210x-usb",
+              "result_path": "/media/sd-mmcblk0p1/labmate_sa5041_board/c_instrument/runs/20261102_194748_106904_6b6643da/reading.json"
+            },
+            "stderr": "",
+            "returncode": 0
+          },
+          {
+            "request_id": "{a443e616-c80c-4fe4-b285-1eb5974f563e}-2",
+            "action": "scope.read",
+            "result": {
+              "request_id": "{a443e616-c80c-4fe4-b285-1eb5974f563e}-2",
+              "device_id": "siglent_sds1202x",
+              "source": "scpi",
+              "transport": "visa",
+              "simulated": false,
+              "value": null,
+              "unit": "",
+              "valid": true,
+              "status": "complete",
+              "captured_at": "2026-11-02T19:47:51.185+08:00",
+              "image_path": "",
+              "error_code": "",
+              "identity": "*IDN SIGLENT,SDS1202X,SDS1XDC4163410,1.1.2.13 R5",
+              "measurements": [
+                {
+                  "measurement_id": "ch1_pkpk",
+                  "label": "峰峰值",
+                  "channel": "1",
+                  "label_source": "config",
+                  "query": "C1:PAVA? PKPK",
+                  "value": 5.04,
+                  "unit": "V",
+                  "unit_source": "response",
+                  "valid": true,
+                  "error_code": "",
+                  "raw_text": "C1:PAVA PKPK,5.04E+00V",
+                  "captured_at": "2026-11-02T19:47:51.194+08:00"
+                },
+                {
+                  "measurement_id": "ch1_freq",
+                  "label": "频率",
+                  "channel": "1",
+                  "label_source": "config",
+                  "query": "C1:PAVA? FREQ",
+                  "value": 1000.0,
+                  "unit": "Hz",
+                  "unit_source": "response",
+                  "valid": true,
+                  "error_code": "",
+                  "raw_text": "C1:PAVA FREQ,1.00E+03Hz",
+                  "captured_at": "2026-11-02T19:47:52.057+08:00"
+                },
+                {
+                  "measurement_id": "ch1_rms",
+                  "label": "有效值",
+                  "channel": "1",
+                  "label_source": "config",
+                  "query": "C1:PAVA? RMS",
+                  "value": 1.76,
+                  "unit": "V",
+                  "unit_source": "response",
+                  "valid": true,
+                  "error_code": "",
+                  "raw_text": "C1:PAVA RMS,1.76E+00V",
+                  "captured_at": "2026-11-02T19:47:52.596+08:00"
+                }
+              ],
+              "valid_count": 3,
+              "total_count": 3,
+              "completed_at": "2026-11-02T19:47:53.170+08:00",
+              "resource": "USB0::62700::60986::SDS1XDC4163410::0::INSTR",
+              "evidence": [
+                {
+                  "query": "*IDN?",
+                  "requested_at": "2026-11-02T19:47:51.185+08:00",
+                  "raw_text": "*IDN SIGLENT,SDS1202X,SDS1XDC4163410,1.1.2.13 R5",
+                  "received_at": "2026-11-02T19:47:51.194+08:00"
+                },
+                {
+                  "query": "C1:PAVA? PKPK",
+                  "requested_at": "2026-11-02T19:47:51.194+08:00",
+                  "raw_text": "C1:PAVA PKPK,5.04E+00V",
+                  "received_at": "2026-11-02T19:47:52.056+08:00"
+                },
+                {
+                  "query": "C1:PAVA? FREQ",
+                  "requested_at": "2026-11-02T19:47:52.057+08:00",
+                  "raw_text": "C1:PAVA FREQ,1.00E+03Hz",
+                  "received_at": "2026-11-02T19:47:52.596+08:00"
+                },
+                {
+                  "query": "C1:PAVA? RMS",
+                  "requested_at": "2026-11-02T19:47:52.597+08:00",
+                  "raw_text": "C1:PAVA RMS,1.76E+00V",
+                  "received_at": "2026-11-02T19:47:53.169+08:00"
+                }
+              ],
+              "identity_verified": true,
+              "result_path": "/media/sd-mmcblk0p1/labmate_sds1202x_board/c_instrument/runs/20261102_194753_172039_f0cc4149/reading.json"
+            },
+            "stderr": "",
+            "returncode": 0
+          }
+        ],
+        "content": "万用表：直流电压 -0.0008 V\n示波器：通道1 峰峰值 5.04 V；通道1 频率 1000.0 Hz；通道1 有效值 1.76 V",
+        "original_text": "记录 数据",
+        "recognized_command": {
+          "intent": "record_device",
+          "count": 1,
+          "interval": 1.0
+        },
+        "captured_at": "2026-11-02T11:47:45.879+00:00",
+        "confirmed_at": "2026-11-02T11:47:53.513+00:00",
+        "saved_at": "2026-11-02T11:47:53.513+00:00",
+        "receipt_path": "/home/root/labmate_ui_test/data/instrument_jobs/e284f0fdc0ca492bfea18fec8d5d87428465861781a93059126fd8ead3141b11.json",
+        "audio_path": null,
+        "image_path": null,
+        "clock_warning": false
+      }
+    },
+    {
+      "path": "/home/root/labmate_ui_test/data/records/record_20261102_113658_195357_f22a15a3cbd3dace9efc228371fb4049.json",
+      "document": {
+        "schema_version": 4,
+        "record_kind": "instrument_result",
+        "record_id": "f22a15a3cbd3dace9efc228371fb4049",
+        "request_id": "{317065de-e3b2-47b8-a69c-f1b9a44700c7}",
+        "source": "instrument_usb",
+        "is_simulated": false,
+        "valid": true,
+        "status": "active",
+        "acquisition_status": "complete",
+        "devices": [
+          {
+            "request_id": "{317065de-e3b2-47b8-a69c-f1b9a44700c7}-1",
+            "action": "scope.capture_screen",
+            "result": {
+              "device_id": "siglent_sds1202x",
+              "status": "complete",
+              "valid": true,
+              "source": "scpi",
+              "transport": "visa",
+              "simulated": false,
+              "resource": "USB0::62700::60986::SDS1XDC4163410::0::INSTR",
+              "identity": "*IDN SIGLENT,SDS1202X,SDS1XDC4163410,1.1.2.13 R5",
+              "captured_at": "2026-11-02T19:36:57.876+08:00",
+              "image_path": "/media/sd-mmcblk0p1/labmate_sds1202x_board/c_instrument/runs/20261102_193657_860651_4a200fdb/screen.bmp",
+              "image_bytes": 1152054
+            },
+            "stderr": "",
+            "returncode": 0
+          }
+        ],
+        "content": "示波器屏幕截图已保存（1152054 字节）",
+        "original_text": "拍 一下 波形",
+        "recognized_command": {
+          "intent": "capture_image"
+        },
+        "captured_at": "2026-11-02T11:36:51.302+00:00",
+        "confirmed_at": "2026-11-02T11:36:58.195+00:00",
+        "saved_at": "2026-11-02T11:36:58.195+00:00",
+        "receipt_path": "/home/root/labmate_ui_test/data/instrument_jobs/f22a15a3cbd3dace9efc228371fb4049f1b261aabe6cf55011a4d79b11646deb.json",
+        "audio_path": null,
+        "image_path": "/home/root/labmate_ui_test/data/records/images/f22a15a3cbd3dace9efc228371fb4049.bmp",
+        "clock_warning": false
+      }
+    },
+    {
+      "path": "/home/root/labmate_ui_test/data/records/record_20261102_110942_913988_59e27989a68dd1d03407e20aa9ac3abf.json",
+      "document": {
+        "schema_version": 4,
+        "record_kind": "instrument_result",
+        "record_id": "59e27989a68dd1d03407e20aa9ac3abf",
+        "request_id": "{162a5763-0136-4e67-a013-f8c46d91301d}",
+        "source": "instrument_usb",
+        "is_simulated": false,
+        "valid": true,
+        "status": "active",
+        "acquisition_status": "complete",
+        "devices": [
+          {
+            "request_id": "{162a5763-0136-4e67-a013-f8c46d91301d}-1",
+            "action": "meter.read",
+            "result": {
+              "request_id": "{162a5763-0136-4e67-a013-f8c46d91301d}-1",
+              "device_id": "suin_sa5041",
+              "device_id_source": "configured",
+              "source": "scpi",
+              "transport": "cp210x_usb",
+              "simulated": false,
+              "identity_verified": false,
+              "value": 0.0005,
+              "unit": "V",
+              "valid": true,
+              "status": "complete",
+              "captured_at": "2026-11-02T19:09:33.345+08:00",
+              "image_path": "",
+              "error_code": "",
+              "measurements": [
+                {
+                  "measurement_id": "ac_voltage",
+                  "label": "交流电压",
+                  "channel": "",
+                  "label_source": "function_response",
+                  "value": 0.0005,
+                  "unit": "V",
+                  "base_unit": "V",
+                  "unit_source": "range_reply_display_scale",
+                  "unit_scale_verified": true,
+                  "validation_status": "range_bracket_checked_display_convention",
+                  "valid": true,
+                  "error_code": "",
+                  "raw_text": "0.0005",
+                  "captured_at": "2026-11-02T19:09:33.976+08:00",
+                  "raw_numeric_value": 0.0005,
+                  "range_query": ":SENSe:VOLTage:AC:RANGe?",
+                  "range": {
+                    "upper": 2.0,
+                    "unit": "V",
+                    "display_unit": "V",
+                    "scale_to_base": 1.0,
+                    "unit_source": "range_reply"
+                  },
+                  "range_after": {
+                    "upper": 2.0,
+                    "unit": "V",
+                    "display_unit": "V",
+                    "scale_to_base": 1.0,
+                    "unit_source": "range_reply"
+                  },
+                  "display_unit": "V",
+                  "display_value": 0.0005,
+                  "scale_to_base": 1.0
+                }
+              ],
+              "evidence": [
+                {
+                  "query": ":FUNCtion?",
+                  "raw_text": "\u0000\u0000VOLT:AC",
+                  "requested_at": "2026-11-02T19:09:33.345+08:00",
+                  "received_at": "2026-11-02T19:09:33.437+08:00"
+                },
+                {
+                  "query": ":READ?",
+                  "raw_text": "0.0005",
+                  "requested_at": "2026-11-02T19:09:33.437+08:00",
+                  "received_at": "2026-11-02T19:09:33.547+08:00"
+                },
+                {
+                  "query": ":FUNCtion?",
+                  "raw_text": "\u0000\u0000VOLT:AC",
+                  "requested_at": "2026-11-02T19:09:33.547+08:00",
+                  "received_at": "2026-11-02T19:09:33.760+08:00"
+                },
+                {
+                  "query": ":SENSe:VOLTage:AC:RANGe?",
+                  "raw_text": "\u0000\u00002V",
+                  "requested_at": "2026-11-02T19:09:33.761+08:00",
+                  "received_at": "2026-11-02T19:09:33.867+08:00"
+                },
+                {
+                  "query": ":READ?",
+                  "raw_text": "0.0005",
+                  "requested_at": "2026-11-02T19:09:33.867+08:00",
+                  "received_at": "2026-11-02T19:09:33.976+08:00"
+                },
+                {
+                  "query": ":SENSe:VOLTage:AC:RANGe?",
+                  "raw_text": "\u0000\u00002V",
+                  "requested_at": "2026-11-02T19:09:33.977+08:00",
+                  "received_at": "2026-11-02T19:09:34.083+08:00"
+                },
+                {
+                  "query": ":FUNCtion?",
+                  "raw_text": "\u0000\u0000VOLT:AC",
+                  "requested_at": "2026-11-02T19:09:34.083+08:00",
+                  "received_at": "2026-11-02T19:09:34.194+08:00"
+                }
+              ],
+              "function": "VOLT:AC",
+              "unit_scale_verified": true,
+              "valid_count": 1,
+              "total_count": 1,
+              "completed_at": "2026-11-02T19:09:34.195+08:00",
+              "port": "cp210x-usb",
+              "result_path": "/media/sd-mmcblk0p1/labmate_sa5041_board/c_instrument/runs/20261102_190934_197247_07ff5cc2/reading.json"
+            },
+            "stderr": "",
+            "returncode": 0
+          },
+          {
+            "request_id": "{162a5763-0136-4e67-a013-f8c46d91301d}-2",
+            "action": "scope.read",
+            "result": {
+              "request_id": "{162a5763-0136-4e67-a013-f8c46d91301d}-2",
+              "device_id": "siglent_sds1202x",
+              "source": "scpi",
+              "transport": "visa",
+              "simulated": false,
+              "value": null,
+              "unit": "",
+              "valid": true,
+              "status": "complete",
+              "captured_at": "2026-11-02T19:09:37.280+08:00",
+              "image_path": "",
+              "error_code": "",
+              "identity": "*IDN SIGLENT,SDS1202X,SDS1XDC4163410,1.1.2.13 R5",
+              "measurements": [
+                {
+                  "measurement_id": "ch1_pkpk",
+                  "label": "峰峰值",
+                  "channel": "1",
+                  "label_source": "config",
+                  "query": "C1:PAVA? PKPK",
+                  "value": 5.08,
+                  "unit": "V",
+                  "unit_source": "response",
+                  "valid": true,
+                  "error_code": "",
+                  "raw_text": "C1:PAVA PKPK,5.08E+00V",
+                  "captured_at": "2026-11-02T19:09:37.290+08:00"
+                },
+                {
+                  "measurement_id": "ch1_freq",
+                  "label": "频率",
+                  "channel": "1",
+                  "label_source": "config",
+                  "query": "C1:PAVA? FREQ",
+                  "value": 1000.0,
+                  "unit": "Hz",
+                  "unit_source": "response",
+                  "valid": true,
+                  "error_code": "",
+                  "raw_text": "C1:PAVA FREQ,1.00E+03Hz",
+                  "captured_at": "2026-11-02T19:09:37.893+08:00"
+                },
+                {
+                  "measurement_id": "ch1_rms",
+                  "label": "有效值",
+                  "channel": "1",
+                  "label_source": "config",
+                  "query": "C1:PAVA? RMS",
+                  "value": 1.76,
+                  "unit": "V",
+                  "unit_source": "response",
+                  "valid": true,
+                  "error_code": "",
+                  "raw_text": "C1:PAVA RMS,1.76E+00V",
+                  "captured_at": "2026-11-02T19:09:38.409+08:00"
+                }
+              ],
+              "valid_count": 3,
+              "total_count": 3,
+              "completed_at": "2026-11-02T19:09:38.921+08:00",
+              "resource": "USB0::62700::60986::SDS1XDC4163410::0::INSTR",
+              "evidence": [
+                {
+                  "query": "*IDN?",
+                  "requested_at": "2026-11-02T19:09:37.281+08:00",
+                  "raw_text": "*IDN SIGLENT,SDS1202X,SDS1XDC4163410,1.1.2.13 R5",
+                  "received_at": "2026-11-02T19:09:37.290+08:00"
+                },
+                {
+                  "query": "C1:PAVA? PKPK",
+                  "requested_at": "2026-11-02T19:09:37.290+08:00",
+                  "raw_text": "C1:PAVA PKPK,5.08E+00V",
+                  "received_at": "2026-11-02T19:09:37.893+08:00"
+                },
+                {
+                  "query": "C1:PAVA? FREQ",
+                  "requested_at": "2026-11-02T19:09:37.893+08:00",
+                  "raw_text": "C1:PAVA FREQ,1.00E+03Hz",
+                  "received_at": "2026-11-02T19:09:38.409+08:00"
+                },
+                {
+                  "query": "C1:PAVA? RMS",
+                  "requested_at": "2026-11-02T19:09:38.410+08:00",
+                  "raw_text": "C1:PAVA RMS,1.76E+00V",
+                  "received_at": "2026-11-02T19:09:38.921+08:00"
+                }
+              ],
+              "identity_verified": true,
+              "result_path": "/media/sd-mmcblk0p1/labmate_sds1202x_board/c_instrument/runs/20261102_190938_923734_7d28a4dd/reading.json"
+            },
+            "stderr": "",
+            "returncode": 0
+          }
+        ],
+        "content": "万用表：交流电压 0.0005 V\n示波器：通道1 峰峰值 5.08 V；通道1 频率 1000.0 Hz；通道1 有效值 1.76 V",
+        "original_text": "读取 数据",
+        "recognized_command": {
+          "intent": "read"
+        },
+        "captured_at": "2026-11-02T11:09:32.054+00:00",
+        "confirmed_at": "2026-11-02T11:09:42.913+00:00",
+        "saved_at": "2026-11-02T11:09:42.913+00:00",
+        "receipt_path": "/home/root/labmate_ui_test/data/instrument_jobs/59e27989a68dd1d03407e20aa9ac3abf103a126a1efa6024ff9ef2648f87f9a0.json",
+        "audio_path": null,
+        "image_path": null,
+        "clock_warning": false
+      }
+    },
+    {
+      "path": "/home/root/labmate_ui_test/data/records/record_20261102_110335_500398_9cb3f7fc36c0c4e6cda249bdf0159bc8.json",
+      "document": {
+        "schema_version": 4,
+        "record_kind": "instrument_result",
+        "record_id": "9cb3f7fc36c0c4e6cda249bdf0159bc8",
+        "request_id": "{4a93ab87-5477-4649-b1ac-61d803d0a422}",
+        "source": "instrument_usb",
+        "is_simulated": false,
+        "valid": true,
+        "status": "active",
+        "acquisition_status": "complete",
+        "devices": [
+          {
+            "request_id": "{4a93ab87-5477-4649-b1ac-61d803d0a422}-1",
+            "action": "scope.capture_screen",
+            "result": {
+              "device_id": "siglent_sds1202x",
+              "status": "complete",
+              "valid": true,
+              "source": "scpi",
+              "transport": "visa",
+              "simulated": false,
+              "resource": "USB0::62700::60986::SDS1XDC4163410::0::INSTR",
+              "identity": "*IDN SIGLENT,SDS1202X,SDS1XDC4163410,1.1.2.13 R5",
+              "captured_at": "2026-11-02T19:03:35.184+08:00",
+              "image_path": "/media/sd-mmcblk0p1/labmate_sds1202x_board/c_instrument/runs/20261102_190335_170160_e3c2c8f5/screen.bmp",
+              "image_bytes": 1152054
+            },
+            "stderr": "",
+            "returncode": 0
+          }
+        ],
+        "content": "示波器屏幕截图已保存（1152054 字节）",
+        "original_text": "拍 一下 波形",
+        "recognized_command": {
+          "intent": "capture_image"
+        },
+        "captured_at": "2026-11-02T11:03:28.648+00:00",
+        "confirmed_at": "2026-11-02T11:03:35.500+00:00",
+        "saved_at": "2026-11-02T11:03:35.500+00:00",
+        "receipt_path": "/home/root/labmate_ui_test/data/instrument_jobs/9cb3f7fc36c0c4e6cda249bdf0159bc8f4e5f709b3781136d11b35362635cb80.json",
+        "audio_path": null,
+        "image_path": "/home/root/labmate_ui_test/data/records/images/9cb3f7fc36c0c4e6cda249bdf0159bc8.bmp",
+        "clock_warning": false
+      }
+    },
+    {
+      "path": "/home/root/labmate_ui_test/data/records/record_20261102_110232_470593_27bf2708b46c0c026573b86eed97325b.json",
+      "document": {
+        "schema_version": 4,
+        "record_kind": "instrument_result",
+        "record_id": "27bf2708b46c0c026573b86eed97325b",
+        "request_id": "{1019e961-9933-4ff3-a703-bfe5692ca0dc}",
+        "source": "instrument_usb",
+        "is_simulated": false,
+        "valid": true,
+        "status": "active",
+        "acquisition_status": "complete",
+        "devices": [
+          {
+            "request_id": "{1019e961-9933-4ff3-a703-bfe5692ca0dc}-1",
+            "action": "meter.read",
+            "result": {
+              "request_id": "{1019e961-9933-4ff3-a703-bfe5692ca0dc}-1",
+              "device_id": "suin_sa5041",
+              "device_id_source": "configured",
+              "source": "scpi",
+              "transport": "cp210x_usb",
+              "simulated": false,
+              "identity_verified": false,
+              "value": 0.0002,
+              "unit": "V",
+              "valid": true,
+              "status": "complete",
+              "captured_at": "2026-11-02T19:02:21.834+08:00",
+              "image_path": "",
+              "error_code": "",
+              "measurements": [
+                {
+                  "measurement_id": "ac_voltage",
+                  "label": "交流电压",
+                  "channel": "",
+                  "label_source": "function_response",
+                  "value": 0.0002,
+                  "unit": "V",
+                  "base_unit": "V",
+                  "unit_source": "range_reply_display_scale",
+                  "unit_scale_verified": true,
+                  "validation_status": "range_bracket_checked_display_convention",
+                  "valid": true,
+                  "error_code": "",
+                  "raw_text": "0.0002",
+                  "captured_at": "2026-11-02T19:02:22.392+08:00",
+                  "raw_numeric_value": 0.0002,
+                  "range_query": ":SENSe:VOLTage:AC:RANGe?",
+                  "range": {
+                    "upper": 2.0,
+                    "unit": "V",
+                    "display_unit": "V",
+                    "scale_to_base": 1.0,
+                    "unit_source": "range_reply"
+                  },
+                  "range_after": {
+                    "upper": 2.0,
+                    "unit": "V",
+                    "display_unit": "V",
+                    "scale_to_base": 1.0,
+                    "unit_source": "range_reply"
+                  },
+                  "display_unit": "V",
+                  "display_value": 0.0002,
+                  "scale_to_base": 1.0
+                }
+              ],
+              "evidence": [
+                {
+                  "query": ":FUNCtion?",
+                  "raw_text": "\u0000\u0000VOLT:AC",
+                  "requested_at": "2026-11-02T19:02:21.834+08:00",
+                  "received_at": "2026-11-02T19:02:21.956+08:00"
+                },
+                {
+                  "query": ":READ?",
+                  "raw_text": "0.0002",
+                  "requested_at": "2026-11-02T19:02:21.956+08:00",
+                  "received_at": "2026-11-02T19:02:22.066+08:00"
+                },
+                {
+                  "query": ":FUNCtion?",
+                  "raw_text": "\u0000\u0000VOLT:AC",
+                  "requested_at": "2026-11-02T19:02:22.066+08:00",
+                  "received_at": "2026-11-02T19:02:22.176+08:00"
+                },
+                {
+                  "query": ":SENSe:VOLTage:AC:RANGe?",
+                  "raw_text": "\u0000\u00002V",
+                  "requested_at": "2026-11-02T19:02:22.176+08:00",
+                  "received_at": "2026-11-02T19:02:22.284+08:00"
+                },
+                {
+                  "query": ":READ?",
+                  "raw_text": "0.0002",
+                  "requested_at": "2026-11-02T19:02:22.284+08:00",
+                  "received_at": "2026-11-02T19:02:22.392+08:00"
+                },
+                {
+                  "query": ":SENSe:VOLTage:AC:RANGe?",
+                  "raw_text": "\u0000\u00002V",
+                  "requested_at": "2026-11-02T19:02:22.392+08:00",
+                  "received_at": "2026-11-02T19:02:22.499+08:00"
+                },
+                {
+                  "query": ":FUNCtion?",
+                  "raw_text": "\u0000\u0000VOLT:AC",
+                  "requested_at": "2026-11-02T19:02:22.500+08:00",
+                  "received_at": "2026-11-02T19:02:22.610+08:00"
+                }
+              ],
+              "function": "VOLT:AC",
+              "unit_scale_verified": true,
+              "valid_count": 1,
+              "total_count": 1,
+              "completed_at": "2026-11-02T19:02:22.610+08:00",
+              "port": "cp210x-usb",
+              "result_path": "/media/sd-mmcblk0p1/labmate_sa5041_board/c_instrument/runs/20261102_190222_612271_4d35de00/reading.json"
+            },
+            "stderr": "",
+            "returncode": 0
+          },
+          {
+            "request_id": "{1019e961-9933-4ff3-a703-bfe5692ca0dc}-2",
+            "action": "scope.read",
+            "result": {
+              "request_id": "{1019e961-9933-4ff3-a703-bfe5692ca0dc}-2",
+              "device_id": "siglent_sds1202x",
+              "source": "scpi",
+              "transport": "visa",
+              "simulated": false,
+              "value": null,
+              "unit": "",
+              "valid": true,
+              "status": "complete",
+              "captured_at": "2026-11-02T19:02:25.682+08:00",
+              "image_path": "",
+              "error_code": "",
+              "identity": "*IDN SIGLENT,SDS1202X,SDS1XDC4163410,1.1.2.13 R5",
+              "measurements": [
+                {
+                  "measurement_id": "ch1_pkpk",
+                  "label": "峰峰值",
+                  "channel": "1",
+                  "label_source": "config",
+                  "query": "C1:PAVA? PKPK",
+                  "value": 4.88,
+                  "unit": "V",
+                  "unit_source": "response",
+                  "valid": true,
+                  "error_code": "",
+                  "raw_text": "C1:PAVA PKPK,4.88E+00V",
+                  "captured_at": "2026-11-02T19:02:25.692+08:00"
+                },
+                {
+                  "measurement_id": "ch1_freq",
+                  "label": "频率",
+                  "channel": "1",
+                  "label_source": "config",
+                  "query": "C1:PAVA? FREQ",
+                  "value": 1000.0,
+                  "unit": "Hz",
+                  "unit_source": "response",
+                  "valid": true,
+                  "error_code": "",
+                  "raw_text": "C1:PAVA FREQ,1.00E+03Hz",
+                  "captured_at": "2026-11-02T19:02:26.162+08:00"
+                },
+                {
+                  "measurement_id": "ch1_rms",
+                  "label": "有效值",
+                  "channel": "1",
+                  "label_source": "config",
+                  "query": "C1:PAVA? RMS",
+                  "value": 1.76,
+                  "unit": "V",
+                  "unit_source": "response",
+                  "valid": true,
+                  "error_code": "",
+                  "raw_text": "C1:PAVA RMS,1.76E+00V",
+                  "captured_at": "2026-11-02T19:02:26.687+08:00"
+                }
+              ],
+              "valid_count": 3,
+              "total_count": 3,
+              "completed_at": "2026-11-02T19:02:27.224+08:00",
+              "resource": "USB0::62700::60986::SDS1XDC4163410::0::INSTR",
+              "evidence": [
+                {
+                  "query": "*IDN?",
+                  "requested_at": "2026-11-02T19:02:25.683+08:00",
+                  "raw_text": "*IDN SIGLENT,SDS1202X,SDS1XDC4163410,1.1.2.13 R5",
+                  "received_at": "2026-11-02T19:02:25.692+08:00"
+                },
+                {
+                  "query": "C1:PAVA? PKPK",
+                  "requested_at": "2026-11-02T19:02:25.692+08:00",
+                  "raw_text": "C1:PAVA PKPK,4.88E+00V",
+                  "received_at": "2026-11-02T19:02:26.162+08:00"
+                },
+                {
+                  "query": "C1:PAVA? FREQ",
+                  "requested_at": "2026-11-02T19:02:26.162+08:00",
+                  "raw_text": "C1:PAVA FREQ,1.00E+03Hz",
+                  "received_at": "2026-11-02T19:02:26.686+08:00"
+                },
+                {
+                  "query": "C1:PAVA? RMS",
+                  "requested_at": "2026-11-02T19:02:26.687+08:00",
+                  "raw_text": "C1:PAVA RMS,1.76E+00V",
+                  "received_at": "2026-11-02T19:02:27.223+08:00"
+                }
+              ],
+              "identity_verified": true,
+              "result_path": "/media/sd-mmcblk0p1/labmate_sds1202x_board/c_instrument/runs/20261102_190227_226131_d63ca860/reading.json"
+            },
+            "stderr": "",
+            "returncode": 0
+          }
+        ],
+        "content": "万用表：交流电压 0.0002 V\n示波器：通道1 峰峰值 4.88 V；通道1 频率 1000.0 Hz；通道1 有效值 1.76 V",
+        "original_text": "读取 数据",
+        "recognized_command": {
+          "intent": "read"
+        },
+        "captured_at": "2026-11-02T11:02:20.538+00:00",
+        "confirmed_at": "2026-11-02T11:02:32.470+00:00",
+        "saved_at": "2026-11-02T11:02:32.470+00:00",
+        "receipt_path": "/home/root/labmate_ui_test/data/instrument_jobs/27bf2708b46c0c026573b86eed97325b8f4678aac35799a1dbb69d137e53bc0b.json",
+        "audio_path": null,
+        "image_path": null,
+        "clock_warning": false
+      }
+    },
+    {
+      "path": "/home/root/labmate_ui_test/data/records/record_20261102_102832_563841_6e4c5abb817ea497104e755f06d70cf5.json",
+      "document": {
+        "schema_version": 3,
+        "record_kind": "voice_result",
+        "record_id": "6e4c5abb817ea497104e755f06d70cf5",
+        "request_id": "{2e103970-486a-4f38-a0a3-db7d3cf2dcbd}",
+        "source": "voice_result",
+        "is_simulated": false,
+        "valid": true,
+        "status": "active",
+        "original_text": "记录 数据",
+        "recognized_command": {
+          "intent": "record_device",
+          "count": 1,
+          "interval": 1.0
+        },
+        "input_at": null,
+        "confirmed_at": "2026-11-02T10:28:32.563+00:00",
+        "saved_at": "2026-11-02T10:28:32.563+00:00",
+        "audio_path": null,
+        "image_path": null,
+        "clock_warning": false
+      }
+    },
+    {
+      "path": "/home/root/labmate_ui_test/data/records/record_20261102_094334_220150_2f1fd509529d332c6931ba7acf47fbfa.json",
+      "document": {
+        "schema_version": 3,
+        "record_kind": "voice_result",
+        "record_id": "2f1fd509529d332c6931ba7acf47fbfa",
+        "request_id": "{44fd5298-be73-4f79-bfef-5ce2147d9ffa}",
+        "source": "voice_result",
+        "is_simulated": false,
+        "valid": true,
+        "status": "active",
+        "original_text": "记录 数据",
+        "recognized_command": {
+          "intent": "record_device",
+          "count": 1,
+          "interval": 1.0
+        },
+        "input_at": null,
+        "confirmed_at": "2026-11-02T09:43:34.220+00:00",
+        "saved_at": "2026-11-02T09:43:34.220+00:00",
+        "audio_path": null,
+        "image_path": null,
+        "clock_warning": false
+      }
+    },
+    {
+      "path": "/home/root/labmate_ui_test/data/records/record_20261102_094309_568077_ad32355ed976a067bb85497582e7ae6e.json",
+      "document": {
+        "schema_version": 3,
+        "record_kind": "voice_result",
+        "record_id": "ad32355ed976a067bb85497582e7ae6e",
+        "request_id": "{9e732ce0-14dd-4516-8fbb-85ee50473b3f}",
+        "source": "voice_result",
+        "is_simulated": false,
+        "valid": true,
+        "status": "active",
+        "original_text": "保存 波形",
+        "recognized_command": {
+          "intent": "save_waveform"
+        },
+        "input_at": null,
+        "confirmed_at": "2026-11-02T09:43:09.568+00:00",
+        "saved_at": "2026-11-02T09:43:09.568+00:00",
+        "audio_path": null,
+        "image_path": null,
+        "clock_warning": false
+      }
+    }
+  ],
+  "session": {
+    "pid": 4878,
+    "previous_gui_pids": [
+      4282
+    ],
+    "backend": "/home/root/labmate_ui_test/backend.py",
+    "launcher": "/home/root/labmate_ui_test/run_ui_instruments.sh",
+    "pcm": "permanent_little",
+    "source_sha256": "0f9436a90036db6895746f38c1d2b79d3015965b81b80a50fe583c7a6f639b0f",
+    "started_at": "2026-11-02T11:47:22.758497+00:00",
+    "log": "/home/root/labmate_ui_test/launch_instruments_20261102.log"
+  },
+  "voice_confirm_marker": true
+}

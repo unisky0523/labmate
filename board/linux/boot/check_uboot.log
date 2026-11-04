@@ -1,0 +1,50 @@
+help ext4load
+ext4load - load binary file from a Ext4 filesystem
+
+Usage:
+ext4load <interface> [<dev[:part]> [addr [filename [bytes [pos]]]]]
+    - load binary file 'filename' from 'dev' on 'interface'
+      to address 'addr' from ext4 filesystem
+Zynq> help fpga
+fpga - loadable FPGA image support
+
+Usage:
+fpga [operation type] [device number] [image address] [image size]
+fpga operations:
+  dump	[dev] [address] [size]	Load device to memory buffer
+  info	[dev]			list known device information
+  load	[dev] [address] [size]	Load device from memory buffer
+  loadp	[dev] [address] [size]	Load device from memory buffer with partial bitstream
+  loadb	[dev] [address] [size]	Load device from bitstream buffer (Xilinx only)
+  loadbp	[dev] [address] [size]	Load device from bitstream buffer with partial bitstream(Xilinx only)
+Load device from filesystem (FAT by default) (Xilinx only)
+  loadfs [dev] [address] [image size] [blocksize] <interface>
+        [<dev[:part]>] <filename>
+  loadmk [dev] [address]	Load device generated with mkimage
+	For loadmk operating on FIT format uImage address must include
+	subimage unit name in the form of addr:<subimg_uname>
+Zynq> printenv bootcmd boot_targets boot_qspi qspi_boot script_offset_f script_size_f scriptaddr
+bootcmd=run distro_bootcmd
+boot_targets=qspi jtag mmc0 mmc1 qspi nand nor usb0 usb1 pxe dhcp 
+## Error: "boot_qspi" not defined
+## Error: "qspi_boot" not defined
+script_offset_f=d20000
+script_size_f=0x20000
+scriptaddr=0x20000
+Zynq> md.l 0xf800012c 1
+f800012c: 01fd0ccd                               ....
+Zynq> ext4load mmc 1:1 0x03000000 /boot/spi-20261104/boot.scr
+1304 bytes read in 21 ms (60.5 KiB/s)
+Zynq> iminfo 0x03000000
+
+## Checking Image at 03000000 ...
+   Legacy image found
+   Image Name:   LabMate SPI eMMC 20261104
+   Image Type:   ARM Linux Script (uncompressed)
+   Data Size:    1240 Bytes = 1.2 KiB
+   Load Address: 00000000
+   Entry Point:  00000000
+   Contents:
+      Image 0: 1232 Bytes = 1.2 KiB
+   Verifying Checksum ... OK
+Zynq> 

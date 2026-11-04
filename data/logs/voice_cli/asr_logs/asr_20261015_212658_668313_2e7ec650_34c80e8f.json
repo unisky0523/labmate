@@ -1,0 +1,95 @@
+{
+  "text": "保存 波形",
+  "words": [
+    {
+      "conf": 0.972021,
+      "end": 1.26,
+      "start": 0.54,
+      "word": "保存"
+    },
+    {
+      "conf": 0.882853,
+      "end": 1.98,
+      "start": 1.26,
+      "word": "波形"
+    }
+  ],
+  "segments": [
+    {
+      "result": [
+        {
+          "conf": 0.972021,
+          "end": 1.26,
+          "start": 0.54,
+          "word": "保存"
+        },
+        {
+          "conf": 0.882853,
+          "end": 1.98,
+          "start": 1.26,
+          "word": "波形"
+        }
+      ],
+      "text": "保存 波形"
+    }
+  ],
+  "command": {
+    "intent": "save_waveform"
+  },
+  "reason": null,
+  "duration_seconds": 3.0,
+  "text_baseline": "保存 波形",
+  "words_baseline": [
+    {
+      "conf": 0.972021,
+      "end": 1.26,
+      "start": 0.54,
+      "word": "保存"
+    },
+    {
+      "conf": 0.882853,
+      "end": 1.98,
+      "start": 1.26,
+      "word": "波形"
+    }
+  ],
+  "segments_baseline": [
+    {
+      "result": [
+        {
+          "conf": 0.972021,
+          "end": 1.26,
+          "start": 0.54,
+          "word": "保存"
+        },
+        {
+          "conf": 0.882853,
+          "end": 1.98,
+          "start": 1.26,
+          "word": "波形"
+        }
+      ],
+      "text": "保存 波形"
+    }
+  ],
+  "min_word_confidence": 0.882853,
+  "recognizer_mode": "baseline",
+  "recognition_ms": 934.26,
+  "mode": "run",
+  "audio_path": "D:\\labmate_b\\data\\audio\\asr_tests\\asr_20261015_212658_668313_2e7ec650.wav",
+  "metadata": {
+    "recorded_at": "2026-10-15T21:26:55.028+08:00",
+    "native_rate": 44100,
+    "device_name": "麦克风阵列 (Realtek(R) Audio)",
+    "truncated": false,
+    "capture_errors": []
+  },
+  "created_at": "2026-10-15T21:26:59.605+08:00",
+  "model_path": "D:\\labmate_b\\models\\vosk-model-small-cn-0.22",
+  "minimum_word_confidence": 0.45,
+  "pipeline_version": "vosk_domain_v1",
+  "sample_rate": 16000,
+  "dispatch_state": "delivered_to_application",
+  "confirm_readback_text": "可以",
+  "confirm_readback_audio_path": "D:\\labmate_b\\data\\audio\\asr_tests\\asr_20261015_212705_840930_3b9c175b.wav"
+}

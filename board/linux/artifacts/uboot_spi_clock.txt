@@ -1,0 +1,13 @@
+Run at the U-Boot prompt, before starting Linux, after loading the new FPGA bitstream.
+The values below have been checked against the supplied XSA ps7_init.c.
+
+mw.l 0xf8000008 0x0000df0d
+mw.l 0xf8000158 0x00000601
+setexpr.l spi_apb *0xf800012c
+setexpr spi_apb ${spi_apb} \| 0x4000
+mw.l 0xf800012c ${spi_apb}
+mw.l 0xf8000004 0x0000767b
+md.l 0xf8000158 1
+
+Expected SPI_CLK_CTRL: 0x00000601. APER_CLK_CTRL bit14 is enabled; other bits are preserved.
+These are U-Boot commands, not Linux shell or devmem commands.

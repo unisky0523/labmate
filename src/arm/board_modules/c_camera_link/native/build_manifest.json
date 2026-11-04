@@ -1,0 +1,24 @@
+{
+  "target": "arm-linux-musleabihf",
+  "cpu": "cortex_a9",
+  "static": true,
+  "zig": "0.13.0",
+  "bytes": 48756,
+  "sha256": "3b77a1c45ad3c5cf842e1fdc5567a4aca9e4777c246380583262a0086438d220",
+  "source_sha256": "489c8793e94eeb9b17d0a56eabe20bba05901556c8428d22a02b5a1a03d9d9f1",
+  "stb_sha256": "cbd5f0ad7a9cf4468affb36354a1d2338034f2c12473cf1a8e32053cb6914a05",
+  "preview_jpeg_sha256": "3b76dbecbb65dcb64a77e31fbb4416c85dea65c0e1659fcbcb568bb2cce87e15",
+  "stb_commit": "1ee679ca2ef753a528db5ba6801e1067b40481b8",
+  "camera_stream": {
+    "bytes": 34088,
+    "sha256": "e8f09337694fa6b3ba48b355076c75d6f7e779c0032f782d3c4230bcef5c2ea1",
+    "source_sha256": "2cfc7776816fcba9b6999a2a1c66209e480867d5e6133a272eae4450d8ec6707"
+  },
+  "camera_jpeg_stream": {
+    "bytes": 54668,
+    "sha256": "83c855bc2da7970a3d1cbd3294c57d36f9596ca74703d2121d5a92c21513527e",
+    "defines": [
+      "LM_CAMERA_JPEG=1"
+    ]
+  }
+}

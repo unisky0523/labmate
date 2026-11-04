@@ -1,0 +1,5 @@
+ls -la /media/sd-mmcblk0p1/labmate_spi_cs_test_20261104
+ls -la /media/sd-mmcblk0p1/labmate_spi_test_20261104/runtime
+ls -l /etc/init.d/*lab* /etc/rc5.d/*lab* 2>/dev/null
+python3 -c 'import pathlib; p=pathlib.Path("/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104"); [(print("FILE",f.name),print(f.read_text()[:16000])) for f in p.iterdir() if f.suffix in (".sh",".py",".md",".txt") and f.stat().st_size<20000]'
+df -h /

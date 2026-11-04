@@ -1,0 +1,17 @@
+/* Merge into the existing system-user.dtsi, keeping all original camera/audio/LCD nodes. */
+&spi0 {
+    status = "okay";
+    is-decoded-cs = <0>;
+    num-cs = <1>;
+    #address-cells = <1>;
+    #size-cells = <0>;
+    esp32_image: image-link@0 {
+        compatible = "labmate,esp32-image-link";
+        reg = <0>;
+        spi-max-frequency = <4000000>;
+        spi-cpha; /* SPI mode1: CPOL=0, CPHA=1 */
+    };
+};
+/* These EMIO pins are now SPI. USB console remains UART0 (e0000000). */
+&uart1 { status = "disabled"; };
+&can0 { status = "disabled"; };

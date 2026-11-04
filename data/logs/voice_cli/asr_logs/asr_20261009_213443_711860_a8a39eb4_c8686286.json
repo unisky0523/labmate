@@ -1,0 +1,111 @@
+{
+  "text": "每隔 两秒 季度 一次 更 三次",
+  "words": [
+    {
+      "conf": 0.527049,
+      "end": 1.23,
+      "start": 0.72,
+      "word": "每隔"
+    },
+    {
+      "conf": 1.0,
+      "end": 1.71,
+      "start": 1.23,
+      "word": "两秒"
+    },
+    {
+      "conf": 0.526333,
+      "end": 2.1,
+      "start": 1.71,
+      "word": "季度"
+    },
+    {
+      "conf": 0.977089,
+      "end": 2.58,
+      "start": 2.1,
+      "word": "一次"
+    },
+    {
+      "conf": 0.798209,
+      "end": 3.0,
+      "start": 2.76,
+      "word": "更"
+    },
+    {
+      "conf": 1.0,
+      "end": 3.6,
+      "start": 3.0,
+      "word": "三次"
+    }
+  ],
+  "segments": [
+    {
+      "result": [
+        {
+          "conf": 0.527049,
+          "end": 1.23,
+          "start": 0.72,
+          "word": "每隔"
+        },
+        {
+          "conf": 1.0,
+          "end": 1.71,
+          "start": 1.23,
+          "word": "两秒"
+        },
+        {
+          "conf": 0.526333,
+          "end": 2.1,
+          "start": 1.71,
+          "word": "季度"
+        },
+        {
+          "conf": 0.977089,
+          "end": 2.58,
+          "start": 2.1,
+          "word": "一次"
+        },
+        {
+          "conf": 0.798209,
+          "end": 3.0,
+          "start": 2.76,
+          "word": "更"
+        },
+        {
+          "conf": 1.0,
+          "end": 3.6,
+          "start": 3.0,
+          "word": "三次"
+        }
+      ],
+      "text": "每隔 两秒 季度 一次 更 三次"
+    }
+  ],
+  "command": null,
+  "reason": "没有完整理解这句话，本次未执行。输入 help 查看支持的表达。",
+  "duration_seconds": 4.05,
+  "recognition_ms": 1171.27,
+  "min_word_confidence": 0.526333,
+  "mode": "test",
+  "audio_path": "D:\\labmate_b\\data\\audio\\asr_tests\\asr_20261009_213443_711860_a8a39eb4.wav",
+  "metadata": {
+    "recorded_at": "2026-10-09T21:34:38.943+08:00",
+    "native_rate": 44100,
+    "device_name": "麦克风阵列 (Realtek(R) Audio)",
+    "truncated": false,
+    "capture_errors": []
+  },
+  "created_at": "2026-10-09T21:34:44.885+08:00",
+  "model_path": "D:\\labmate_b\\models\\vosk-model-small-cn-0.22",
+  "minimum_word_confidence": 0.45,
+  "pipeline_version": "vosk_domain_v1",
+  "sample_rate": 16000,
+  "expected_text": "每隔两秒记录一次，共三次",
+  "expected_command": {
+    "intent": "record_device",
+    "count": 3,
+    "interval": 2.0
+  },
+  "semantic_correct": false,
+  "dispatch_state": "not_dispatched"
+}

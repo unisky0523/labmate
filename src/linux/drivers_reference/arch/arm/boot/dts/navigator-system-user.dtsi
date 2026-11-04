@@ -1,0 +1,479 @@
+#include <dt-bindings/gpio/gpio.h>
+#include <dt-bindings/input/input.h>
+#include <dt-bindings/media/xilinx-vip.h>
+#include <dt-bindings/phy/phy.h>
+
+/ {
+	model = "Alientek Navigator Zynq Development Board";
+	compatible = "xlnx,zynq-zc702", "xlnx,zynq-7000";
+
+	//此处添加chosen节点方便用于直接拷贝system-user.dtsi用于petalinux工程
+	chosen {
+		bootargs = "console=ttyPS0,115200 cma=50M earlycon root=/dev/mmcblk0p2 rw rootwait";
+		stdout-path = "serial0:115200n8";
+	};
+
+    leds {
+		compatible = "gpio-leds";
+
+		gpio-led1 {
+			label = "led1";
+			gpios = <&gpio0 54 GPIO_ACTIVE_HIGH>;
+			default-state = "on";
+		};
+
+		gpio-led2 {
+			label = "led2";
+			gpios = <&gpio0 0 GPIO_ACTIVE_HIGH>;
+			linux,default-trigger = "heartbeat";
+		};
+
+		gpio-led3 {
+			label = "pl_led0";
+			gpios = <&axi_gpio_0 0 0 GPIO_ACTIVE_HIGH>;
+			default-state = "on";
+		};
+
+		gpio-led4 {
+			label = "pl_led1";
+			gpios = <&axi_gpio_0 1 0 GPIO_ACTIVE_HIGH>;
+			linux,default-trigger = "timer";
+		};
+
+		gpio-led5 {
+			label = "ps_led0";
+			gpios = <&gpio0 7 GPIO_ACTIVE_HIGH>;
+			default-state = "on";
+		};
+
+		gpio-led6 {
+			label = "ps_led1";
+			gpios = <&gpio0 8 GPIO_ACTIVE_HIGH>;
+			linux,default-trigger = "timer";
+		};
+	};
+
+	keys {
+		compatible = "gpio-keys";
+		autorepeat;
+
+		gpio-key1 {
+			label = "pl_key0";
+			gpios = <&gpio0 55 GPIO_ACTIVE_LOW>;
+			linux,code = <KEY_LEFT>;
+			gpio-key,wakeup;
+			autorepeat;
+		};
+
+		gpio-key2 {
+			label = "pl_key1";
+			gpios = <&gpio0 56 GPIO_ACTIVE_LOW>;
+			linux,code = <KEY_RIGHT>;
+			gpio-key,wakeup;
+			autorepeat;
+		};
+
+		gpio-key3 {
+			label = "ps_key1";
+			gpios = <&gpio0 12 GPIO_ACTIVE_LOW>;
+			linux,code = <KEY_UP>;
+			gpio-key,wakeup;
+			autorepeat;
+		};
+
+		gpio-key4 {
+			label = "ps_key2";
+			gpios = <&gpio0 11 GPIO_ACTIVE_LOW>;
+			linux,code = <KEY_DOWN>;
+			gpio-key,wakeup;
+			autorepeat;
+		};
+
+		touch-key {
+			label = "touch_key";
+			gpios = <&gpio0 57 GPIO_ACTIVE_HIGH>;
+			linux,code = <KEY_ENTER>;
+			gpio-key,wakeup;
+			autorepeat;
+		};
+	};
+
+	beep {
+		compatible = "gpio-beeper";
+		gpios = <&gpio0 58 GPIO_ACTIVE_HIGH>;
+	};
+
+	usb_phy0: phy0@e0002000 {
+		compatible = "ulpi-phy";
+		#phy-cells = <0>;
+		reg = <0xe0002000 0x1000>;
+		view-port = <0x0170>;
+		drv-vbus;
+	};
+};
+
+&uart0 {
+	u-boot,dm-pre-reloc;
+	status = "okay";
+};
+
+&sdhci0 {
+	u-boot,dm-pre-reloc;
+	status = "okay";
+};
+
+&usb0 {
+	dr_mode = "otg";
+	usb-phy = <&usb_phy0>;
+};
+
+&qspi {
+	u-boot,dm-pre-reloc;
+	flash@0 { /* 16 MB */
+		compatible = "w25q256", "jedec,spi-nor";
+		reg = <0x0>;
+		spi-max-frequency = <50000000>;
+		#address-cells = <1>;
+		#size-cells = <1>;
+		partition@0x000000 {
+			label = "boot";
+			reg = <0x000000 0x600000>;
+		};
+		partition@0x600000 {
+			label = "bootenv";
+			reg = <0x600000 0x020000>;
+		};
+		partition@0x620000 {
+			label = "image.ub";
+			reg = <0x620000 0x700000>;
+		};
+		partition@0xD20000 {
+			label = "boot.scr";
+			reg = <0xD20000 0x020000>;
+		};
+		partition@0xD40000 {
+			label = "space";
+			reg = <0xD40000 0x000000>;
+		};
+	};
+};
+
+&gem0 {
+	local-mac-address = [00 0a 35 00 8b 87];
+
+	phy-handle = <&ethernet_phy>;
+	ethernet_phy: ethernet-phy@7 {	/* yt8521 */
+		reg = <0x7>;
+		device_type = "ethernet-phy";
+	};
+};
+
+&gem1 {
+	local-mac-address = [00 0a 35 00 11 55];
+	phy-reset-gpio = <&gpio0 63 GPIO_ACTIVE_LOW>;
+	phy-reset-active-low;
+
+	phy-handle = <&pl_phy>;
+	pl_phy: pl_phy@4 {	
+		reg = <0x4>;
+		device_type = "ethernet-phy";
+	};
+};
+
+&watchdog0 {
+	status = "okay";
+	reset-on-timeout;		// Enable watchdog reset function
+};
+
+&adc {
+	status = "okay";
+
+	xlnx,channels {
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+		channel@0 {
+			reg = <0>;
+		};
+	};
+};
+
+&i2c0 {
+	clock-frequency = <100000>;
+
+	eeprom@50 {
+		compatible = "atmel,24c64";
+		reg = <0x50>;
+		pagesize = <32>;
+	};
+
+	rtc@51 {
+		compatible = "nxp,pcf8563";
+		reg = <0x51>;
+	};
+
+	codec: es8388@10 {
+		compatible = "atk,es8388";
+		reg = <0x10>;
+		clock-names = "mclk";
+
+		clocks = <&clk_wiz_0 1>;
+		#sound-dai-cells = <0>;
+		status = "okay";
+	};
+};
+
+&i2c1 {
+	clock-frequency = <100000>;
+
+	edt-ft5x06@38 {
+		compatible = "edt,edt-ft5426";
+		reg = <0x38>;
+
+		interrupt-parent = <&gpio0>;
+		interrupts = <60 0x2>;
+
+		reset-gpio = <&gpio0 59 GPIO_ACTIVE_LOW>;
+		interrupt-gpio = <&gpio0 60 GPIO_ACTIVE_LOW>;
+	};
+
+	goodix_ts@14 {
+		compatible = "goodix,gt9xx";
+		status = "okay";
+		reg = <0x14>;
+		interrupt-parent = <&gpio0>;
+		interrupts = <60 0>;
+		reset-gpio = <&gpio0 59 GPIO_ACTIVE_LOW>;
+		interrupt-gpio = <&gpio0 60 GPIO_ACTIVE_LOW>;
+	};
+};
+
+&i2c2 {
+	clock-frequency = <100000>;
+
+	ov5640@3c {
+		compatible = "ovti,ov5640";
+		reg = <0x3c>;
+
+		pwdn-gpios = <&gpio0 61 GPIO_ACTIVE_HIGH>;
+		reset-gpios = <&gpio0 62 GPIO_ACTIVE_LOW>;
+		iprst-gpios = <&camera_in_axi_gpio_0 0 0 GPIO_ACTIVE_LOW>;
+
+		status = "okay";
+
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+		port@0 {
+			reg = <0>;
+
+			ov5640_ep: endpoint {
+				remote-endpoint = <&xlnx_vcap>;
+			};
+		};
+	};
+};
+
+&audio_audio_formatter{
+	audio-codec = <&codec>;
+};
+
+&clk_wiz_0 {
+    compatible = "xlnx,clocking-wizard";
+    xlnx,nr-outputs = <2>;
+};
+
+&lcd_out_lcd_pl_pwm{
+	compatible = "digilent,axi-pwm";
+	#pwm-cells = <2>;
+	clock-names = "pwm";
+	npwm = <1>;
+};
+
+&lcd_out_lcd_vtc {
+	compatible = "xlnx,bridge-v-tc-6.1";
+	xlnx,pixels-per-clock = <1>;
+};
+
+#ifndef Z7010		//7010的开发板因为pl资源不够，没有添加hdmi
+&hdmi_out_clk_wiz_dyn{
+    compatible = "xlnx,clocking-wizard";
+    xlnx,nr-outputs = <2>;
+};
+
+&hdmi_out_hdmi_vtc {
+	compatible = "xlnx,bridge-v-tc-6.1";
+	xlnx,pixels-per-clock = <1>;
+};
+#endif
+
+&amba_pl {
+	drm_pl_disp_lcd {
+		compatible = "xlnx,pl-disp";
+		dmas = <&lcd_out_v_frmbuf_rd_0 0>;
+		dma-names = "dma0";
+		xlnx,vformat = "BG24";
+		xlnx,bridge = <&lcd_out_lcd_vtc>;
+
+		ports {
+			#address-cells = <1>;
+			#size-cells = <0>;
+			port@0 {
+				reg = <0>;
+				pl_disp_crtc_lcd:endpoint {
+					remote-endpoint = <&lcd_encoder>;
+				};
+			};
+		};
+	};
+
+	atk_lcd_drm{
+		compatible = "atk,atk_dpi";
+		status = "okay";
+
+		clocks = <&clk_wiz_0 0>;
+		clock-names = "lcd_pclk";
+		pwms = <&lcd_out_lcd_pl_pwm 0 5000000>;
+
+		lcdID = <&lcd_out_lcd_id 0 0 GPIO_ACTIVE_LOW
+				 &lcd_out_lcd_id 1 0 GPIO_ACTIVE_LOW
+				 &lcd_out_lcd_id 2 0 GPIO_ACTIVE_LOW>;
+
+		ports {
+			#address-cells = <1>;
+			#size-cells = <0>;
+			port@0 {
+				reg = <0>;
+				lcd_encoder: endpoint {
+					remote-endpoint = <&pl_disp_crtc_lcd>;
+				};
+			};
+		};
+
+		display-timings {					/* 时序信息 */
+			timing_4342: timing0 {
+				clock-frequency = <9000000>; /* LCD 像素时钟，单位 Hz */
+				hactive = <480>;			/* LCD X 轴像素个数 */
+				vactive = <272>;			/* LCD Y 轴像素个数 */
+				hback-porch = <2>;			/* LCD hfp 参数 */
+				hfront-porch = <2>;			/* LCD hbp 参数 */
+				hsync-len = <41>;			/* LCD hspw 参数 */
+				vback-porch = <2>;			/* LCD vbp 参数 */
+				vfront-porch = <2>;			/* LCD vfp 参数 */
+				vsync-len = <10>;			/* LCD vspw 参数 */
+				hsync-active = <0>;			/* hsync 数据线极性 */
+				vsync-active = <0>;			/* vsync 数据线极性 */
+				de-active = <1>;			/* de 数据线极性 */
+			};
+			timing_7084: timing1 {
+				clock-frequency = <33330000>;
+				hactive = <800>;
+				vactive = <480>;
+				hback-porch = <88>;
+				hfront-porch = <40>;
+				hsync-len = <128>;
+				vback-porch = <33>;
+				vfront-porch = <10>;
+				vsync-len = <2>;
+				hsync-active = <0>;
+				vsync-active = <0>;
+				de-active = <1>;
+				pixelclk-active = <0>;
+			};
+			timing_7016: timing2 {
+				clock-frequency = <51200000>;
+				hactive = <1024>;
+				vactive = <600>;
+				hback-porch = <140>;
+				hfront-porch = <160>;
+				hsync-len = <20>;
+				vback-porch = <20>;
+				vfront-porch = <12>;
+				vsync-len = <3>;
+				hsync-active = <0>;
+				vsync-active = <0>;
+				de-active = <1>;
+				pixelclk-active = <0>;
+			};
+			timing_1018: timing3 {
+				clock-frequency = <71100000>;
+				hactive = <1280>;
+				vactive = <800>;
+				hback-porch = <80>;
+				hfront-porch = <70>;
+				hsync-len = <10>;
+				vback-porch = <10>;
+				vfront-porch = <10>;
+				vsync-len = <3>;
+				hsync-active = <0>;
+				vsync-active = <0>;
+				de-active = <1>;
+				pixelclk-active = <0>;
+			};
+		};
+	};
+
+#ifndef Z7010
+	drm_pl_disp_hdmi {
+		compatible = "xlnx,pl-disp";
+		dmas = <&hdmi_out_v_frmbuf_rd_0 0>;
+		dma-names = "dma0";
+		xlnx,vformat = "BG24";
+		xlnx,bridge = <&hdmi_out_hdmi_vtc>;
+
+		ports {
+			#address-cells = <1>;
+			#size-cells = <0>;
+			port@0 {
+				reg = <0>;
+				pl_disp_crtc_hdmi:endpoint {
+					remote-endpoint = <&hdmi_encoder>;
+				};
+			};
+		};
+	};
+
+	atk_hdmi_drm{
+		compatible = "atk,atk-hdmi";
+		status = "okay";
+
+		clocks = <&hdmi_out_clk_wiz_dyn 0>, <&hdmi_out_clk_wiz_dyn 1>;
+		clock-names = "hdmi_pclk", "hdmi_pclk_5x";
+    	clk-num = <2>;			//时钟数
+		ddc-i2c-bus = <&i2c1>;
+		hpd-gpios = <&gpio0 64 GPIO_ACTIVE_HIGH>;
+
+		ports {
+				#address-cells = <1>;
+				#size-cells = <0>;
+			port@0 {
+				reg = <0>;
+				hdmi_encoder: endpoint {
+					remote-endpoint = <&pl_disp_crtc_hdmi>;
+				};
+			};
+		};
+	};
+#endif
+
+	vcap_dvp {
+		compatible = "xlnx,video";
+		dmas = <&camera_in_v_frmbuf_wr_0 0>;
+		dma-names = "port0";
+		status = "okay";
+
+		ports {
+			#address-cells = <1>;
+			#size-cells = <0>;
+
+			port@0 {
+				reg = <0>;
+				direction = "input";
+
+				xlnx_vcap: endpoint {
+					remote-endpoint = <&ov5640_ep>;
+				};
+			};
+		};
+	};	
+};

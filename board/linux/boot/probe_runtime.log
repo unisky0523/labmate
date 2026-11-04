@@ -1,0 +1,22 @@
+ls -la /media/sd -mmcblk0p1/labmate_spi_cs_test_20261104
+total 128
+drwxrwxr-x    3 root     users        32768 Nov  4  2026 .
+drwxrwxr-x   16 root     users        32768 Jan  1  1970 ..
+drwxrwxr-x    3 root     users        32768 Nov  4  2026 c_camera_link
+-rwxrwxr-x    1 root     users        28262 Nov  4  2026 sample.jpg
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104# ls -la /media/sd -mmcblk0p1/labmate_spi_test_20261104/runtime
+total 256
+drwxrwxr-x    2 root     users        32768 Nov  3 17:45 .
+drwxrwxr-x    3 root     users        32768 Nov  3 17:45 ..
+-rwxrwxr-x    1 root     users          741 Nov  3 17:29 add_spidev_match.py
+-rwxrwxr-x    1 root     users          472 Nov  3 17:29 check_board.sh
+-rwxrwxr-x    1 root     users          551 Nov  3 17:29 esp32-spi.dtsi
+-rwxrwxr-x    1 root     users         1129 Nov  3 17:29 qt_send_example.cpp
+-rwxrwxr-x    1 root     users         5038 Nov  3 17:29 send_jpeg.py
+-rwxrwxr-x    1 root     users         7023 Nov  3 17:29 test_320x240.jpg
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104# ls -l /etc/init. d/*lab* /etc/rc5.d/*lab* 2>/dev/null
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104# python3 -c 'impo rt pathlib; p=pathlib.Path("/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104");  [(print("FILE",f.name),print(f.read_text()[:16000])) for f in p.iterdir() if f.s uffix in (".sh",".py",".md",".txt") and f.stat().st_size<20000]'
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104# df -h /
+Filesystem                Size      Used Available Use% Mounted on
+/dev/root                 7.1G    972.6M      5.8G  14% /
+root@ATK-ZYNQ:/media/sd-mmcblk0p1/labmate_spi_cs_test_20261104# 

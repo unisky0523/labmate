@@ -1,0 +1,111 @@
+{
+  "text": "帮 我 连续 记住 五次 数据",
+  "words": [
+    {
+      "conf": 0.770366,
+      "end": 1.08,
+      "start": 0.81,
+      "word": "帮"
+    },
+    {
+      "conf": 0.827744,
+      "end": 1.26,
+      "start": 1.08,
+      "word": "我"
+    },
+    {
+      "conf": 0.627103,
+      "end": 1.74,
+      "start": 1.26779,
+      "word": "连续"
+    },
+    {
+      "conf": 0.858849,
+      "end": 2.1,
+      "start": 1.74,
+      "word": "记住"
+    },
+    {
+      "conf": 1.0,
+      "end": 2.64,
+      "start": 2.1,
+      "word": "五次"
+    },
+    {
+      "conf": 0.975514,
+      "end": 3.18,
+      "start": 2.64,
+      "word": "数据"
+    }
+  ],
+  "segments": [
+    {
+      "result": [
+        {
+          "conf": 0.770366,
+          "end": 1.08,
+          "start": 0.81,
+          "word": "帮"
+        },
+        {
+          "conf": 0.827744,
+          "end": 1.26,
+          "start": 1.08,
+          "word": "我"
+        },
+        {
+          "conf": 0.627103,
+          "end": 1.74,
+          "start": 1.26779,
+          "word": "连续"
+        },
+        {
+          "conf": 0.858849,
+          "end": 2.1,
+          "start": 1.74,
+          "word": "记住"
+        },
+        {
+          "conf": 1.0,
+          "end": 2.64,
+          "start": 2.1,
+          "word": "五次"
+        },
+        {
+          "conf": 0.975514,
+          "end": 3.18,
+          "start": 2.64,
+          "word": "数据"
+        }
+      ],
+      "text": "帮 我 连续 记住 五次 数据"
+    }
+  ],
+  "command": null,
+  "reason": "没有完整理解这句话，本次未执行。输入 help 查看支持的表达。",
+  "duration_seconds": 3.25,
+  "recognition_ms": 1205.33,
+  "min_word_confidence": 0.627103,
+  "mode": "test",
+  "audio_path": "D:\\labmate_b\\data\\audio\\asr_tests\\asr_20261009_213422_935040_83ef2a6b.wav",
+  "metadata": {
+    "recorded_at": "2026-10-09T21:34:19.048+08:00",
+    "native_rate": 44100,
+    "device_name": "麦克风阵列 (Realtek(R) Audio)",
+    "truncated": false,
+    "capture_errors": []
+  },
+  "created_at": "2026-10-09T21:34:24.145+08:00",
+  "model_path": "D:\\labmate_b\\models\\vosk-model-small-cn-0.22",
+  "minimum_word_confidence": 0.45,
+  "pipeline_version": "vosk_domain_v1",
+  "sample_rate": 16000,
+  "expected_text": "帮我连续记录五次数据",
+  "expected_command": {
+    "intent": "record_device",
+    "count": 5,
+    "interval": 1.0
+  },
+  "semantic_correct": false,
+  "dispatch_state": "not_dispatched"
+}

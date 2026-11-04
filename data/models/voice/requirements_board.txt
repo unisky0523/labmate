@@ -1,0 +1,6 @@
+# Board runtime: Python 3.7.6 / ARMv7.
+# NumPy is already present on the current image.
+numpy==1.17.0
+
+# Optional. Test the ARMv7 + Python 3.7 wheel before deployment.
+# vosk==0.3.45

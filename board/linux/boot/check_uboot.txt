@@ -1,0 +1,6 @@
+help ext4load
+help fpga
+printenv bootcmd boot_targets boot_qspi qspi_boot script_offset_f script_size_f scriptaddr
+md.l 0xf800012c 1
+ext4load mmc 1:1 0x03000000 /boot/spi-20261104/boot.scr
+iminfo 0x03000000

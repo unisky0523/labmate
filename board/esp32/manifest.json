@@ -1,0 +1,9 @@
+{
+  "spi-emio": {
+    "environment": "esp32dev_spi_emio",
+    "chip": "esp32",
+    "flash_offset": 0,
+    "bytes": 885056,
+    "sha256": "c30082a49a1782e9ad18d9eab50b93cfcc7cdc7455b0455a0454790700f853e2"
+  }
+}

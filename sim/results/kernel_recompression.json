@@ -1,0 +1,10 @@
+{
+  "old_archive_bytes": 113905892,
+  "new_archive_bytes": 109558484,
+  "tar_bytes": 943329280,
+  "tar_sha256": "d468bcc11cd377edda49895fb98e08b1bed7135b6b92f18b01dbc3927c96f7c7",
+  "tar_stream_identical": true,
+  "xz_preset": 9,
+  "new_sha256": "4c48d7fec2411512b1af9812cdf5b07b81dc494b6268519a229bca51445b57e7",
+  "seconds": 536.2
+}
